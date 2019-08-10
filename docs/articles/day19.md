@@ -2,7 +2,7 @@
 
 標題只是嚇嚇你而已 (毆)。
 
-![](https://thumbs.gfycat.com/ScrawnyDisloyalHeifer-size_restricted.gif)
+![](https://thumbs.gfycat.com/ScrawnyDisloyalHeifer-size_restricted.gif)  
 (Source: [網路圖片](https://thumbs.gfycat.com/ScrawnyDisloyalHeifer-size_restricted.gif))
 
 函數 (Function) 是程式編寫非常重要的一環。

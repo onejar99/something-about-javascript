@@ -12,7 +12,7 @@
 
 套句港片「賭俠」裡星爺的台詞：我摔你也摔，怎麼你一摔就變成個印度阿三啦？
 
-![](https://i.imgur.com/TBWgV4I.png)
+![](https://i.imgur.com/TBWgV4I.png)  
 (Source: [網路](https://gss0.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/b8389b504fc2d562a46680a3e71190ef76c66c15.jpg))
 
 **動態型別加弱型別不是罪，動態型別加超級弱型別就是一場夢魘，更別說攪和了 JavaScript 自身型別系統(Type System)的混亂**。
@@ -21,7 +21,7 @@
 
 究竟～是動態型別加弱型別的原罪使然，還是型別系統的命運糾葛，讓我們繼續看下去～
 
-![](http://v1c.im.tv/beta/2014/04/ART1404281738-86793-Icon.jpg)
+![](http://v1c.im.tv/beta/2014/04/ART1404281738-86793-Icon.jpg)  
 (Source: [網路](http://v1c.im.tv/beta/2014/04/ART1404281738-86793-Icon.jpg))
 
 ## 動態型別
@@ -110,7 +110,7 @@ console.log(x);
 333333111222
 ```
 
-![](https://i.imgur.com/Xx9HKan.png)
+![](https://i.imgur.com/Xx9HKan.png)  
 (Source: [網路](https://vignette.wikia.nocookie.net/evchk/images/e/ec/2471912.jpg/revision/latest?cb=20171012125530))
 
 是一個讓人黑人問號的答案呢。
@@ -193,7 +193,7 @@ console.log( true + true + true );          // 3
 console.log( false + false + false );       // 0
 ```
 
-![](https://i.imgur.com/BmP9xAt.png)
+![](https://i.imgur.com/BmP9xAt.png)  
 (Source: [臭跩貓愛嗆人7-白爛貓超級胖](https://store.line.me/stickershop/product/1382681/zh-Hant?from=sticker))
 
 **動態型別加弱型別**不是問題，**動態型別加超級弱型別**就變成一場夢魘。

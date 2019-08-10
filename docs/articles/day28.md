@@ -10,14 +10,14 @@
 
 **閉包 (Closures) 是一個能存取父作用域的函數，即使父作用域已經結束**。
 
-![](https://i.imgur.com/lcqSy7g.png)
+![](https://i.imgur.com/lcqSy7g.png)  
 (Source: [網路圖片](http://colorfulblanche.com/wp-content/uploads/2018/01/%E6%8A%95%E5%BD%B1%E7%89%8713-1024x576.png))
 
 看到這種論文式的定義說明就能心領神會的練武奇才，可以考慮左轉離開去找對你更有價值的知識 (誤)。
 
 沒學過如來神掌的觀眾，我們還是從頭來好好認識一下閉包。
 
-![](https://i.imgur.com/2ee8sjQ.jpg)
+![](https://i.imgur.com/2ee8sjQ.jpg)  
 (Source: [網路圖片](https://s9.rr.itc.cn/r/wapChange/20164_15_14/a0sisi1715111647352.JPEG))
 
 
@@ -93,7 +93,7 @@ sellTicket('Steven Rogers');   // (Total Sold: 4) Buyer: Steven Rogers
 
 但你知我知獨眼龍也知，工程師哪有這麼乖。
 
-![](https://i.imgur.com/UO4AaaY.png)
+![](https://i.imgur.com/UO4AaaY.png)  
 (Source: [Youtube](https://www.youtube.com/watch?v=m_24DLLpNDU))
 
 這道理就像小孩子跟爸媽拿零用錢，如果爸媽允許小孩直接去錢包自己拿，等於依賴小孩的自律，無法保證哪天小孩鬼迷心竅直接拿信用卡去刷爆。

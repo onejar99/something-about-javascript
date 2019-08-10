@@ -157,7 +157,7 @@ fs[2]();
 3
 ```
 
-![](https://i.imgur.com/JC52Dvn.png)
+![](https://i.imgur.com/JC52Dvn.png)  
 (Source: [白爛貓貼圖](https://store.line.me/stickershop/product/1236945/?ref=Desktop))
 
 趕快出動我的銀色子彈，分析一下發生什麼事。
@@ -526,7 +526,7 @@ fs2[2]();
 2
 ```
 
-![](https://i.imgur.com/ap8KLrg.png)
+![](https://i.imgur.com/ap8KLrg.png)  
 (Source: [網路圖片](https://fs2.my-bras.com/upload/ftp/00.Web/04.Column/Chau.jpg))
 
 為什麼？

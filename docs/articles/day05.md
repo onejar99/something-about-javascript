@@ -4,7 +4,7 @@
 
 那一個變數什麼時候失效？這個問題的答案就複雜多了。
 
-![](https://ithelp.ithome.com.tw/upload/images/20171223/20107429aYpMCDIU6H.jpg)
+![](https://ithelp.ithome.com.tw/upload/images/20171223/20107429aYpMCDIU6H.jpg)  
 (Source: [網路](https://ithelp.ithome.com.tw/upload/images/20171223/20107429aYpMCDIU6H.jpg))
 
 俗話說：「出來混，遲早要還」，變數們在程式裡走跳，不會每個都長命百歲。
@@ -33,13 +33,13 @@
 每次看到演技精湛的華人演員在好萊塢只能演花瓶或雞肋，就覺得非常感嘆，目前仍是個西方娛樂文化強勢當道的世界。
 
 例如我極欣賞的一部電影「十月圍城」，裡面以不慍不火的沉穩演技而貫穿全片的大腕演員王學圻，在「鋼鐵人 3」裡只能飾演一個沒什麼存在感的醫生角色。(我甚至想不太起來他的橋段……)
-![](https://i.imgur.com/5w180ba.png)
+![](https://i.imgur.com/5w180ba.png)  
 (Source: [網路](http://vpic.video.qq.com/4269112134/y00123ggapv_ori_5.jpg))
 
 而好萊塢巨星往往就有跨界的影響力。
 
 例如今年轟動一時的新聞：好萊塢巨星湯姆克魯斯參加韓國知名綜藝節目 Running Man，雖然不同國情、文化、地域，身為國際巨星的阿湯哥依然仍發揮他的跨界影響力，為 Running Man 創下歷史高收視。
-![](https://i.imgur.com/iFJjqNj.png)
+![](https://i.imgur.com/iFJjqNj.png)  
 (Source: [Youtube](https://www.youtube.com/watch?v=URN9TCmoJDQ))
 
 知名度對明星來說既現實又殘酷，就像作用域之於變數。
@@ -64,7 +64,7 @@
 
 先從最容易理解的 Function Scope 開始。
 
-![](https://i.imgur.com/kLTbvWS.png)
+![](https://i.imgur.com/kLTbvWS.png)  
 (Source: [網路](https://pic.pimg.tw/taker/1191231257_n.jpg))
 
 只要有心，人人都可以是工程師！

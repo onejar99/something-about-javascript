@@ -19,7 +19,7 @@ console.log('Hello');
 一樣都是立刻執行的效果，何必脫褲子放屁，多此一舉，豈非多餘？
 
 
-![](https://i.imgur.com/s7apwXU.png)
+![](https://i.imgur.com/s7apwXU.png)  
 (Source: [Youtube](https://www.youtube.com/watch?v=3iAGnItkHA0))
 
 

@@ -2,7 +2,7 @@
 
 ## 星爺強碰阿湯哥誰會贏？Global Scope vs. Function Scope
 
-![](https://i.imgur.com/KkQVLtA.png)
+![](https://i.imgur.com/KkQVLtA.png)  
 (Source: [網路1](https://puui.qpic.cn/qqvideo_ori/0/k0505psezun_496_280/0) / [網路2](http://globedia.com/imagenes/noticias/2015/9/4/mision-imposible-tom-cruise-corre-horas_1_2287136.jpg))
 
 俗話說天高皇帝遠，十里外的瀑布不如眼前的一杯水。
@@ -46,7 +46,7 @@ Global: n1= Tom Cruise
 
 除了 Global Level 和 Function Level，還有第三種等級：Block Level。
 
-![](https://i.imgur.com/PPHpxvt.jpg)
+![](https://i.imgur.com/PPHpxvt.jpg)  
 (Source: [網路](https://i.ytimg.com/vi/GbBdx9uwe4o/maxresdefault.jpg))
 
 Block Level 就像住在你家隔壁號稱歌神的里長阿伯。
@@ -134,7 +134,7 @@ Global: this.n1= OneJar
 Global: window.n1= OneJar
 ```
 
-![](https://i.imgur.com/Xx9HKan.png)
+![](https://i.imgur.com/Xx9HKan.png)  
 (Source: [網路](https://vignette.wikia.nocookie.net/evchk/images/e/ec/2471912.jpg/revision/latest?cb=20171012125530))
 
 怎麼還是印得出來？而且是個全域變數。
@@ -162,7 +162,7 @@ myFunc(): this.n1= undefined
 myFunc(): window.n1= undefined
 ```
 
-![](https://i.imgur.com/FKU24ly.png)
+![](https://i.imgur.com/FKU24ly.png)  
 (Source: [網路](https://vignette.wikia.nocookie.net/evchk/images/e/ec/2471912.jpg/revision/latest?cb=20171012125530))
 
 還是印得出來，雖然不再是 Global 變數，但看起來是 Function Level Scope，而不是上面所描述的 Block Scope。
@@ -171,7 +171,7 @@ myFunc(): window.n1= undefined
 
 ## 對，傳統 JavaScript 只有 Global 和 Function 兩種等級的作用域
 
-![](https://i.imgur.com/GLkuwLF.png)
+![](https://i.imgur.com/GLkuwLF.png)  
 (Source: [Youtube](https://www.youtube.com/watch?v=o9US59aO71s))
 
 剛剛一大段 Block Scope 都在講辛酸的嗎？

@@ -181,7 +181,7 @@ TypeError: unsupported operand type(s) for +: 'int' and 'str'
 
 下面這張象限圖可以非常清楚看到不同語言各自屬於哪個象限：
 
-![](https://2.bp.blogspot.com/-z6nC9JYj8vY/WsWy73hIO8I/AAAAAAAAT4I/3DhB8aOI2JAQTJumnGOEPq2HtgF_R4s0wCLcBGAs/s400/b0aeb7ffd1667b9162e5329154d43777_hd.jpg)
+![](https://2.bp.blogspot.com/-z6nC9JYj8vY/WsWy73hIO8I/AAAAAAAAT4I/3DhB8aOI2JAQTJumnGOEPq2HtgF_R4s0wCLcBGAs/s400/b0aeb7ffd1667b9162e5329154d43777_hd.jpg)  
 (Source: [動態語言與靜態？直譯與編譯？強型別與弱型別？](https://millenniummeetonce.blogspot.com/2018/04/blog-post_5.html))
 
 

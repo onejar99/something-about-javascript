@@ -10,14 +10,14 @@ Day13 介紹嚴謹模式 (Strict Mode) 的例子時提到，`with` 語法甚至�
 
 對，語法沒意義，你知道了也不能用 (毆)。
 
-![](https://i.imgur.com/OWsV1lC.png)
+![](https://i.imgur.com/OWsV1lC.png)  
 (Source: [豆卡頻道貼圖](https://store.line.me/stickershop/product/1140900/zh-Hant?from=sticker))
 
 這一篇文章的定位確實有點像考古文，瞭解一下 JavaScript 曾有過這個語法。
 
 但想要探討的**不是這個語法怎麼寫，而是它為什麼會被摒棄？**
 
-![](https://i.imgur.com/wWManCT.png)
+![](https://i.imgur.com/wWManCT.png)  
 (Source: [網路圖片](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiDBrJIeJcp-GaSZI42hma6hssYcdsJsTQMnuntRtUAkZT4vljGA))
 
 一個語法或特性被特地發展出來，然後又被淘汰，一定有其缺點或原因。
@@ -46,7 +46,7 @@ with(<object>){
 
 如果光看這種論文式的說明就知道怎麼用，你一定是百年一見的練武奇才。
 
-![](https://i.imgur.com/2ee8sjQ.jpg)
+![](https://i.imgur.com/2ee8sjQ.jpg)  
 (Source: [網路圖片](https://s9.rr.itc.cn/r/wapChange/20164_15_14/a0sisi1715111647352.JPEG))
 
 沒學過如來神掌的人，請跟著導遊繼續往下看實際舉例。

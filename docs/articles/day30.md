@@ -2,7 +2,7 @@
 
 終於來到最後一天尾聲。
 
-![](https://i.imgur.com/e77c9Yp.png)
+![](https://i.imgur.com/e77c9Yp.png)  
 (Source: [白爛貓貼圖](https://store.line.me/stickershop/product/1236945/?ref=Desktop))
 
 ## 擁抱 JavaScript 的未來
@@ -14,7 +14,7 @@
 
 先簡單介紹一下 JavaScript 的背景。還記得 Day 1 文章看到的這位老兄嗎？
 
-![](https://i.imgur.com/mbI00JX.png)
+![](https://i.imgur.com/mbI00JX.png)  
 (Source: [Thanks Brendan for giving us the Javascript : ProgrammerHumor - Reddit](https://www.reddit.com/r/ProgrammerHumor/comments/8srix1/thanks_brendan_for_giving_us_the_javascript/))
 
 這位笑得你心裡發寒的，就是 JavaScript 的發明者 Brendan Eich。
@@ -25,7 +25,7 @@
 
 這個商業上的命名考量也造成歷來許多人的誤解和疑惑：Java 和 JavaScript 有什麼關係？
 
-![](https://i.imgur.com/6qUTmr7.png)
+![](https://i.imgur.com/6qUTmr7.png)  
 (Source: [Wiki - 網景](https://zh.wikipedia.org/wiki/%E7%B6%B2%E6%99%AF)、[Wiki - 昇陽電腦](https://zh.wikipedia.org/wiki/%E6%98%87%E9%99%BD%E9%9B%BB%E8%85%A6))
 
 雖然當年 Netscape 和發明 Java 的 Sun 公司之間有合作關係，使 JavaScript 在語法上受到 Java 影響和啟發。
@@ -37,7 +37,7 @@
 
 1996 年 11 月，Netscape 公司決定將 JavaScript 提交給標準化組織 ECMA，希望這種語言能夠成為國際標準。
 
-![](https://i.imgur.com/Ni37bmp.png)
+![](https://i.imgur.com/Ni37bmp.png)  
 (Source: [Wiki - Ecma國際](https://zh.wikipedia.org/wiki/Ecma%E5%9B%BD%E9%99%85))
 
 ECMA 是一家國際性會員制度的資訊和電信標準組織。1994年之前名為**歐洲電腦製造商協會** (**E**uropean **C**omputer **M**anufacturers **A**ssociation)。1994年之後，因為電腦的國際化，改名 Ecma 國際 (Ecma International)。
@@ -92,7 +92,7 @@ ECMA 中負責制定 ECMAScript 標準的是**第 39 號技術專家委員會** 
 
 一個提案只要能進入 Stage 2，幾乎就代表會被包含進未來的正式標準裡。所以有些工具會提供定案階段前的語法測試，例如[Babel 的線上 REPL](https://babeljs.io/repl)。
 
-![](https://i.imgur.com/hifPNmy.png)
+![](https://i.imgur.com/hifPNmy.png)  
 (Source: [Babel REPL](https://babeljs.io/repl))
 
 TC39 委員會想讓標準的升級成為常規流程，決定**在每年的 6 月份正式發布一次，作為當年度的正式版本**。接下來的時間就在這個版本的基礎上做增修，直到下一年的 6 月，草案自然變成新一年的版本，所以可以預期明年的 6 月就會有 ES10 誕生。
@@ -109,19 +109,19 @@ TC39 委員會想讓標準的升級成為常規流程，決定**在每年的 6 �
 
 標題帶點日文風味，是因為過去 30 天的感覺就像每天被追稿的連載漫畫家。
 
-![](https://i.imgur.com/juNeeAW.png)
+![](https://i.imgur.com/juNeeAW.png)  
 (Source: [網路圖片](https://www.google.com.tw/search?q=%E6%BC%AB%E7%95%AB%E5%AE%B6+%E8%B6%95%E7%A8%BF&rlz=1C1SAVA_enTW523TW523&source=lnms&tbm=isch&sa=X&ved=0ahUKEwin9KaM5s_eAhWBErwKHbsiAM8Q_AUIDigB&biw=1280&bih=882#imgrc=aAmXWBceBZbs2M:))
 
 ### 鐵人賽果然不是浪得虛名
 
-![](https://i.imgur.com/eBaKKLW.png)
+![](https://i.imgur.com/eBaKKLW.png)  
 (Source: [網路圖片](http://nos.netease.com/v163/snapshot/20180108/WaugI2823_cover.jpg))
 
 這次參賽的決定頗為倉促，別說什麼庫存，開賽死線的前 3 天才決定報名、開始規劃主題大綱。報名時我心裡還想：哼，連續 30 天發文、每篇最低門檻才 300 字有什麼難，難道每天連一、兩個小時都撥不出來？
 
 果然事情不是憨人想得這麼簡單。
 
-![](https://i.imgur.com/wqbkXte.png)
+![](https://i.imgur.com/wqbkXte.png)  
 (Source: [網路圖片](http://komicolle.dreamhosters.com/pix/img12426.jpg))
 
 技術文章和小說散文在寫作性質上有別，技術性質的內容本來就比較不易閱讀，需要花更多心力在文句修飾、編排潤飾，避免閱讀起來過於生硬乏味。
@@ -167,12 +167,12 @@ But，就是這個 But。
 
 沒想到這個系列最後只有帶到 ES6 少數特性，原本預計會提到的 ES6 解構賦值、Promises、Classes、Module，甚至 ES8 的 async/await，通通都沒有～
 
-![](https://i.imgur.com/ynA5XVD.png)
+![](https://i.imgur.com/ynA5XVD.png)  
 (Source: [Youtube](https://www.youtube.com/watch?v=HzXLJyHLStc))
 
 還好，就像 Day 1 文章提到，近年 JavaScript 果然是個大明星。放眼望去今年的鐵人賽參賽主題，以 JavaScript 為題的應該可以湊個三五桌麻將，別說 ES5、ES6，甚至不乏 ES8、ES9。
 
-![](https://i.imgur.com/F9nXAet.png)
+![](https://i.imgur.com/F9nXAet.png)  
 (Source: [Youtube](https://www.youtube.com/watch?v=b3op8Vo00Ec))
 
 既然如此，新版本的語法介紹也不差我一個湊熱鬧。與其把一堆觀念以沾醬油的方式介紹過一輪，不如好好做個深度整理。不求主題涵蓋範圍包山包海，但求釐清一些微妙的概念。

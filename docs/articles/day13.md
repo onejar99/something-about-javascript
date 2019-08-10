@@ -219,7 +219,7 @@ myFunc();
 
 ## 嚴謹模式下你還是能……
 
-![](https://i.imgur.com/21mdrMB.jpg)
+![](https://i.imgur.com/21mdrMB.jpg)  
 (Source: [網路](https://puui.qpic.cn/qqvideo_ori/0/l07381q86of_496_280/0))
 
 嚴謹模式下增加了很多規範，目的是讓程式更安全。
@@ -249,7 +249,7 @@ console.log(x);     // 20
 
 事實上可以注意到，著名的 JavaScript 編譯器 Babel 在將新版 ECMAScript 轉譯成 ES5 時，在你還沒打任何程式碼之前，ES5 的那一欄已經預設好一行程式，就是 `use strict`！
 
-![](https://i.imgur.com/3B5o5VH.png)
+![](https://i.imgur.com/3B5o5VH.png)  
 (Source: [Babel REPL](https://babeljs.io/repl))
 
 

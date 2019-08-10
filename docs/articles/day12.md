@@ -4,7 +4,7 @@ Day11 的文章介紹 JavaScript 中的嚴謹模式 (Strict Mode) 是什麼、�
 
 嚴謹模式 (Strict Mode) 就像 JavaScript 中的「還我漂亮拳」，能夠讓原本不夠嚴謹、造成混亂的語法，變得更安全、乾淨。
 
-![](https://i.imgur.com/WqfhHab.jpg)
+![](https://i.imgur.com/WqfhHab.jpg)  
 (Source: [網路](https://scontent-ort2-1.cdninstagram.com/vp/9bcf3c4d8ed64dd8b5b9ea403dc62d16/5C630A48/t51.2885-15/e35/s480x480/31384596_175641703266886_1657800957565599744_n.jpg))
 
 「不允許使用未宣告的變數」只是嚴謹模式最簡單的應用，事實上嚴謹模式發揮的地方非常多。

@@ -307,7 +307,7 @@ console.log( hero.act2(sayHi) );  // Hi I am Global
 
 這兩篇文章不厭其煩的將一些情境的範例用 Arrow Function 走過一遍，十分囉嗦。
 
-![](https://i.imgur.com/mxGyGFc.png)
+![](https://i.imgur.com/mxGyGFc.png)  
 (Source: [Youtube](https://www.youtube.com/watch?v=wPxXT0nB36I))
 
 其實目的是希望**能不犯了「想當然耳」的毛病**。

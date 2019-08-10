@@ -17,7 +17,7 @@
 
 JavaScript 的 `this` 一下是物件本身，一下是 Global 物件，一下是 `undefined`，一下還可以是任何物件！
 
-![](https://i.imgur.com/RqTPySJ.png)
+![](https://i.imgur.com/RqTPySJ.png)  
 (Source: [網路圖片](https://pic.pimg.tw/kenmy/1380581708-2393697494_n.jpg))
 
 `this` 是程式語言中很重要的部分，誤判 `this` 所代表的物件會直接對程式的運作造成影響。所以本篇文章就來好好弄清楚 JavaScript 的 `this`。
@@ -62,7 +62,7 @@ JavaScript 的語彙定義上沒有像類別那樣完整明確的物件界線，
 * 全域執行環境 (Global Context) 下和函數執行環境 (Function Context) 下不同。
 * 在嚴謹模式 (Strict Mode) 與一般模式下也可能有所不同。
 
-![](https://i.imgur.com/lcqSy7g.png)
+![](https://i.imgur.com/lcqSy7g.png)  
 (Source: [網路圖片](http://colorfulblanche.com/wp-content/uploads/2018/01/%E6%8A%95%E5%BD%B1%E7%89%8713-1024x576.png))
 
 理論描述太抽象，接下來會試圖用各種實際的例子來探討 `this` 的運作。

@@ -14,7 +14,7 @@ console.log(x);
 Uncaught ReferenceError: x is not defined
 ```
 
-![](https://i.imgur.com/zhRQGS8.png)
+![](https://i.imgur.com/zhRQGS8.png)  
 (Source: [白爛貓貼圖](https://store.line.me/stickershop/product/1265214/?ref=Desktop))
 
 因為使用了根本不存在的變數 `x`，執行時拋出錯誤，非常合理。
@@ -28,7 +28,7 @@ var x = "OneJar";
 
 你程式老師在你後面，他非常火。
 
-![](https://i.imgur.com/8IUOmvs.png)
+![](https://i.imgur.com/8IUOmvs.png)  
 (Source: [Youtube](https://www.youtube.com/watch?v=RrzNpZcoaPs))
 
 變數宣告當然是要在使用之前，補在後面有什麼用，一樣會先執行到拋錯的那一行。
@@ -39,14 +39,14 @@ var x = "OneJar";
 undefined
 ```
 
-![](https://i.imgur.com/IAgBBAs.png)
+![](https://i.imgur.com/IAgBBAs.png)  
 (Source: [白爛貓貼圖](https://store.line.me/stickershop/product/4337259/?ref=Desktop))
 
 Why？為什麼宣告在使用之後不會拋錯？而且印了個莫名的答案。
 
 我知道了。
 
-![](https://i.imgur.com/Lb9iqZ9.jpg)
+![](https://i.imgur.com/Lb9iqZ9.jpg)  
 (Source: [網路](http://farm9.static.flickr.com/8716/28345276131_48339620bf_o.jpg))
 
 喂，冷靜。

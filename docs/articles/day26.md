@@ -1,6 +1,6 @@
 # 你不可不知的 JavaScript 二三事#Day26：程式界的哈姆雷特 —— Pass by value, or Pass by reference？
 
-![](https://i.imgur.com/3jXfT1v.png)
+![](https://i.imgur.com/3jXfT1v.png)  
 (圖片素材來源: [網路圖片](http://cc2e7e3e75a47f276cc1-88ad9aa911bb90089a975b5bf54af6e6.r50.cf2.rackcdn.com/uploaded/l/0e7119966_1521467067_lego-hamlet.jpg))
 
 「To be or not to be, that is the question.」
@@ -9,7 +9,7 @@
 
 你知道程式世界裡也有一個萬年經典題嗎？
 
-![](https://i.imgur.com/pmU2gU1.png)
+![](https://i.imgur.com/pmU2gU1.png)  
 (圖片素材來源: [網路圖片](https://i.ebayimg.com/images/i/400819020350-0-1/s-l1000.jpg))
 
 「Pass by value, or pass by reference, that is the question.」
@@ -232,7 +232,7 @@ console.log(person);
 {name: "OneJar"}
 ```
 
-![](https://i.imgur.com/Pi6huxi.png)
+![](https://i.imgur.com/Pi6huxi.png)  
 (Source: [網路圖片](https://img.appledaily.com.tw/images/twapple/640pix/20110919/_Other/826_altek01.jpg))
 
 怎麼好像和前面說好的不一樣？
@@ -307,7 +307,7 @@ console.log(person3);  // {money: 333}
 
 如此一來，稱為 Pass by reference 也不對，稱為 Pass by value 也不對，於是就出現了 **Pass by sharing** 的說法。
 
-![](https://i.imgur.com/Ek5XCoa.jpg)
+![](https://i.imgur.com/Ek5XCoa.jpg)  
 (Source: [網路圖片](https://www.google.com.tw/search?q=%E4%B8%83%E9%BE%8D%E7%8F%A0+%E8%9E%8D%E5%90%88%E8%A1%93&rlz=1C1GCEU_zh-TWTW821&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjU-rqW2cbeAhWDurwKHfIgDYwQ_AUIEygB&biw=1745&bih=853&dpr=1.1#imgrc=3fvdxKl6L9GHlM:))
 
 **不少人將 JavaScript 的變數內容傳遞方式，稱為 Pass by sharing**：
@@ -329,7 +329,7 @@ console.log(person3);  // {money: 333}
 
 電腦在執行程式的過程，是將資料暫存在記憶體裡，以供運算過程使用。
 
-![](https://i.imgur.com/1n19mQ2.jpg)
+![](https://i.imgur.com/1n19mQ2.jpg)  
 (Source: [網路圖片](http://www.adata.com/upload/products/list/226.jpg))
 
 對電腦來說，記憶體每一個空間都有對應的位址，就像住址編號一樣。
@@ -349,7 +349,7 @@ console.log(0x108);
 
 應該會有 87% 的程式開發者想要逃坑。
 
-![](https://i.imgur.com/HFk2nx0.png)
+![](https://i.imgur.com/HFk2nx0.png)  
 (Source: 進擊的巨人)
 
 還好，一個偉大的發明拯救了程式苦海中的眾生：**變數**。
@@ -476,7 +476,7 @@ var obj = { name: "OneJar" };
 
 **技術名詞是為了方便溝通，不是為了吵架**。
 
-![](https://i.imgur.com/CTZSbHS.jpg)
+![](https://i.imgur.com/CTZSbHS.jpg)  
 (Source: [網路圖片](https://0.share.photo.xuite.net/jingyueanfj/10e8827/8119399/320526272_m.jpg))
 
 技術名詞的概念統一定義很重要，因為能讓大家在一個共通的語彙概念上溝通或學習。

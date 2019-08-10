@@ -8,7 +8,7 @@ JavaScript 在語法的限制上很寬容，這是它容易上手的優點，不
 
 Bug 就是程式裡的恐怖份子。
 
-![](https://i.imgur.com/IGsOxho.png)
+![](https://i.imgur.com/IGsOxho.png)  
 (Source: [網路](https://cw1.tw/CW/images/article/C1465977854096.jpg))
 
 JavaScript 語法限制寬鬆，也是它容易產生 Bug 的原罪。

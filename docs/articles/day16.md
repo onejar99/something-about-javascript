@@ -198,7 +198,7 @@ console.log(introCaptainAmerica());  // "Steven Rogers"
 
 #### 4.3. Binding 就像山盟海誓，只有第一次有效
 
-![](https://i.imgur.com/v6ScbGj.png)
+![](https://i.imgur.com/v6ScbGj.png)  
 (Source: [網路圖片](https://www.liidda.com.tw/humanity-feelings-images/pic01.jpg))
 
 需要注意的是，**對一個函數物件來說，只有第一次的 Binding 動作有效**。

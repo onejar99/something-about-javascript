@@ -9,7 +9,7 @@
 
 今天就來介紹 ES6 的嬌客—— `let` 和 `const`，看他們究竟有什麼本事，可以改善 `var` 做不到的事。
 
-![](https://i.imgur.com/uNKdWPM.png)
+![](https://i.imgur.com/uNKdWPM.png)  
 (Source: [網路](http://3.bp.blogspot.com/_JD7pHOAgHko/SwlLKATP-OI/AAAAAAAACN8/XfqfFC--NMw/s1600/%E5%A6%82%E4%BE%86%E7%A5%9E%E6%8E%8C.jpg))
 
 ## let
@@ -31,7 +31,7 @@ let
 n = 'OneJar'
 ```
 
-![](https://i.imgur.com/sw3gIzz.jpg)
+![](https://i.imgur.com/sw3gIzz.jpg)  
 (Source: [網路](http://img.ltn.com.tw/Upload/liveNews/BigPic/600_phppqUcwz.jpg))
 
 就是這麼簡單 (昏)。
@@ -47,7 +47,7 @@ n = 'OneJar'
 
 舞棍阿伯終於能夠在 JavaScript 裡正式登場。
 
-![](https://i.imgur.com/PPHpxvt.jpg)
+![](https://i.imgur.com/PPHpxvt.jpg)  
 (Source: [網路](https://i.ytimg.com/vi/GbBdx9uwe4o/maxresdefault.jpg))
 
 Day5、Day6 的文章介紹到何謂 Block Scope，而傳統 `var` 不支援 Block Scope 的效果。

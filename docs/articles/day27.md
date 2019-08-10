@@ -1,6 +1,6 @@
 # 你不可不知的 JavaScript 二三事#Day27：別管變數 Pass by Whatever，尋找容易理解的銀色子彈 (Silver Bullet)
 
-![](https://i.imgur.com/EmnBEyG.jpg)
+![](https://i.imgur.com/EmnBEyG.jpg)  
 (Source: [網路圖片](https://www.nurtur-health.eu/WebRoot/StoreNL/Shops/62902058/50AB/33F7/232B/F188/F3CD/C0A8/28BE/BCA0/SBPacks_ml.JPG))
 
 
@@ -34,7 +34,7 @@
 
 尤其軟體開發要記的知識已經太多，身為一個金魚腦開發者，必須盡量用「理解」取代「硬記」，否則即使短時間內記得，也容易隨著時間變得印象模糊，更別提「硬記」這件事本身有多累。
 
-![](https://i.imgur.com/j2x63SC.png)
+![](https://i.imgur.com/j2x63SC.png)  
 (Source: [網路圖片](Shttps://scontent-atl3-1.cdninstagram.com/vp/eb29f41249b13e02315e33b79c683a50/5C2829EA/t51.2885-15/e35/40268872_1509711539173717_664853700400906240_n.jpg))
 
 **對於情境千變萬化的議題，我偏好試著去找出一個簡單、容易掌握、而且能夠自圓其說的模式，無論遇上任何情境都能用同一個模式推導出正確行為，就像一顆銀色子彈**。
@@ -164,7 +164,7 @@ var person = {name: "OneJar", money: 250};
 
 因為這個匿名盒子和變數 `person` 之間有著引用關係 (Reference)，這個關係就像一條隱形的紅線，牽起兩個盒子之間親密的關係。
 
-![](https://i.imgur.com/TeE6WGd.png)
+![](https://i.imgur.com/TeE6WGd.png)  
 (Source: [網路圖片](https://www.google.com.tw/search?rlz=1C1SAVA_enTW523TW523&biw=1280&bih=882&tbm=isch&sa=1&ei=OP7lW9nZNsT08QW346nwDA&q=%E6%9F%AF%E5%8D%97+%E7%B4%85%E7%B7%9A&oq=%E6%9F%AF%E5%8D%97+%E7%B4%85%E7%B7%9A&gs_l=img.3...5065461.5068983.0.5069522.20.18.2.0.0.0.126.1122.14j3.17.0....0...1c.1j4.64.img..2.10.418...0j0i24k1.0.eiv3m89iKIc#imgrc=zSz_-sm0CaTzxM:))
 
 透過變數 `person`，還有機會存取到 `0x093` 盒子的資料，因此 `0x093` 盒子還不會被回收。
@@ -193,7 +193,7 @@ person = {name: "John"};
 
 **反之，如果不存在被需要的引用關係 (Reference)，匿名盒子就視同被消滅**。
 
-![](https://i.imgur.com/iiA5FDt.jpg)
+![](https://i.imgur.com/iiA5FDt.jpg)  
 (Source: [網路圖片](https://pic.pimg.tw/locking1218/1377625199-1383853375.jpg))
 
 
