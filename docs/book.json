@@ -1,4 +1,11 @@
 {
-    "plugins": [  "back-to-top-button", "intopic-toc" ]
+    "plugins": [  "back-to-top-button", "intopic-toc" ],
+    "pluginsConfig": {
+      "intopic-toc": {
+        "selector": ".markdown-section h2, .markdown-section h3",
+        "visible": true,
+        "label": "Table of Contents"
+      }
+    }
 }
   
