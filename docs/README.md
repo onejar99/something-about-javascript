@@ -1,6 +1,9 @@
 # 2019 iT 邦幫忙鐵人賽：你不可不知的 JavaScript 二三事
 
-> [iT 邦幫忙傳送門](https://ithelp.ithome.com.tw/users/20112483/ironman/2016)
+## 關於本書
+
+* [2019 iT 邦幫忙鐵人賽傳送門](https://ithelp.ithome.com.tw/users/20112483/ironman/2016)
+* 如果發現任何理解錯誤或筆誤，歡迎[告知指正](https://github.com/onejar99/something-about-javascript/issues)~
 
 ## 文章目錄
 
@@ -34,6 +37,3 @@
 * Day 28：[閉包 (Closures)](./articles/day28.md)
 * Day 29：[閉包 (Closures) 進階打怪實戰](./articles/day29.md)
 * Day 30：[ES10 醞釀中 —— 擁抱 JS の 未來](./articles/day30.md)
-
-
-如果發現任何理解錯誤或筆誤，歡迎告知指正~
