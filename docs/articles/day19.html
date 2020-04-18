@@ -17,11 +17,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-etoc/plugin.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -545,20 +541,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day19&#xFF1A;&#x51FD;&#x6578;&#x5B9A;&#x7FA9;-function-definition-&#x7684;-100-&#x7A2E;&#x5BEB;&#x6CD5;">&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684; JavaScript &#x4E8C;&#x4E09;&#x4E8B;#Day19&#xFF1A;&#x51FD;&#x6578;&#x5B9A;&#x7FA9; (Function Definition) &#x7684; 100 &#x7A2E;&#x5BEB;&#x6CD5;</h1>
-<!-- toc --><div id="toc" class="toc">
-
-<ul>
-<li><a href="#&#x5BA3;&#x544A;&#x51FD;&#x6578;&#x5728;&#x8A9E;&#x6CD5;&#x4E0A;&#x6709;-4-&#x7A2E;&#x65B9;&#x5F0F;">&#x5BA3;&#x544A;&#x51FD;&#x6578;&#x5728;&#x8A9E;&#x6CD5;&#x4E0A;&#x6709; 4 &#x7A2E;&#x65B9;&#x5F0F;</a></li>
-<li><a href="#&#x5BA3;&#x544A;&#x5F0F;-function-declarations">&#x5BA3;&#x544A;&#x5F0F; (Function Declarations)</a></li>
-<li><a href="#&#x533F;&#x540D;&#x8868;&#x9054;&#x5F0F;-function-expressions-wo-function-name">&#x533F;&#x540D;&#x8868;&#x9054;&#x5F0F; (Function Expressions w/o Function Name)</a></li>
-<li><a href="#&#x5177;&#x540D;&#x8868;&#x9054;&#x5F0F;-function-expressions-w-function-name">&#x5177;&#x540D;&#x8868;&#x9054;&#x5F0F; (Function Expressions w/ Function Name)</a></li>
-<li><a href="#&#x5EFA;&#x69CB;&#x5B50;&#x5F0F;-function-constructor">&#x5EFA;&#x69CB;&#x5B50;&#x5F0F; (Function Constructor)</a></li>
-<li><a href="#&#x7E3D;&#x7D50;">&#x7E3D;&#x7D50;</a></li>
-<li><a href="#references">References</a></li>
-</ul>
-
-</div><!-- tocstop -->
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day19&#xFF1A;&#x51FD;&#x6578;&#x5B9A;&#x7FA9;-function-definition-&#x7684;-100-&#x7A2E;&#x5BEB;&#x6CD5;"><b> </b>&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684; JavaScript &#x4E8C;&#x4E09;&#x4E8B;#Day19&#xFF1A;&#x51FD;&#x6578;&#x5B9A;&#x7FA9; (Function Definition) &#x7684; 100 &#x7A2E;&#x5BEB;&#x6CD5;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5BA3;&#x544A;&#x51FD;&#x6578;&#x5728;&#x8A9E;&#x6CD5;&#x4E0A;&#x6709;-4-&#x7A2E;&#x65B9;&#x5F0F;"><b>1. </b>&#x5BA3;&#x544A;&#x51FD;&#x6578;&#x5728;&#x8A9E;&#x6CD5;&#x4E0A;&#x6709; 4 &#x7A2E;&#x65B9;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#&#x5BA3;&#x544A;&#x5F0F;-function-declarations"><b>2. </b>&#x5BA3;&#x544A;&#x5F0F; (Function Declarations)</a></li><li><span class="title-icon "></span><a href="#&#x533F;&#x540D;&#x8868;&#x9054;&#x5F0F;-function-expressions-wo-function-name"><b>3. </b>&#x533F;&#x540D;&#x8868;&#x9054;&#x5F0F; (Function Expressions w/o Function Name)</a></li><li><span class="title-icon "></span><a href="#&#x5177;&#x540D;&#x8868;&#x9054;&#x5F0F;-function-expressions-w-function-name"><b>4. </b>&#x5177;&#x540D;&#x8868;&#x9054;&#x5F0F; (Function Expressions w/ Function Name)</a></li><li><span class="title-icon "></span><a href="#&#x5EFA;&#x69CB;&#x5B50;&#x5F0F;-function-constructor"><b>5. </b>&#x5EFA;&#x69CB;&#x5B50;&#x5F0F; (Function Constructor)</a></li><li><span class="title-icon "></span><a href="#&#x7E3D;&#x7D50;"><b>6. </b>&#x7E3D;&#x7D50;</a></li><li><span class="title-icon "></span><a href="#references"><b>7. </b>References</a></li></ul></ul></div><a href="#&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day19&#xFF1A;&#x51FD;&#x6578;&#x5B9A;&#x7FA9;-function-definition-&#x7684;-100-&#x7A2E;&#x5BEB;&#x6CD5;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day19&#xFF1A;&#x51FD;&#x6578;&#x5B9A;&#x7FA9;-function-definition-&#x7684;-100-&#x7A2E;&#x5BEB;&#x6CD5;"><a name="&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day19&#xFF1A;&#x51FD;&#x6578;&#x5B9A;&#x7FA9;-function-definition-&#x7684;-100-&#x7A2E;&#x5BEB;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day19&#xFF1A;&#x51FD;&#x6578;&#x5B9A;&#x7FA9;-function-definition-&#x7684;-100-&#x7A2E;&#x5BEB;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684; JavaScript &#x4E8C;&#x4E09;&#x4E8B;#Day19&#xFF1A;&#x51FD;&#x6578;&#x5B9A;&#x7FA9; (Function Definition) &#x7684; 100 &#x7A2E;&#x5BEB;&#x6CD5;</h1>
 <p>&#x6A19;&#x984C;&#x53EA;&#x662F;&#x5687;&#x5687;&#x4F60;&#x800C;&#x5DF2; (&#x6BC6;)&#x3002;</p>
 <p><img src="https://thumbs.gfycat.com/ScrawnyDisloyalHeifer-size_restricted.gif" alt=""><br>(Source: <a href="https://thumbs.gfycat.com/ScrawnyDisloyalHeifer-size_restricted.gif" target="_blank">&#x7DB2;&#x8DEF;&#x5716;&#x7247;</a>)</p>
 <p>&#x51FD;&#x6578; (Function) &#x662F;&#x7A0B;&#x5F0F;&#x7DE8;&#x5BEB;&#x975E;&#x5E38;&#x91CD;&#x8981;&#x7684;&#x4E00;&#x74B0;&#x3002;</p>
@@ -566,7 +549,7 @@
 <p>&#x4F46; JavaScript &#x88E1;&#x5B9A;&#x7FA9;&#x51FD;&#x6578;&#x7684;&#x8A9E;&#x6CD5;&#x82B1;&#x6A23;&#x53EF;&#x591A;&#x4E86;&#xFF0C;&#x4E0D;&#x540C;&#x5BEB;&#x6CD5;&#x6240;&#x5B9A;&#x7FA9;&#x51FA;&#x4F86;&#x7684;&#x51FD;&#x6578;&#x7269;&#x4EF6; (Function Object) &#x4E5F;&#x5404;&#x6709;&#x4E9B;&#x5FAE;&#x5DEE;&#x7570;&#xFF0C;&#x53EB;&#x4EBA;&#x773C;&#x82B1;&#x64A9;&#x4E82;&#x3002;</p>
 <p>&#x5982;&#x679C;&#x6C92;&#x6709;&#x7279;&#x5225;&#x9700;&#x6C42;&#xFF0C;&#x592A;&#x591A;&#x4E0D;&#x540C;&#x5BEB;&#x6CD5;&#x53EA;&#x6703;&#x9020;&#x6210;&#x958B;&#x767C;&#x5718;&#x968A; Coding Convention &#x4E00;&#x81F4;&#x6027;&#x7684;&#x56F0;&#x64FE;&#xFF0C;&#x751A;&#x81F3;&#x9020;&#x6210;&#x4E0D;&#x5FC5;&#x8981;&#x7684; Bug &#x98A8;&#x96AA;&#x3002;</p>
 <p>&#x672C;&#x7BC7;&#x6587;&#x7AE0;&#x8A66;&#x8457;&#x53BB;&#x7D71;&#x6574;&#x5DF2;&#x77E5;&#x7684; JavaScript &#x51FD;&#x6578;&#x5BEB;&#x6CD5;&#xFF0C;&#x6BD4;&#x8F03;&#x5F7C;&#x6B64;&#x5DEE;&#x7570;&#x3002;</p>
-<h2 id="&#x5BA3;&#x544A;&#x51FD;&#x6578;&#x5728;&#x8A9E;&#x6CD5;&#x4E0A;&#x6709;-4-&#x7A2E;&#x65B9;&#x5F0F;">&#x5BA3;&#x544A;&#x51FD;&#x6578;&#x5728;&#x8A9E;&#x6CD5;&#x4E0A;&#x6709; 4 &#x7A2E;&#x65B9;&#x5F0F;</h2>
+<h2 id="&#x5BA3;&#x544A;&#x51FD;&#x6578;&#x5728;&#x8A9E;&#x6CD5;&#x4E0A;&#x6709;-4-&#x7A2E;&#x65B9;&#x5F0F;"><a name="&#x5BA3;&#x544A;&#x51FD;&#x6578;&#x5728;&#x8A9E;&#x6CD5;&#x4E0A;&#x6709;-4-&#x7A2E;&#x65B9;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x5BA3;&#x544A;&#x51FD;&#x6578;&#x5728;&#x8A9E;&#x6CD5;&#x4E0A;&#x6709;-4-&#x7A2E;&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x5BA3;&#x544A;&#x51FD;&#x6578;&#x5728;&#x8A9E;&#x6CD5;&#x4E0A;&#x6709; 4 &#x7A2E;&#x65B9;&#x5F0F;</h2>
 <ol>
 <li>&#x5BA3;&#x544A;&#x5F0F; (Function Declarations)</li>
 <li>&#x533F;&#x540D;&#x8868;&#x9054;&#x5F0F; (Function Expressions w/o Function Name)</li>
@@ -576,7 +559,7 @@
 <blockquote>
 <p>ES6 &#x591A;&#x4E86;&#x7B2C; 5 &#x7A2E; &#x2014;&#x2014; Arrow Function&#x3002;</p>
 </blockquote>
-<h2 id="&#x5BA3;&#x544A;&#x5F0F;-function-declarations">&#x5BA3;&#x544A;&#x5F0F; (Function Declarations)</h2>
+<h2 id="&#x5BA3;&#x544A;&#x5F0F;-function-declarations"><a name="&#x5BA3;&#x544A;&#x5F0F;-function-declarations" class="anchor-navigation-ex-anchor" href="#&#x5BA3;&#x544A;&#x5F0F;-function-declarations"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x5BA3;&#x544A;&#x5F0F; (Function Declarations)</h2>
 <p>&#x7279;&#x9EDE;&#xFF1A;</p>
 <ul>
 <li>&#x6700;&#x666E;&#x904D;&#x6A19;&#x6E96;&#x7684;&#x5BEB;&#x6CD5;&#x3002;</li>
@@ -598,7 +581,7 @@
 </code></pre><blockquote>
 <p>&#x95DC;&#x65BC; Hoisting &#x53EF;&#x53C3;&#x8003; Day10 &#x6587;&#x7AE0;&#x3002;</p>
 </blockquote>
-<h2 id="&#x533F;&#x540D;&#x8868;&#x9054;&#x5F0F;-function-expressions-wo-function-name">&#x533F;&#x540D;&#x8868;&#x9054;&#x5F0F; (Function Expressions w/o Function Name)</h2>
+<h2 id="&#x533F;&#x540D;&#x8868;&#x9054;&#x5F0F;-function-expressions-wo-function-name"><a name="&#x533F;&#x540D;&#x8868;&#x9054;&#x5F0F;-function-expressions-wo-function-name" class="anchor-navigation-ex-anchor" href="#&#x533F;&#x540D;&#x8868;&#x9054;&#x5F0F;-function-expressions-wo-function-name"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x533F;&#x540D;&#x8868;&#x9054;&#x5F0F; (Function Expressions w/o Function Name)</h2>
 <p>&#x7279;&#x9EDE;&#xFF1A;</p>
 <ul>
 <li>&#x5148;&#x5BA3;&#x544A;&#x4E00;&#x500B;&#x8B8A;&#x6578;&#xFF0C;&#x518D;&#x5B9A;&#x7FA9;&#x4E00;&#x500B;&#x51FD;&#x6578;&#x5167;&#x5BB9;&#x653E;&#x5230;&#x8A72;&#x8B8A;&#x6578;&#x88E1;&#x3002;</li>
@@ -622,7 +605,7 @@
     return a + b;
 }
 9
-</code></pre><h2 id="&#x5177;&#x540D;&#x8868;&#x9054;&#x5F0F;-function-expressions-w-function-name">&#x5177;&#x540D;&#x8868;&#x9054;&#x5F0F; (Function Expressions w/ Function Name)</h2>
+</code></pre><h2 id="&#x5177;&#x540D;&#x8868;&#x9054;&#x5F0F;-function-expressions-w-function-name"><a name="&#x5177;&#x540D;&#x8868;&#x9054;&#x5F0F;-function-expressions-w-function-name" class="anchor-navigation-ex-anchor" href="#&#x5177;&#x540D;&#x8868;&#x9054;&#x5F0F;-function-expressions-w-function-name"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x5177;&#x540D;&#x8868;&#x9054;&#x5F0F; (Function Expressions w/ Function Name)</h2>
 <p>&#x7279;&#x9EDE;&#xFF1A;</p>
 <ul>
 <li>&#x548C;&#x300C;&#x533F;&#x540D;&#x8868;&#x9054;&#x5F0F;&#x300D;&#x5341;&#x5206;&#x76F8;&#x4F3C;&#xFF0C;&#x53EA;&#x5DEE;&#x5728;&#x5B9A;&#x7FA9;&#x51FD;&#x6578;&#x5167;&#x5BB9;&#x6642;&#xFF0C;&#x6709;&#x7D66;&#x4E88;&#x4E00;&#x500B;&#x51FD;&#x6578;&#x540D;&#x7A31;&#x3002;</li>
@@ -653,7 +636,7 @@
     return a + b;
 }
 9
-</code></pre><h2 id="&#x5EFA;&#x69CB;&#x5B50;&#x5F0F;-function-constructor">&#x5EFA;&#x69CB;&#x5B50;&#x5F0F; (Function Constructor)</h2>
+</code></pre><h2 id="&#x5EFA;&#x69CB;&#x5B50;&#x5F0F;-function-constructor"><a name="&#x5EFA;&#x69CB;&#x5B50;&#x5F0F;-function-constructor" class="anchor-navigation-ex-anchor" href="#&#x5EFA;&#x69CB;&#x5B50;&#x5F0F;-function-constructor"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x5EFA;&#x69CB;&#x5B50;&#x5F0F; (Function Constructor)</h2>
 <p>W3Schools:</p>
 <blockquote>
 <p>With a built-in JavaScript function constructor called <code>Function()</code>&#x3002;</p>
@@ -679,7 +662,7 @@
 return a + b
 }
 9
-</code></pre><h2 id="&#x7E3D;&#x7D50;">&#x7E3D;&#x7D50;</h2>
+</code></pre><h2 id="&#x7E3D;&#x7D50;"><a name="&#x7E3D;&#x7D50;" class="anchor-navigation-ex-anchor" href="#&#x7E3D;&#x7D50;"><i class="fa fa-link" aria-hidden="true"></i></a>6. &#x7E3D;&#x7D50;</h2>
 <p>&#x51FD;&#x6578;&#x7684;&#x5BA3;&#x544A;&#x548C;&#x5B9A;&#x7FA9;&#x5728;&#x8A9E;&#x6CD5;&#x4E0A;&#x6709; 4 &#x7A2E;&#x5BEB;&#x6CD5;&#xFF1A;</p>
 <table>
 <thead>
@@ -721,7 +704,7 @@ return a + b
 <p>&#x5176;&#x4E2D; 1 &#x548C; 2 &#x662F;&#x6700;&#x666E;&#x904D;&#x7684;&#x5BEB;&#x6CD5;&#xFF1B;3 &#x548C; 4 &#x5982;&#x679C;&#x6C92;&#x6709;&#x7279;&#x6B8A;&#x9700;&#x6C42;&#xFF0C;&#x6C92;&#x5FC5;&#x8981;&#x4F7F;&#x7528;&#x3002;</p>
 <p>ES6 &#x591A;&#x4E86;&#x7B2C; 5 &#x7A2E;&#x51FD;&#x6578;&#x5BEB;&#x6CD5;&#xFF1A;<strong>Arrow Function</strong>&#x3002;</p>
 <p>&#x7531;&#x65BC; <strong>Arrow Function</strong> &#x4E0D;&#x53EA;&#x662F;&#x8A9E;&#x6CD5;&#x6709;&#x6240;&#x4E0D;&#x540C;&#xFF0C;&#x9084;&#x589E;&#x52A0;&#x4E86;&#x4E0D;&#x5C11;&#x4F7F;&#x7528;&#x4E0A;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x660E;&#x5929;&#x7684;&#x6587;&#x7AE0;&#x5C07;&#x53E6;&#x5916;&#x5C08;&#x9580;&#x5C0D; Arrow Function &#x4F5C;&#x4ECB;&#x7D39;&#x3002;</p>
-<h2 id="references">References</h2>
+<h2 id="references"><a name="references" class="anchor-navigation-ex-anchor" href="#references"><i class="fa fa-link" aria-hidden="true"></i></a>7. References</h2>
 <ul>
 <li><a href="https://www.w3schools.com/js/js_functions.asp" target="_blank">W3Schools - JavaScript Functions</a></li>
 <li><a href="http://sweeteason.pixnet.net/blog/post/40371736" target="_blank">Javascript &#x958B;&#x767C;&#x5B78;&#x7FD2;&#x5FC3;&#x5F97; - &#x51FD;&#x6578;&#x7684;&#x591A;&#x7A2E;&#x5BEB;&#x6CD5;&#x8207;&#x61C9;&#x7528;&#x9650;&#x5236;</a></li>
@@ -769,7 +752,7 @@ return a + b
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Day 19：函數定義 (Function Definition) 的 100 種寫法","level":"1.20","depth":1,"next":{"title":"Day 20：ES6 的箭頭函數 (Arrow Functions)","level":"1.21","depth":1,"path":"articles/day20.md","ref":"./articles/day20.md","articles":[]},"previous":{"title":"Day 18：this 關鍵字 (4)","level":"1.19","depth":1,"path":"articles/day18.md","ref":"./articles/day18.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","etoc","edit-link","ga"],"pluginsConfig":{"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"ga":{"configuration":"auto","token":"UA-163310308-2"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day19.md","mtime":"2020-04-18T18:25:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T19:44:21.929Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Day 19：函數定義 (Function Definition) 的 100 種寫法","level":"1.20","depth":1,"next":{"title":"Day 20：ES6 的箭頭函數 (Arrow Functions)","level":"1.21","depth":1,"path":"articles/day20.md","ref":"./articles/day20.md","articles":[]},"previous":{"title":"Day 18：this 關鍵字 (4)","level":"1.19","depth":1,"path":"articles/day18.md","ref":"./articles/day18.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchor-navigation-ex","edit-link","copy-code-button","ga"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"night","family":"sans"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-163310308-2"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day19.md","mtime":"2020-04-18T18:25:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T21:32:09.107Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -779,15 +762,11 @@ return a + b
     <script src="../gitbook/theme.js"></script>
     
         
-        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-etoc/plugin.js"></script>
-        
-    
-        
         <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
         
     
         

@@ -17,11 +17,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-etoc/plugin.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -545,31 +541,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day25&#xFF1A;&#x4E0D;&#x662F;&#x591A;&#x4E86;&#x584A;&#x9B5A;-&#x2014;&#x2014;-&#x7ACB;&#x5373;&#x51FD;&#x6578;&#x7684;&#x61C9;&#x7528;&#x6574;&#x7406;">&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684; JavaScript &#x4E8C;&#x4E09;&#x4E8B;#Day25&#xFF1A;&#x4E0D;&#x662F;&#x591A;&#x4E86;&#x584A;&#x9B5A; &#x2014;&#x2014; &#x7ACB;&#x5373;&#x51FD;&#x6578;&#x7684;&#x61C9;&#x7528;&#x6574;&#x7406;</h1>
-<!-- toc --><div id="toc" class="toc">
-
-<ul>
-<li><a href="#&#x7ACB;&#x5373;&#x51FD;&#x6578;&#x662F;&#x812B;&#x8932;&#x5B50;&#x653E;&#x5C41;&#xFF1F;">&#x7ACB;&#x5373;&#x51FD;&#x6578;&#x662F;&#x812B;&#x8932;&#x5B50;&#x653E;&#x5C41;&#xFF1F;</a><ul>
-<li><a href="#&#x7528;&#x9014;-1&#xFF1A;&#x5C01;&#x88DD;&#x4E00;&#x6B21;&#x6027;&#x7684;-local-scope">&#x7528;&#x9014; 1&#xFF1A;&#x5C01;&#x88DD;&#x4E00;&#x6B21;&#x6027;&#x7684; Local Scope</a><ul>
-<li><a href="#before">Before:</a></li>
-<li><a href="#after">After:</a></li>
-</ul>
-</li>
-<li><a href="#&#x7528;&#x9014;-2&#xFF1A;&#x70BA;&#x7269;&#x4EF6;&#x5BE6;&#x5B57;-object-literals-&#x7684;&#x5C6C;&#x6027;&#x521D;&#x59CB;&#x503C;&#x7522;&#x751F;&#x52D5;&#x614B;&#x503C;">&#x7528;&#x9014; 2&#xFF1A;&#x70BA;&#x7269;&#x4EF6;&#x5BE6;&#x5B57; (Object Literals) &#x7684;&#x5C6C;&#x6027;&#x521D;&#x59CB;&#x503C;&#x7522;&#x751F;&#x52D5;&#x614B;&#x503C;</a><ul>
-<li><a href="#before-1">Before:</a></li>
-<li><a href="#after-1">After:</a></li>
-</ul>
-</li>
-<li><a href="#&#x7528;&#x9014;-3&#xFF1A;&#x5C07;&#x5B57;&#x4E32;&#x5167;&#x5BB9;&#x8F49;&#x6210;&#x51FD;&#x6578;&#x7269;&#x4EF6;">&#x7528;&#x9014; 3&#xFF1A;&#x5C07;&#x5B57;&#x4E32;&#x5167;&#x5BB9;&#x8F49;&#x6210;&#x51FD;&#x6578;&#x7269;&#x4EF6;</a></li>
-<li><a href="#&#x7528;&#x9014;-4--&#x9589;&#x5305;-closures-&#x7684;&#x61C9;&#x7528;">&#x7528;&#x9014; 4 : &#x9589;&#x5305; (Closures) &#x7684;&#x61C9;&#x7528;</a></li>
-<li><a href="#&#x7528;&#x9014;-5--&#x700F;&#x89BD;&#x5668;&#x66F8;&#x7C64;&#x5C0F;&#x5DE5;&#x5177;">&#x7528;&#x9014; 5 : &#x700F;&#x89BD;&#x5668;&#x66F8;&#x7C64;&#x5C0F;&#x5DE5;&#x5177;</a></li>
-</ul>
-</li>
-<li><a href="#&#x7E3D;&#x7D50;">&#x7E3D;&#x7D50;</a></li>
-<li><a href="#references">References</a></li>
-</ul>
-
-</div><!-- tocstop -->
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day25&#xFF1A;&#x4E0D;&#x662F;&#x591A;&#x4E86;&#x584A;&#x9B5A;-&#x2014;&#x2014;-&#x7ACB;&#x5373;&#x51FD;&#x6578;&#x7684;&#x61C9;&#x7528;&#x6574;&#x7406;"><b> </b>&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684; JavaScript &#x4E8C;&#x4E09;&#x4E8B;#Day25&#xFF1A;&#x4E0D;&#x662F;&#x591A;&#x4E86;&#x584A;&#x9B5A; &#x2014;&#x2014; &#x7ACB;&#x5373;&#x51FD;&#x6578;&#x7684;&#x61C9;&#x7528;&#x6574;&#x7406;</a></li><ul><li><span class="title-icon "></span><a href="#&#x7ACB;&#x5373;&#x51FD;&#x6578;&#x662F;&#x812B;&#x8932;&#x5B50;&#x653E;&#x5C41;&#xFF1F;"><b>1. </b>&#x7ACB;&#x5373;&#x51FD;&#x6578;&#x662F;&#x812B;&#x8932;&#x5B50;&#x653E;&#x5C41;&#xFF1F;</a></li><ul><li><span class="title-icon "></span><a href="#&#x7528;&#x9014;-1&#xFF1A;&#x5C01;&#x88DD;&#x4E00;&#x6B21;&#x6027;&#x7684;-local-scope"><b>1.1. </b>&#x7528;&#x9014; 1&#xFF1A;&#x5C01;&#x88DD;&#x4E00;&#x6B21;&#x6027;&#x7684; Local Scope</a></li><li><span class="title-icon "></span><a href="#&#x7528;&#x9014;-2&#xFF1A;&#x70BA;&#x7269;&#x4EF6;&#x5BE6;&#x5B57;-object-literals-&#x7684;&#x5C6C;&#x6027;&#x521D;&#x59CB;&#x503C;&#x7522;&#x751F;&#x52D5;&#x614B;&#x503C;"><b>1.2. </b>&#x7528;&#x9014; 2&#xFF1A;&#x70BA;&#x7269;&#x4EF6;&#x5BE6;&#x5B57; (Object Literals) &#x7684;&#x5C6C;&#x6027;&#x521D;&#x59CB;&#x503C;&#x7522;&#x751F;&#x52D5;&#x614B;&#x503C;</a></li><li><span class="title-icon "></span><a href="#&#x7528;&#x9014;-3&#xFF1A;&#x5C07;&#x5B57;&#x4E32;&#x5167;&#x5BB9;&#x8F49;&#x6210;&#x51FD;&#x6578;&#x7269;&#x4EF6;"><b>1.3. </b>&#x7528;&#x9014; 3&#xFF1A;&#x5C07;&#x5B57;&#x4E32;&#x5167;&#x5BB9;&#x8F49;&#x6210;&#x51FD;&#x6578;&#x7269;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x7528;&#x9014;-4--&#x9589;&#x5305;-closures-&#x7684;&#x61C9;&#x7528;"><b>1.4. </b>&#x7528;&#x9014; 4 : &#x9589;&#x5305; (Closures) &#x7684;&#x61C9;&#x7528;</a></li><li><span class="title-icon "></span><a href="#&#x7528;&#x9014;-5--&#x700F;&#x89BD;&#x5668;&#x66F8;&#x7C64;&#x5C0F;&#x5DE5;&#x5177;"><b>1.5. </b>&#x7528;&#x9014; 5 : &#x700F;&#x89BD;&#x5668;&#x66F8;&#x7C64;&#x5C0F;&#x5DE5;&#x5177;</a></li></ul><li><span class="title-icon "></span><a href="#&#x7E3D;&#x7D50;"><b>2. </b>&#x7E3D;&#x7D50;</a></li><li><span class="title-icon "></span><a href="#references"><b>3. </b>References</a></li></ul></ul></div><a href="#&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day25&#xFF1A;&#x4E0D;&#x662F;&#x591A;&#x4E86;&#x584A;&#x9B5A;-&#x2014;&#x2014;-&#x7ACB;&#x5373;&#x51FD;&#x6578;&#x7684;&#x61C9;&#x7528;&#x6574;&#x7406;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day25&#xFF1A;&#x4E0D;&#x662F;&#x591A;&#x4E86;&#x584A;&#x9B5A;-&#x2014;&#x2014;-&#x7ACB;&#x5373;&#x51FD;&#x6578;&#x7684;&#x61C9;&#x7528;&#x6574;&#x7406;"><a name="&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day25&#xFF1A;&#x4E0D;&#x662F;&#x591A;&#x4E86;&#x584A;&#x9B5A;-&#x2014;&#x2014;-&#x7ACB;&#x5373;&#x51FD;&#x6578;&#x7684;&#x61C9;&#x7528;&#x6574;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day25&#xFF1A;&#x4E0D;&#x662F;&#x591A;&#x4E86;&#x584A;&#x9B5A;-&#x2014;&#x2014;-&#x7ACB;&#x5373;&#x51FD;&#x6578;&#x7684;&#x61C9;&#x7528;&#x6574;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684; JavaScript &#x4E8C;&#x4E09;&#x4E8B;#Day25&#xFF1A;&#x4E0D;&#x662F;&#x591A;&#x4E86;&#x584A;&#x9B5A; &#x2014;&#x2014; &#x7ACB;&#x5373;&#x51FD;&#x6578;&#x7684;&#x61C9;&#x7528;&#x6574;&#x7406;</h1>
 <p>&#x4E0A;&#x4E00;&#x7BC7;&#x4ECB;&#x7D39;&#x5230;&#x7ACB;&#x5373;&#x51FD;&#x6578; (Self-Invoking Functions) &#x7684;&#x7528;&#x6CD5;&#xFF0C;&#x904E;&#x7A0B;&#x6709;&#x6C92;&#x6709;&#x7522;&#x751F;&#x4E00;&#x500B;&#x7591;&#x60D1;&#xFF1F;</p>
 <p>&#x4F8B;&#x5982;&#x5927;&#x8CBB;&#x5468;&#x7AE0;&#x5305;&#x88DD;&#x4E86;&#x4E00;&#x500B;&#x7ACB;&#x5373;&#x51FD;&#x6578;&#xFF1A;</p>
 <pre><code class="lang-js">(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
@@ -581,14 +553,14 @@
 </code></pre>
 <p>&#x4E00;&#x6A23;&#x90FD;&#x662F;&#x7ACB;&#x523B;&#x57F7;&#x884C;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x4F55;&#x5FC5;&#x812B;&#x8932;&#x5B50;&#x653E;&#x5C41;&#xFF0C;&#x591A;&#x6B64;&#x4E00;&#x8209;&#xFF0C;&#x8C48;&#x975E;&#x591A;&#x9918;&#xFF1F;</p>
 <p><img src="https://i.imgur.com/s7apwXU.png" alt=""><br>(Source: <a href="https://www.youtube.com/watch?v=3iAGnItkHA0" target="_blank">Youtube</a>)</p>
-<h2 id="&#x7ACB;&#x5373;&#x51FD;&#x6578;&#x662F;&#x812B;&#x8932;&#x5B50;&#x653E;&#x5C41;&#xFF1F;">&#x7ACB;&#x5373;&#x51FD;&#x6578;&#x662F;&#x812B;&#x8932;&#x5B50;&#x653E;&#x5C41;&#xFF1F;</h2>
+<h2 id="&#x7ACB;&#x5373;&#x51FD;&#x6578;&#x662F;&#x812B;&#x8932;&#x5B50;&#x653E;&#x5C41;&#xFF1F;"><a name="&#x7ACB;&#x5373;&#x51FD;&#x6578;&#x662F;&#x812B;&#x8932;&#x5B50;&#x653E;&#x5C41;&#xFF1F;" class="anchor-navigation-ex-anchor" href="#&#x7ACB;&#x5373;&#x51FD;&#x6578;&#x662F;&#x812B;&#x8932;&#x5B50;&#x653E;&#x5C41;&#xFF1F;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x7ACB;&#x5373;&#x51FD;&#x6578;&#x662F;&#x812B;&#x8932;&#x5B50;&#x653E;&#x5C41;&#xFF1F;</h2>
 <p>&#x7A0B;&#x5F0F;&#x662F;&#x5DE5;&#x5177;&#xFF0C;&#x5DE5;&#x5177;&#x662F;&#x70BA;&#x4E86;&#x5E6B;&#x52A9;&#x89E3;&#x6C7A;&#x554F;&#x984C;&#x800C;&#x5B58;&#x5728;&#x624D;&#x6709;&#x610F;&#x7FA9;&#xFF0C;&#x4E0D;&#x6703;&#x55AE;&#x7D14;&#x56E0;&#x70BA;&#x8A9E;&#x6CD5;&#x9177;&#x70AB;&#x6216;&#x7528;&#x8D77;&#x4F86;&#x5F88;&#x6F6E;&#x800C;&#x589E;&#x52A0;&#x50F9;&#x503C;&#x3002;</p>
 <p>&#x4E00;&#x958B;&#x59CB;&#x5B78;&#x5230;&#x7ACB;&#x5373;&#x51FD;&#x6578;&#x6642;&#xFF0C;&#x6211;&#x7684;&#x7B2C;&#x4E00;&#x500B;&#x611F;&#x60F3;&#x78BA;&#x5BE6;&#x662F;&#x89BA;&#x5F97;&#x5F88;&#x591A;&#x9918;&#x3002;</p>
 <p>&#x4F46;&#x6211;&#x76F8;&#x4FE1;&#x6BCF;&#x500B;&#x8A9E;&#x6CD5;&#x7684;&#x5B58;&#x5728;&#x4E00;&#x5B9A;&#x6709;&#x5176;&#x7528;&#x610F;&#xFF0C;&#x56E0;&#x6B64;&#x8A66;&#x8457;&#x53BB;&#x89C0;&#x6469;&#x548C;&#x6574;&#x7406;&#x4F7F;&#x7528;&#x7ACB;&#x5373;&#x51FD;&#x6578;&#x7684;&#x5834;&#x5408;&#x3002;</p>
 <p>&#x4EE5;&#x4E0B;&#x662F;&#x6211;&#x76EE;&#x524D;&#x6B78;&#x7D0D;&#x51FA;&#x7684;&#x7528;&#x9014;&#xFF0C;&#x6B61;&#x8FCE;&#x88DC;&#x5145;&#xFF1A;</p>
-<h3 id="&#x7528;&#x9014;-1&#xFF1A;&#x5C01;&#x88DD;&#x4E00;&#x6B21;&#x6027;&#x7684;-local-scope">&#x7528;&#x9014; 1&#xFF1A;&#x5C01;&#x88DD;&#x4E00;&#x6B21;&#x6027;&#x7684; Local Scope</h3>
+<h3 id="&#x7528;&#x9014;-1&#xFF1A;&#x5C01;&#x88DD;&#x4E00;&#x6B21;&#x6027;&#x7684;-local-scope"><a name="&#x7528;&#x9014;-1&#xFF1A;&#x5C01;&#x88DD;&#x4E00;&#x6B21;&#x6027;&#x7684;-local-scope" class="anchor-navigation-ex-anchor" href="#&#x7528;&#x9014;-1&#xFF1A;&#x5C01;&#x88DD;&#x4E00;&#x6B21;&#x6027;&#x7684;-local-scope"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x7528;&#x9014; 1&#xFF1A;&#x5C01;&#x88DD;&#x4E00;&#x6B21;&#x6027;&#x7684; Local Scope</h3>
 <p>&#x53EF;&#x4EE5;&#x5C01;&#x88DD;&#x4E00;&#x6BB5;&#x60F3;&#x7ACB;&#x523B;&#x57F7;&#x884C;&#x7684;&#x7A0B;&#x5F0F;&#x78BC;&#xFF0C;&#x5EFA;&#x7ACB;&#x4E00;&#x6B21;&#x6027;&#x7684; Local Scope&#xFF0C;&#x8B93;&#x4E00;&#x6B21;&#x6027;&#x8B8A;&#x6578;&#x7684;&#x751F;&#x547D;&#x9031;&#x671F;&#x7559;&#x5728;&#x51FD;&#x6578;&#x5167;&#xFF0C;&#x907F;&#x514D;&#x6C59;&#x67D3;&#x5230; Global Scope&#x3002;</p>
-<h4 id="before">Before:</h4>
+<h4 id="before"><a name="before" class="anchor-navigation-ex-anchor" href="#before"><i class="fa fa-link" aria-hidden="true"></i></a>Before:</h4>
 <p>&#x5728;&#x672A;&#x7D93;&#x5C01;&#x88DD;&#x524D;&#xFF0C;&#x4E00;&#x6B21;&#x6027;&#x7528;&#x9014;&#x7684;&#x8B8A;&#x6578; <code>temp</code> &#x66B4;&#x9732;&#x5728;&#x5168;&#x57DF;&#x4F5C;&#x7528;&#x57DF;&#x4E0B;&#xFF0C;&#x6F5B;&#x85CF;&#x5F8C;&#x7E8C;&#x5C0D;&#x5176;&#x4ED6;&#x7A0B;&#x5F0F;&#x9020;&#x6210;&#x5E72;&#x64FE;&#x7684;&#x98A8;&#x96AA;&#xFF1A;</p>
 <pre><code class="lang-js"><span class="hljs-keyword">var</span> temp = <span class="hljs-number">10</span> + <span class="hljs-number">5</span>;
 <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Answer is &quot;</span> + temp);
@@ -602,7 +574,7 @@ otherMission();
 <p>&#x57F7;&#x884C;&#x7D50;&#x679C;&#xFF1A;</p>
 <pre><code>Answer is 15
 15
-</code></pre><h4 id="after">After:</h4>
+</code></pre><h4 id="after"><a name="after" class="anchor-navigation-ex-anchor" href="#after"><i class="fa fa-link" aria-hidden="true"></i></a>After:</h4>
 <p>&#x900F;&#x904E;&#x7ACB;&#x5373;&#x51FD;&#x6578;&#x4F5C;&#x5C01;&#x88DD;&#xFF0C;&#x907F;&#x514D;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x8B8A;&#x6578;&#x5F71;&#x97FF;&#x6B98;&#x7559;&#xFF1A;</p>
 <pre><code class="lang-js">(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>)</span>{
     <span class="hljs-keyword">var</span> temp = <span class="hljs-number">10</span> + <span class="hljs-number">5</span>;
@@ -631,21 +603,21 @@ function otherMission(){
     console.log(temp);     // temp &#x4E0D;&#x5B58;&#x5728;&#x65BC;&#x6B64;&#x4F5C;&#x7528;&#x57DF;
 }
 </code></pre><p>&#x597D;&#x7684;&#x547D;&#x540D;&#x4E5F;&#x662F;&#x9700;&#x8981;&#x82B1;&#x8166;&#x7D30;&#x80DE;&#x53BB;&#x60F3;&#xFF0C;&#x65E2;&#x7136;&#x53EA;&#x662F;&#x4E00;&#x6B21;&#x6027;&#x800C;&#x4E14;&#x7ACB;&#x5373;&#x6027;&#x7684;&#x7528;&#x9014;&#xFF0C;&#x90A3;&#x5C31;&#x7528;&#x7ACB;&#x5373;&#x51FD;&#x6578;&#x5427;&#xFF01;</p>
-<h3 id="&#x7528;&#x9014;-2&#xFF1A;&#x70BA;&#x7269;&#x4EF6;&#x5BE6;&#x5B57;-object-literals-&#x7684;&#x5C6C;&#x6027;&#x521D;&#x59CB;&#x503C;&#x7522;&#x751F;&#x52D5;&#x614B;&#x503C;">&#x7528;&#x9014; 2&#xFF1A;&#x70BA;&#x7269;&#x4EF6;&#x5BE6;&#x5B57; (Object Literals) &#x7684;&#x5C6C;&#x6027;&#x521D;&#x59CB;&#x503C;&#x7522;&#x751F;&#x52D5;&#x614B;&#x503C;</h3>
-<h4 id="before">Before:</h4>
+<h3 id="&#x7528;&#x9014;-2&#xFF1A;&#x70BA;&#x7269;&#x4EF6;&#x5BE6;&#x5B57;-object-literals-&#x7684;&#x5C6C;&#x6027;&#x521D;&#x59CB;&#x503C;&#x7522;&#x751F;&#x52D5;&#x614B;&#x503C;"><a name="&#x7528;&#x9014;-2&#xFF1A;&#x70BA;&#x7269;&#x4EF6;&#x5BE6;&#x5B57;-object-literals-&#x7684;&#x5C6C;&#x6027;&#x521D;&#x59CB;&#x503C;&#x7522;&#x751F;&#x52D5;&#x614B;&#x503C;" class="anchor-navigation-ex-anchor" href="#&#x7528;&#x9014;-2&#xFF1A;&#x70BA;&#x7269;&#x4EF6;&#x5BE6;&#x5B57;-object-literals-&#x7684;&#x5C6C;&#x6027;&#x521D;&#x59CB;&#x503C;&#x7522;&#x751F;&#x52D5;&#x614B;&#x503C;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x7528;&#x9014; 2&#xFF1A;&#x70BA;&#x7269;&#x4EF6;&#x5BE6;&#x5B57; (Object Literals) &#x7684;&#x5C6C;&#x6027;&#x521D;&#x59CB;&#x503C;&#x7522;&#x751F;&#x52D5;&#x614B;&#x503C;</h3>
+<h4 id="before_1"><a name="before_1" class="anchor-navigation-ex-anchor" href="#before_1"><i class="fa fa-link" aria-hidden="true"></i></a>Before:</h4>
 <p>&#x539F;&#x672C;&#x5982;&#x679C;&#x60F3;&#x70BA;&#x7269;&#x4EF6;&#x5C6C;&#x6027;&#x7522;&#x751F;&#x52D5;&#x614B;&#x6578;&#x503C;&#xFF0C;&#x5FC5;&#x9808;&#x5148;&#x7522;&#x751F;&#x57FA;&#x672C;&#x7684;&#x521D;&#x59CB;&#x7269;&#x4EF6;&#xFF0C;&#x518D;&#x984D;&#x5916;&#x5C0D;&#x5C6C;&#x6027;&#x4F86;&#x52D5;&#x614B;&#x8CE6;&#x503C;&#xFF1A;</p>
 <pre><code class="lang-js"><span class="hljs-keyword">var</span> student = {};
 student.score = <span class="hljs-built_in">Math</span>.random();
 <span class="hljs-built_in">console</span>.log(student.score);    <span class="hljs-comment">// 0.7779381225655557</span>
 </code></pre>
-<h4 id="after">After:</h4>
+<h4 id="after_1"><a name="after_1" class="anchor-navigation-ex-anchor" href="#after_1"><i class="fa fa-link" aria-hidden="true"></i></a>After:</h4>
 <p>&#x900F;&#x904E;&#x7ACB;&#x5373;&#x51FD;&#x6578;&#x7684;&#x7528;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x7269;&#x4EF6;&#x5BE6;&#x5B57;&#x521D;&#x59CB;&#x5316;&#x968E;&#x6BB5;&#x5C31;&#x52D5;&#x614B;&#x7522;&#x751F;&#x7D50;&#x679C;&#xFF1A;</p>
 <pre><code class="lang-js"><span class="hljs-keyword">var</span> student = {
     score: (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>)</span>{ <span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.random(); })()
 };
 <span class="hljs-built_in">console</span>.log(student.score);    <span class="hljs-comment">// 0.7779381225655557</span>
 </code></pre>
-<h3 id="&#x7528;&#x9014;-3&#xFF1A;&#x5C07;&#x5B57;&#x4E32;&#x5167;&#x5BB9;&#x8F49;&#x6210;&#x51FD;&#x6578;&#x7269;&#x4EF6;">&#x7528;&#x9014; 3&#xFF1A;&#x5C07;&#x5B57;&#x4E32;&#x5167;&#x5BB9;&#x8F49;&#x6210;&#x51FD;&#x6578;&#x7269;&#x4EF6;</h3>
+<h3 id="&#x7528;&#x9014;-3&#xFF1A;&#x5C07;&#x5B57;&#x4E32;&#x5167;&#x5BB9;&#x8F49;&#x6210;&#x51FD;&#x6578;&#x7269;&#x4EF6;"><a name="&#x7528;&#x9014;-3&#xFF1A;&#x5C07;&#x5B57;&#x4E32;&#x5167;&#x5BB9;&#x8F49;&#x6210;&#x51FD;&#x6578;&#x7269;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x7528;&#x9014;-3&#xFF1A;&#x5C07;&#x5B57;&#x4E32;&#x5167;&#x5BB9;&#x8F49;&#x6210;&#x51FD;&#x6578;&#x7269;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x7528;&#x9014; 3&#xFF1A;&#x5C07;&#x5B57;&#x4E32;&#x5167;&#x5BB9;&#x8F49;&#x6210;&#x51FD;&#x6578;&#x7269;&#x4EF6;</h3>
 <p>&#x8CC7;&#x6599;&#x50B3;&#x905E;&#x683C;&#x5F0F; JSON &#x4E0D;&#x652F;&#x63F4;&#x5132;&#x5B58;&#x51FD;&#x6578;&#x578B;&#x614B;&#x7684;&#x8CC7;&#x6599;&#xFF0C;&#x7406;&#x8AD6;&#x4E0A;&#x7121;&#x6CD5;&#x7528;&#x4F86;&#x50B3;&#x905E;&#x51FD;&#x6578;&#x7269;&#x4EF6;&#x3002;</p>
 <p>&#x4F46;&#x900F;&#x904E;&#x7ACB;&#x5373;&#x51FD;&#x6578;&#xFF0C;&#x914D;&#x5408; <code>eval()</code>&#xFF0C;&#x5C31;&#x6709;&#x6A5F;&#x6703;&#x5BE6;&#x73FE;&#x7528; JSON &#x50B3;&#x905E;&#x51FD;&#x6578;&#x578B;&#x614B;&#x8CC7;&#x6599;&#xFF0C;&#x4F8B;&#x5982;&#x4EE5;&#x4E0B;&#x7BC4;&#x4F8B;&#xFF1A;</p>
 <pre><code class="lang-js"><span class="hljs-keyword">var</span> text = <span class="hljs-string">&apos;{ &quot;name&quot;:&quot;John&quot;, &quot;age&quot;:&quot;function () {return 30;}&quot;}&apos;</span>;
@@ -661,7 +633,7 @@ student.score = <span class="hljs-built_in">Math</span>.random();
 <blockquote>
 <p>&#x5982;&#x679C;&#x4E0D;&#x662F;&#x7279;&#x6B8A;&#x9700;&#x6C42;&#xFF0C;&#x5BE6;&#x969B;&#x5C08;&#x6848;&#x4E0D;&#x5EFA;&#x8B70;&#x9019;&#x6A23;&#x7684;&#x4F5C;&#x6CD5;&#xFF0C;&#x6703;&#x9020;&#x6210;&#x7A0B;&#x5F0F;&#x7DAD;&#x8B77;&#x56F0;&#x96E3;&#x3002;</p>
 </blockquote>
-<h3 id="&#x7528;&#x9014;-4--&#x9589;&#x5305;-closures-&#x7684;&#x61C9;&#x7528;">&#x7528;&#x9014; 4 : &#x9589;&#x5305; (Closures) &#x7684;&#x61C9;&#x7528;</h3>
+<h3 id="&#x7528;&#x9014;-4--&#x9589;&#x5305;-closures-&#x7684;&#x61C9;&#x7528;"><a name="&#x7528;&#x9014;-4--&#x9589;&#x5305;-closures-&#x7684;&#x61C9;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x7528;&#x9014;-4--&#x9589;&#x5305;-closures-&#x7684;&#x61C9;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. &#x7528;&#x9014; 4 : &#x9589;&#x5305; (Closures) &#x7684;&#x61C9;&#x7528;</h3>
 <p>&#x900F;&#x904E;&#x7ACB;&#x5373;&#x51FD;&#x6578;&#x7684;&#x5C01;&#x88DD;&#x5BE6;&#x73FE;&#x9589;&#x5305;&#x61C9;&#x7528;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
 <pre><code class="lang-js"><span class="hljs-keyword">var</span> add = (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
     <span class="hljs-keyword">var</span> counter = <span class="hljs-number">0</span>;
@@ -682,12 +654,12 @@ student.score = <span class="hljs-built_in">Math</span>.random();
 Uncaught ReferenceError: counter is not defined
 </code></pre><p>&#x8B8A;&#x6578; <code>counter</code> &#x88AB;&#x5BA3;&#x544A;&#x65BC; <code>add()</code> &#x7684;&#x51FD;&#x6578;&#x4F5C;&#x7528;&#x57DF;&#x88E1; (Function Scope Level)&#xFF0C;&#x7406;&#x8AD6;&#x4E0A;&#x96E2;&#x958B;&#x51FD;&#x6578;&#x5C31;&#x6703;&#x88AB;&#x6D88;&#x6EC5;&#x3002;&#x4F46;&#x900F;&#x904E;&#x9589;&#x5305;&#xFF0C;&#x53EF;&#x4EE5;&#x8B93; <code>counter</code> &#x7E7C;&#x7E8C;&#x5B58;&#x6D3B;&#xFF0C;&#x4F46;&#x53C8;&#x4E0D;&#x81F3;&#x65BC;&#x88AB; Global Context &#x76F4;&#x63A5;&#x64CD;&#x4F5C;&#xFF0C;&#x53EA;&#x80FD;&#x900F;&#x904E; <code>add()</code> &#x64CD;&#x63A7;&#x3002;</p>
 <p>&#x95DC;&#x65BC;&#x9589;&#x5305;&#xFF0C;&#x6211;&#x5011;&#x6703;&#x53E6;&#x5916;&#x8A73;&#x7D30;&#x8A0E;&#x8AD6;&#xFF0C;&#x6B64;&#x8655;&#x5C31;&#x4E0D;&#x8D05;&#x8FF0;&#x3002;</p>
-<h3 id="&#x7528;&#x9014;-5--&#x700F;&#x89BD;&#x5668;&#x66F8;&#x7C64;&#x5C0F;&#x5DE5;&#x5177;">&#x7528;&#x9014; 5 : &#x700F;&#x89BD;&#x5668;&#x66F8;&#x7C64;&#x5C0F;&#x5DE5;&#x5177;</h3>
+<h3 id="&#x7528;&#x9014;-5--&#x700F;&#x89BD;&#x5668;&#x66F8;&#x7C64;&#x5C0F;&#x5DE5;&#x5177;"><a name="&#x7528;&#x9014;-5--&#x700F;&#x89BD;&#x5668;&#x66F8;&#x7C64;&#x5C0F;&#x5DE5;&#x5177;" class="anchor-navigation-ex-anchor" href="#&#x7528;&#x9014;-5--&#x700F;&#x89BD;&#x5668;&#x66F8;&#x7C64;&#x5C0F;&#x5DE5;&#x5177;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. &#x7528;&#x9014; 5 : &#x700F;&#x89BD;&#x5668;&#x66F8;&#x7C64;&#x5C0F;&#x5DE5;&#x5177;</h3>
 <p>&#x53EF;&#x4EE5;&#x628A; JavaScript &#x7A0B;&#x5F0F;&#x78BC;&#x5305;&#x88DD;&#x6210;&#x7ACB;&#x5373;&#x51FD;&#x6578;&#xFF0C;&#x5B58;&#x6210;&#x700F;&#x89BD;&#x5668;&#x7684;&#x66F8;&#x7C64;&#xFF0C;&#x9EDE;&#x4E0B;&#x53BB;&#x5C31;&#x6703;&#x7ACB;&#x5373;&#x57F7;&#x884C;&#x3002;</p>
 <p>&#x4F8B;&#x5982;&#x5E38;&#x898B;&#x7684;&#x300C;&#x89E3;&#x9664;&#x53F3;&#x9375;&#x300D;&#x5DE5;&#x5177;&#x5C31;&#x662F;&#x9019;&#x7A2E;&#x7528;&#x6CD5;&#xFF1A;</p>
 <pre><code class="lang-js">javascript:(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{ <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">R</span>(<span class="hljs-params">a</span>)</span>{ona = <span class="hljs-string">&quot;on&quot;</span>+a; <span class="hljs-keyword">if</span>(<span class="hljs-built_in">window</span>.addEventListener) <span class="hljs-built_in">window</span>.addEventListener(a, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{ <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> n=e.originalTarget; n; n=n.parentNode) n[ona]=<span class="hljs-literal">null</span>; }, <span class="hljs-literal">true</span>); <span class="hljs-built_in">window</span>[ona]=<span class="hljs-literal">null</span>; <span class="hljs-built_in">document</span>[ona]=<span class="hljs-literal">null</span>; <span class="hljs-keyword">if</span>(<span class="hljs-built_in">document</span>.body) <span class="hljs-built_in">document</span>.body[ona]=<span class="hljs-literal">null</span>; } R(<span class="hljs-string">&quot;contextmenu&quot;</span>); R(<span class="hljs-string">&quot;click&quot;</span>); R(<span class="hljs-string">&quot;mousedown&quot;</span>); R(<span class="hljs-string">&quot;mouseup&quot;</span>); R(<span class="hljs-string">&quot;selectstart&quot;</span>);})()
 </code></pre>
-<h2 id="&#x7E3D;&#x7D50;">&#x7E3D;&#x7D50;</h2>
+<h2 id="&#x7E3D;&#x7D50;"><a name="&#x7E3D;&#x7D50;" class="anchor-navigation-ex-anchor" href="#&#x7E3D;&#x7D50;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x7E3D;&#x7D50;</h2>
 <p>&#x7ACB;&#x5373;&#x51FD;&#x6578;&#x53EF;&#x4EE5;&#x61C9;&#x7528;&#x7684;&#x7528;&#x9014;&#xFF1A;</p>
 <ul>
 <li>&#x5C01;&#x88DD;&#x4E00;&#x6B21;&#x6027;&#x7684; Local Scope</li>
@@ -697,7 +669,7 @@ Uncaught ReferenceError: counter is not defined
 <li>&#x700F;&#x89BD;&#x5668;&#x66F8;&#x7C64;&#x5C0F;&#x5DE5;&#x5177;</li>
 </ul>
 <p>&#x76F8;&#x4FE1;&#x9084;&#x6709;&#x5176;&#x4ED6;&#x61C9;&#x7528;&#x60C5;&#x5883;&#xFF0C;&#x6B61;&#x8FCE;&#x88DC;&#x5145;&#xFF01;</p>
-<h2 id="references">References</h2>
+<h2 id="references"><a name="references" class="anchor-navigation-ex-anchor" href="#references"><i class="fa fa-link" aria-hidden="true"></i></a>3. References</h2>
 <ul>
 <li><a href="https://www.w3schools.com/js/js_functions.asp" target="_blank">W3Schools - JavaScript Functions</a></li>
 <li><a href="http://sweeteason.pixnet.net/blog/post/40371736" target="_blank">Javascript &#x958B;&#x767C;&#x5B78;&#x7FD2;&#x5FC3;&#x5F97; - &#x51FD;&#x6578;&#x7684;&#x591A;&#x7A2E;&#x5BEB;&#x6CD5;&#x8207;&#x61C9;&#x7528;&#x9650;&#x5236;</a></li>
@@ -745,7 +717,7 @@ Uncaught ReferenceError: counter is not defined
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Day 25：不是多了塊魚 —— 立即函數的應用整理","level":"1.26","depth":1,"next":{"title":"Day 26：程式界的哈姆雷特 —— Pass by value, or Pass by reference？","level":"1.27","depth":1,"path":"articles/day26.md","ref":"./articles/day26.md","articles":[]},"previous":{"title":"Day 24：函數呼叫 (Function Invocation) 與立即函數 (Self-Invoking Functions)","level":"1.25","depth":1,"path":"articles/day24.md","ref":"./articles/day24.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","etoc","edit-link","ga"],"pluginsConfig":{"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"ga":{"configuration":"auto","token":"UA-163310308-2"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day25.md","mtime":"2020-04-18T19:05:24.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T19:44:21.929Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Day 25：不是多了塊魚 —— 立即函數的應用整理","level":"1.26","depth":1,"next":{"title":"Day 26：程式界的哈姆雷特 —— Pass by value, or Pass by reference？","level":"1.27","depth":1,"path":"articles/day26.md","ref":"./articles/day26.md","articles":[]},"previous":{"title":"Day 24：函數呼叫 (Function Invocation) 與立即函數 (Self-Invoking Functions)","level":"1.25","depth":1,"path":"articles/day24.md","ref":"./articles/day24.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchor-navigation-ex","edit-link","copy-code-button","ga"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"night","family":"sans"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-163310308-2"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day25.md","mtime":"2020-04-18T20:32:54.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T21:32:09.107Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -755,15 +727,11 @@ Uncaught ReferenceError: counter is not defined
     <script src="../gitbook/theme.js"></script>
     
         
-        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-etoc/plugin.js"></script>
-        
-    
-        
         <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
         
     
         

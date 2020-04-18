@@ -17,11 +17,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-etoc/plugin.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -545,26 +541,9 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day17&#xFF1A;this-&#x95DC;&#x9375;&#x5B57;-3">&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684; JavaScript &#x4E8C;&#x4E09;&#x4E8B;#Day17&#xFF1A;this &#x95DC;&#x9375;&#x5B57; (3)</h1>
-<!-- toc --><div id="toc" class="toc">
-
-<ul>
-<li><a href="#&#x51FD;&#x6578;&#x57F7;&#x884C;&#x74B0;&#x5883;&#x4E0B;-function-context-&#x7E8C;">&#x51FD;&#x6578;&#x57F7;&#x884C;&#x74B0;&#x5883;&#x4E0B; (Function Context) (&#x7E8C;)</a><ul>
-<li><a href="#5-&#x986F;&#x6027;&#x51FD;&#x6578;&#x7D81;&#x5B9A;&#x4E4B;-callapply-&#x7BC7;-explicit-function-binding-for-callapply">5. &#x986F;&#x6027;&#x51FD;&#x6578;&#x7D81;&#x5B9A;&#x4E4B; call()/apply() &#x7BC7; (Explicit Function Binding for call()/apply())</a><ul>
-<li><a href="#51-&#x548C;-bind-&#x7684;&#x5DEE;&#x5225;">5.1. &#x548C; bind() &#x7684;&#x5DEE;&#x5225;</a></li>
-<li><a href="#52-&#x7D81;&#x5B9A;&#x7269;&#x4EF6;&#x7BC4;&#x4F8B;-&#x4E00;&#x822C;&#x6A21;&#x5F0F;--&#x56B4;&#x8B39;&#x6A21;&#x5F0F;">5.2. &#x7D81;&#x5B9A;&#x7269;&#x4EF6;&#x7BC4;&#x4F8B; (&#x4E00;&#x822C;&#x6A21;&#x5F0F; &amp; &#x56B4;&#x8B39;&#x6A21;&#x5F0F;)</a></li>
-<li><a href="#53-&#x5C0D;&#x5DF2;&#x7D93;&#x88AB;-binding-&#x904E;&#x7684;&#x51FD;&#x6578;&#x7269;&#x4EF6;&#x7121;&#x6548;">5.3. &#x5C0D;&#x5DF2;&#x7D93;&#x88AB; Binding &#x904E;&#x7684;&#x51FD;&#x6578;&#x7269;&#x4EF6;&#x7121;&#x6548;</a></li>
-</ul>
-</li>
-<li><a href="#6-this-&#x6307;&#x5411;-new-&#x6240;&#x7522;&#x751F;&#x7684;&#x65B0;&#x7269;&#x4EF6;">6. <code>this</code> &#x6307;&#x5411; <code>new</code> &#x6240;&#x7522;&#x751F;&#x7684;&#x65B0;&#x7269;&#x4EF6;</a></li>
-</ul>
-</li>
-<li><a href="#references">References</a></li>
-</ul>
-
-</div><!-- tocstop -->
-<h2 id="&#x51FD;&#x6578;&#x57F7;&#x884C;&#x74B0;&#x5883;&#x4E0B;-function-context-&#x7E8C;">&#x51FD;&#x6578;&#x57F7;&#x884C;&#x74B0;&#x5883;&#x4E0B; (Function Context) (&#x7E8C;)</h2>
-<h3 id="5-&#x986F;&#x6027;&#x51FD;&#x6578;&#x7D81;&#x5B9A;&#x4E4B;-callapply-&#x7BC7;-explicit-function-binding-for-callapply">5. &#x986F;&#x6027;&#x51FD;&#x6578;&#x7D81;&#x5B9A;&#x4E4B; call()/apply() &#x7BC7; (Explicit Function Binding for call()/apply())</h3>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day17&#xFF1A;this-&#x95DC;&#x9375;&#x5B57;-3"><b> </b>&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684; JavaScript &#x4E8C;&#x4E09;&#x4E8B;#Day17&#xFF1A;this &#x95DC;&#x9375;&#x5B57; (3)</a></li><ul><li><span class="title-icon "></span><a href="#&#x51FD;&#x6578;&#x57F7;&#x884C;&#x74B0;&#x5883;&#x4E0B;-function-context-&#x7E8C;"><b>1. </b>&#x51FD;&#x6578;&#x57F7;&#x884C;&#x74B0;&#x5883;&#x4E0B; (Function Context) (&#x7E8C;)</a></li><ul><li><span class="title-icon "></span><a href="#5-&#x986F;&#x6027;&#x51FD;&#x6578;&#x7D81;&#x5B9A;&#x4E4B;-callapply-&#x7BC7;-explicit-function-binding-for-callapply"><b>1.1. </b>5. &#x986F;&#x6027;&#x51FD;&#x6578;&#x7D81;&#x5B9A;&#x4E4B; call()/apply() &#x7BC7; (Explicit Function Binding for call()/apply())</a></li><li><span class="title-icon "></span><a href="#6-this-&#x6307;&#x5411;-new-&#x6240;&#x7522;&#x751F;&#x7684;&#x65B0;&#x7269;&#x4EF6;"><b>1.2. </b>6. this &#x6307;&#x5411; new &#x6240;&#x7522;&#x751F;&#x7684;&#x65B0;&#x7269;&#x4EF6;</a></li></ul><li><span class="title-icon "></span><a href="#references"><b>2. </b>References</a></li></ul></ul></div><a href="#&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day17&#xFF1A;this-&#x95DC;&#x9375;&#x5B57;-3" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day17&#xFF1A;this-&#x95DC;&#x9375;&#x5B57;-3"><a name="&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day17&#xFF1A;this-&#x95DC;&#x9375;&#x5B57;-3" class="anchor-navigation-ex-anchor" href="#&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day17&#xFF1A;this-&#x95DC;&#x9375;&#x5B57;-3"><i class="fa fa-link" aria-hidden="true"></i></a> &#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684; JavaScript &#x4E8C;&#x4E09;&#x4E8B;#Day17&#xFF1A;this &#x95DC;&#x9375;&#x5B57; (3)</h1>
+<h2 id="&#x51FD;&#x6578;&#x57F7;&#x884C;&#x74B0;&#x5883;&#x4E0B;-function-context-&#x7E8C;"><a name="&#x51FD;&#x6578;&#x57F7;&#x884C;&#x74B0;&#x5883;&#x4E0B;-function-context-&#x7E8C;" class="anchor-navigation-ex-anchor" href="#&#x51FD;&#x6578;&#x57F7;&#x884C;&#x74B0;&#x5883;&#x4E0B;-function-context-&#x7E8C;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x51FD;&#x6578;&#x57F7;&#x884C;&#x74B0;&#x5883;&#x4E0B; (Function Context) (&#x7E8C;)</h2>
+<h3 id="5-&#x986F;&#x6027;&#x51FD;&#x6578;&#x7D81;&#x5B9A;&#x4E4B;-callapply-&#x7BC7;-explicit-function-binding-for-callapply"><a name="5-&#x986F;&#x6027;&#x51FD;&#x6578;&#x7D81;&#x5B9A;&#x4E4B;-callapply-&#x7BC7;-explicit-function-binding-for-callapply" class="anchor-navigation-ex-anchor" href="#5-&#x986F;&#x6027;&#x51FD;&#x6578;&#x7D81;&#x5B9A;&#x4E4B;-callapply-&#x7BC7;-explicit-function-binding-for-callapply"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. 5. &#x986F;&#x6027;&#x51FD;&#x6578;&#x7D81;&#x5B9A;&#x4E4B; call()/apply() &#x7BC7; (Explicit Function Binding for call()/apply())</h3>
 <blockquote>
 <p><code>this</code> &#x7269;&#x4EF6;&#xFF1A;&#x51FD;&#x6578;&#x7269;&#x4EF6;&#x88AB;&#x57F7;&#x884C;&#x6642;&#x6240;&#x6307;&#x5B9A;&#x7684;&#x7D81;&#x5B9A;&#x7269;&#x4EF6;&#xFF0C;&#x4E5F;&#x5C31;&#x662F; <code>Function.prototype.call()</code> &#x6216; <code>Function.prototype.apply()</code> &#x7684;&#x7B2C;&#x4E00;&#x500B;&#x53C3;&#x6578;&#x3002;</p>
 </blockquote>
@@ -577,7 +556,7 @@
 <span class="hljs-built_in">console</span>.log( <span class="hljs-built_in">Math</span>.max.apply(<span class="hljs-literal">null</span>, [<span class="hljs-number">40</span>, <span class="hljs-number">100</span>, <span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">25</span>, <span class="hljs-number">10</span>]) );   <span class="hljs-comment">//100</span>
 </code></pre>
 <p>&#x56E0;&#x6B64;&#x4EE5;&#x4E0B;&#x7BC4;&#x4F8B;&#x53EA;&#x7528; <code>apply()</code> &#x4F86;&#x793A;&#x7BC4;&#x3002;</p>
-<h4 id="51-&#x548C;-bind-&#x7684;&#x5DEE;&#x5225;">5.1. &#x548C; bind() &#x7684;&#x5DEE;&#x5225;</h4>
+<h4 id="51-&#x548C;-bind-&#x7684;&#x5DEE;&#x5225;"><a name="51-&#x548C;-bind-&#x7684;&#x5DEE;&#x5225;" class="anchor-navigation-ex-anchor" href="#51-&#x548C;-bind-&#x7684;&#x5DEE;&#x5225;"><i class="fa fa-link" aria-hidden="true"></i></a>5.1. &#x548C; bind() &#x7684;&#x5DEE;&#x5225;</h4>
 <p><code>apply()</code> / <code>call()</code> &#x548C;&#x4E0A;&#x4E00;&#x7BC0;&#x4ECB;&#x7D39;&#x7684; <code>bind()</code> &#x975E;&#x5E38;&#x76F8;&#x4F3C;&#xFF0C;&#x90FD;&#x662F;&#x5C0D;&#x51FD;&#x6578;&#x7269;&#x4EF6;&#x505A;&#x7D81;&#x5B9A;&#x7269;&#x4EF6;&#x7684;&#x6307;&#x5B9A;&#xFF0C;&#x4F7F;&#x7528;&#x7684;&#x8A9E;&#x6CD5;&#x5F62;&#x5F0F;&#x4E5F;&#x5F88;&#x50CF;&#x3002;</p>
 <p>&#x4F46;&#x540C;&#x6A23;&#x5C0D;&#x67D0;&#x500B;&#x51FD;&#x6578;&#x7269;&#x4EF6; A &#x4F7F;&#x7528;&#x6642;&#xFF0C; <code>bind()</code> &#x548C; <code>apply()</code> / <code>call()</code> &#x7684;&#x5DEE;&#x5225;&#x5728;&#x65BC;&#xFF1A;</p>
 <ul>
@@ -590,7 +569,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="52-&#x7D81;&#x5B9A;&#x7269;&#x4EF6;&#x7BC4;&#x4F8B;-&#x4E00;&#x822C;&#x6A21;&#x5F0F;--&#x56B4;&#x8B39;&#x6A21;&#x5F0F;">5.2. &#x7D81;&#x5B9A;&#x7269;&#x4EF6;&#x7BC4;&#x4F8B; (&#x4E00;&#x822C;&#x6A21;&#x5F0F; &amp; &#x56B4;&#x8B39;&#x6A21;&#x5F0F;)</h4>
+<h4 id="52-&#x7D81;&#x5B9A;&#x7269;&#x4EF6;&#x7BC4;&#x4F8B;-&#x4E00;&#x822C;&#x6A21;&#x5F0F;--&#x56B4;&#x8B39;&#x6A21;&#x5F0F;"><a name="52-&#x7D81;&#x5B9A;&#x7269;&#x4EF6;&#x7BC4;&#x4F8B;-&#x4E00;&#x822C;&#x6A21;&#x5F0F;--&#x56B4;&#x8B39;&#x6A21;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#52-&#x7D81;&#x5B9A;&#x7269;&#x4EF6;&#x7BC4;&#x4F8B;-&#x4E00;&#x822C;&#x6A21;&#x5F0F;--&#x56B4;&#x8B39;&#x6A21;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>5.2. &#x7D81;&#x5B9A;&#x7269;&#x4EF6;&#x7BC4;&#x4F8B; (&#x4E00;&#x822C;&#x6A21;&#x5F0F; &amp; &#x56B4;&#x8B39;&#x6A21;&#x5F0F;)</h4>
 <p>&#x7531;&#x65BC;&#x4E00;&#x822C;&#x6A21;&#x5F0F;&#x548C;&#x56B4;&#x8B39;&#x6A21;&#x5F0F;&#x7684;&#x884C;&#x70BA;&#x4E00;&#x6A23;&#xFF0C;&#x9019;&#x88E1;&#x4EE5;&#x4E00;&#x822C;&#x6A21;&#x5F0F;&#x793A;&#x7BC4;&#x3002;</p>
 <pre><code class="lang-js"><span class="hljs-keyword">var</span> whatsThis = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
     <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
@@ -609,7 +588,7 @@
 </code></pre>
 <p>&#x76F4;&#x63A5;&#x4EE5;&#x8981;&#x57F7;&#x884C;&#x7684;&#x51FD;&#x6578;&#x7269;&#x4EF6;&#x672C;&#x8EAB; (e.g., <code>whatsThis</code>, <code>getFullName</code>) &#x53BB;&#x547C;&#x53EB; <code>apply()</code>&#xFF0C;&#x7B2C;&#x4E00;&#x500B;&#x53C3;&#x6578;&#x5C31;&#x662F;&#x51FD;&#x6578;&#x88E1;&#x7684; <code>this</code>&#x3002;</p>
 <p>&#x900F;&#x904E;&#x9019;&#x7A2E;&#x65B9;&#x5F0F;&#x6307;&#x5B9A;&#x51FD;&#x6578;&#x7684;&#x7D81;&#x5B9A;&#x7269;&#x4EF6;&#xFF0C;&#x4E5F;&#x4E0D;&#x9700;&#x8981;&#x53E6;&#x5916;&#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x65B0;&#x7684;&#x51FD;&#x6578;&#x7269;&#x4EF6;&#xFF0C;&#x5373;&#x63D2;&#x5373;&#x7528;&#x3002;&#x5728;&#x4F7F;&#x7528;&#x9748;&#x6D3B;&#x6027;&#x4E0A;&#xFF0C;&#x6211;&#x8A8D;&#x70BA;&#x6BD4; <code>bind()</code> &#x65B9;&#x4FBF;&#x3002;</p>
-<h4 id="53-&#x5C0D;&#x5DF2;&#x7D93;&#x88AB;-binding-&#x904E;&#x7684;&#x51FD;&#x6578;&#x7269;&#x4EF6;&#x7121;&#x6548;">5.3. &#x5C0D;&#x5DF2;&#x7D93;&#x88AB; Binding &#x904E;&#x7684;&#x51FD;&#x6578;&#x7269;&#x4EF6;&#x7121;&#x6548;</h4>
+<h4 id="53-&#x5C0D;&#x5DF2;&#x7D93;&#x88AB;-binding-&#x904E;&#x7684;&#x51FD;&#x6578;&#x7269;&#x4EF6;&#x7121;&#x6548;"><a name="53-&#x5C0D;&#x5DF2;&#x7D93;&#x88AB;-binding-&#x904E;&#x7684;&#x51FD;&#x6578;&#x7269;&#x4EF6;&#x7121;&#x6548;" class="anchor-navigation-ex-anchor" href="#53-&#x5C0D;&#x5DF2;&#x7D93;&#x88AB;-binding-&#x904E;&#x7684;&#x51FD;&#x6578;&#x7269;&#x4EF6;&#x7121;&#x6548;"><i class="fa fa-link" aria-hidden="true"></i></a>5.3. &#x5C0D;&#x5DF2;&#x7D93;&#x88AB; Binding &#x904E;&#x7684;&#x51FD;&#x6578;&#x7269;&#x4EF6;&#x7121;&#x6548;</h4>
 <p>&#x4E0A;&#x4E00;&#x7BC0;&#x63D0;&#x904E;&#xFF0C;<code>bind()</code> &#x5C31;&#x50CF;&#x6D77;&#x8A93;&#x5C71;&#x76DF;&#xFF0C;&#x4E00;&#x500B;&#x51FD;&#x6578;&#x7269;&#x4EF6;&#x53EA;&#x8981;&#x66FE;&#x7D93;&#x548C;&#x67D0;&#x500B;&#x7269;&#x4EF6;&#x9032;&#x884C;&#x7D81;&#x5B9A;&#x5C31;&#x6703;&#x6B7B;&#x5FC3;&#x8E0F;&#x5730;&#xFF0C;&#x5373;&#x4F7F;&#x518D;&#x9032;&#x884C;&#x4E8C;&#x6B21; <code>bind()</code> &#x6216;&#x5229;&#x7528; <code>apply()</code> &#x6307;&#x6D3E;&#x4E00;&#x6B21;&#x6027;&#x7684;&#x7D81;&#x5B9A;&#x7269;&#x4EF6;&#xFF0C;&#x90FD;&#x4E0D;&#x6703;&#x751F;&#x6548;&#x3002;</p>
 <pre><code class="lang-js"><span class="hljs-keyword">var</span> getFullName = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
     <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.firstName + <span class="hljs-string">&quot; &quot;</span> + <span class="hljs-keyword">this</span>.lastName;
@@ -638,7 +617,7 @@
 <li><code>introClone()</code> &#x548C; <code>introSpiderMan()</code> &#x56E0;&#x70BA;&#x672C;&#x8EAB;&#x51FD;&#x6578;&#x7269;&#x4EF6;&#x5DF2;&#x7D93;&#x5B58;&#x5728;&#x7D81;&#x5B9A;&#x4E86; <code>ironMan</code> &#x7684;&#x95DC;&#x4FC2;&#xFF0C;&#x5373;&#x4F7F;&#x900F;&#x904E; <code>apply()</code> &#x6307;&#x6D3E;&#x65B0;&#x7684;&#x7269;&#x4EF6;&#xFF0C;&#x57F7;&#x884C;&#x6642;&#x51FD;&#x6578;&#x5167;&#x7684; <code>this</code> &#x6C38;&#x9060;&#x4ECD;&#x662F; <code>ironMan</code>&#x3002;</li>
 <li><code>getFullName()</code> &#x56E0;&#x70BA;&#x6C92;&#x6709;&#x5B58;&#x5728;&#x4EFB;&#x4F55;&#x7D81;&#x5B9A;&#x95DC;&#x4FC2;&#xFF0C;&#x56E0;&#x6B64;&#x900F;&#x904E; <code>apply()</code>&#xFF0C;&#x53EF;&#x4EE5;&#x6210;&#x529F;&#x5C07;&#x51FD;&#x6578;&#x5167;&#x7684; <code>this</code> &#x6307;&#x6D3E;&#x70BA; <code>spiderMan</code>&#x3002;</li>
 </ul>
-<h3 id="6-this-&#x6307;&#x5411;-new-&#x6240;&#x7522;&#x751F;&#x7684;&#x65B0;&#x7269;&#x4EF6;">6. <code>this</code> &#x6307;&#x5411; <code>new</code> &#x6240;&#x7522;&#x751F;&#x7684;&#x65B0;&#x7269;&#x4EF6;</h3>
+<h3 id="6-this-&#x6307;&#x5411;-new-&#x6240;&#x7522;&#x751F;&#x7684;&#x65B0;&#x7269;&#x4EF6;"><a name="6-this-&#x6307;&#x5411;-new-&#x6240;&#x7522;&#x751F;&#x7684;&#x65B0;&#x7269;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#6-this-&#x6307;&#x5411;-new-&#x6240;&#x7522;&#x751F;&#x7684;&#x65B0;&#x7269;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. 6. this &#x6307;&#x5411; new &#x6240;&#x7522;&#x751F;&#x7684;&#x65B0;&#x7269;&#x4EF6;</h3>
 <blockquote>
 <p><code>this</code> &#x7269;&#x4EF6;&#xFF1A;<code>new</code> &#x6240;&#x7522;&#x751F;&#x7684;&#x65B0;&#x7269;&#x4EF6;&#x3002;</p>
 </blockquote>
@@ -655,7 +634,7 @@
 <li>&#x539F;&#x672C;&#x51FD;&#x6578;&#x5167;&#x7684; <code>this.exp</code> &#x8B8A;&#x6210;&#x65B0;&#x7269;&#x4EF6; <code>h</code> &#x7684;&#x5C6C;&#x6027;&#x3002;</li>
 <li>&#x4E00;&#x822C;&#x6A21;&#x5F0F;&#x548C;&#x56B4;&#x8B39;&#x6A21;&#x5F0F;&#x662F;&#x4E00;&#x6A23;&#x7684;&#x884C;&#x70BA;&#x3002;</li>
 </ul>
-<h2 id="references">References</h2>
+<h2 id="references"><a name="references" class="anchor-navigation-ex-anchor" href="#references"><i class="fa fa-link" aria-hidden="true"></i></a>2. References</h2>
 <ul>
 <li><a href="https://www.w3schools.com/js/js_this.asp" target="_blank">W3Schools - The JavaScript this Keyword</a></li>
 <li><a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Operators/this" target="_blank">this - JavaScript | MDN</a></li>
@@ -705,7 +684,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Day 17：this 關鍵字 (3)","level":"1.18","depth":1,"next":{"title":"Day 18：this 關鍵字 (4)","level":"1.19","depth":1,"path":"articles/day18.md","ref":"./articles/day18.md","articles":[]},"previous":{"title":"Day 16：this 關鍵字 (2)","level":"1.17","depth":1,"path":"articles/day16.md","ref":"./articles/day16.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","etoc","edit-link","ga"],"pluginsConfig":{"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"ga":{"configuration":"auto","token":"UA-163310308-2"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day17.md","mtime":"2020-04-18T18:25:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T19:44:21.929Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Day 17：this 關鍵字 (3)","level":"1.18","depth":1,"next":{"title":"Day 18：this 關鍵字 (4)","level":"1.19","depth":1,"path":"articles/day18.md","ref":"./articles/day18.md","articles":[]},"previous":{"title":"Day 16：this 關鍵字 (2)","level":"1.17","depth":1,"path":"articles/day16.md","ref":"./articles/day16.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchor-navigation-ex","edit-link","copy-code-button","ga"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"night","family":"sans"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-163310308-2"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day17.md","mtime":"2020-04-18T18:25:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T21:32:09.107Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -715,15 +694,11 @@
     <script src="../gitbook/theme.js"></script>
     
         
-        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-etoc/plugin.js"></script>
-        
-    
-        
         <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
         
     
         
