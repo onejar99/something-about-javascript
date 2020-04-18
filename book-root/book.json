@@ -1,13 +1,14 @@
 {
-    "plugins": [  "back-to-top-button", "intopic-toc", "edit-link" ],
+    "plugins": [  "back-to-top-button", "etoc", "edit-link" ],
     "pluginsConfig": {
       "theme-default": {
         "showLevel": false
       },
-      "intopic-toc": {
-        "selector": ".markdown-section h2, .markdown-section h3",
-        "visible": true,
-        "label": "Table of Contents"
+      "etoc": {
+        "h2lb": 3,
+        "mindepth": 3,
+        "maxdepth": 4,
+        "notoc": false
       },
       "edit-link": {
         "base": "https://github.com/onejar99/something-about-javascript/blob/master/book-root/",
