@@ -10,7 +10,7 @@
         "label": "Table of Contents"
       },
       "edit-link": {
-        "base": "https://github.com/onejar99/something-about-javascript/blob/master/docs/",
+        "base": "https://github.com/onejar99/something-about-javascript/blob/master/book-root/",
         "label": "Edit This Page"
       }
     }
