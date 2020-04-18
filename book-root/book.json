@@ -1,5 +1,5 @@
 {
-    "plugins": [  "back-to-top-button", "etoc", "edit-link" ],
+    "plugins": [  "back-to-top-button", "etoc", "edit-link", "ga" ],
     "pluginsConfig": {
       "theme-default": {
         "showLevel": false
@@ -13,6 +13,9 @@
       "edit-link": {
         "base": "https://github.com/onejar99/something-about-javascript/blob/master/book-root/",
         "label": "Edit This Page"
+      },
+      "ga": {
+        "token": "UA-163310308-2"
       }
     }
 }
