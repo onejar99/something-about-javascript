@@ -1,14 +1,29 @@
 {
-    "plugins": [  "back-to-top-button", "etoc", "edit-link", "ga" ],
+    "plugins": [  "anchor-navigation-ex", "edit-link", "ga" ],
     "pluginsConfig": {
       "theme-default": {
         "showLevel": false
       },
-      "etoc": {
-        "h2lb": 3,
-        "mindepth": 3,
-        "maxdepth": 4,
-        "notoc": false
+      "anchor-navigation-ex": {
+          "showLevel": true,
+          "associatedWithSummary": false,
+          "printLog": false,
+          "multipleH1": false,
+          "mode": "float",
+          "showGoTop":true,
+          "float": {
+              "floatIcon": "fa fa-navicon",
+              "showLevelIcon": false,
+              "level1Icon": "fa fa-hand-o-right",
+              "level2Icon": "fa fa-hand-o-right",
+              "level3Icon": "fa fa-hand-o-right"
+          },
+          "pageTop": {
+              "showLevelIcon": false,
+              "level1Icon": "fa fa-hand-o-right",
+              "level2Icon": "fa fa-hand-o-right",
+              "level3Icon": "fa fa-hand-o-right"
+          }
       },
       "edit-link": {
         "base": "https://github.com/onejar99/something-about-javascript/blob/master/book-root/",
