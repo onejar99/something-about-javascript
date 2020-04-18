@@ -1,0 +1,17 @@
+{
+    "plugins": [  "back-to-top-button", "intopic-toc", "edit-link" ],
+    "pluginsConfig": {
+      "theme-default": {
+        "showLevel": false
+      },
+      "intopic-toc": {
+        "selector": ".markdown-section h2, .markdown-section h3",
+        "visible": true,
+        "label": "Table of Contents"
+      },
+      "edit-link": {
+        "base": "https://github.com/onejar99/something-about-javascript/blob/master/docs/",
+        "label": "Edit This Page"
+      }
+    }
+}
