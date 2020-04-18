@@ -1,6 +1,10 @@
 {
     "plugins": [  "anchor-navigation-ex", "edit-link", "ga" ],
     "pluginsConfig": {
+      "fontSettings": {
+        "theme": "night",
+        "family": "sans"
+      },
       "theme-default": {
         "showLevel": false
       },
