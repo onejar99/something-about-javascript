@@ -1,6 +1,6 @@
 # 你不可不知的 JavaScript 二三事
 
-* [GitBook](https://book-js-something.onejar99.com)
+* [GitBook (GitHub Pages)](https://book-js-something.onejar99.com)
     - [Hosted by GitBook V2](https://something-about-js-book.onejar99.com)
     - [Original Link in GitBook V2](https://something-about-js-onejar99.gitbook.io/something-about-javascript/)
 * [GitHub](https://github.com/onejar99/something-about-javascript/tree/master/book-root)
