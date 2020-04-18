@@ -21,7 +21,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-intopic-toc/style.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-etoc/plugin.css">
                 
             
                 
@@ -546,6 +546,24 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day10&#xFF1A;&#x7A0B;&#x5F0F;&#x4E5F;&#x61C2;&#x96FB;&#x68AF;&#x5411;&#x4E0A;&#xFF1F;-&#x2014;&#x2014;-hoisting">&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684; JavaScript &#x4E8C;&#x4E09;&#x4E8B;#Day10&#xFF1A;&#x7A0B;&#x5F0F;&#x4E5F;&#x61C2;&#x96FB;&#x68AF;&#x5411;&#x4E0A;&#xFF1F; &#x2014;&#x2014; Hoisting</h1>
+<!-- toc --><div id="toc" class="toc">
+
+<ul>
+<li><a href="#javascript-&#x88E1;&#x7684;&#x6587;&#x7AE0;&#x7F6E;&#x9802;&#x6548;&#x679C;-&#x2014;&#x2014;-hoisting">JavaScript &#x88E1;&#x7684;&#x6587;&#x7AE0;&#x7F6E;&#x9802;&#x6548;&#x679C; &#x2014;&#x2014; Hoisting</a></li>
+<li><a href="#hoisting-&#x7F6E;&#x9802;&#x4E86;&#x5BA3;&#x544A;&#x7684;&#x6548;&#x679C;">Hoisting &#x7F6E;&#x9802;&#x4E86;&#x5BA3;&#x544A;&#x7684;&#x6548;&#x679C;</a></li>
+<li><a href="#&#x8B8A;&#x6578;&#x5BA3;&#x544A;&#x7684;-hoisting-&#x6548;&#x679C;-&#x900F;&#x904E;-var-&#x95DC;&#x9375;&#x5B57;">&#x8B8A;&#x6578;&#x5BA3;&#x544A;&#x7684; Hoisting &#x6548;&#x679C; (&#x900F;&#x904E; <code>var</code> &#x95DC;&#x9375;&#x5B57;)</a></li>
+<li><a href="#&#x8B8A;&#x6578;&#x7684;-hoisting-&#x6548;&#x679C;&#x53EA;&#x6709;&#x300C;&#x5BA3;&#x544A;&#x300D;&#x7684;&#x90E8;&#x5206;&#xFF0C;&#x4E0D;&#x5305;&#x542B;&#x300C;&#x521D;&#x59CB;&#x5316;&#x300D;initializations">&#x8B8A;&#x6578;&#x7684; Hoisting &#x6548;&#x679C;&#x53EA;&#x6709;&#x300C;&#x5BA3;&#x544A;&#x300D;&#x7684;&#x90E8;&#x5206;&#xFF0C;&#x4E0D;&#x5305;&#x542B;&#x300C;&#x521D;&#x59CB;&#x5316;&#x300D;(Initializations)</a></li>
+<li><a href="#&#x51FD;&#x6578;&#x4E5F;&#x6709;-hoisting-&#x6548;&#x679C;-&#x900F;&#x904E;-function-&#x95DC;&#x9375;&#x5B57;">&#x51FD;&#x6578;&#x4E5F;&#x6709; Hoisting &#x6548;&#x679C; (&#x900F;&#x904E; <code>function</code> &#x95DC;&#x9375;&#x5B57;)</a></li>
+<li><a href="#&#x900F;&#x904E;&#x8B8A;&#x6578;&#x65B9;&#x5F0F;&#x5BA3;&#x544A;&#x7684;&#x51FD;&#x6578;&#xFF0C;hoisting-&#x6548;&#x679C;&#x6BD4;&#x7167;&#x8B8A;&#x6578;">&#x900F;&#x904E;&#x8B8A;&#x6578;&#x65B9;&#x5F0F;&#x5BA3;&#x544A;&#x7684;&#x51FD;&#x6578;&#xFF0C;Hoisting &#x6548;&#x679C;&#x6BD4;&#x7167;&#x8B8A;&#x6578;</a></li>
+<li><a href="#&#x4F7F;&#x7528;-let-&#x6216;-const-&#x5BA3;&#x544A;&#x7684;&#x8B8A;&#x6578;&#x4E0D;&#x5177;&#x5099;-hoisting-&#x6548;&#x679C;">&#x4F7F;&#x7528; <code>let</code> &#x6216; <code>const</code> &#x5BA3;&#x544A;&#x7684;&#x8B8A;&#x6578;&#x4E0D;&#x5177;&#x5099; Hoisting &#x6548;&#x679C;</a><ul>
+<li><a href="#&#x88DC;&#x5145;&#xFF1A;&#x771F;&#x76F8;&#x662F;-let-&#x548C;-const-&#x5176;&#x5BE6;&#x4E5F;&#x6709;-hoisting">&#x88DC;&#x5145;&#xFF1A;&#x771F;&#x76F8;&#x662F; <code>let</code> &#x548C; <code>const</code> &#x5176;&#x5BE6;&#x4E5F;&#x6709; Hoisting</a></li>
+</ul>
+</li>
+<li><a href="#&#x7E3D;&#x7D50;-hoisting">&#x7E3D;&#x7D50; Hoisting</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+
+</div><!-- tocstop -->
 <p>&#x6709;&#x6C92;&#x6709;&#x6CE8;&#x610F;&#x904E; JavaScript &#x88E1;&#x4E00;&#x500B;&#x795E;&#x5947;&#x7684;&#x73FE;&#x8C61;&#xFF1F;</p>
 <p>&#x6BD4;&#x5982;&#x4EE5;&#x4E0B;&#x7A0B;&#x5F0F;&#xFF1A;</p>
 <pre><code class="lang-js"><span class="hljs-built_in">console</span>.log(x);
@@ -755,7 +773,7 @@ test();
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Day 10：程式也懂電梯向上？ —— Hoisting","level":"1.11","depth":1,"next":{"title":"Day 11：Strict Mode (嚴謹模式)","level":"1.12","depth":1,"path":"articles/day11.md","ref":"./articles/day11.md","articles":[]},"previous":{"title":"Day 9：圖解變數作用域(Scope)","level":"1.10","depth":1,"path":"articles/day09.md","ref":"./articles/day09.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","intopic-toc","edit-link"],"pluginsConfig":{"intopic-toc":{"label":"Table of Contents","selector":".markdown-section h2, .markdown-section h3","visible":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day10.md","mtime":"2019-08-10T04:32:18.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T16:47:57.947Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Day 10：程式也懂電梯向上？ —— Hoisting","level":"1.11","depth":1,"next":{"title":"Day 11：Strict Mode (嚴謹模式)","level":"1.12","depth":1,"path":"articles/day11.md","ref":"./articles/day11.md","articles":[]},"previous":{"title":"Day 9：圖解變數作用域(Scope)","level":"1.10","depth":1,"path":"articles/day09.md","ref":"./articles/day09.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","etoc","edit-link"],"pluginsConfig":{"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day10.md","mtime":"2020-04-18T18:25:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T19:09:40.522Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -769,15 +787,7 @@ test();
         
     
         
-        <script src="../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-intopic-toc/gumshoe.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        <script src="../gitbook/gitbook-plugin-etoc/plugin.js"></script>
         
     
         

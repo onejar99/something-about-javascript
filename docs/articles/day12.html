@@ -21,7 +21,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-intopic-toc/style.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-etoc/plugin.css">
                 
             
                 
@@ -546,6 +546,23 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day12&#xFF1A;&#x770B;-strict-mode-&#x5982;&#x4F55;&#x65BD;&#x5C55;&#x300C;&#x9084;&#x6211;&#x6F02;&#x4EAE;&#x62F3;&#x300D;1">&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684; JavaScript &#x4E8C;&#x4E09;&#x4E8B;#Day12&#xFF1A;&#x770B; Strict Mode &#x5982;&#x4F55;&#x65BD;&#x5C55;&#x300C;&#x9084;&#x6211;&#x6F02;&#x4EAE;&#x62F3;&#x300D;(1)</h1>
+<!-- toc --><div id="toc" class="toc">
+
+<ul>
+<li><a href="#&#x56B4;&#x8B39;&#x6A21;&#x5F0F;&#x4E0B;&#x4F60;&#x4E0D;&#x80FD;&#x505A;&#x7684;&#x4E8B;">&#x56B4;&#x8B39;&#x6A21;&#x5F0F;&#x4E0B;&#x4F60;&#x4E0D;&#x80FD;&#x505A;&#x7684;&#x4E8B;</a><ul>
+<li><a href="#1-&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x672A;&#x5BA3;&#x544A;&#x7684;&#x8B8A;&#x6578;">1. &#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x672A;&#x5BA3;&#x544A;&#x7684;&#x8B8A;&#x6578;</a></li>
+<li><a href="#2-&#x4E0D;&#x80FD;&#x522A;&#x9664;&#x8B8A;&#x6578;&#x6216;&#x51FD;&#x6578;">2. &#x4E0D;&#x80FD;&#x522A;&#x9664;&#x8B8A;&#x6578;&#x6216;&#x51FD;&#x6578;</a></li>
+<li><a href="#3-&#x51FD;&#x6578;&#x7684;&#x53C3;&#x6578;&#x540D;&#x7A31;&#x4E0D;&#x80FD;&#x91CD;&#x8907;">3. &#x51FD;&#x6578;&#x7684;&#x53C3;&#x6578;&#x540D;&#x7A31;&#x4E0D;&#x80FD;&#x91CD;&#x8907;</a></li>
+<li><a href="#4-&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x516B;&#x9032;&#x5236;&#x7684;&#x6578;&#x5B57;&#x5BE6;&#x5B57;-octal-numeric-literals">4. &#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x516B;&#x9032;&#x5236;&#x7684;&#x6578;&#x5B57;&#x5BE6;&#x5B57; (Octal numeric literals)</a></li>
+<li><a href="#5-&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x516B;&#x9032;&#x5236;&#x7684;&#x8DF3;&#x812B;&#x5B57;&#x5143;-octal-escape-characters">5. &#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x516B;&#x9032;&#x5236;&#x7684;&#x8DF3;&#x812B;&#x5B57;&#x5143; (Octal escape characters)</a></li>
+<li><a href="#6-&#x4E0D;&#x80FD;&#x5C0D;&#x552F;&#x8B80;&#x7684;&#x7269;&#x4EF6;&#x5C6C;&#x6027;&#x4F5C;&#x5BEB;&#x5165;-write-to-a-read-only-property-of-objects">6. &#x4E0D;&#x80FD;&#x5C0D;&#x552F;&#x8B80;&#x7684;&#x7269;&#x4EF6;&#x5C6C;&#x6027;&#x4F5C;&#x5BEB;&#x5165; (write to a read-only property of objects)</a></li>
+<li><a href="#7-&#x4E0D;&#x80FD;&#x5C0D;-get-only-&#x7684;&#x7269;&#x4EF6;&#x5C6C;&#x6027;&#x4F5C;&#x5BEB;&#x5165;">7. &#x4E0D;&#x80FD;&#x5C0D; get-only &#x7684;&#x7269;&#x4EF6;&#x5C6C;&#x6027;&#x4F5C;&#x5BEB;&#x5165;</a></li>
+</ul>
+</li>
+<li><a href="#references">References</a></li>
+</ul>
+
+</div><!-- tocstop -->
 <p>Day11 &#x7684;&#x6587;&#x7AE0;&#x4ECB;&#x7D39; JavaScript &#x4E2D;&#x7684;&#x56B4;&#x8B39;&#x6A21;&#x5F0F; (Strict Mode) &#x662F;&#x4EC0;&#x9EBC;&#x3001;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x3001;&#x70BA;&#x4EC0;&#x9EBC;&#x8981;&#x7528;&#xFF0C;&#x4E26;&#x8209;&#x4E86;&#x7C21;&#x55AE;&#x7684;&#x4F8B;&#x5B50;&#x4F86;&#x793A;&#x7BC4;&#x3002;</p>
 <p>&#x56B4;&#x8B39;&#x6A21;&#x5F0F; (Strict Mode) &#x5C31;&#x50CF; JavaScript &#x4E2D;&#x7684;&#x300C;&#x9084;&#x6211;&#x6F02;&#x4EAE;&#x62F3;&#x300D;&#xFF0C;&#x80FD;&#x5920;&#x8B93;&#x539F;&#x672C;&#x4E0D;&#x5920;&#x56B4;&#x8B39;&#x3001;&#x9020;&#x6210;&#x6DF7;&#x4E82;&#x7684;&#x8A9E;&#x6CD5;&#xFF0C;&#x8B8A;&#x5F97;&#x66F4;&#x5B89;&#x5168;&#x3001;&#x4E7E;&#x6DE8;&#x3002;</p>
 <p><img src="https://i.imgur.com/WqfhHab.jpg" alt=""><br>(Source: <a href="https://scontent-ort2-1.cdninstagram.com/vp/9bcf3c4d8ed64dd8b5b9ea403dc62d16/5C630A48/t51.2885-15/e35/s480x480/31384596_175641703266886_1657800957565599744_n.jpg" target="_blank">&#x7DB2;&#x8DEF;</a>)</p>
@@ -788,7 +805,7 @@ person.age = <span class="hljs-number">70</span>;                        <span c
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Day 12：看 Strict Mode 如何施展「還我漂亮拳」(1)","level":"1.13","depth":1,"next":{"title":"Day 13：看 Strict Mode 如何施展「還我漂亮拳」(2)","level":"1.14","depth":1,"path":"articles/day13.md","ref":"./articles/day13.md","articles":[]},"previous":{"title":"Day 11：Strict Mode (嚴謹模式)","level":"1.12","depth":1,"path":"articles/day11.md","ref":"./articles/day11.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","intopic-toc","edit-link"],"pluginsConfig":{"intopic-toc":{"label":"Table of Contents","selector":".markdown-section h2, .markdown-section h3","visible":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day12.md","mtime":"2019-08-10T04:33:01.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T16:47:57.947Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Day 12：看 Strict Mode 如何施展「還我漂亮拳」(1)","level":"1.13","depth":1,"next":{"title":"Day 13：看 Strict Mode 如何施展「還我漂亮拳」(2)","level":"1.14","depth":1,"path":"articles/day13.md","ref":"./articles/day13.md","articles":[]},"previous":{"title":"Day 11：Strict Mode (嚴謹模式)","level":"1.12","depth":1,"path":"articles/day11.md","ref":"./articles/day11.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","etoc","edit-link"],"pluginsConfig":{"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day12.md","mtime":"2020-04-18T18:25:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T19:09:40.522Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -802,15 +819,7 @@ person.age = <span class="hljs-number">70</span>;                        <span c
         
     
         
-        <script src="../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-intopic-toc/gumshoe.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        <script src="../gitbook/gitbook-plugin-etoc/plugin.js"></script>
         
     
         

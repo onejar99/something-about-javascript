@@ -21,7 +21,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-intopic-toc/style.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-etoc/plugin.css">
                 
             
                 
@@ -546,6 +546,25 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day14&#xFF1A;&#x4F86;&#x6316;&#x6316;&#x6050;&#x9F8D;&#x9AA8;&#x2014;&#x2014;-with-&#x8A9E;&#x6CD5;">&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684; JavaScript &#x4E8C;&#x4E09;&#x4E8B;#Day14&#xFF1A;&#x4F86;&#x6316;&#x6316;&#x6050;&#x9F8D;&#x9AA8;&#x2014;&#x2014; with &#x8A9E;&#x6CD5;</h1>
+<!-- toc --><div id="toc" class="toc">
+
+<ul>
+<li><a href="#with-&#x7684;&#x8A9E;&#x6CD5;"><code>with</code> &#x7684;&#x8A9E;&#x6CD5;</a></li>
+<li><a href="#with-&#x4F7F;&#x7528;&#x65BC;&#x5167;&#x5EFA;&#x7269;&#x4EF6;&#x7684;&#x7BC4;&#x4F8B;"><code>with</code> &#x4F7F;&#x7528;&#x65BC;&#x5167;&#x5EFA;&#x7269;&#x4EF6;&#x7684;&#x7BC4;&#x4F8B;</a></li>
+<li><a href="#with-&#x4F7F;&#x7528;&#x65BC;&#x81EA;&#x8A02;&#x7269;&#x4EF6;&#x7684;&#x7BC4;&#x4F8B;"><code>with</code> &#x4F7F;&#x7528;&#x65BC;&#x81EA;&#x8A02;&#x7269;&#x4EF6;&#x7684;&#x7BC4;&#x4F8B;</a></li>
+<li><a href="#&#x649E;&#x540D;&#x6703;&#x767C;&#x751F;&#x4EC0;&#x9EBC;&#x4E8B;&#xFF1F;">&#x649E;&#x540D;&#x6703;&#x767C;&#x751F;&#x4EC0;&#x9EBC;&#x4E8B;&#xFF1F;</a><ul>
+<li><a href="#1-&#x8B8A;&#x6578;&#x662F;&#x5728;-with-&#x5340;&#x584A;&#x4E4B;&#x5916;&#x5BA3;&#x544A;">1. &#x8B8A;&#x6578;&#x662F;&#x5728; <code>with</code> &#x5340;&#x584A;&#x4E4B;&#x5916;&#x5BA3;&#x544A;</a></li>
+<li><a href="#2-&#x8B8A;&#x6578;&#x662F;&#x5728;-with-&#x5340;&#x584A;&#x4E4B;&#x5167;&#x5BA3;&#x544A;">2. &#x8B8A;&#x6578;&#x662F;&#x5728; <code>with</code> &#x5340;&#x584A;&#x4E4B;&#x5167;&#x5BA3;&#x544A;</a></li>
+<li><a href="#3-&#x8B8A;&#x6578;&#x662F;&#x5728;-with-&#x5340;&#x584A;&#x4E4B;&#x5916;&#x5BA3;&#x544A;&#xFF0C;&#x4F46;&#x5728;-with-&#x5340;&#x584A;&#x4E4B;&#x5167;&#x88AB;&#x4F7F;&#x7528;">3. &#x8B8A;&#x6578;&#x662F;&#x5728; <code>with</code> &#x5340;&#x584A;&#x4E4B;&#x5916;&#x5BA3;&#x544A;&#xFF0C;&#x4F46;&#x5728; <code>with</code> &#x5340;&#x584A;&#x4E4B;&#x5167;&#x88AB;&#x4F7F;&#x7528;</a></li>
+</ul>
+</li>
+<li><a href="#&#x7E3D;&#x7D50;-with-&#x4F5C;&#x7528;&#x57DF;&#x7684;&#x512A;&#x5148;&#x9806;&#x5E8F;">&#x7E3D;&#x7D50; <code>with</code> &#x4F5C;&#x7528;&#x57DF;&#x7684;&#x512A;&#x5148;&#x9806;&#x5E8F;</a></li>
+<li><a href="#with-&#x7684;&#x98A8;&#x96AA;"><code>with</code> &#x7684;&#x98A8;&#x96AA;</a></li>
+<li><a href="#with-&#x63B0;&#x63B0;&#xFF5E;"><code>with</code> &#x63B0;&#x63B0;&#xFF5E;</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+
+</div><!-- tocstop -->
 <p>JavaScript &#x6709;&#x4E00;&#x500B;&#x8A9E;&#x6CD5; <code>with</code> &#x4F3C;&#x4E4E;&#x76F8;&#x5C0D;&#x51B7;&#x9580;&#xFF0C;&#x6BD4;&#x8F03;&#x5C11;&#x770B;&#x5230;&#x88AB;&#x4F7F;&#x7528;&#x3002;</p>
 <p>&#x4E8B;&#x5BE6;&#x4E0A;&#x9023; <a href="https://www.w3schools.com/js/" target="_blank">W3Schools &#x7684; JavaScript &#x6559;&#x6750;</a> &#x90FD;&#x6C92;&#x6709; <code>with</code> &#x8A9E;&#x6CD5;&#x6559;&#x5B78;&#xFF01;&#x67E5;&#x4E86;&#x4E00;&#x4E0B;&#x7DB2;&#x8DEF;&#x8A0E;&#x8AD6;&#xFF0C;<code>with</code> &#x66FE;&#x7D93;&#x4E5F;&#x662F;&#x6709;&#x4EBA;&#x8A8D;&#x70BA;&#x5F88;&#x597D;&#x7528;&#x7684;&#x8A9E;&#x6CD5;&#x3002;&#x90A3;&#x9EBC;&#x7A76;&#x7ADF;&#x767C;&#x751F;&#x4EC0;&#x9EBC;&#x4E8B;&#xFF0C;&#x8B93; <code>with</code> &#x50CF;&#x500B;&#x9ED1;&#x6B77;&#x53F2;&#x4E00;&#x6A23;&#xFF0C;&#x88AB; W3Schools &#x523B;&#x610F;&#x907A;&#x5FD8;&#xFF1F;</p>
 <p>Day13 &#x4ECB;&#x7D39;&#x56B4;&#x8B39;&#x6A21;&#x5F0F; (Strict Mode) &#x7684;&#x4F8B;&#x5B50;&#x6642;&#x63D0;&#x5230;&#xFF0C;<code>with</code> &#x8A9E;&#x6CD5;&#x751A;&#x81F3;&#x5DF2;&#x7D93;&#x5728; ES5 &#x5C0E;&#x5165;&#x56B4;&#x8B39;&#x6A21;&#x5F0F;&#x5F8C;&#x88AB;&#x7981;&#x6B62;&#x4F7F;&#x7528;&#x3002;</p>
@@ -784,7 +803,7 @@ The recommended alternative is to assign the object whose properties you want to
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Day 14：來挖挖恐龍骨 —— with 語法","level":"1.15","depth":1,"next":{"title":"Day 15：this 關鍵字 (1)","level":"1.16","depth":1,"path":"articles/day15.md","ref":"./articles/day15.md","articles":[]},"previous":{"title":"Day 13：看 Strict Mode 如何施展「還我漂亮拳」(2)","level":"1.14","depth":1,"path":"articles/day13.md","ref":"./articles/day13.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","intopic-toc","edit-link"],"pluginsConfig":{"intopic-toc":{"label":"Table of Contents","selector":".markdown-section h2, .markdown-section h3","visible":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day14.md","mtime":"2019-08-10T04:34:01.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T16:47:57.947Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Day 14：來挖挖恐龍骨 —— with 語法","level":"1.15","depth":1,"next":{"title":"Day 15：this 關鍵字 (1)","level":"1.16","depth":1,"path":"articles/day15.md","ref":"./articles/day15.md","articles":[]},"previous":{"title":"Day 13：看 Strict Mode 如何施展「還我漂亮拳」(2)","level":"1.14","depth":1,"path":"articles/day13.md","ref":"./articles/day13.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","etoc","edit-link"],"pluginsConfig":{"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day14.md","mtime":"2020-04-18T18:25:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T19:09:40.522Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -798,15 +817,7 @@ The recommended alternative is to assign the object whose properties you want to
         
     
         
-        <script src="../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-intopic-toc/gumshoe.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        <script src="../gitbook/gitbook-plugin-etoc/plugin.js"></script>
         
     
         

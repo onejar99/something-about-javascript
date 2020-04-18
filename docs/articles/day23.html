@@ -21,7 +21,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-intopic-toc/style.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-etoc/plugin.css">
                 
             
                 
@@ -546,6 +546,34 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day23&#xFF1A;es6-&#x7269;&#x4EF6;&#x5BE6;&#x5B57;&#x5A01;&#x529B;&#x52A0;&#x5F37;&#x7248;-enhanced-object-literals">&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684; JavaScript &#x4E8C;&#x4E09;&#x4E8B;#Day23&#xFF1A;ES6 &#x7269;&#x4EF6;&#x5BE6;&#x5B57;&#x5A01;&#x529B;&#x52A0;&#x5F37;&#x7248; (Enhanced Object Literals)</h1>
+<!-- toc --><div id="toc" class="toc">
+
+<ul>
+<li><a href="#&#x4EC0;&#x9EBC;&#x662F;&#x7269;&#x4EF6;&#x5BE6;&#x5B57;-object-literals">&#x4EC0;&#x9EBC;&#x662F;&#x7269;&#x4EF6;&#x5BE6;&#x5B57; (Object Literals)</a></li>
+<li><a href="#es6-&#x63A8;&#x51FA;&#x7269;&#x4EF6;&#x5BE6;&#x5B57;&#x8A9E;&#x6CD5;&#x7684;&#x52A0;&#x5F37;&#x7248;">ES6 &#x63A8;&#x51FA;&#x7269;&#x4EF6;&#x5BE6;&#x5B57;&#x8A9E;&#x6CD5;&#x7684;&#x52A0;&#x5F37;&#x7248;</a><ul>
+<li><a href="#1-&#x7269;&#x4EF6;&#x5C6C;&#x6027;&#x521D;&#x59CB;&#x5316;&#x7684;&#x8A9E;&#x6CD5;&#x7C21;&#x5BEB;">1. &#x7269;&#x4EF6;&#x5C6C;&#x6027;&#x521D;&#x59CB;&#x5316;&#x7684;&#x8A9E;&#x6CD5;&#x7C21;&#x5BEB;</a><ul>
+<li><a href="#es5">ES5</a></li>
+<li><a href="#es6">ES6</a></li>
+</ul>
+</li>
+<li><a href="#2-&#x7269;&#x4EF6;&#x51FD;&#x5F0F;&#x7684;&#x8A9E;&#x6CD5;&#x7C21;&#x5BEB;">2. &#x7269;&#x4EF6;&#x51FD;&#x5F0F;&#x7684;&#x8A9E;&#x6CD5;&#x7C21;&#x5BEB;</a><ul>
+<li><a href="#es5-1">ES5</a></li>
+<li><a href="#es6-1">ES6</a></li>
+<li><a href="#&#x6CE8;&#x610F;&#xFF01;es6-&#x7C21;&#x5BEB;&#x8A9E;&#x6CD5;&#x7684;&#x51FD;&#x6578;&#x8996;&#x70BA;&#x50B3;&#x7D71;&#x51FD;&#x6578;">&#x6CE8;&#x610F;&#xFF01;ES6 &#x7C21;&#x5BEB;&#x8A9E;&#x6CD5;&#x7684;&#x51FD;&#x6578;&#x8996;&#x70BA;&#x50B3;&#x7D71;&#x51FD;&#x6578;</a></li>
+</ul>
+</li>
+<li><a href="#3-&#x5177;&#x904B;&#x7B97;&#x6027;&#x7684;&#x5C6C;&#x6027;&#x540D;&#x7A31;">3. &#x5177;&#x904B;&#x7B97;&#x6027;&#x7684;&#x5C6C;&#x6027;&#x540D;&#x7A31;</a><ul>
+<li><a href="#es5-2">ES5</a></li>
+<li><a href="#es6-2">ES6</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#&#x7E3D;&#x7D50;">&#x7E3D;&#x7D50;</a></li>
+<li><a href="#references">References:</a></li>
+</ul>
+
+</div><!-- tocstop -->
 <p>&#x4ECA;&#x5929;&#x6587;&#x7AE0;&#x8F15;&#x9B06;&#x4E00;&#x9EDE;&#xFF0C;&#x4F86;&#x4ECB;&#x7D39;&#x4E00;&#x500B;&#x7C21;&#x55AE;&#x7684; ES6 &#x65B0;&#x7279;&#x6027;&#xFF1A;<strong>Enhanced Object Literals</strong>&#x3002;</p>
 <h2 id="&#x4EC0;&#x9EBC;&#x662F;&#x7269;&#x4EF6;&#x5BE6;&#x5B57;-object-literals">&#x4EC0;&#x9EBC;&#x662F;&#x7269;&#x4EF6;&#x5BE6;&#x5B57; (Object Literals)</h2>
 <p>&#x5E73;&#x5E38;&#x6211;&#x5011;&#x7528;&#x5927;&#x62EC;&#x865F; (<code>{}</code>) &#x4F86;&#x5EFA;&#x7ACB;&#x7269;&#x4EF6;&#x7684;&#x8A9E;&#x6CD5;&#xFF0C;&#x5C31;&#x7A31;&#x70BA;&#x7269;&#x4EF6;&#x5BE6;&#x5B57; (Object Literals)&#x3002;</p>
@@ -758,7 +786,7 @@ player[prefix + (++i)] = <span class="hljs-string">&quot;C&quot;</span>;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Day 23：ES6 物件實字威力加強版 (Enhanced Object Literals)","level":"1.24","depth":1,"next":{"title":"Day 24：函數呼叫 (Function Invocation) 與立即函數 (Self-Invoking Functions)","level":"1.25","depth":1,"path":"articles/day24.md","ref":"./articles/day24.md","articles":[]},"previous":{"title":"Day 22：箭頭函數 (Arrow Functions) 的 this 和你想的不一樣 (2)","level":"1.23","depth":1,"path":"articles/day22.md","ref":"./articles/day22.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","intopic-toc","edit-link"],"pluginsConfig":{"intopic-toc":{"label":"Table of Contents","selector":".markdown-section h2, .markdown-section h3","visible":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day23.md","mtime":"2018-11-28T15:12:57.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T16:47:57.947Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Day 23：ES6 物件實字威力加強版 (Enhanced Object Literals)","level":"1.24","depth":1,"next":{"title":"Day 24：函數呼叫 (Function Invocation) 與立即函數 (Self-Invoking Functions)","level":"1.25","depth":1,"path":"articles/day24.md","ref":"./articles/day24.md","articles":[]},"previous":{"title":"Day 22：箭頭函數 (Arrow Functions) 的 this 和你想的不一樣 (2)","level":"1.23","depth":1,"path":"articles/day22.md","ref":"./articles/day22.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","etoc","edit-link"],"pluginsConfig":{"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day23.md","mtime":"2020-04-18T18:25:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T19:09:40.522Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -772,15 +800,7 @@ player[prefix + (++i)] = <span class="hljs-string">&quot;C&quot;</span>;
         
     
         
-        <script src="../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-intopic-toc/gumshoe.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        <script src="../gitbook/gitbook-plugin-etoc/plugin.js"></script>
         
     
         

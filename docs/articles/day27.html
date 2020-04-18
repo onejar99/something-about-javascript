@@ -21,7 +21,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-intopic-toc/style.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-etoc/plugin.css">
                 
             
                 
@@ -546,6 +546,42 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day27&#xFF1A;&#x5225;&#x7BA1;&#x8B8A;&#x6578;-pass-by-whatever&#xFF0C;&#x5C0B;&#x627E;&#x5BB9;&#x6613;&#x7406;&#x89E3;&#x7684;&#x9280;&#x8272;&#x5B50;&#x5F48;-silver-bullet">&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684; JavaScript &#x4E8C;&#x4E09;&#x4E8B;#Day27&#xFF1A;&#x5225;&#x7BA1;&#x8B8A;&#x6578; Pass by Whatever&#xFF0C;&#x5C0B;&#x627E;&#x5BB9;&#x6613;&#x7406;&#x89E3;&#x7684;&#x9280;&#x8272;&#x5B50;&#x5F48; (Silver Bullet)</h1>
+<!-- toc --><div id="toc" class="toc">
+
+<ul>
+<li><a href="#&#x77E5;&#x9053;&#x884C;&#x70BA;&#x7D50;&#x679C;&#xFF0C;&#x4F46;&#x8AAA;&#x4E0D;&#x51FA;&#x70BA;&#x4EC0;&#x9EBC;">&#x77E5;&#x9053;&#x884C;&#x70BA;&#x7D50;&#x679C;&#xFF0C;&#x4F46;&#x8AAA;&#x4E0D;&#x51FA;&#x70BA;&#x4EC0;&#x9EBC;</a></li>
+<li><a href="#&#x63A8;&#x5C0E;&#x8B8A;&#x6578;&#x884C;&#x70BA;&#x7684;&#x9280;&#x8272;&#x5B50;&#x5F48;&#xFF1A;&#x76D2;&#x5B50;&#x5716;&#x50CF;&#x6982;&#x5FF5;">&#x63A8;&#x5C0E;&#x8B8A;&#x6578;&#x884C;&#x70BA;&#x7684;&#x9280;&#x8272;&#x5B50;&#x5F48;&#xFF1A;&#x76D2;&#x5B50;&#x5716;&#x50CF;&#x6982;&#x5FF5;</a></li>
+<li><a href="#&#x76D2;&#x5B50;&#x5716;&#x50CF;&#x6982;&#x5FF5;&#x7684;&#x8D77;&#x624B;&#x5F0F;">&#x76D2;&#x5B50;&#x5716;&#x50CF;&#x6982;&#x5FF5;&#x7684;&#x8D77;&#x624B;&#x5F0F;</a><ul>
+<li><a href="#&#x8A18;&#x61B6;&#x9AD4;&#x6BCF;&#x4E00;&#x584A;&#x7A7A;&#x9593;&#x662F;&#x4E00;&#x500B;&#x76D2;&#x5B50;">&#x8A18;&#x61B6;&#x9AD4;&#x6BCF;&#x4E00;&#x584A;&#x7A7A;&#x9593;&#x662F;&#x4E00;&#x500B;&#x76D2;&#x5B50;</a></li>
+<li><a href="#&#x5BA3;&#x544A;&#x8B8A;&#x6578;&#x5C31;&#x662F;&#x8DDF;&#x96FB;&#x8166;&#x8A0E;&#x4E00;&#x500B;&#x76D2;&#x5B50;">&#x5BA3;&#x544A;&#x8B8A;&#x6578;&#x5C31;&#x662F;&#x8DDF;&#x96FB;&#x8166;&#x8A0E;&#x4E00;&#x500B;&#x76D2;&#x5B50;</a></li>
+<li><a href="#&#x4F7F;&#x7528;&#x5BE6;&#x5B57;-literals-&#x6216;-new-&#x95DC;&#x9375;&#x5B57;&#xFF0C;&#x5176;&#x5BE6;&#x90FD;&#x662F;&#x8DDF;&#x96FB;&#x8166;&#x8A0E;&#x4E00;&#x500B;&#x533F;&#x540D;&#x76D2;&#x5B50;">&#x4F7F;&#x7528;&#x5BE6;&#x5B57; (Literals) &#x6216; <code>new</code> &#x95DC;&#x9375;&#x5B57;&#xFF0C;&#x5176;&#x5BE6;&#x90FD;&#x662F;&#x8DDF;&#x96FB;&#x8166;&#x8A0E;&#x4E00;&#x500B;&#x533F;&#x540D;&#x76D2;&#x5B50;</a></li>
+<li><a href="#&#x5C07;&#x8CC7;&#x6599;&#x653E;&#x9032;&#x6709;&#x540D;&#x5B57;&#x7684;&#x76D2;&#x5B50;">&#x5C07;&#x8CC7;&#x6599;&#x653E;&#x9032;&#x6709;&#x540D;&#x5B57;&#x7684;&#x76D2;&#x5B50;</a></li>
+<li><a href="#&#x6C92;&#x6709;&#x7528;&#x7684;&#x533F;&#x540D;&#x76D2;&#x5B50;&#x5F88;&#x5FEB;&#x6703;&#x88AB;&#x6D88;&#x6EC5;">&#x6C92;&#x6709;&#x7528;&#x7684;&#x533F;&#x540D;&#x76D2;&#x5B50;&#x5F88;&#x5FEB;&#x6703;&#x88AB;&#x6D88;&#x6EC5;</a></li>
+<li><a href="#&#x5F15;&#x7528;&#x95DC;&#x4FC2;-reference-&#x53EF;&#x4EE5;&#x53D6;&#x6D88;&#x6216;&#x6539;&#x8B8A;">&#x5F15;&#x7528;&#x95DC;&#x4FC2; (Reference) &#x53EF;&#x4EE5;&#x53D6;&#x6D88;&#x6216;&#x6539;&#x8B8A;</a></li>
+</ul>
+</li>
+<li><a href="#&#x76D2;&#x5B50;&#x5716;&#x50CF;&#x6982;&#x5FF5;&#x65B0;&#x624B;&#x6751;&#x7D50;&#x675F;&#xFF0C;&#x6E96;&#x5099;&#x4E0A;&#x6230;&#x5834;">&#x76D2;&#x5B50;&#x5716;&#x50CF;&#x6982;&#x5FF5;&#x65B0;&#x624B;&#x6751;&#x7D50;&#x675F;&#xFF0C;&#x6E96;&#x5099;&#x4E0A;&#x6230;&#x5834;</a><ul>
+<li><a href="#a-&#x6703;&#x8B8A;&#x66F4;&#x5230;&#x5916;&#x90E8;&#x53C3;&#x6578;&#x7684;&#x7BC4;&#x4F8B;">(A) &#x6703;&#x8B8A;&#x66F4;&#x5230;&#x5916;&#x90E8;&#x53C3;&#x6578;&#x7684;&#x7BC4;&#x4F8B;</a><ul>
+<li><a href="#1-&#x5BA3;&#x544A;-person-&#x4E26;&#x7D66;&#x4E88;&#x521D;&#x59CB;&#x503C;">1. &#x5BA3;&#x544A; <code>person</code> &#x4E26;&#x7D66;&#x4E88;&#x521D;&#x59CB;&#x503C;</a></li>
+<li><a href="#2-&#x547C;&#x53EB;&#x51FD;&#x6578;-rename&#xFF0C;&#x4E26;&#x50B3;&#x5165;-person-&#x4F5C;&#x70BA;&#x53C3;&#x6578;">2. &#x547C;&#x53EB;&#x51FD;&#x6578; <code>rename()</code>&#xFF0C;&#x4E26;&#x50B3;&#x5165; <code>person</code> &#x4F5C;&#x70BA;&#x53C3;&#x6578;</a></li>
+<li><a href="#21-&#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x51FD;&#x6578;&#x57F7;&#x884C;&#x74B0;&#x5883;-function-execution-context">2.1. &#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x51FD;&#x6578;&#x57F7;&#x884C;&#x74B0;&#x5883; (Function Execution Context)</a></li>
+<li><a href="#22-&#x627F;&#x63A5;&#x50B3;&#x5165;&#x7684;&#x53C3;&#x6578;">2.2. &#x627F;&#x63A5;&#x50B3;&#x5165;&#x7684;&#x53C3;&#x6578;</a></li>
+<li><a href="#3-&#x57F7;&#x884C;&#x51FD;&#x6578;&#x5167;&#x7684;&#x64CD;&#x4F5C;&#x7269;&#x4EF6;">3. &#x57F7;&#x884C;&#x51FD;&#x6578;&#x5167;&#x7684;&#x64CD;&#x4F5C;&#x7269;&#x4EF6;</a></li>
+</ul>
+</li>
+<li><a href="#b-&#x4E0D;&#x6703;&#x8B8A;&#x66F4;&#x5230;&#x5916;&#x90E8;&#x53C3;&#x6578;&#x7684;&#x7BC4;&#x4F8B;">(B) &#x4E0D;&#x6703;&#x8B8A;&#x66F4;&#x5230;&#x5916;&#x90E8;&#x53C3;&#x6578;&#x7684;&#x7BC4;&#x4F8B;</a><ul>
+<li><a href="#3-&#x57F7;&#x884C;&#x51FD;&#x6578;&#x5167;&#x7684;&#x64CD;&#x4F5C;&#x7269;&#x4EF6;-1">3. &#x57F7;&#x884C;&#x51FD;&#x6578;&#x5167;&#x7684;&#x64CD;&#x4F5C;&#x7269;&#x4EF6;</a></li>
+<li><a href="#31-&#x70BA;&#x7269;&#x4EF6;&#x5BE6;&#x5B57;&#x7522;&#x751F;&#x4E00;&#x500B;&#x533F;&#x540D;&#x76D2;&#x5B50;">3.1. &#x70BA;&#x7269;&#x4EF6;&#x5BE6;&#x5B57;&#x7522;&#x751F;&#x4E00;&#x500B;&#x533F;&#x540D;&#x76D2;&#x5B50;</a></li>
+<li><a href="#32-&#x5C07;&#x533F;&#x540D;&#x76D2;&#x5B50;&#x7684;&#x8CC7;&#x6599;&#x50B3;&#x7D66;&#x8B8A;&#x6578;&#x76D2;&#x5B50;-obj">3.2. &#x5C07;&#x533F;&#x540D;&#x76D2;&#x5B50;&#x7684;&#x8CC7;&#x6599;&#x50B3;&#x7D66;&#x8B8A;&#x6578;&#x76D2;&#x5B50; <code>obj</code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#&#x7E3D;&#x7D50;">&#x7E3D;&#x7D50;</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+
+</div><!-- tocstop -->
 <p><img src="https://i.imgur.com/EmnBEyG.jpg" alt=""><br>(Source: <a href="https://www.nurtur-health.eu/WebRoot/StoreNL/Shops/62902058/50AB/33F7/232B/F188/F3CD/C0A8/28BE/BCA0/SBPacks_ml.JPG" target="_blank">&#x7DB2;&#x8DEF;&#x5716;&#x7247;</a>)</p>
 <p>&#x6628;&#x5929;&#x7684;&#x6587;&#x7AE0;&#x8AC7;&#x5230; Pass by value &#x548C; Pass by reference&#x3002;</p>
 <p>&#x4E00;&#x500B;&#x7A0B;&#x5F0F;&#x8A9E;&#x8A00;&#x7684;&#x8B8A;&#x6578;&#x904B;&#x4F5C;&#x6A5F;&#x5236;&#x7A76;&#x7ADF;&#x662F; Pass by value &#x9084;&#x662F; Pass by reference&#xFF0C;&#x4E0D;&#x7BA1;&#x5728; JavaScript &#x6216;&#x5176;&#x4ED6;&#x8A9E;&#x8A00;&#xFF0C;&#x4E00;&#x76F4;&#x90FD;&#x722D;&#x8B70;&#x4E0D;&#x65B7;&#x3002;</p>
@@ -800,7 +836,7 @@ rename(person);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Day 27：別管變數 Pass by Whatever，尋找容易理解的銀色子彈 (Silver Bullet)","level":"1.28","depth":1,"next":{"title":"Day 28：閉包 (Closures)","level":"1.29","depth":1,"path":"articles/day28.md","ref":"./articles/day28.md","articles":[]},"previous":{"title":"Day 26：程式界的哈姆雷特 —— Pass by value, or Pass by reference？","level":"1.27","depth":1,"path":"articles/day26.md","ref":"./articles/day26.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","intopic-toc","edit-link"],"pluginsConfig":{"intopic-toc":{"label":"Table of Contents","selector":".markdown-section h2, .markdown-section h3","visible":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day27.md","mtime":"2019-08-10T04:38:28.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T16:47:57.947Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Day 27：別管變數 Pass by Whatever，尋找容易理解的銀色子彈 (Silver Bullet)","level":"1.28","depth":1,"next":{"title":"Day 28：閉包 (Closures)","level":"1.29","depth":1,"path":"articles/day28.md","ref":"./articles/day28.md","articles":[]},"previous":{"title":"Day 26：程式界的哈姆雷特 —— Pass by value, or Pass by reference？","level":"1.27","depth":1,"path":"articles/day26.md","ref":"./articles/day26.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","etoc","edit-link"],"pluginsConfig":{"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day27.md","mtime":"2020-04-18T18:25:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T19:09:40.522Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -814,15 +850,7 @@ rename(person);
         
     
         
-        <script src="../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-intopic-toc/gumshoe.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        <script src="../gitbook/gitbook-plugin-etoc/plugin.js"></script>
         
     
         

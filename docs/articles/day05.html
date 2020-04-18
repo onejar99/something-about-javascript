@@ -21,7 +21,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-intopic-toc/style.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-etoc/plugin.css">
                 
             
                 
@@ -546,6 +546,18 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day5&#xFF1A;&#x6E6F;&#x59C6;&#x514B;&#x9B6F;&#x65AF;&#x8207;&#x5510;&#x5BB6;&#x9738;&#x738B;&#x69CD;&#x2014;&#x2014;&#x8B8A;&#x6578;&#x7684;&#x4F5C;&#x7528;&#x57DF;scope-1">&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684; JavaScript &#x4E8C;&#x4E09;&#x4E8B;#Day5&#xFF1A;&#x6E6F;&#x59C6;&#x514B;&#x9B6F;&#x65AF;&#x8207;&#x5510;&#x5BB6;&#x9738;&#x738B;&#x69CD;&#x2014;&#x2014;&#x8B8A;&#x6578;&#x7684;&#x4F5C;&#x7528;&#x57DF;(Scope) (1)</h1>
+<!-- toc --><div id="toc" class="toc">
+
+<ul>
+<li><a href="#&#x8B8A;&#x6578;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#x5C31;&#x50CF;&#x660E;&#x661F;&#x7684;&#x5730;&#x76E4;">&#x8B8A;&#x6578;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#x5C31;&#x50CF;&#x660E;&#x661F;&#x7684;&#x5730;&#x76E4;</a></li>
+<li><a href="#javascript-&#x7684;&#x4F5C;&#x7528;&#x57DF;&#x6709;-3-&#x500B;&#x7B49;&#x7D1A;">JavaScript &#x7684;&#x4F5C;&#x7528;&#x57DF;&#x6709; 3 &#x500B;&#x7B49;&#x7D1A;</a></li>
+<li><a href="#function-level-scope">Function Level Scope</a></li>
+<li><a href="#global-level-scope">Global Level Scope</a></li>
+<li><a href="#local-&#x5167;&#x7684;&#x8B8A;&#x6578;&#x6709;&#x53EF;&#x80FD;&#x81EA;&#x52D5;&#x8F49;&#x6210;-global-&#x8B8A;&#x6578;">Local &#x5167;&#x7684;&#x8B8A;&#x6578;&#x6709;&#x53EF;&#x80FD;&#x81EA;&#x52D5;&#x8F49;&#x6210; Global &#x8B8A;&#x6578;</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+
+</div><!-- tocstop -->
 <p>&#x4E00;&#x500B;&#x8B8A;&#x6578;&#x4EC0;&#x9EBC;&#x6642;&#x5019;&#x958B;&#x59CB;&#x767C;&#x63EE;&#x4F5C;&#x7528;&#xFF1F;&#x9019;&#x500B;&#x554F;&#x984C;&#x7684;&#x7B54;&#x6848;&#x5F88;&#x55AE;&#x7D14;&#x2014;&#x2014;&#x7576;&#x4E00;&#x500B;&#x8B8A;&#x6578;&#x88AB;&#x5BA3;&#x544A;&#x3002;</p>
 <p>&#x90A3;&#x4E00;&#x500B;&#x8B8A;&#x6578;&#x4EC0;&#x9EBC;&#x6642;&#x5019;&#x5931;&#x6548;&#xFF1F;&#x9019;&#x500B;&#x554F;&#x984C;&#x7684;&#x7B54;&#x6848;&#x5C31;&#x8907;&#x96DC;&#x591A;&#x4E86;&#x3002;</p>
 <p><img src="https://ithelp.ithome.com.tw/upload/images/20171223/20107429aYpMCDIU6H.jpg" alt=""><br>(Source: <a href="https://ithelp.ithome.com.tw/upload/images/20171223/20107429aYpMCDIU6H.jpg" target="_blank">&#x7DB2;&#x8DEF;</a>)</p>
@@ -718,7 +730,7 @@ Global: n1= OneJar
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Day 5：湯姆克魯斯與唐家霸王槍——變數的作用域(Scope) (1)","level":"1.6","depth":1,"next":{"title":"Day 6：湯姆克魯斯與唐家霸王槍——變數的作用域(Scope) (2)","level":"1.7","depth":1,"path":"articles/day06.md","ref":"./articles/day06.md","articles":[]},"previous":{"title":"Day 4：動態型別加弱型別不是罪——怎麼 JavaScript 一摔就變成個印度阿三？","level":"1.5","depth":1,"path":"articles/day04.md","ref":"./articles/day04.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","intopic-toc","edit-link"],"pluginsConfig":{"intopic-toc":{"label":"Table of Contents","selector":".markdown-section h2, .markdown-section h3","visible":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day05.md","mtime":"2019-08-10T04:29:46.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T16:47:57.947Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Day 5：湯姆克魯斯與唐家霸王槍——變數的作用域(Scope) (1)","level":"1.6","depth":1,"next":{"title":"Day 6：湯姆克魯斯與唐家霸王槍——變數的作用域(Scope) (2)","level":"1.7","depth":1,"path":"articles/day06.md","ref":"./articles/day06.md","articles":[]},"previous":{"title":"Day 4：動態型別加弱型別不是罪——怎麼 JavaScript 一摔就變成個印度阿三？","level":"1.5","depth":1,"path":"articles/day04.md","ref":"./articles/day04.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","etoc","edit-link"],"pluginsConfig":{"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day05.md","mtime":"2020-04-18T18:25:49.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T19:09:40.522Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -732,15 +744,7 @@ Global: n1= OneJar
         
     
         
-        <script src="../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-intopic-toc/gumshoe.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        <script src="../gitbook/gitbook-plugin-etoc/plugin.js"></script>
         
     
         

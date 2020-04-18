@@ -21,7 +21,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-intopic-toc/style.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-etoc/plugin.css">
                 
             
                 
@@ -546,6 +546,32 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day8&#xFF1A;var-&#x63B0;&#x63B0;-&#x2014;&#x2014;-es6-&#x66F4;&#x56B4;&#x8B39;&#x5B89;&#x5168;&#x7684;-let-&#x548C;-const">&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684; JavaScript &#x4E8C;&#x4E09;&#x4E8B;#Day8&#xFF1A;var &#x63B0;&#x63B0; &#x2014;&#x2014; ES6 &#x66F4;&#x56B4;&#x8B39;&#x5B89;&#x5168;&#x7684; let &#x548C; const</h1>
+<!-- toc --><div id="toc" class="toc">
+
+<ul>
+<li><a href="#let">let</a><ul>
+<li><a href="#let-&#x7684;&#x8A9E;&#x610F;">let &#x7684;&#x8A9E;&#x610F;</a></li>
+<li><a href="#&#x652F;&#x63F4;-block-scope">&#x652F;&#x63F4; Block Scope</a></li>
+<li><a href="#&#x7981;&#x6B62;&#x540C;&#x4E00;&#x5C64;-block-&#x91CD;&#x8907;&#x5BA3;&#x544A;&#x8B8A;&#x6578;">&#x7981;&#x6B62;&#x540C;&#x4E00;&#x5C64; Block &#x91CD;&#x8907;&#x5BA3;&#x544A;&#x8B8A;&#x6578;</a></li>
+<li><a href="#&#x4E0D;&#x6703;&#x7522;&#x751F;-global-scope-&#x8B8A;&#x6578;">&#x4E0D;&#x6703;&#x7522;&#x751F; Global Scope &#x8B8A;&#x6578;</a></li>
+</ul>
+</li>
+<li><a href="#const">const</a><ul>
+<li><a href="#&#x548C;-let-&#x4E00;&#x6A23;&#x662F;-block-scope--&#x7981;&#x6B62;&#x91CD;&#x8907;&#x5BA3;&#x544A;--&#x4E0D;&#x6703;&#x7522;&#x751F;-global-scope">&#x548C; <code>let</code> &#x4E00;&#x6A23;&#x662F; Block Scope + &#x7981;&#x6B62;&#x91CD;&#x8907;&#x5BA3;&#x544A; + &#x4E0D;&#x6703;&#x7522;&#x751F; Global Scope</a></li>
+<li><a href="#&#x5B9A;&#x7FA9;&#x6642;&#x5FC5;&#x9808;&#x521D;&#x59CB;&#x5316;-initialization">&#x5B9A;&#x7FA9;&#x6642;&#x5FC5;&#x9808;&#x521D;&#x59CB;&#x5316; (Initialization)</a></li>
+<li><a href="#&#x5F8C;&#x7E8C;&#x4E0D;&#x80FD;&#x66F4;&#x6539;&#x503C;">&#x5F8C;&#x7E8C;&#x4E0D;&#x80FD;&#x66F4;&#x6539;&#x503C;</a></li>
+</ul>
+</li>
+<li><a href="#&#x7E3D;&#x7D50;">&#x7E3D;&#x7D50;</a><ul>
+<li><a href="#let-1">let</a></li>
+<li><a href="#const-1">const</a></li>
+<li><a href="#&#x61C9;&#x907F;&#x514D;&#x4F7F;&#x7528;-var&#xFF0C;&#x6539;&#x7528;-let-&#x548C;-const">&#x61C9;&#x907F;&#x514D;&#x4F7F;&#x7528; <code>var</code>&#xFF0C;&#x6539;&#x7528; <code>let</code> &#x548C; <code>const</code></a></li>
+</ul>
+</li>
+<li><a href="#references">References</a></li>
+</ul>
+
+</div><!-- tocstop -->
 <p>&#x4E0A;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#x4ECB;&#x7D39;&#x4E86;&#x50B3;&#x7D71; <code>var</code> &#x95DC;&#x9375;&#x5B57;&#x5BA3;&#x544A;&#x8B8A;&#x6578;&#x7684;&#x7F3A;&#x9EDE;&#x3002;</p>
 <blockquote>
 <p>&#x61F6;&#x4EBA;&#x5305;&#x652F;&#x63F4;&#xFF1A;</p>
@@ -784,7 +810,7 @@ x = <span class="hljs-number">20</span>; <span class="hljs-comment">// TypeError
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Day 8：var 掰掰 —— ES6 更嚴謹安全的 let 和 const","level":"1.9","depth":1,"next":{"title":"Day 9：圖解變數作用域(Scope)","level":"1.10","depth":1,"path":"articles/day09.md","ref":"./articles/day09.md","articles":[]},"previous":{"title":"Day 7：傳統 var 關鍵字的不足","level":"1.8","depth":1,"path":"articles/day07.md","ref":"./articles/day07.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","intopic-toc","edit-link"],"pluginsConfig":{"intopic-toc":{"label":"Table of Contents","selector":".markdown-section h2, .markdown-section h3","visible":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day08.md","mtime":"2019-08-10T04:31:41.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T16:47:57.947Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Day 8：var 掰掰 —— ES6 更嚴謹安全的 let 和 const","level":"1.9","depth":1,"next":{"title":"Day 9：圖解變數作用域(Scope)","level":"1.10","depth":1,"path":"articles/day09.md","ref":"./articles/day09.md","articles":[]},"previous":{"title":"Day 7：傳統 var 關鍵字的不足","level":"1.8","depth":1,"path":"articles/day07.md","ref":"./articles/day07.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","etoc","edit-link"],"pluginsConfig":{"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day08.md","mtime":"2020-04-18T18:25:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T19:09:40.522Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -798,15 +824,7 @@ x = <span class="hljs-number">20</span>; <span class="hljs-comment">// TypeError
         
     
         
-        <script src="../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-intopic-toc/gumshoe.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        <script src="../gitbook/gitbook-plugin-etoc/plugin.js"></script>
         
     
         

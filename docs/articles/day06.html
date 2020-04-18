@@ -21,7 +21,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-intopic-toc/style.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-etoc/plugin.css">
                 
             
                 
@@ -546,6 +546,20 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day6&#xFF1A;&#x6E6F;&#x59C6;&#x514B;&#x9B6F;&#x65AF;&#x8207;&#x5510;&#x5BB6;&#x9738;&#x738B;&#x69CD;&#x2014;&#x2014;&#x8B8A;&#x6578;&#x7684;&#x4F5C;&#x7528;&#x57DF;scope-2">&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684; JavaScript &#x4E8C;&#x4E09;&#x4E8B;#Day6&#xFF1A;&#x6E6F;&#x59C6;&#x514B;&#x9B6F;&#x65AF;&#x8207;&#x5510;&#x5BB6;&#x9738;&#x738B;&#x69CD;&#x2014;&#x2014;&#x8B8A;&#x6578;&#x7684;&#x4F5C;&#x7528;&#x57DF;(Scope) (2)</h1>
+<!-- toc --><div id="toc" class="toc">
+
+<ul>
+<li><a href="#&#x661F;&#x723A;&#x5F37;&#x78B0;&#x963F;&#x6E6F;&#x54E5;&#x8AB0;&#x6703;&#x8D0F;&#xFF1F;global-scope-vs-function-scope">&#x661F;&#x723A;&#x5F37;&#x78B0;&#x963F;&#x6E6F;&#x54E5;&#x8AB0;&#x6703;&#x8D0F;&#xFF1F;Global Scope vs. Function Scope</a></li>
+<li><a href="#block-level-scope">Block Level Scope</a><ul>
+<li><a href="#block-scope-&#x7684;-java-&#x4F8B;&#x5B50;">Block Scope &#x7684; Java &#x4F8B;&#x5B50;</a></li>
+<li><a href="#javascript-&#x7684;-var-&#x5728;-block-scope-&#x4F7F;&#x7528;&#x7684;&#x4F8B;&#x5B50;">JavaScript &#x7684; <code>var</code> &#x5728; Block Scope &#x4F7F;&#x7528;&#x7684;&#x4F8B;&#x5B50;</a></li>
+</ul>
+</li>
+<li><a href="#&#x5C0D;&#xFF0C;&#x50B3;&#x7D71;-javascript-&#x53EA;&#x6709;-global-&#x548C;-function-&#x5169;&#x7A2E;&#x7B49;&#x7D1A;&#x7684;&#x4F5C;&#x7528;&#x57DF;">&#x5C0D;&#xFF0C;&#x50B3;&#x7D71; JavaScript &#x53EA;&#x6709; Global &#x548C; Function &#x5169;&#x7A2E;&#x7B49;&#x7D1A;&#x7684;&#x4F5C;&#x7528;&#x57DF;</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+
+</div><!-- tocstop -->
 <h2 id="&#x661F;&#x723A;&#x5F37;&#x78B0;&#x963F;&#x6E6F;&#x54E5;&#x8AB0;&#x6703;&#x8D0F;&#xFF1F;global-scope-vs-function-scope">&#x661F;&#x723A;&#x5F37;&#x78B0;&#x963F;&#x6E6F;&#x54E5;&#x8AB0;&#x6703;&#x8D0F;&#xFF1F;Global Scope vs. Function Scope</h2>
 <p><img src="https://i.imgur.com/KkQVLtA.png" alt=""><br>(Source: <a href="https://puui.qpic.cn/qqvideo_ori/0/k0505psezun_496_280/0" target="_blank">&#x7DB2;&#x8DEF;1</a> / <a href="http://globedia.com/imagenes/noticias/2015/9/4/mision-imposible-tom-cruise-corre-horas_1_2287136.jpg" target="_blank">&#x7DB2;&#x8DEF;2</a>)</p>
 <p>&#x4FD7;&#x8A71;&#x8AAA;&#x5929;&#x9AD8;&#x7687;&#x5E1D;&#x9060;&#xFF0C;&#x5341;&#x91CC;&#x5916;&#x7684;&#x7011;&#x5E03;&#x4E0D;&#x5982;&#x773C;&#x524D;&#x7684;&#x4E00;&#x676F;&#x6C34;&#x3002;</p>
@@ -698,7 +712,7 @@ myFunc(): window.n1= undefined
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Day 6：湯姆克魯斯與唐家霸王槍——變數的作用域(Scope) (2)","level":"1.7","depth":1,"next":{"title":"Day 7：傳統 var 關鍵字的不足","level":"1.8","depth":1,"path":"articles/day07.md","ref":"./articles/day07.md","articles":[]},"previous":{"title":"Day 5：湯姆克魯斯與唐家霸王槍——變數的作用域(Scope) (1)","level":"1.6","depth":1,"path":"articles/day05.md","ref":"./articles/day05.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","intopic-toc","edit-link"],"pluginsConfig":{"intopic-toc":{"label":"Table of Contents","selector":".markdown-section h2, .markdown-section h3","visible":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day06.md","mtime":"2019-08-10T04:30:36.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T16:47:57.947Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Day 6：湯姆克魯斯與唐家霸王槍——變數的作用域(Scope) (2)","level":"1.7","depth":1,"next":{"title":"Day 7：傳統 var 關鍵字的不足","level":"1.8","depth":1,"path":"articles/day07.md","ref":"./articles/day07.md","articles":[]},"previous":{"title":"Day 5：湯姆克魯斯與唐家霸王槍——變數的作用域(Scope) (1)","level":"1.6","depth":1,"path":"articles/day05.md","ref":"./articles/day05.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","etoc","edit-link"],"pluginsConfig":{"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day06.md","mtime":"2020-04-18T18:25:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T19:09:40.522Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -712,15 +726,7 @@ myFunc(): window.n1= undefined
         
     
         
-        <script src="../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-intopic-toc/gumshoe.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        <script src="../gitbook/gitbook-plugin-etoc/plugin.js"></script>
         
     
         

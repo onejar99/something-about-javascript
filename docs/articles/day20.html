@@ -21,7 +21,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-intopic-toc/style.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-etoc/plugin.css">
                 
             
                 
@@ -546,6 +546,31 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day20&#xFF1A;es6-&#x7684;&#x7BAD;&#x982D;&#x51FD;&#x6578;-arrow-functions">&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684; JavaScript &#x4E8C;&#x4E09;&#x4E8B;#Day20&#xFF1A;ES6 &#x7684;&#x7BAD;&#x982D;&#x51FD;&#x6578; (Arrow Functions)</h1>
+<!-- toc --><div id="toc" class="toc">
+
+<ul>
+<li><a href="#arrow-functions-&#x5C0F;&#x6A94;&#x6848;">Arrow Functions &#x5C0F;&#x6A94;&#x6848;</a></li>
+<li><a href="#arrow-functions-&#x8A9E;&#x6CD5;">Arrow Functions &#x8A9E;&#x6CD5;</a><ul>
+<li><a href="#1-&#x6A19;&#x6E96;&#x8A9E;&#x6CD5;">1. &#x6A19;&#x6E96;&#x8A9E;&#x6CD5;</a></li>
+<li><a href="#2-&#x7576;&#x51FD;&#x6578;&#x5167;&#x5BB9;&#x53EA;&#x6709;&#x55AE;&#x884C;&#x56DE;&#x50B3;&#x6642;&#x7684;&#x7C21;&#x5BEB;">2. &#x7576;&#x51FD;&#x6578;&#x5167;&#x5BB9;&#x53EA;&#x6709;&#x55AE;&#x884C;&#x56DE;&#x50B3;&#x6642;&#x7684;&#x7C21;&#x5BEB;</a></li>
+<li><a href="#3-&#x7576;&#x53EA;&#x6709;&#x55AE;&#x4E00;&#x500B;&#x53C3;&#x6578;&#x6642;&#x7684;&#x7C21;&#x5BEB;">3. &#x7576;&#x53EA;&#x6709;&#x55AE;&#x4E00;&#x500B;&#x53C3;&#x6578;&#x6642;&#x7684;&#x7C21;&#x5BEB;</a></li>
+</ul>
+</li>
+<li><a href="#arrow-functions-&#x4F7F;&#x7528;&#x7684;&#x6CE8;&#x610F;&#x4E8B;&#x9805;">Arrow Functions &#x4F7F;&#x7528;&#x7684;&#x6CE8;&#x610F;&#x4E8B;&#x9805;</a><ul>
+<li><a href="#1-&#x6C92;&#x6709;-hoisting-&#x6548;&#x679C;">1. &#x6C92;&#x6709; Hoisting &#x6548;&#x679C;</a></li>
+<li><a href="#2-&#x5EFA;&#x8B70;&#x4F7F;&#x7528;-const-&#x505A;&#x540D;&#x7A31;&#x90E8;&#x5206;&#x7684;&#x5BA3;&#x544A;">2. &#x5EFA;&#x8B70;&#x4F7F;&#x7528; <code>const</code> &#x505A;&#x540D;&#x7A31;&#x90E8;&#x5206;&#x7684;&#x5BA3;&#x544A;</a></li>
+</ul>
+</li>
+<li><a href="#arrow-functions-&#x548C;&#x50B3;&#x7D71;&#x51FD;&#x6578;&#x8A9E;&#x6CD5;&#x7684;&#x5DEE;&#x7570;">Arrow Functions &#x548C;&#x50B3;&#x7D71;&#x51FD;&#x6578;&#x8A9E;&#x6CD5;&#x7684;&#x5DEE;&#x7570;</a><ul>
+<li><a href="#1-&#x4E0D;&#x6703;&#x7522;&#x751F;&#x65B0;&#x7684;-arguments-&#x7269;&#x4EF6;">1. &#x4E0D;&#x6703;&#x7522;&#x751F;&#x65B0;&#x7684; <code>arguments</code> &#x7269;&#x4EF6;</a></li>
+<li><a href="#2-this-&#x904B;&#x4F5C;&#x884C;&#x70BA;&#x7684;&#x4E0D;&#x540C;">2. <code>this</code> &#x904B;&#x4F5C;&#x884C;&#x70BA;&#x7684;&#x4E0D;&#x540C;</a></li>
+</ul>
+</li>
+<li><a href="#&#x5C0F;&#x7D50;">&#x5C0F;&#x7D50;</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+
+</div><!-- tocstop -->
 <p>&#x6628;&#x5929;&#x7684;&#x6587;&#x7AE0;&#x6211;&#x5011;&#x4ECB;&#x7D39;&#x5230;&#x50B3;&#x7D71; JavaScript &#x5C0D;&#x65BC;&#x51FD;&#x6578;&#x5B9A;&#x7FA9;&#x7684;&#x8A9E;&#x6CD5;&#x6709; 4 &#x7A2E;&#x5BEB;&#x6CD5;&#x3002;</p>
 <blockquote>
 <p>&#x61F6;&#x4EBA;&#x5305;&#x652F;&#x63F4;&#xFF1A;</p>
@@ -777,7 +802,7 @@ player.f = whatsThis;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Day 20：ES6 的箭頭函數 (Arrow Functions)","level":"1.21","depth":1,"next":{"title":"Day 21：箭頭函數 (Arrow Functions) 的 this 和你想的不一樣 (1)","level":"1.22","depth":1,"path":"articles/day21.md","ref":"./articles/day21.md","articles":[]},"previous":{"title":"Day 19：函數定義 (Function Definition) 的 100 種寫法","level":"1.20","depth":1,"path":"articles/day19.md","ref":"./articles/day19.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","intopic-toc","edit-link"],"pluginsConfig":{"intopic-toc":{"label":"Table of Contents","selector":".markdown-section h2, .markdown-section h3","visible":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day20.md","mtime":"2018-11-28T15:06:31.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T16:47:57.947Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Day 20：ES6 的箭頭函數 (Arrow Functions)","level":"1.21","depth":1,"next":{"title":"Day 21：箭頭函數 (Arrow Functions) 的 this 和你想的不一樣 (1)","level":"1.22","depth":1,"path":"articles/day21.md","ref":"./articles/day21.md","articles":[]},"previous":{"title":"Day 19：函數定義 (Function Definition) 的 100 種寫法","level":"1.20","depth":1,"path":"articles/day19.md","ref":"./articles/day19.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","etoc","edit-link"],"pluginsConfig":{"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day20.md","mtime":"2020-04-18T18:25:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T19:09:40.522Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -791,15 +816,7 @@ player.f = whatsThis;
         
     
         
-        <script src="../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-intopic-toc/gumshoe.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        <script src="../gitbook/gitbook-plugin-etoc/plugin.js"></script>
         
     
         

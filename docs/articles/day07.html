@@ -21,7 +21,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-intopic-toc/style.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-etoc/plugin.css">
                 
             
                 
@@ -546,6 +546,22 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day7&#xFF1A;&#x50B3;&#x7D71;-var-&#x95DC;&#x9375;&#x5B57;&#x7684;&#x4E0D;&#x8DB3;">&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684; JavaScript &#x4E8C;&#x4E09;&#x4E8B;#Day7&#xFF1A;&#x50B3;&#x7D71; var &#x95DC;&#x9375;&#x5B57;&#x7684;&#x4E0D;&#x8DB3;</h1>
+<!-- toc --><div id="toc" class="toc">
+
+<ul>
+<li><a href="#&#x5B78;&#x7A0B;&#x5F0F;&#x5F88;&#x91CD;&#x8981;&#x7684;&#x4E00;&#x9EDE;&#x662F;&#x8981;&#x601D;&#x8003;&#x300C;&#x70BA;&#x4EC0;&#x9EBC;&#x300D;">&#x5B78;&#x7A0B;&#x5F0F;&#x5F88;&#x91CD;&#x8981;&#x7684;&#x4E00;&#x9EDE;&#x662F;&#x8981;&#x601D;&#x8003;&#x300C;&#x70BA;&#x4EC0;&#x9EBC;&#x300D;</a></li>
+<li><a href="#&#x50B3;&#x7D71;-var-&#x7684;&#x8B8A;&#x6578;&#x5BA3;&#x544A;&#x65B9;&#x6CD5;">&#x50B3;&#x7D71; <code>var</code> &#x7684;&#x8B8A;&#x6578;&#x5BA3;&#x544A;&#x65B9;&#x6CD5;</a></li>
+<li><a href="#&#x50B3;&#x7D71;-var-&#x6709;&#x4EC0;&#x9EBC;&#x7F3A;&#x9EDE;&#xFF1F;">&#x50B3;&#x7D71; <code>var</code> &#x6709;&#x4EC0;&#x9EBC;&#x7F3A;&#x9EDE;&#xFF1F;</a><ul>
+<li><a href="#&#x8A9E;&#x6CD5;&#x5141;&#x8A31;&#x91CD;&#x8907;&#x5BA3;&#x544A;-re-declaring">&#x8A9E;&#x6CD5;&#x5141;&#x8A31;&#x91CD;&#x8907;&#x5BA3;&#x544A; (Re-Declaring)</a></li>
+<li><a href="#&#x4E0D;&#x652F;&#x63F4;&#x5340;&#x584A;&#x4F5C;&#x7528;&#x57DF;-block-scope">&#x4E0D;&#x652F;&#x63F4;&#x5340;&#x584A;&#x4F5C;&#x7528;&#x57DF; (Block Scope)</a></li>
+<li><a href="#&#x4E0D;&#x652F;&#x63F4;&#x5E38;&#x6578;-constant-&#x7279;&#x6027;">&#x4E0D;&#x652F;&#x63F4;&#x5E38;&#x6578; (Constant) &#x7279;&#x6027;</a></li>
+</ul>
+</li>
+<li><a href="#&#x7E3D;&#x7D50;">&#x7E3D;&#x7D50;</a></li>
+<li><a href="#referneces">Referneces</a></li>
+</ul>
+
+</div><!-- tocstop -->
 <p>&#x9577;&#x4E45;&#x4EE5;&#x4F86; JavaScript &#x5BA3;&#x544A;&#x8B8A;&#x6578;&#x6240;&#x7528;&#x7684;&#x95DC;&#x9375;&#x5B57; (Keyword) &#x90FD;&#x662F; <code>var</code>&#x3002;</p>
 <p>&#x5927;&#x5BB6;&#x5DF2;&#x7D93;&#x975E;&#x5E38;&#x7FD2;&#x6163;&#xFF0C;&#x751A;&#x81F3;&#x5728; <code>let</code> &#x548C; <code>const</code> &#x5C0E;&#x5165;&#x9019;&#x9EBC;&#x4E45;&#x4E4B;&#x5F8C;&#xFF0C;&#x4ECD;&#x6642;&#x5E38;&#x770B;&#x5230; <code>var</code> &#x7684;&#x82B3;&#x8E64;&#x3002;(&#x7576;&#x7136;&#x4E00;&#x90E8;&#x4EFD;&#x539F;&#x56E0;&#x8DDF; ES6 &#x652F;&#x63F4;&#x5EA6;&#x7684;&#x666E;&#x53CA;&#x6709;&#x95DC;&#x4FC2;)</p>
 <p>&#x4F46;&#x50B3;&#x7D71; <code>var</code> &#x6709;&#x5E7E;&#x500B;&#x7F3A;&#x9EDE;&#xFF0C;&#x5BB9;&#x6613;&#x9020;&#x6210;&#x7A0B;&#x5F0F;&#x7DE8;&#x5BEB;&#x4E0A;&#x7684;&#x4E0D;&#x56B4;&#x8B39;&#xFF0C;&#x9032;&#x800C;&#x5C0E;&#x81F4;&#x8B8A;&#x6578;&#x63A7;&#x7BA1;&#x56F0;&#x64FE;&#x3002;</p>
@@ -708,7 +724,7 @@ PI = <span class="hljs-number">1234</span>;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Day 7：傳統 var 關鍵字的不足","level":"1.8","depth":1,"next":{"title":"Day 8：var 掰掰 —— ES6 更嚴謹安全的 let 和 const","level":"1.9","depth":1,"path":"articles/day08.md","ref":"./articles/day08.md","articles":[]},"previous":{"title":"Day 6：湯姆克魯斯與唐家霸王槍——變數的作用域(Scope) (2)","level":"1.7","depth":1,"path":"articles/day06.md","ref":"./articles/day06.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","intopic-toc","edit-link"],"pluginsConfig":{"intopic-toc":{"label":"Table of Contents","selector":".markdown-section h2, .markdown-section h3","visible":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day07.md","mtime":"2019-08-10T04:31:12.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T16:47:57.947Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Day 7：傳統 var 關鍵字的不足","level":"1.8","depth":1,"next":{"title":"Day 8：var 掰掰 —— ES6 更嚴謹安全的 let 和 const","level":"1.9","depth":1,"path":"articles/day08.md","ref":"./articles/day08.md","articles":[]},"previous":{"title":"Day 6：湯姆克魯斯與唐家霸王槍——變數的作用域(Scope) (2)","level":"1.7","depth":1,"path":"articles/day06.md","ref":"./articles/day06.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","etoc","edit-link"],"pluginsConfig":{"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day07.md","mtime":"2020-04-18T18:25:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T19:09:40.522Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -722,15 +738,7 @@ PI = <span class="hljs-number">1234</span>;
         
     
         
-        <script src="../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-intopic-toc/gumshoe.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        <script src="../gitbook/gitbook-plugin-etoc/plugin.js"></script>
         
     
         

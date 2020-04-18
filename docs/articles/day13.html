@@ -21,7 +21,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-intopic-toc/style.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-etoc/plugin.css">
                 
             
                 
@@ -546,6 +546,27 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day13&#xFF1A;&#x770B;-strict-mode-&#x5982;&#x4F55;&#x65BD;&#x5C55;&#x300C;&#x9084;&#x6211;&#x6F02;&#x4EAE;&#x62F3;&#x300D;2">&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684; JavaScript &#x4E8C;&#x4E09;&#x4E8B;#Day13&#xFF1A;&#x770B; Strict Mode &#x5982;&#x4F55;&#x65BD;&#x5C55;&#x300C;&#x9084;&#x6211;&#x6F02;&#x4EAE;&#x62F3;&#x300D;(2)</h1>
+<!-- toc --><div id="toc" class="toc">
+
+<ul>
+<li><a href="#&#x56B4;&#x8B39;&#x6A21;&#x5F0F;&#x4E0B;&#x4F60;&#x4E0D;&#x80FD;&#x505A;&#x7684;&#x4E8B;-&#x7E8C;">&#x56B4;&#x8B39;&#x6A21;&#x5F0F;&#x4E0B;&#x4F60;&#x4E0D;&#x80FD;&#x505A;&#x7684;&#x4E8B; (&#x7E8C;)</a><ul>
+<li><a href="#8-&#x4E0D;&#x80FD;&#x5C0D;&#x4E0D;&#x53EF;&#x522A;&#x9664;&#x7684;&#x5C6C;&#x6027;-undeletable-properties-&#x4F7F;&#x7528;-delete-&#x904B;&#x7B97;&#x5B50;">8. &#x4E0D;&#x80FD;&#x5C0D;&#x4E0D;&#x53EF;&#x522A;&#x9664;&#x7684;&#x5C6C;&#x6027; (undeletable properties) &#x4F7F;&#x7528; <code>delete</code> &#x904B;&#x7B97;&#x5B50;</a></li>
+<li><a href="#9-&#x4E0D;&#x80FD;&#x4F7F;&#x7528;-eval-&#x6216;-arguments-&#x4F5C;&#x70BA;&#x8B8A;&#x6578;&#x540D;&#x7A31;">9. &#x4E0D;&#x80FD;&#x4F7F;&#x7528; <code>eval</code> &#x6216; <code>arguments</code> &#x4F5C;&#x70BA;&#x8B8A;&#x6578;&#x540D;&#x7A31;</a></li>
+<li><a href="#10-&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x672A;&#x4F86;&#x7684;&#x4FDD;&#x7559;&#x5B57;&#x505A;&#x8B8A;&#x6578;&#x540D;&#x7A31;-cannot-use-future-reserved-keywords-as-variables">10. &#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x672A;&#x4F86;&#x7684;&#x4FDD;&#x7559;&#x5B57;&#x505A;&#x8B8A;&#x6578;&#x540D;&#x7A31; (cannot use future reserved keywords as variables)</a></li>
+<li><a href="#11-&#x7528;-eval-&#x5BA3;&#x544A;&#x7684;&#x8B8A;&#x6578;&#x6216;&#x51FD;&#x6578;&#xFF0C;&#x4E0D;&#x80FD;&#x5728;&#x8A72;-scope-&#x88AB;&#x8A9E;&#x6CD5;&#x547C;&#x53EB;&#x4F7F;&#x7528;">11. &#x7528; <code>eval()</code> &#x5BA3;&#x544A;&#x7684;&#x8B8A;&#x6578;&#x6216;&#x51FD;&#x6578;&#xFF0C;&#x4E0D;&#x80FD;&#x5728;&#x8A72; Scope &#x88AB;&#x8A9E;&#x6CD5;&#x547C;&#x53EB;&#x4F7F;&#x7528;</a></li>
+<li><a href="#12-&#x4E0D;&#x80FD;&#x4F7F;&#x7528;-with-&#x8A9E;&#x6CD5;">12. &#x4E0D;&#x80FD;&#x4F7F;&#x7528; <code>with</code> &#x8A9E;&#x6CD5;</a></li>
+<li><a href="#13-&#x5168;&#x57DF;&#x57F7;&#x884C;&#x74B0;&#x5883;&#x5167;&#x7684;&#x51FD;&#x6578;&#xFF0C;&#x88E1;&#x9762;&#x7684;-this-&#x4EE3;&#x8868;&#x7684;&#x7269;&#x4EF6;&#x4E0D;&#x4E00;&#x6A23;">13. &#x5168;&#x57DF;&#x57F7;&#x884C;&#x74B0;&#x5883;&#x5167;&#x7684;&#x51FD;&#x6578;&#xFF0C;&#x88E1;&#x9762;&#x7684; <code>this</code> &#x4EE3;&#x8868;&#x7684;&#x7269;&#x4EF6;&#x4E0D;&#x4E00;&#x6A23;</a></li>
+</ul>
+</li>
+<li><a href="#&#x56B4;&#x8B39;&#x6A21;&#x5F0F;&#x4E0B;&#x4F60;&#x9084;&#x662F;&#x80FD;">&#x56B4;&#x8B39;&#x6A21;&#x5F0F;&#x4E0B;&#x4F60;&#x9084;&#x662F;&#x80FD;&#x2026;&#x2026;</a><ul>
+<li><a href="#1-&#x9084;&#x662F;&#x53EF;&#x4EE5;&#x91CD;&#x8907;&#x5BA3;&#x544A;&#x8B8A;&#x6578;">1. &#x9084;&#x662F;&#x53EF;&#x4EE5;&#x91CD;&#x8907;&#x5BA3;&#x544A;&#x8B8A;&#x6578;</a></li>
+</ul>
+</li>
+<li><a href="#&#x7E3D;&#x7D50;">&#x7E3D;&#x7D50;</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+
+</div><!-- tocstop -->
 <h2 id="&#x56B4;&#x8B39;&#x6A21;&#x5F0F;&#x4E0B;&#x4F60;&#x4E0D;&#x80FD;&#x505A;&#x7684;&#x4E8B;-&#x7E8C;">&#x56B4;&#x8B39;&#x6A21;&#x5F0F;&#x4E0B;&#x4F60;&#x4E0D;&#x80FD;&#x505A;&#x7684;&#x4E8B; (&#x7E8C;)</h2>
 <h3 id="8-&#x4E0D;&#x80FD;&#x5C0D;&#x4E0D;&#x53EF;&#x522A;&#x9664;&#x7684;&#x5C6C;&#x6027;-undeletable-properties-&#x4F7F;&#x7528;-delete-&#x904B;&#x7B97;&#x5B50;">8. &#x4E0D;&#x80FD;&#x5C0D;&#x4E0D;&#x53EF;&#x522A;&#x9664;&#x7684;&#x5C6C;&#x6027; (undeletable properties) &#x4F7F;&#x7528; <code>delete</code> &#x904B;&#x7B97;&#x5B50;</h3>
 <ul>
@@ -783,7 +804,7 @@ myFunc();
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Day 13：看 Strict Mode 如何施展「還我漂亮拳」(2)","level":"1.14","depth":1,"next":{"title":"Day 14：來挖挖恐龍骨 —— with 語法","level":"1.15","depth":1,"path":"articles/day14.md","ref":"./articles/day14.md","articles":[]},"previous":{"title":"Day 12：看 Strict Mode 如何施展「還我漂亮拳」(1)","level":"1.13","depth":1,"path":"articles/day12.md","ref":"./articles/day12.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","intopic-toc","edit-link"],"pluginsConfig":{"intopic-toc":{"label":"Table of Contents","selector":".markdown-section h2, .markdown-section h3","visible":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day13.md","mtime":"2019-08-10T04:33:26.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T16:47:57.947Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Day 13：看 Strict Mode 如何施展「還我漂亮拳」(2)","level":"1.14","depth":1,"next":{"title":"Day 14：來挖挖恐龍骨 —— with 語法","level":"1.15","depth":1,"path":"articles/day14.md","ref":"./articles/day14.md","articles":[]},"previous":{"title":"Day 12：看 Strict Mode 如何施展「還我漂亮拳」(1)","level":"1.13","depth":1,"path":"articles/day12.md","ref":"./articles/day12.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","etoc","edit-link"],"pluginsConfig":{"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day13.md","mtime":"2020-04-18T18:25:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T19:09:40.522Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -797,15 +818,7 @@ myFunc();
         
     
         
-        <script src="../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-intopic-toc/gumshoe.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        <script src="../gitbook/gitbook-plugin-etoc/plugin.js"></script>
         
     
         

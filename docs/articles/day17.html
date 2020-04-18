@@ -21,7 +21,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-intopic-toc/style.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-etoc/plugin.css">
                 
             
                 
@@ -546,6 +546,23 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day17&#xFF1A;this-&#x95DC;&#x9375;&#x5B57;-3">&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684; JavaScript &#x4E8C;&#x4E09;&#x4E8B;#Day17&#xFF1A;this &#x95DC;&#x9375;&#x5B57; (3)</h1>
+<!-- toc --><div id="toc" class="toc">
+
+<ul>
+<li><a href="#&#x51FD;&#x6578;&#x57F7;&#x884C;&#x74B0;&#x5883;&#x4E0B;-function-context-&#x7E8C;">&#x51FD;&#x6578;&#x57F7;&#x884C;&#x74B0;&#x5883;&#x4E0B; (Function Context) (&#x7E8C;)</a><ul>
+<li><a href="#5-&#x986F;&#x6027;&#x51FD;&#x6578;&#x7D81;&#x5B9A;&#x4E4B;-callapply-&#x7BC7;-explicit-function-binding-for-callapply">5. &#x986F;&#x6027;&#x51FD;&#x6578;&#x7D81;&#x5B9A;&#x4E4B; call()/apply() &#x7BC7; (Explicit Function Binding for call()/apply())</a><ul>
+<li><a href="#51-&#x548C;-bind-&#x7684;&#x5DEE;&#x5225;">5.1. &#x548C; bind() &#x7684;&#x5DEE;&#x5225;</a></li>
+<li><a href="#52-&#x7D81;&#x5B9A;&#x7269;&#x4EF6;&#x7BC4;&#x4F8B;-&#x4E00;&#x822C;&#x6A21;&#x5F0F;--&#x56B4;&#x8B39;&#x6A21;&#x5F0F;">5.2. &#x7D81;&#x5B9A;&#x7269;&#x4EF6;&#x7BC4;&#x4F8B; (&#x4E00;&#x822C;&#x6A21;&#x5F0F; &amp; &#x56B4;&#x8B39;&#x6A21;&#x5F0F;)</a></li>
+<li><a href="#53-&#x5C0D;&#x5DF2;&#x7D93;&#x88AB;-binding-&#x904E;&#x7684;&#x51FD;&#x6578;&#x7269;&#x4EF6;&#x7121;&#x6548;">5.3. &#x5C0D;&#x5DF2;&#x7D93;&#x88AB; Binding &#x904E;&#x7684;&#x51FD;&#x6578;&#x7269;&#x4EF6;&#x7121;&#x6548;</a></li>
+</ul>
+</li>
+<li><a href="#6-this-&#x6307;&#x5411;-new-&#x6240;&#x7522;&#x751F;&#x7684;&#x65B0;&#x7269;&#x4EF6;">6. <code>this</code> &#x6307;&#x5411; <code>new</code> &#x6240;&#x7522;&#x751F;&#x7684;&#x65B0;&#x7269;&#x4EF6;</a></li>
+</ul>
+</li>
+<li><a href="#references">References</a></li>
+</ul>
+
+</div><!-- tocstop -->
 <h2 id="&#x51FD;&#x6578;&#x57F7;&#x884C;&#x74B0;&#x5883;&#x4E0B;-function-context-&#x7E8C;">&#x51FD;&#x6578;&#x57F7;&#x884C;&#x74B0;&#x5883;&#x4E0B; (Function Context) (&#x7E8C;)</h2>
 <h3 id="5-&#x986F;&#x6027;&#x51FD;&#x6578;&#x7D81;&#x5B9A;&#x4E4B;-callapply-&#x7BC7;-explicit-function-binding-for-callapply">5. &#x986F;&#x6027;&#x51FD;&#x6578;&#x7D81;&#x5B9A;&#x4E4B; call()/apply() &#x7BC7; (Explicit Function Binding for call()/apply())</h3>
 <blockquote>
@@ -688,7 +705,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Day 17：this 關鍵字 (3)","level":"1.18","depth":1,"next":{"title":"Day 18：this 關鍵字 (4)","level":"1.19","depth":1,"path":"articles/day18.md","ref":"./articles/day18.md","articles":[]},"previous":{"title":"Day 16：this 關鍵字 (2)","level":"1.17","depth":1,"path":"articles/day16.md","ref":"./articles/day16.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","intopic-toc","edit-link"],"pluginsConfig":{"intopic-toc":{"label":"Table of Contents","selector":".markdown-section h2, .markdown-section h3","visible":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day17.md","mtime":"2018-11-28T15:00:44.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T16:47:57.947Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Day 17：this 關鍵字 (3)","level":"1.18","depth":1,"next":{"title":"Day 18：this 關鍵字 (4)","level":"1.19","depth":1,"path":"articles/day18.md","ref":"./articles/day18.md","articles":[]},"previous":{"title":"Day 16：this 關鍵字 (2)","level":"1.17","depth":1,"path":"articles/day16.md","ref":"./articles/day16.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","etoc","edit-link"],"pluginsConfig":{"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day17.md","mtime":"2020-04-18T18:25:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T19:09:40.522Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -702,15 +719,7 @@
         
     
         
-        <script src="../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-intopic-toc/gumshoe.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        <script src="../gitbook/gitbook-plugin-etoc/plugin.js"></script>
         
     
         

@@ -21,7 +21,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-intopic-toc/style.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-etoc/plugin.css">
                 
             
                 
@@ -546,6 +546,23 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day11&#xFF1A;strict-mode-&#x56B4;&#x8B39;&#x6A21;&#x5F0F;">&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684; JavaScript &#x4E8C;&#x4E09;&#x4E8B;#Day11&#xFF1A;Strict Mode (&#x56B4;&#x8B39;&#x6A21;&#x5F0F;)</h1>
+<!-- toc --><div id="toc" class="toc">
+
+<ul>
+<li><a href="#&#x4EC0;&#x9EBC;&#x662F;&#x56B4;&#x8B39;&#x6A21;&#x5F0F;-strict-mode">&#x4EC0;&#x9EBC;&#x662F;&#x56B4;&#x8B39;&#x6A21;&#x5F0F; (Strict Mode)</a></li>
+<li><a href="#&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x56B4;&#x8B39;&#x6A21;&#x5F0F;">&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x56B4;&#x8B39;&#x6A21;&#x5F0F;</a><ul>
+<li><a href="#&#x900F;&#x904E;use-strict-&#x6307;&#x4EE4;&#x5BA3;&#x544A;">&#x900F;&#x904E;<code>&quot;use strict&quot;</code> &#x6307;&#x4EE4;&#x5BA3;&#x544A;</a></li>
+<li><a href="#use-strict-&#x7684;&#x4F5C;&#x7528;&#x7BC4;&#x570D;-scope">&quot;use strict&quot; &#x7684;&#x4F5C;&#x7528;&#x7BC4;&#x570D; (Scope)</a></li>
+</ul>
+</li>
+<li><a href="#&#x700F;&#x89BD;&#x5668;&#x5C0D;&#x56B4;&#x8B39;&#x6A21;&#x5F0F;&#x7684;&#x652F;&#x63F4;&#x6027;">&#x700F;&#x89BD;&#x5668;&#x5C0D;&#x56B4;&#x8B39;&#x6A21;&#x5F0F;&#x7684;&#x652F;&#x63F4;&#x6027;</a></li>
+<li><a href="#&#x65E2;&#x6709;&#x7A0B;&#x5F0F;&#x5207;&#x63DB;&#x5230;&#x56B4;&#x8B39;&#x6A21;&#x5F0F;&#x5FC5;&#x9808;&#x6CE8;&#x610F;">&#x65E2;&#x6709;&#x7A0B;&#x5F0F;&#x5207;&#x63DB;&#x5230;&#x56B4;&#x8B39;&#x6A21;&#x5F0F;&#x5FC5;&#x9808;&#x6CE8;&#x610F;</a></li>
+<li><a href="#&#x70BA;&#x4EC0;&#x9EBC;&#x8981;&#x4F7F;&#x7528;&#x56B4;&#x8B39;&#x6A21;&#x5F0F;">&#x70BA;&#x4EC0;&#x9EBC;&#x8981;&#x4F7F;&#x7528;&#x56B4;&#x8B39;&#x6A21;&#x5F0F;</a></li>
+<li><a href="#&#x7C21;&#x55AE;&#x4F86;&#x8AAA;&#xFF0C;&#x56B4;&#x8B39;&#x6A21;&#x5F0F;&#x7684;&#x597D;&#x8655;&#x5728;&#x65BC;">&#x7C21;&#x55AE;&#x4F86;&#x8AAA;&#xFF0C;&#x56B4;&#x8B39;&#x6A21;&#x5F0F;&#x7684;&#x597D;&#x8655;&#x5728;&#x65BC;</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+
+</div><!-- tocstop -->
 <p>JavaScript &#x5728;&#x8A9E;&#x6CD5;&#x7684;&#x9650;&#x5236;&#x4E0A;&#x5F88;&#x5BEC;&#x5BB9;&#xFF0C;&#x9019;&#x662F;&#x5B83;&#x5BB9;&#x6613;&#x4E0A;&#x624B;&#x7684;&#x512A;&#x9EDE;&#xFF0C;&#x4E0D;&#x6703;&#x5728;&#x5B78;&#x7FD2;&#x521D;&#x671F;&#x5C31;&#x7528;&#x4E00;&#x5806;&#x8A9E;&#x6CD5;&#x898F;&#x5247;&#x6253;&#x64CA;&#x4F60;&#x3002;</p>
 <p>&#x4F46;&#x65B9;&#x4FBF;&#x548C;&#x5B89;&#x5168;&#x6C38;&#x9060;&#x662F;&#x4E00;&#x9AD4;&#x5169;&#x9762;&#x3002;</p>
 <p>&#x5C31;&#x50CF;&#x6A5F;&#x5834;&#x5B89;&#x6AA2;&#xFF0C;&#x5982;&#x679C;&#x592A;&#x904E;&#x56B4;&#x683C;&#xFF0C;&#x5F88;&#x5B89;&#x5168;&#xFF0C;&#x4F46;&#x65C5;&#x5BA2;&#x6703;&#x89BA;&#x5F97;&#x64FE;&#x6C11;&#xFF1B;&#x5982;&#x679C;&#x592A;&#x5BEC;&#x9B06;&#xFF0C;&#x65C5;&#x5BA2;&#x65B9;&#x4FBF;&#xFF0C;&#x6050;&#x6016;&#x4EFD;&#x5B50;&#x4E5F;&#x5BB9;&#x6613;&#x51FA;&#x73FE;&#x3002;</p>
@@ -693,7 +710,7 @@ It is not a statement, but a literal expression, ignored by earlier versions of 
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Day 11：Strict Mode (嚴謹模式)","level":"1.12","depth":1,"next":{"title":"Day 12：看 Strict Mode 如何施展「還我漂亮拳」(1)","level":"1.13","depth":1,"path":"articles/day12.md","ref":"./articles/day12.md","articles":[]},"previous":{"title":"Day 10：程式也懂電梯向上？ —— Hoisting","level":"1.11","depth":1,"path":"articles/day10.md","ref":"./articles/day10.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","intopic-toc","edit-link"],"pluginsConfig":{"intopic-toc":{"label":"Table of Contents","selector":".markdown-section h2, .markdown-section h3","visible":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day11.md","mtime":"2019-08-10T04:32:47.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T16:47:57.947Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Day 11：Strict Mode (嚴謹模式)","level":"1.12","depth":1,"next":{"title":"Day 12：看 Strict Mode 如何施展「還我漂亮拳」(1)","level":"1.13","depth":1,"path":"articles/day12.md","ref":"./articles/day12.md","articles":[]},"previous":{"title":"Day 10：程式也懂電梯向上？ —— Hoisting","level":"1.11","depth":1,"path":"articles/day10.md","ref":"./articles/day10.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","etoc","edit-link"],"pluginsConfig":{"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day11.md","mtime":"2020-04-18T18:25:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T19:09:40.522Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -707,15 +724,7 @@ It is not a statement, but a literal expression, ignored by earlier versions of 
         
     
         
-        <script src="../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-intopic-toc/gumshoe.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        <script src="../gitbook/gitbook-plugin-etoc/plugin.js"></script>
         
     
         

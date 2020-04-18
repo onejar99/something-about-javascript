@@ -21,7 +21,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-intopic-toc/style.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-etoc/plugin.css">
                 
             
                 
@@ -546,6 +546,22 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day9&#xFF1A;&#x5716;&#x89E3;&#x8B8A;&#x6578;&#x4F5C;&#x7528;&#x57DF;scope">&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684; JavaScript &#x4E8C;&#x4E09;&#x4E8B;#Day9&#xFF1A;&#x5716;&#x89E3;&#x8B8A;&#x6578;&#x4F5C;&#x7528;&#x57DF;(Scope)</h1>
+<!-- toc --><div id="toc" class="toc">
+
+<ul>
+<li><a href="#&#x5716;&#x89E3;&#x4E4B;&#x65C5;&#x884C;&#x524D;&#x8AAA;&#x660E;">&#x5716;&#x89E3;&#x4E4B;&#x65C5;&#x884C;&#x524D;&#x8AAA;&#x660E;</a></li>
+<li><a href="#example-1&#xFF1A;&#x5BA3;&#x544A;&#x5728;-function-&#x5167;-&#x4F7F;&#x7528;-var&#x3001;let&#x3001;const-&#x90FD;&#x4E00;&#x6A23;">Example 1&#xFF1A;&#x5BA3;&#x544A;&#x5728; Function &#x5167; (&#x4F7F;&#x7528; <code>var</code>&#x3001;<code>let</code>&#x3001;<code>const</code> &#x90FD;&#x4E00;&#x6A23;)</a></li>
+<li><a href="#example-2&#xFF1A;&#x5BA3;&#x544A;&#x5728;&#x4E3B;&#x7A0B;&#x5F0F;&#x5340;-&#x4F7F;&#x7528;-var">Example 2&#xFF1A;&#x5BA3;&#x544A;&#x5728;&#x4E3B;&#x7A0B;&#x5F0F;&#x5340; (&#x4F7F;&#x7528; <code>var</code>)</a></li>
+<li><a href="#example-3&#xFF1A;&#x5BA3;&#x544A;&#x5728;&#x4E3B;&#x7A0B;&#x5F0F;&#x5340;-&#x4F7F;&#x7528;-let-&#x6216;-const">Example 3&#xFF1A;&#x5BA3;&#x544A;&#x5728;&#x4E3B;&#x7A0B;&#x5F0F;&#x5340; (&#x4F7F;&#x7528; <code>let</code> &#x6216; <code>const</code>)</a></li>
+<li><a href="#example-4&#xFF1A;&#x8CE6;&#x503C;&#x7D66;&#x672A;&#x5BA3;&#x544A;&#x7684;&#x8B8A;&#x6578;&#xFF0C;&#x6240;&#x81EA;&#x52D5;&#x7522;&#x751F;&#x7684;&#x5168;&#x57DF;&#x8B8A;&#x6578;">Example 4&#xFF1A;&#x8CE6;&#x503C;&#x7D66;&#x672A;&#x5BA3;&#x544A;&#x7684;&#x8B8A;&#x6578;&#xFF0C;&#x6240;&#x81EA;&#x52D5;&#x7522;&#x751F;&#x7684;&#x5168;&#x57DF;&#x8B8A;&#x6578;</a></li>
+<li><a href="#example-5&#xFF1A;global-&#x548C;-function-&#x5167;&#x540C;&#x6642;&#x5B58;&#x5728;&#x540C;&#x540D;&#x8B8A;&#x6578;-&#x4F7F;&#x7528;-var&#x3001;let&#x3001;const-&#x90FD;&#x4E00;&#x6A23;">Example 5&#xFF1A;Global &#x548C; Function &#x5167;&#x540C;&#x6642;&#x5B58;&#x5728;&#x540C;&#x540D;&#x8B8A;&#x6578; (&#x4F7F;&#x7528; <code>var</code>&#x3001;<code>let</code>&#x3001;<code>const</code> &#x90FD;&#x4E00;&#x6A23;)</a></li>
+<li><a href="#example-6&#xFF1A;block-&#x5167;&#x4F7F;&#x7528;-var-&#x5BA3;&#x544A;">Example 6&#xFF1A;Block &#x5167;&#x4F7F;&#x7528; <code>var</code> &#x5BA3;&#x544A;</a></li>
+<li><a href="#example-7&#xFF1A;block-&#x5167;&#x4F7F;&#x7528;-let-&#x6216;-const-&#x5BA3;&#x544A;">Example 7&#xFF1A;Block &#x5167;&#x4F7F;&#x7528; <code>let</code> &#x6216; <code>const</code> &#x5BA3;&#x544A;</a></li>
+<li><a href="#&#x7E3D;&#x7D50;">&#x7E3D;&#x7D50;</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+
+</div><!-- tocstop -->
 <p>&#x524D;&#x5E7E;&#x5929;&#x7684;&#x6587;&#x7AE0;&#x8AC7;&#x5230;&#x5404;&#x7A2E;&#x7B49;&#x7D1A;&#x7684; Scope &#x6548;&#x679C;&#x3002;</p>
 <blockquote>
 <p>&#x61F6;&#x4EBA;&#x5305;&#x652F;&#x63F4;&#xFF1A;</p>
@@ -798,7 +814,7 @@ Global: n1= Tom Cruise
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Day 9：圖解變數作用域(Scope)","level":"1.10","depth":1,"next":{"title":"Day 10：程式也懂電梯向上？ —— Hoisting","level":"1.11","depth":1,"path":"articles/day10.md","ref":"./articles/day10.md","articles":[]},"previous":{"title":"Day 8：var 掰掰 —— ES6 更嚴謹安全的 let 和 const","level":"1.9","depth":1,"path":"articles/day08.md","ref":"./articles/day08.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","intopic-toc","edit-link"],"pluginsConfig":{"intopic-toc":{"label":"Table of Contents","selector":".markdown-section h2, .markdown-section h3","visible":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day09.md","mtime":"2018-11-28T14:40:48.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T16:47:57.947Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Day 9：圖解變數作用域(Scope)","level":"1.10","depth":1,"next":{"title":"Day 10：程式也懂電梯向上？ —— Hoisting","level":"1.11","depth":1,"path":"articles/day10.md","ref":"./articles/day10.md","articles":[]},"previous":{"title":"Day 8：var 掰掰 —— ES6 更嚴謹安全的 let 和 const","level":"1.9","depth":1,"path":"articles/day08.md","ref":"./articles/day08.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","etoc","edit-link"],"pluginsConfig":{"etoc":{"h2lb":3,"header":1,"maxdepth":4,"mindepth":3,"notoc":false},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day09.md","mtime":"2020-04-18T18:25:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T19:09:40.522Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -812,15 +828,7 @@ Global: n1= Tom Cruise
         
     
         
-        <script src="../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-intopic-toc/gumshoe.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        <script src="../gitbook/gitbook-plugin-etoc/plugin.js"></script>
         
     
         
