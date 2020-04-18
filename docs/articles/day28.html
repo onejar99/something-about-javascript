@@ -1,0 +1,972 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Day 28：閉包 (Closures) · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="day29.html" />
+    
+    
+    <link rel="prev" href="day27.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="day01.html">
+            
+                <a href="day01.html">
+            
+                    
+                    Day 1：前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="day02.html">
+            
+                <a href="day02.html">
+            
+                    
+                    Day 2：資料型態的夢魘——動態型別加弱型別(1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="day03.html">
+            
+                <a href="day03.html">
+            
+                    
+                    Day 3：資料型態的夢魘——動態型別加弱型別(2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="day04.html">
+            
+                <a href="day04.html">
+            
+                    
+                    Day 4：動態型別加弱型別不是罪——怎麼 JavaScript 一摔就變成個印度阿三？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="day05.html">
+            
+                <a href="day05.html">
+            
+                    
+                    Day 5：湯姆克魯斯與唐家霸王槍——變數的作用域(Scope) (1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="day06.html">
+            
+                <a href="day06.html">
+            
+                    
+                    Day 6：湯姆克魯斯與唐家霸王槍——變數的作用域(Scope) (2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="day07.html">
+            
+                <a href="day07.html">
+            
+                    
+                    Day 7：傳統 var 關鍵字的不足
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="day08.html">
+            
+                <a href="day08.html">
+            
+                    
+                    Day 8：var 掰掰 —— ES6 更嚴謹安全的 let 和 const
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="day09.html">
+            
+                <a href="day09.html">
+            
+                    
+                    Day 9：圖解變數作用域(Scope)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="day10.html">
+            
+                <a href="day10.html">
+            
+                    
+                    Day 10：程式也懂電梯向上？ —— Hoisting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="day11.html">
+            
+                <a href="day11.html">
+            
+                    
+                    Day 11：Strict Mode (嚴謹模式)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="day12.html">
+            
+                <a href="day12.html">
+            
+                    
+                    Day 12：看 Strict Mode 如何施展「還我漂亮拳」(1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="day13.html">
+            
+                <a href="day13.html">
+            
+                    
+                    Day 13：看 Strict Mode 如何施展「還我漂亮拳」(2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="day14.html">
+            
+                <a href="day14.html">
+            
+                    
+                    Day 14：來挖挖恐龍骨 —— with 語法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="day15.html">
+            
+                <a href="day15.html">
+            
+                    
+                    Day 15：this 關鍵字 (1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="day16.html">
+            
+                <a href="day16.html">
+            
+                    
+                    Day 16：this 關鍵字 (2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="day17.html">
+            
+                <a href="day17.html">
+            
+                    
+                    Day 17：this 關鍵字 (3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="day18.html">
+            
+                <a href="day18.html">
+            
+                    
+                    Day 18：this 關鍵字 (4)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="day19.html">
+            
+                <a href="day19.html">
+            
+                    
+                    Day 19：函數定義 (Function Definition) 的 100 種寫法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="day20.html">
+            
+                <a href="day20.html">
+            
+                    
+                    Day 20：ES6 的箭頭函數 (Arrow Functions)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="day21.html">
+            
+                <a href="day21.html">
+            
+                    
+                    Day 21：箭頭函數 (Arrow Functions) 的 this 和你想的不一樣 (1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="day22.html">
+            
+                <a href="day22.html">
+            
+                    
+                    Day 22：箭頭函數 (Arrow Functions) 的 this 和你想的不一樣 (2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="day23.html">
+            
+                <a href="day23.html">
+            
+                    
+                    Day 23：ES6 物件實字威力加強版 (Enhanced Object Literals)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="day24.html">
+            
+                <a href="day24.html">
+            
+                    
+                    Day 24：函數呼叫 (Function Invocation) 與立即函數 (Self-Invoking Functions)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="day25.html">
+            
+                <a href="day25.html">
+            
+                    
+                    Day 25：不是多了塊魚 —— 立即函數的應用整理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="day26.html">
+            
+                <a href="day26.html">
+            
+                    
+                    Day 26：程式界的哈姆雷特 —— Pass by value, or Pass by reference？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="day27.html">
+            
+                <a href="day27.html">
+            
+                    
+                    Day 27：別管變數 Pass by Whatever，尋找容易理解的銀色子彈 (Silver Bullet)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.29" data-path="day28.html">
+            
+                <a href="day28.html">
+            
+                    
+                    Day 28：閉包 (Closures)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="day29.html">
+            
+                <a href="day29.html">
+            
+                    
+                    Day 29：閉包 (Closures) 進階打怪實戰
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="day30.html">
+            
+                <a href="day30.html">
+            
+                    
+                    Day 30：ES10 醞釀中 —— 擁抱 JS の 未來
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Day 28：閉包 (Closures)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day28&#xFF1A;&#x9589;&#x5305;-closures">&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684; JavaScript &#x4E8C;&#x4E09;&#x4E8B;#Day28&#xFF1A;&#x9589;&#x5305; (Closures)</h1>
+<p>&#x9589;&#x5305; (Closures) &#x662F; JavaScript &#x4E2D;&#x540D;&#x865F;&#x97FF;&#x5679;&#x5679;&#x7684;&#x4E00;&#x500B;&#x6982;&#x5FF5;&#x3002;&#x9435;&#x4EBA;&#x8CFD;&#x63A5;&#x8FD1;&#x5C3E;&#x8072;&#xFF0C;&#x7D42;&#x65BC;&#x8F2A;&#x5230;&#x9589;&#x5305;&#x51FA;&#x5834;&#x3002;</p>
+<p>&#x9589;&#x5305;&#x662F;&#x4EC0;&#x9EBC;&#x5462;&#xFF1F;</p>
+<p>&#x6211;&#x5011;&#x4F86;&#x770B;&#x4E00;&#x4E0B; W3Schools &#x7684;&#x5B9A;&#x7FA9;&#xFF1A;</p>
+<blockquote>
+<p>A closure is a function having access to the parent scope, even after the parent function has closed.</p>
+</blockquote>
+<p><strong>&#x9589;&#x5305; (Closures) &#x662F;&#x4E00;&#x500B;&#x80FD;&#x5B58;&#x53D6;&#x7236;&#x4F5C;&#x7528;&#x57DF;&#x7684;&#x51FD;&#x6578;&#xFF0C;&#x5373;&#x4F7F;&#x7236;&#x4F5C;&#x7528;&#x57DF;&#x5DF2;&#x7D93;&#x7D50;&#x675F;</strong>&#x3002;</p>
+<p><img src="https://i.imgur.com/lcqSy7g.png" alt=""><br>(Source: <a href="http://colorfulblanche.com/wp-content/uploads/2018/01/%E6%8A%95%E5%BD%B1%E7%89%8713-1024x576.png" target="_blank">&#x7DB2;&#x8DEF;&#x5716;&#x7247;</a>)</p>
+<p>&#x770B;&#x5230;&#x9019;&#x7A2E;&#x8AD6;&#x6587;&#x5F0F;&#x7684;&#x5B9A;&#x7FA9;&#x8AAA;&#x660E;&#x5C31;&#x80FD;&#x5FC3;&#x9818;&#x795E;&#x6703;&#x7684;&#x7DF4;&#x6B66;&#x5947;&#x624D;&#xFF0C;&#x53EF;&#x4EE5;&#x8003;&#x616E;&#x5DE6;&#x8F49;&#x96E2;&#x958B;&#x53BB;&#x627E;&#x5C0D;&#x4F60;&#x66F4;&#x6709;&#x50F9;&#x503C;&#x7684;&#x77E5;&#x8B58; (&#x8AA4;)&#x3002;</p>
+<p>&#x6C92;&#x5B78;&#x904E;&#x5982;&#x4F86;&#x795E;&#x638C;&#x7684;&#x89C0;&#x773E;&#xFF0C;&#x6211;&#x5011;&#x9084;&#x662F;&#x5F9E;&#x982D;&#x4F86;&#x597D;&#x597D;&#x8A8D;&#x8B58;&#x4E00;&#x4E0B;&#x9589;&#x5305;&#x3002;</p>
+<p><img src="https://i.imgur.com/2ee8sjQ.jpg" alt=""><br>(Source: <a href="https://s9.rr.itc.cn/r/wapChange/20164_15_14/a0sisi1715111647352.JPEG" target="_blank">&#x7DB2;&#x8DEF;&#x5716;&#x7247;</a>)</p>
+<h2 id="&#x9589;&#x5305;-closures-&#x5148;&#x4FEE;&#x8AB2;">&#x9589;&#x5305; (Closures) &#x5148;&#x4FEE;&#x8AB2;</h2>
+<p>&#x9589;&#x5305;&#x5728; JavaScript &#x4E2D;&#x662F;&#x4E00;&#x500B;&#x5F88;&#x91CD;&#x8981;&#x3001;&#x76F8;&#x5C0D;&#x7406;&#x89E3;&#x4E0A;&#x4E5F;&#x8F03;&#x70BA;&#x8907;&#x96DC;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x904B;&#x7528;&#x5F88;&#x591A;&#x5176;&#x4ED6; JavaScript &#x76F8;&#x95DC;&#x77E5;&#x8B58;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x5C0D;&#x9019;&#x4E9B;&#x5FC5;&#x8981;&#x7684;&#x77E5;&#x8B58;&#x7F3A;&#x4E4F;&#x638C;&#x63E1;&#xFF0C;&#x6703;&#x9020;&#x6210;&#x9589;&#x5305;&#x7406;&#x89E3;&#x904E;&#x7A0B;&#x7684;&#x963B;&#x7919;&#x3002;</p>
+<p>&#x56E0;&#x6B64;&#x6B63;&#x5F0F;&#x8E0F;&#x5165;&#x9589;&#x5305;&#x526F;&#x672C;&#x6253;&#x602A;&#x4E4B;&#x524D;&#xFF0C;&#x5EFA;&#x8B70;&#x5148;&#x5165;&#x624B;&#x5E7E;&#x9805;&#x6280;&#x80FD;&#x5305;&#xFF0C;&#x5426;&#x5247;&#x8D8A;&#x7D1A;&#x6253;&#x602A;&#x53EA;&#x6703;&#x89BA;&#x5F97;&#x75DB;&#x82E6;&#xFF0C;&#x904E;&#x7A0B;&#x4E2D;&#x4F3C;&#x61C2;&#x975E;&#x61C2;&#x3001;&#x751A;&#x81F3;&#x4E0D;&#x77E5;&#x6240;&#x4E91;&#x3002;</p>
+<p>&#x597D;&#x6D88;&#x606F;&#x662F;&#xFF0C;&#x9019;&#x4E9B;&#x77E5;&#x8B58;&#x90FD;&#x662F;&#x6211;&#x5011;&#x524D;&#x9762;&#x6240;&#x4ECB;&#x7D39;&#x904E;&#x7684;&#x6982;&#x5FF5;&#xFF01;</p>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x50B3;&#x9001;&#x9580;&#x6574;&#x7406;&#xFF1A;</p>
+<ol>
+<li><strong>&#x8B8A;&#x6578;&#x904B;&#x4F5C;&#x884C;&#x70BA;&#xFF1A;</strong><ul>
+<li><a href="https://ithelp.ithome.com.tw/articles/10209104" target="_blank">Day26&#xFF1A;&#x7A0B;&#x5F0F;&#x754C;&#x7684;&#x54C8;&#x59C6;&#x96F7;&#x7279; &#x2014;&#x2014; Pass by value, or Pass by reference&#xFF1F;</a></li>
+<li><a href="https://ithelp.ithome.com.tw/articles/10209287" target="_blank">Day27&#xFF1A;&#x5225;&#x7BA1;&#x8B8A;&#x6578; Pass by Whatever&#xFF0C;&#x5C0B;&#x627E;&#x5BB9;&#x6613;&#x7406;&#x89E3;&#x7684;&#x9280;&#x8272;&#x5B50;&#x5F48; (Silver Bullet)</a></li>
+</ul>
+</li>
+<li><strong>&#x8B8A;&#x6578;&#x4F5C;&#x7528;&#x57DF; (Scope)&#xFF1A;</strong><ul>
+<li><a href="https://ithelp.ithome.com.tw/articles/10203387" target="_blank">Day5&#xFF1A;&#x6E6F;&#x59C6;&#x514B;&#x9B6F;&#x65AF;&#x8207;&#x5510;&#x5BB6;&#x9738;&#x738B;&#x69CD;&#x2014;&#x2014;&#x8B8A;&#x6578;&#x7684;&#x4F5C;&#x7528;&#x57DF;(Scope) (1)</a></li>
+<li><a href="https://ithelp.ithome.com.tw/articles/10203306" target="_blank">Day6&#xFF1A;&#x6E6F;&#x59C6;&#x514B;&#x9B6F;&#x65AF;&#x8207;&#x5510;&#x5BB6;&#x9738;&#x738B;&#x69CD;&#x2014;&#x2014;&#x8B8A;&#x6578;&#x7684;&#x4F5C;&#x7528;&#x57DF;(Scope) (2)</a></li>
+<li><a href="https://ithelp.ithome.com.tw/articles/10203548" target="_blank">Day7&#xFF1A;&#x50B3;&#x7D71; var &#x95DC;&#x9375;&#x5B57;&#x7684;&#x4E0D;&#x8DB3;</a></li>
+<li><a href="https://ithelp.ithome.com.tw/articles/10203715" target="_blank">Day8&#xFF1A;var &#x63B0;&#x63B0; &#x2014;&#x2014; ES6 &#x66F4;&#x56B4;&#x8B39;&#x5B89;&#x5168;&#x7684; let &#x548C; const</a></li>
+</ul>
+</li>
+<li><strong>Hoisting (&#x5BA3;&#x544A;&#x7684;&#x63D0;&#x5347;&#x6548;&#x679C;)&#xFF1A;</strong><ul>
+<li><a href="https://ithelp.ithome.com.tw/articles/10204951" target="_blank">Day10&#xFF1A;&#x7A0B;&#x5F0F;&#x4E5F;&#x61C2;&#x96FB;&#x68AF;&#x5411;&#x4E0A;&#xFF1F; &#x2014;&#x2014; Hoisting</a></li>
+</ul>
+</li>
+<li><strong>&#x7ACB;&#x5373;&#x51FD;&#x6578;&#xFF1A;</strong><ul>
+<li><a href="https://ithelp.ithome.com.tw/articles/10208709" target="_blank">Day24&#xFF1A;&#x51FD;&#x6578;&#x547C;&#x53EB; (Function Invocation) &#x8207;&#x7ACB;&#x5373;&#x51FD;&#x6578; (Self-Invoking Functions)</a></li>
+</ul>
+</li>
+</ol>
+<h2 id="&#x5148;&#x4E0D;&#x8981;&#x7BA1;&#x9589;&#x5305;&#xFF0C;&#x4F60;&#x6709;&#x6C92;&#x6709;&#x807D;&#x904E;">&#x5148;&#x4E0D;&#x8981;&#x7BA1;&#x9589;&#x5305;&#xFF0C;&#x4F60;&#x6709;&#x6C92;&#x6709;&#x807D;&#x904E;&#x2026;&#x2026;</h2>
+<p>&#x9589;&#x5305;&#x662F;&#x4E00;&#x500B;&#x7565;&#x70BA;&#x8907;&#x96DC;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x7279;&#x5730;&#x767C;&#x5C55;&#x51FA;&#x9019;&#x6A23;&#x4E00;&#x500B;&#x8907;&#x96DC;&#x7684;&#x904B;&#x7528;&#xFF0C;&#x7D55;&#x5C0D;&#x4E0D;&#x662F;&#x70BA;&#x4E86;&#x81EA;&#x8650;&#xFF0C;&#x4E00;&#x5B9A;&#x662F;&#x70BA;&#x4E86;&#x89E3;&#x6C7A;&#x67D0;&#x500B;&#x554F;&#x984C;&#x6216;&#x60C5;&#x5883;&#x3002;</p>
+<p>&#x54B1;&#x5011;&#x5148;&#x4E0D;&#x8981;&#x7BA1;&#x4EC0;&#x9EBC;&#x662F;&#x9589;&#x5305;&#xFF0C;&#x5148;&#x4F86;&#x770B;&#x500B;&#x7BC4;&#x4F8B;&#x7A0B;&#x5F0F;&#x3002;</p>
+<p>&#x5728;&#x524D;&#x9762;&#x7684;&#x6587;&#x7AE0;&#xFF0C;&#x6211;&#x5011;&#x5DF2;&#x7D93;&#x77E5;&#x9053;&#x4F5C;&#x7528;&#x57DF; (Scope) &#x7684;&#x904B;&#x4F5C;&#xFF0C;&#x6839;&#x64DA;&#x4F5C;&#x7528;&#x57DF;&#x93C8; (Scope Chain)&#xFF0C;Local Scope &#x53EF;&#x4EE5;&#x5B58;&#x53D6;&#x5230; Global Scope &#x7684;&#x8B8A;&#x6578;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#x4EE5;&#x4E0B;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> counter = <span class="hljs-number">0</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sellTicket</span>(<span class="hljs-params">buyer</span>)</span>{
+  counter +=<span class="hljs-number">1</span>;
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`(Total Sold: <span class="hljs-subst">${counter}</span>) Buyer: <span class="hljs-subst">${buyer}</span>`</span>);
+}
+
+sellTicket(<span class="hljs-string">&apos;OneJar&apos;</span>);          <span class="hljs-comment">// (Total Sold: 1) Buyer: OneJar</span>
+sellTicket(<span class="hljs-string">&apos;Tony Stark&apos;</span>);      <span class="hljs-comment">// (Total Sold: 2) Buyer: Tony Stark</span>
+sellTicket(<span class="hljs-string">&apos;Steven Rogers&apos;</span>);   <span class="hljs-comment">// (Total Sold: 3) Buyer: Steven Rogers</span>
+</code></pre>
+<p>&#x6BCF;&#x7576;&#x6210;&#x529F;&#x8CE3;&#x51FA;&#x4E00;&#x5F35;&#x7968;&#xFF0C;&#x5C31;&#x6703;&#x547C;&#x53EB; <code>sellTicket()</code>&#xFF0C;&#x5370;&#x51FA;&#x8CFC;&#x7968;&#x8005;&#xFF0C;&#x4E26;&#x5C07;&#x552E;&#x7968;&#x7E3D;&#x6578;&#x52A0;&#x4E00;&#x3002;</p>
+<p>&#x4F46;&#x9019;&#x6A23;&#x5BEB;&#x6709;&#x4E00;&#x500B;&#x7F3A;&#x9EDE;&#xFF0C;&#x5C31;&#x662F;<strong>&#x5927;&#x5BB6;&#x90FD;&#x80FD;&#x76F4;&#x63A5;&#x5B58;&#x53D6;&#x8B8A;&#x6578; <code>counter</code>&#xFF0C;&#x7121;&#x6CD5;&#x9650;&#x5236;&#x5FC5;&#x9808;&#x900F;&#x904E; <code>sellTicket()</code> &#x4F86;&#x4FDD;&#x969C;&#x8B8A;&#x6578; <code>counter</code> &#x7684;&#x904B;&#x4F5C;</strong>&#xFF0C;&#x5C0D;&#x65BC;&#x8B8A;&#x6578; <code>counter</code> &#x4F86;&#x8AAA;&#x662F;&#x4E0D;&#x5B89;&#x5168;&#x7684;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#x53EF;&#x80FD;&#x767C;&#x751F;&#x9019;&#x6A23;&#x7684;&#x4E8B;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> counter = <span class="hljs-number">0</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sellTicket</span>(<span class="hljs-params">buyer</span>)</span>{
+  counter +=<span class="hljs-number">1</span>;
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`(Total Sold: <span class="hljs-subst">${counter}</span>) Buyer: <span class="hljs-subst">${buyer}</span>`</span>);
+}
+
+sellTicket(<span class="hljs-string">&apos;OneJar&apos;</span>);          <span class="hljs-comment">// (Total Sold: 1) Buyer: OneJar</span>
+sellTicket(<span class="hljs-string">&apos;Tony Stark&apos;</span>);      <span class="hljs-comment">// (Total Sold: 2) Buyer: Tony Stark</span>
+counter +=<span class="hljs-number">1</span>;
+sellTicket(<span class="hljs-string">&apos;Steven Rogers&apos;</span>);   <span class="hljs-comment">// (Total Sold: 4) Buyer: Steven Rogers</span>
+</code></pre>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x8AAA;&#xFF0C;&#x90A3;&#x5C31;&#x53E3;&#x982D;&#x8981;&#x6C42;&#x5927;&#x5BB6;&#x90FD;&#x5FC5;&#x9808;&#x900F;&#x904E; <code>sellTicket()</code> &#x4F86;&#x5B58;&#x53D6;&#x3002;</p>
+<p>&#x4F46;&#x4F60;&#x77E5;&#x6211;&#x77E5;&#x7368;&#x773C;&#x9F8D;&#x4E5F;&#x77E5;&#xFF0C;&#x5DE5;&#x7A0B;&#x5E2B;&#x54EA;&#x6709;&#x9019;&#x9EBC;&#x4E56;&#x3002;</p>
+<p><img src="https://i.imgur.com/UO4AaaY.png" alt=""><br>(Source: <a href="https://www.youtube.com/watch?v=m_24DLLpNDU" target="_blank">Youtube</a>)</p>
+<p>&#x9019;&#x9053;&#x7406;&#x5C31;&#x50CF;&#x5C0F;&#x5B69;&#x5B50;&#x8DDF;&#x7238;&#x5ABD;&#x62FF;&#x96F6;&#x7528;&#x9322;&#xFF0C;&#x5982;&#x679C;&#x7238;&#x5ABD;&#x5141;&#x8A31;&#x5C0F;&#x5B69;&#x76F4;&#x63A5;&#x53BB;&#x9322;&#x5305;&#x81EA;&#x5DF1;&#x62FF;&#xFF0C;&#x7B49;&#x65BC;&#x4F9D;&#x8CF4;&#x5C0F;&#x5B69;&#x7684;&#x81EA;&#x5F8B;&#xFF0C;&#x7121;&#x6CD5;&#x4FDD;&#x8B49;&#x54EA;&#x5929;&#x5C0F;&#x5B69;&#x9B3C;&#x8FF7;&#x5FC3;&#x7AC5;&#x76F4;&#x63A5;&#x62FF;&#x4FE1;&#x7528;&#x5361;&#x53BB;&#x5237;&#x7206;&#x3002;</p>
+<blockquote>
+<p>&#x7B46;&#x8005;&#x9592;&#x804A;&#xFF1A;&#x985E;&#x4F3C;&#x7684;&#x4E8B;&#x4EF6;&#x8FD1;&#x5E74;&#x5DF2;&#x7D93;&#x4E0D;&#x662F;&#x4EC0;&#x9EBC;<a href="https://unwire.hk/2018/04/04/micro-transaction/fun-tech/" target="_blank">&#x65B0;&#x805E;</a>&#x3002;</p>
+</blockquote>
+<p>&#x5C0D;&#x7A0B;&#x5F0F;&#x4F86;&#x8AAA;&#xFF0C;&#x9019;&#x7A2E;&#x4EBA;&#x70BA;&#x81EA;&#x5F8B;&#x6C92;&#x6709;&#x4FDD;&#x969C;&#xFF0C;&#x901A;&#x5E38;&#x90FD;&#x4E0D;&#x662F;&#x60E1;&#x610F;&#xFF0C;&#x4F46;&#x5076;&#x7136;&#x4E0D;&#x5C0F;&#x5FC3;&#x8AA4;&#x7528;&#x5C31;&#x8DB3;&#x4EE5;&#x5C0D;&#x7A0B;&#x5F0F;&#x7CFB;&#x7D71;&#x9020;&#x6210;&#x9EBB;&#x7169;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x7A0B;&#x5F0F;&#x8A2D;&#x8A08;&#x4E2D;&#x624D;&#x6703;&#x6709;&#x5C01;&#x88DD;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x9664;&#x4E86;&#x964D;&#x4F4E;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x7D30;&#x7BC0;&#x66B4;&#x9732;&#xFF0C;&#x4E5F;&#x63D0;&#x9AD8;&#x5B89;&#x5168;&#x63A7;&#x7BA1;&#xFF0C;&#x4F8B;&#x5982; getter&#x3001;setter &#x5C31;&#x662F;&#x5178;&#x578B;&#x4F8B;&#x5B50;&#x3002;</p>
+<p>&#x90A3;&#x70BA;&#x4E86;&#x4E0D;&#x8B93;&#x5927;&#x5BB6;&#x90FD;&#x80FD;&#x76F4;&#x63A5;&#x5B58;&#x53D6; <code>counter</code>&#xFF0C;&#x6211;&#x5C07;&#x8B8A;&#x6578; <code>counter</code> &#x653E;&#x9032; <code>sellTicket()</code> &#x88E1;&#xFF0C;&#x5916;&#x90E8;&#x74B0;&#x5883;&#x7121;&#x6CD5;&#x76F4;&#x63A5;&#x5B58;&#x53D6;&#xFF0C;&#x4E00;&#x5B9A;&#x8981;&#x900F;&#x904E; <code>sellTicket()</code> &#x624D;&#x80FD;&#x63A7;&#x5236;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sellTicket</span>(<span class="hljs-params">buyer</span>)</span>{
+  <span class="hljs-keyword">var</span> counter = <span class="hljs-number">0</span>;
+  counter +=<span class="hljs-number">1</span>;
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`(Total Sold: <span class="hljs-subst">${counter}</span>) Buyer: <span class="hljs-subst">${buyer}</span>`</span>);
+}
+
+sellTicket(<span class="hljs-string">&apos;OneJar&apos;</span>);          <span class="hljs-comment">// (Total Sold: 1) Buyer: OneJar</span>
+sellTicket(<span class="hljs-string">&apos;Tony Stark&apos;</span>);      <span class="hljs-comment">// (Total Sold: 1) Buyer: Tony Stark</span>
+sellTicket(<span class="hljs-string">&apos;Steven Rogers&apos;</span>);   <span class="hljs-comment">// (Total Sold: 1) Buyer: Steven Rogers</span>
+</code></pre>
+<p>&#x56E0;&#x70BA;&#x8B8A;&#x6578; <code>counter</code> &#x5B58;&#x5728; Local Scope &#x88E1;&#xFF0C;&#x4E00;&#x65E6;&#x6BCF;&#x6B21; <code>sellTicket()</code> &#x7684;&#x51FD;&#x6578;&#x57F7;&#x884C;&#x74B0;&#x5883;&#x6D88;&#x5931;&#xFF0C;&#x8B8A;&#x6578; <code>counter</code> &#x5C31;&#x6703;&#x8DDF;&#x8457;&#x5931;&#x6548;&#xFF0C;&#x5C0E;&#x81F4;&#x7E3D;&#x7968;&#x6578;&#x6C38;&#x9060;&#x90FD;&#x662F; <code>1</code>&#xFF0C;&#x9019;&#x986F;&#x7136;&#x4E0D;&#x5408;&#x9700;&#x6C42;&#x3002;</p>
+<p><strong>&#x7531;&#x6B64;&#x53EF;&#x4EE5;&#x6B78;&#x7D0D;&#x51FA;&#x6211;&#x5011;&#x9700;&#x8981;&#x7684;&#x6548;&#x679C;</strong>&#xFF1A;</p>
+<ol>
+<li>&#x8B8A;&#x6578; <code>counter</code> &#x9700;&#x8981;&#x5B58;&#x5728;&#x65BC;&#x7684; Local Scope &#x88E1;&#xFF0C;&#x8B93;&#x5916;&#x90E8;&#x74B0;&#x5883;&#x7121;&#x6CD5;&#x76F4;&#x63A5;&#x5B58;&#x53D6;&#xFF0C;&#x5FC5;&#x9808;&#x900F;&#x904E; <code>sellTicket()</code> &#x4F86;&#x78BA;&#x4FDD;&#x57F7;&#x884C;&#x52D5;&#x4F5C;&#x7684;&#x5B89;&#x5168;&#x3002;</li>
+<li>&#x4F46;&#x5373;&#x4F7F;&#x51FD;&#x6578;&#x57F7;&#x884C;&#x7D50;&#x675F;&#xFF0C;&#x8B8A;&#x6578; <code>counter</code> &#x9084;&#x662F;&#x80FD;&#x6301;&#x7E8C;&#x5B58;&#x6D3B;&#x4E0D;&#x5931;&#x6548;&#x3002;</li>
+</ol>
+<p>&#x9019;&#x5C31;&#x662F;&#x9589;&#x5305;&#x60F3;&#x8981;&#x505A;&#x5230;&#x7684;&#x4E8B;&#x60C5;&#x3002;</p>
+<h2 id="&#x5F9E;&#x76EE;&#x6A19;&#x5206;&#x6790;&#x9589;&#x5305;&#x9700;&#x8981;&#x7684;&#x8981;&#x7D20;">&#x5F9E;&#x76EE;&#x6A19;&#x5206;&#x6790;&#x9589;&#x5305;&#x9700;&#x8981;&#x7684;&#x8981;&#x7D20;</h2>
+<p>&#x4E0A;&#x8FF0;&#x76EE;&#x6A19;&#x6548;&#x679C;&#x4E3B;&#x8981;&#x6709;&#x5169;&#x500B;&#x8981;&#x9EDE;&#xFF1A;</p>
+<h3 id="1-&#x8B8A;&#x6578;&#x8CC7;&#x6599;&#x5B58;&#x5728;&#x65BC;&#x7684;-local-scope-&#x88E1;&#xFF0C;&#x8B93;&#x5916;&#x90E8;&#x74B0;&#x5883;&#x7121;&#x6CD5;&#x76F4;&#x63A5;&#x5B58;&#x53D6;&#xFF0C;&#x4EE5;&#x78BA;&#x4FDD;&#x52D5;&#x4F5C;&#x5B89;&#x5168;">1. &#x8B8A;&#x6578;&#x8CC7;&#x6599;&#x5B58;&#x5728;&#x65BC;&#x7684; Local Scope &#x88E1;&#xFF0C;&#x8B93;&#x5916;&#x90E8;&#x74B0;&#x5883;&#x7121;&#x6CD5;&#x76F4;&#x63A5;&#x5B58;&#x53D6;&#xFF0C;&#x4EE5;&#x78BA;&#x4FDD;&#x52D5;&#x4F5C;&#x5B89;&#x5168;</h3>
+<p>&#x63DB;&#x53E5;&#x8A71;&#x8AAA;&#xFF0C;&#x5C07;&#x6211;&#x5011;&#x5E0C;&#x671B;&#x64CD;&#x63A7;&#x7684;&#x8B8A;&#x6578;&#x5BA3;&#x544A;&#x65BC;&#x4E00;&#x500B; Local Scope &#x5167;&#xFF0C;&#x9650;&#x5236;&#x5B83;&#x7684;&#x5B58;&#x53D6;&#x6B0A;&#x3002;</p>
+<p>&#x9019;&#x662F;&#x76F8;&#x5C0D;&#x5BB9;&#x6613;&#x505A;&#x5230;&#x7684;&#xFF0C;&#x4E00;&#x500B;&#x666E;&#x901A;&#x7684;&#x51FD;&#x6578;&#x5C31;&#x80FD;&#x9054;&#x5230;&#x76EE;&#x7684;&#x3002;</p>
+<p><strong>&#x6240;&#x4EE5;&#x6211;&#x5011;&#x77E5;&#x9053;&#x4E86;&#x9589;&#x5305;&#x7684;&#x7B2C;&#x4E00;&#x500B;&#x8981;&#x7D20;&#xFF1A;&#x51FD;&#x6578;&#x3002;</strong></p>
+<p>&#x6BD4;&#x8F03;&#x9EBB;&#x7169;&#x7684;&#x662F;&#x7B2C;&#x4E8C;&#x9EDE;&#x3002;</p>
+<h3 id="2-&#x5373;&#x4F7F;-local-&#x7684;&#x57F7;&#x884C;&#x74B0;&#x5883;&#x7D50;&#x675F;&#xFF0C;local-&#x74B0;&#x5883;&#x5167;&#x5EFA;&#x7ACB;&#x7684;&#x8CC7;&#x6599;&#x9084;&#x662F;&#x80FD;&#x6301;&#x7E8C;&#x5B58;&#x6D3B;">2. &#x5373;&#x4F7F; Local &#x7684;&#x57F7;&#x884C;&#x74B0;&#x5883;&#x7D50;&#x675F;&#xFF0C;Local &#x74B0;&#x5883;&#x5167;&#x5EFA;&#x7ACB;&#x7684;&#x8CC7;&#x6599;&#x9084;&#x662F;&#x80FD;&#x6301;&#x7E8C;&#x5B58;&#x6D3B;</h3>
+<p>&#x6BCF;&#x4E00;&#x6B21;&#x547C;&#x53EB;&#x51FD;&#x6578;&#xFF0C;&#x90FD;&#x662F;&#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x65B0;&#x7684;&#x51FD;&#x6578;&#x57F7;&#x884C;&#x74B0;&#x5883;&#xFF0C;&#x4E00;&#x65E6;&#x51FD;&#x6578;&#x57F7;&#x884C;&#x7D50;&#x675F;&#xFF0C;&#x9019;&#x500B;&#x74B0;&#x5883;&#x5C31;&#x6703;&#x5931;&#x6548;&#xFF0C;&#x5305;&#x542B;&#x74B0;&#x5883;&#x5167;&#x6240;&#x5BA3;&#x544A;&#x7684;&#x8B8A;&#x6578;&#xFF0C;&#x9019;&#x4E5F;&#x662F; Local Scope &#x80FD;&#x6210;&#x7ACB;&#x7684;&#x524D;&#x63D0;&#x3002;</p>
+<p>&#x90A3;&#x5728;&#x9019;&#x500B;&#x524D;&#x63D0;&#x4E0B;&#xFF0C;<strong>&#x5982;&#x4F55;&#x505A;&#x5230;&#x5373;&#x4F7F;&#x51FD;&#x6578;&#x57F7;&#x884C;&#x74B0;&#x5883;&#x7D50;&#x675F;&#xFF0C;&#x88E1;&#x9762;&#x7684;&#x8B8A;&#x6578;&#x80FD;&#x6301;&#x7E8C;&#x5B58;&#x6D3B;&#xFF1F;</strong></p>
+<p>&#x9084;&#x8A18;&#x5F97; <a href="https://ithelp.ithome.com.tw/articles/10209287" target="_blank">Day27</a> &#x6211;&#x5011;&#x63D0;&#x5230;&#x4F7F;&#x7528;&#x76D2;&#x5B50;&#x5716;&#x50CF;&#x7684;&#x6982;&#x5FF5;&#x4F86;&#x601D;&#x8003;&#x8CC7;&#x6599;&#x5132;&#x5B58;&#x3002;</p>
+<p>&#x5728;&#x4E00;&#x500B;&#x51FD;&#x6578;&#x88E1;&#x5BA3;&#x544A;&#x4E00;&#x500B;&#x8B8A;&#x6578;&#xFF0C;&#x5C31;&#x662F;&#x7522;&#x751F;&#x4E00;&#x500B;&#x65B0;&#x7684;&#x8B8A;&#x6578;&#x76D2;&#x5B50;&#x3002;</p>
+<p>&#x800C;&#x7576;&#x51FD;&#x6578;&#x57F7;&#x884C;&#x7D50;&#x675F;&#xFF0C;&#x51FD;&#x6578;&#x57F7;&#x884C;&#x74B0;&#x5883;&#x5931;&#x6548;&#xFF0C;&#x7B49;&#x65BC;&#x8B8A;&#x6578;&#x7684;&#x5BA3;&#x544A;&#x5931;&#x6548;&#xFF0C;&#x5C31;&#x4EE3;&#x8868;&#x62FF;&#x6389;&#x76D2;&#x5B50;&#x7684;&#x8B8A;&#x6578;&#x540D;&#x7A31;&#xFF0C;&#x8B8A;&#x6210;&#x4E00;&#x500B;&#x533F;&#x540D;&#x76D2;&#x5B50;&#x3002;</p>
+<p>&#x533F;&#x540D;&#x76D2;&#x5B50;&#x56E0;&#x70BA;&#x7121;&#x6CD5;&#x518D;&#x88AB;&#x547C;&#x53EB;&#x4F7F;&#x7528;&#xFF0C;&#x5F88;&#x5FEB;&#x5C31;&#x6703;&#x88AB;&#x7CFB;&#x7D71;&#x56DE;&#x6536;&#xFF0C;&#x5FB9;&#x5E95;&#x6D88;&#x6EC5;&#x3002;</p>
+<p><strong>&#x90A3;&#x4EC0;&#x9EBC;&#x60C5;&#x6CC1;&#x4E0B;&#xFF0C;&#x4E00;&#x500B;&#x533F;&#x540D;&#x76D2;&#x5B50;&#x53EF;&#x4EE5;&#x7E7C;&#x7E8C;&#x5B58;&#x6D3B;&#x4E0D;&#x88AB;&#x56DE;&#x6536;&#xFF1F;</strong></p>
+<blockquote>
+<p>&#x53EA;&#x8981;&#x76D2;&#x5B50;&#x8EAB;&#x4E0A;&#x9084;&#x7D81;&#x8457;&#x88AB;&#x5225;&#x4EBA;&#x9700;&#x8981;&#x7684;&#x7D05;&#x7DDA;&#xFF0C;&#x76D2;&#x5B50;&#x5C31;&#x4E0D;&#x6703;&#x88AB;&#x56DE;&#x6536;&#x3002;</p>
+</blockquote>
+<p><strong>&#x7D05;&#x7DDA;&#x5C31;&#x662F;&#x5F15;&#x7528;&#x95DC;&#x4FC2; (Reference)&#x3002;</strong></p>
+<p>&#x8209;&#x4F8B;&#x4F86;&#x8AAA;&#x4EE5;&#x4E0B;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createCar</span>(<span class="hljs-params">brandName</span>)</span>{
+  <span class="hljs-keyword">var</span> car = { brand:brandName };
+  <span class="hljs-keyword">return</span> car;
+}
+
+<span class="hljs-keyword">var</span> myCar = createCar(<span class="hljs-string">&quot;BMW&quot;</span>);
+<span class="hljs-built_in">console</span>.log(myCar);   <span class="hljs-comment">// {brand: &quot;BMW&quot;}</span>
+</code></pre>
+<p>&#x6211;&#x5011;&#x7528;&#x76D2;&#x5B50;&#x5716;&#x50CF;&#x6982;&#x5FF5;&#x4F86;&#x5206;&#x89E3;&#x904E;&#x7A0B;&#x767C;&#x751F;&#x4EC0;&#x9EBC;&#x4E8B;&#x3002;</p>
+<p><strong>1. &#x547C;&#x53EB; <code>createCar()</code>&#xFF0C;&#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x65B0;&#x7684;&#x51FD;&#x6578;&#x57F7;&#x884C;&#x74B0;&#x5883;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x4E00;&#x500B; Local &#x74B0;&#x5883;&#x3002;</strong></p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createCar</span>(<span class="hljs-params">brandName</span>)</span>{
+  ......
+}
+
+<span class="hljs-keyword">var</span> myCar = createCar(<span class="hljs-string">&quot;BMW&quot;</span>);
+.....
+</code></pre>
+<p><img src="https://i.imgur.com/rolkUBp.png" alt=""></p>
+<ul>
+<li>Global &#x74B0;&#x5883;&#x547C;&#x53EB; <code>createCar()</code> &#x7684;&#x540C;&#x6642;&#xFF0C;&#x7522;&#x751F;&#x4E00;&#x500B;&#x5B57;&#x4E32;&#x5BE6;&#x5B57; (Object Literals) <code>&quot;BMW&quot;</code>&#xFF0C;&#x66AB;&#x6642;&#x653E;&#x5728;&#x4F4D;&#x5740; <code>0x001</code> &#x7684;&#x76D2;&#x5B50;&#xFF0C;&#x6E96;&#x5099;&#x7528;&#x4F86;&#x50B3;&#x5165;&#x53C3;&#x6578;&#x3002;</li>
+<li>Local &#x74B0;&#x5883;&#x81EA;&#x52D5;&#x5BA3;&#x544A;&#x4E00;&#x500B; Local &#x8B8A;&#x6578; <code>brandName</code> &#x8CA0;&#x8CAC;&#x5132;&#x5B58;&#x53C3;&#x6578;&#x3002;</li>
+<li>&#x5C07; Global &#x74B0;&#x5883;&#x7684; <code>&quot;BMW&quot;</code> &#x8CC7;&#x6599;&#x8907;&#x88FD;&#x5230; Local &#x8B8A;&#x6578; <code>brandName</code>&#x3002;</li>
+<li>(&#x5B8C;&#x6210;&#x8907;&#x88FD;&#x8CC7;&#x6599;&#x7684;&#x4EFB;&#x52D9;&#x5F8C;&#xFF0C;&#x4F4D;&#x5740; <code>0x001</code> &#x7684;&#x533F;&#x540D;&#x76D2;&#x5B50;&#x56E0;&#x70BA;&#x4E0D;&#x518D;&#x6709;&#x6A5F;&#x6703;&#x88AB;&#x547C;&#x53EB;&#xFF0C;&#x5F88;&#x5FEB;&#x5C31;&#x6703;&#x88AB;&#x56DE;&#x6536;&#x3002;)</li>
+</ul>
+<p><strong>2. &#x5728; Local &#x74B0;&#x5883;&#x5167;&#x7522;&#x751F;&#x4E00;&#x500B;&#x65B0;&#x7269;&#x4EF6;&#x3002;</strong></p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createCar</span>(<span class="hljs-params">brandName</span>)</span>{
+  <span class="hljs-keyword">var</span> car = { brand:brandName };
+  .....
+}
+</code></pre>
+<p><img src="https://i.imgur.com/jnzAr83.png" alt=""></p>
+<ul>
+<li>&#x5229;&#x7528;&#x8B8A;&#x6578; <code>brandName</code> &#x7684;&#x8CC7;&#x6599;&#x7576;&#x7D20;&#x6750;&#xFF0C;&#x7522;&#x751F;&#x4E00;&#x500B;&#x7269;&#x4EF6;&#x5BE6;&#x5B57; (Object Literals) <code>{brand: &quot;BMW&quot;}</code>&#xFF0C;&#x653E;&#x5728;&#x4F4D;&#x5740; <code>0x003</code> &#x7684;&#x533F;&#x540D;&#x76D2;&#x5B50;&#x3002;</li>
+<li>&#x5BA3;&#x544A;&#x4E00;&#x500B; Local &#x8B8A;&#x6578; <code>car</code> &#x8CA0;&#x8CAC;&#x5132;&#x5B58;&#x65B0;&#x7269;&#x4EF6;&#xFF0C;&#x4F46;&#x56E0;&#x70BA;&#x65B0;&#x7269;&#x4EF6;&#x662F;&#x7269;&#x4EF6;&#x578B;&#x614B; (Object Types)&#xFF0C;&#x7121;&#x6CD5;&#x76F4;&#x63A5;&#x5B58;&#x653E;&#x5230; <code>car</code> &#x8B8A;&#x6578;&#x76D2;&#x5B50;&#x88E1;&#xFF0C;&#x56E0;&#x6B64;&#x5132;&#x5B58;&#x7684;&#x662F;&#x4F4D;&#x5740; <code>0x003</code>&#xFF0C;&#x5EFA;&#x7ACB;&#x5F15;&#x7528;&#x95DC;&#x4FC2;&#x3002;</li>
+</ul>
+<p><strong>3. &#x5C07; Local &#x74B0;&#x5883;&#x7684;&#x7269;&#x4EF6;&#x56DE;&#x50B3;&#x7D66; Global &#x74B0;&#x5883;&#x3002;</strong></p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createCar</span>(<span class="hljs-params">brandName</span>)</span>{
+  <span class="hljs-keyword">var</span> car = { brand:brandName };
+  <span class="hljs-keyword">return</span> car;
+}
+
+<span class="hljs-keyword">var</span> myCar = createCar(<span class="hljs-string">&quot;BMW&quot;</span>);
+.......
+</code></pre>
+<p><img src="https://i.imgur.com/UEbjZvT.png" alt=""></p>
+<ul>
+<li>Global &#x74B0;&#x5883;&#x5BA3;&#x544A;&#x8B8A;&#x6578; <code>myCar</code> &#x6E96;&#x5099;&#x627F;&#x63A5;&#x56DE;&#x50B3;&#x8CC7;&#x6599;&#x3002;</li>
+<li>Local &#x74B0;&#x5883;&#x56DE;&#x50B3; <code>car</code> &#x8B8A;&#x6578;&#xFF0C;&#x5C07; <code>car</code> &#x8B8A;&#x6578;&#x7684;&#x5167;&#x5BB9;&#x50B3;&#x7D66; <code>myCar</code>&#xFF0C;&#x4E5F;&#x5C31;&#x662F; <code>0x003</code> &#x9019;&#x500B;&#x4F4D;&#x5740;&#x3002;</li>
+<li><code>myCar</code> &#x548C;&#x5B58;&#x653E; <code>{brand: &quot;BMW&quot;}</code> &#x7684;&#x533F;&#x540D;&#x76D2;&#x5B50;&#x5EFA;&#x7ACB;&#x5F15;&#x7528;&#x95DC;&#x4FC2;&#x3002;</li>
+</ul>
+<p><strong>4. Local &#x74B0;&#x5883;&#x7D50;&#x675F;&#x3002;</strong></p>
+<pre><code class="lang-js">.......
+console.log(myCar);   <span class="hljs-comment">// {brand: &quot;BMW&quot;}</span>
+</code></pre>
+<p><img src="https://i.imgur.com/LmNjDk0.png" alt=""></p>
+<ul>
+<li>&#x5728; Local &#x74B0;&#x5883;&#x5BA3;&#x544A;&#x7684;&#x8B8A;&#x6578;&#x540D;&#x7A31;&#x5931;&#x6548;&#xFF0C;&#x6C92;&#x6709;&#x6A5F;&#x6703;&#x518D;&#x88AB;&#x547C;&#x53EB;&#x7684;&#x76D2;&#x5B50;&#x90FD;&#x88AB;&#x6D88;&#x6EC5;&#x56DE;&#x6536;&#x3002;</li>
+<li>&#x4F46;&#x4F4D;&#x5740; <code>0x003</code> &#x7684;&#x533F;&#x540D;&#x76D2;&#x5B50;&#x56E0;&#x70BA;&#x9084;&#x5B58;&#x5728;&#x5F15;&#x7528;&#x95DC;&#x4FC2;&#xFF0C;&#x6240;&#x4EE5;&#x4ECD;&#x7136;&#x5B58;&#x6D3B;&#x3002;</li>
+</ul>
+<p>&#x9019;&#x5C31;&#x662F;&#x70BA;&#x4EC0;&#x9EBC;&#x7406;&#x8AD6;&#x4E0A; <code>{brand: &quot;BMW&quot;}</code> &#x662F; Local Scope &#x7522;&#x751F;&#x7684;&#x8CC7;&#x6599;&#xFF0C;&#x5728; Global &#x74B0;&#x5883;&#x537B;&#x53EF;&#x4EE5;&#x7E7C;&#x7E8C;&#x4F7F;&#x7528;&#x3002;</p>
+<p><strong>&#x9019;&#x5C31;&#x662F;&#x9589;&#x5305;&#x7684;&#x7B2C;&#x4E8C;&#x500B;&#x8981;&#x7D20;&#xFF1A;&#x5F15;&#x7528;&#x3002;</strong></p>
+<h2 id="&#x6B63;&#x5F0F;&#x9032;&#x5165;&#x9589;&#x5305;&#x7684;&#x7528;&#x6CD5;">&#x6B63;&#x5F0F;&#x9032;&#x5165;&#x9589;&#x5305;&#x7684;&#x7528;&#x6CD5;</h2>
+<p>&#x524D;&#x9762;&#x4E86;&#x89E3;&#x5230;&#xFF0C;<strong>&#x51FD;&#x6578;&#x548C;&#x5F15;&#x7528;&#x662F;&#x9589;&#x5305;&#x7684;&#x539F;&#x7406;&#x91CD;&#x9EDE;</strong>&#x3002;</p>
+<p>&#x6211;&#x5011;&#x4F86;&#x770B;&#x8981;&#x5982;&#x4F55;&#x5BE6;&#x969B;&#x61C9;&#x7528;&#x3002;</p>
+<h3 id="&#x9589;&#x5305;&#x57FA;&#x672C;&#x793A;&#x7BC4;">&#x9589;&#x5305;&#x57FA;&#x672C;&#x793A;&#x7BC4;</h3>
+<p>&#x6211;&#x5011;&#x5EF6;&#x7E8C;&#x524D;&#x9762;&#x7684; sellTicket &#x7BC4;&#x4F8B;&#xFF0C;&#x4F86;&#x770B;&#x770B;&#x5982;&#x4F55;&#x7528;&#x9589;&#x5305;&#x9054;&#x5230;&#x6211;&#x5011;&#x7684;&#x76EE;&#x7684;&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x9019;&#x500B;&#x7BC4;&#x4F8B;&#x7684;&#x9589;&#x5305;&#x5BEB;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getSellTicketClosure</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-keyword">var</span> counter = <span class="hljs-number">0</span>;
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">action</span>(<span class="hljs-params">buyer</span>)</span>{
+    counter +=<span class="hljs-number">1</span>;
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`(Total Sold: <span class="hljs-subst">${counter}</span>) Buyer: <span class="hljs-subst">${buyer}</span>`</span>);
+  }
+  <span class="hljs-keyword">return</span> action;
+}
+
+<span class="hljs-keyword">var</span> sellTicket = getSellTicketClosure();
+
+sellTicket(<span class="hljs-string">&apos;OneJar&apos;</span>);          <span class="hljs-comment">// (Total Sold: 1) Buyer: OneJar</span>
+sellTicket(<span class="hljs-string">&apos;Tony Stark&apos;</span>);      <span class="hljs-comment">// (Total Sold: 2) Buyer: Tony Stark</span>
+sellTicket(<span class="hljs-string">&apos;Steven Rogers&apos;</span>);   <span class="hljs-comment">// (Total Sold: 3) Buyer: Steven Rogers</span>
+</code></pre>
+<p>&#x89E3;&#x8AAA;&#xFF1A;</p>
+<ul>
+<li>&#x5229;&#x7528; <code>getSellTicketClosure()</code> &#x7684;&#x5305;&#x88DD;&#xFF0C;&#x8B93;&#x8B8A;&#x6578; <code>counter</code> &#x5EFA;&#x7ACB;&#x5728; Local &#x74B0;&#x5883;&#xFF0C;&#x7121;&#x6CD5;&#x88AB; Global &#x74B0;&#x5883;&#x76F4;&#x63A5;&#x5B58;&#x53D6;&#x3002;</li>
+<li>&#x5C07;&#x57F7;&#x884C;&#x52D5;&#x4F5C;&#x7684;&#x908F;&#x8F2F;&#x4ECD;&#x7136;&#x6253;&#x5305;&#x6210;&#x4E00;&#x500B;&#x51FD;&#x6578;&#xFF0C;&#x540D;&#x70BA; <code>action()</code>&#xFF0C;&#x4F46;&#x662F;&#x5BA3;&#x544A;&#x5728; <code>getSellTicketClosure()</code> &#x5167;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x4E00;&#x500B;&#x5167;&#x90E8;&#x51FD;&#x6578;&#x3002;</li>
+<li>&#x5C07; <code>action()</code> &#x7684;<strong>&#x51FD;&#x6578;&#x7269;&#x4EF6;</strong>&#x56DE;&#x50B3;&#x51FA;&#x53BB;&#x7D66; Global &#x74B0;&#x5883;&#xFF0C;&#x5BA3;&#x544A;&#x4E00;&#x500B; <code>sellTicket</code> &#x8CA0;&#x8CAC;&#x627F;&#x63A5;&#x3002;</li>
+<li><strong><code>sellTicket</code> &#x662F;&#x4E00;&#x500B;&#x51FD;&#x6578;&#x7269;&#x4EF6;&#xFF0C;&#x4E5F;&#x662F;&#x4E00;&#x500B;&#x9589;&#x5305;</strong>&#x3002;</li>
+</ul>
+<p>&#x53EF;&#x4EE5;&#x767C;&#x73FE;&#x9019;&#x88E1;&#x9084;&#x904B;&#x7528;&#x4E86;&#x51FD;&#x6578;&#x4F5C;&#x7528;&#x57DF;&#x7684;&#x4E00;&#x500B;&#x6027;&#x8CEA;&#xFF1A;<strong>&#x5167;&#x90E8;&#x51FD;&#x6578;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7236;&#x51FD;&#x6578;&#x7684;&#x8B8A;&#x6578;</strong>&#x3002;</p>
+<p>&#x4E5F;&#x5C31;&#x662F;&#x5167;&#x90E8;&#x51FD;&#x6578; <code>action()</code> &#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7236;&#x51FD;&#x6578; <code>getSellTicketClosure()</code> &#x88E1;&#x7684;&#x8B8A;&#x6578; <code>counter</code>&#x3002;</p>
+<p><strong>&#x9019;&#x500B;&#x6027;&#x8CEA;&#x662F;&#x5C07;&#x9589;&#x5305;&#x7684;&#x5169;&#x500B;&#x8981;&#x7D20;&#x2014;&#x2014;&#x51FD;&#x6578;&#x548C;&#x5F15;&#x7528;&#x2014;&#x2014;&#x4E32;&#x806F;&#x8D77;&#x4F86;&#x7684;&#x91CD;&#x8981;&#x95DC;&#x9375;&#x3002;</strong></p>
+<p>&#x9019;&#x88E1;&#x7528;&#x5716;&#x50CF;&#x4F86;&#x9032;&#x4E00;&#x6B65;&#x8A73;&#x89E3;&#x904E;&#x7A0B;&#xFF1A;</p>
+<p><strong>1. &#x57F7;&#x884C; <code>getSellTicketClosure()</code>&#xFF0C;&#x5EFA;&#x7ACB;&#x4E00;&#x500B; Local &#x74B0;&#x5883;&#xFF0C;&#x5BA3;&#x544A; Local &#x8B8A;&#x6578;&#x548C;&#x5167;&#x90E8;&#x51FD;&#x6578;&#x3002;</strong></p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getSellTicketClosure</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-keyword">var</span> counter = <span class="hljs-number">0</span>;
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">action</span>(<span class="hljs-params">buyer</span>)</span>{
+    counter +=<span class="hljs-number">1</span>;
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`(Total Sold: <span class="hljs-subst">${counter}</span>) Buyer: <span class="hljs-subst">${buyer}</span>`</span>);
+  }
+  ..............
+}
+
+<span class="hljs-keyword">var</span> sellTicket = getSellTicketClosure();
+.......
+</code></pre>
+<p><img src="https://i.imgur.com/vh3qdwf.png" alt=""></p>
+<ul>
+<li>&#x5728; Local Scope &#x5BA3;&#x544A;&#x8B8A;&#x6578; <code>counter</code>&#xFF0C;&#x521D;&#x59CB;&#x503C;&#x662F; <code>0</code>&#x3002;</li>
+<li>&#x5BA3;&#x544A;&#x4E00;&#x500B;&#x51FD;&#x6578; <code>action</code>&#xFF0C;&#x5305;&#x88DD;&#x8981;&#x57F7;&#x884C;&#x7684;&#x52D5;&#x4F5C;&#x908F;&#x8F2F;&#x3002;&#x5728; JavaScript &#x5167;&#x51FD;&#x6578;&#x662F;&#x4E00;&#x7A2E;&#x7269;&#x4EF6;&#xFF0C;&#x56E0;&#x6B64;&#x76F8;&#x7576;&#x65BC;&#x5BA3;&#x544A;&#x4E00;&#x500B;&#x8B8A;&#x6578;&#x540D;&#x53EB; <code>action</code>&#xFF0C;&#x5132;&#x5B58;&#x51FD;&#x6578;&#x7269;&#x4EF6;&#x7684;&#x4F4D;&#x5740;&#x3002;</li>
+<li>&#x51FD;&#x6578; <code>action</code> &#x88E1;&#x7684;&#x52D5;&#x4F5C;&#x4F7F;&#x7528;&#x5230; <code>counter</code> &#x8B8A;&#x6578;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8AAA;<strong>&#x5167;&#x90E8;&#x51FD;&#x6578;&#x5F15;&#x7528;&#x4E86;&#x7236;&#x51FD;&#x6578;&#x7684;&#x8B8A;&#x6578;</strong>&#x3002;</li>
+</ul>
+<p><strong>2. &#x5C07;&#x5167;&#x90E8;&#x51FD;&#x6578;&#x4F5C;&#x70BA;&#x7269;&#x4EF6;&#x56DE;&#x50B3;&#x51FA;&#x53BB; Global &#x74B0;&#x5883;&#x3002;</strong></p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getSellTicketClosure</span>(<span class="hljs-params"></span>)</span>{
+  .........
+  return action;
+}
+
+<span class="hljs-keyword">var</span> sellTicket = getSellTicketClosure();
+...........
+</code></pre>
+<p><img src="https://i.imgur.com/S77Tzxz.png" alt=""></p>
+<ul>
+<li>&#x5C07;&#x51FD;&#x6578;&#x7269;&#x4EF6; <code>action</code> &#x56DE;&#x50B3;&#x51FA;&#x53BB;&#x3002;</li>
+<li>Global &#x74B0;&#x5883;&#x5BA3;&#x544A;&#x4E00;&#x500B;&#x8B8A;&#x6578; <code>sellTicket</code> &#x8CA0;&#x8CAC;&#x627F;&#x63A5;&#x50B3;&#x51FA;&#x4F86;&#x7684; <code>action</code>&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x51FD;&#x6578;&#x7269;&#x4EF6;&#x7684;&#x4F4D;&#x5740; <code>0x002</code>&#x3002;</li>
+</ul>
+<p><strong>3. <code>getSellTicketClosure()</code> &#x7684; Local &#x74B0;&#x5883;&#x7D50;&#x675F;&#x3002;</strong></p>
+<pre><code class="lang-js">...........
+
+var sellTicket = getSellTicketClosure();
+
+sellTicket(<span class="hljs-string">&apos;OneJar&apos;</span>);          <span class="hljs-comment">// (Total Sold: 1) Buyer: OneJar</span>
+sellTicket(<span class="hljs-string">&apos;Tony Stark&apos;</span>);      <span class="hljs-comment">// (Total Sold: 2) Buyer: Tony Stark</span>
+sellTicket(<span class="hljs-string">&apos;Steven Rogers&apos;</span>);   <span class="hljs-comment">// (Total Sold: 3) Buyer: Steven Rogers</span>
+</code></pre>
+<p><img src="https://i.imgur.com/iSZcrsM.png" alt=""></p>
+<ul>
+<li>Local &#x57F7;&#x884C;&#x74B0;&#x5883;&#x7D50;&#x675F;&#xFF0C;&#x5BA3;&#x544A;&#x7684; Local &#x8B8A;&#x6578;&#x540D;&#x7A31;&#x5931;&#x6548;&#xFF0C;&#x539F;&#x672C;&#x7684; Local &#x8B8A;&#x6578;&#x76D2;&#x5B50;&#x90FD;&#x8B8A;&#x6210;&#x533F;&#x540D;&#x76D2;&#x5B50;&#x3002;</li>
+<li>&#x6C92;&#x6709;&#x6A5F;&#x6703;&#x518D;&#x88AB;&#x547C;&#x53EB;&#xFF0C;&#x4E5F;&#x6C92;&#x6709;&#x88AB;&#x5225;&#x4EBA;&#x5F15;&#x7528;&#x7684;&#x533F;&#x540D;&#x76D2;&#x5B50;&#xFF0C;&#x90FD;&#x6703;&#x88AB;&#x56DE;&#x6536;&#x3002;</li>
+<li>&#x4F4D;&#x5740; <code>0x002</code> &#x7684;&#x76D2;&#x5B50;&#xFF0C;&#x88AB; <code>sellTicket</code> &#x5F15;&#x7528;&#xFF0C;&#x6240;&#x4EE5;&#x6301;&#x7E8C;&#x5B58;&#x6D3B;&#x3002;</li>
+<li>&#x4F4D;&#x5740; <code>0x001</code> &#x7684;&#x76D2;&#x5B50;&#xFF0C;&#x88AB;&#x4F4D;&#x5740; <code>0x002</code> &#x5F15;&#x7528;&#xFF0C;&#x6240;&#x4EE5;&#x9593;&#x63A5;&#x6D3B;&#x8457;&#x3002;</li>
+<li>Global &#x74B0;&#x5883;&#x7121;&#x6CD5;&#x76F4;&#x63A5;&#x5B58;&#x53D6;&#x4F4D;&#x5740; <code>0x001</code> &#x7684;&#x76D2;&#x5B50;&#xFF0C;&#x5FC5;&#x9808;&#x900F;&#x904E; <code>sellTicket</code>&#xFF0C;&#x53BB;&#x5F15;&#x7528;&#x4F4D;&#x5740; <code>0x002</code> &#x7684;&#x51FD;&#x6578;&#xFF0C;&#x4FDD;&#x969C;&#x4E86;&#x539F;&#x672C; <code>counter</code> &#x8B8A;&#x6578;&#x7684;&#x8CC7;&#x6599;&#x5B89;&#x5168;&#x3002;</li>
+</ul>
+<h3 id="&#x6BCF;&#x4E00;&#x500B;&#x9589;&#x5305;&#x4FDD;&#x5B58;&#x7684;&#x90FD;&#x662F;&#x4E00;&#x500B;&#x7368;&#x7ACB;&#x7684;&#x74B0;&#x5883;">&#x6BCF;&#x4E00;&#x500B;&#x9589;&#x5305;&#x4FDD;&#x5B58;&#x7684;&#x90FD;&#x662F;&#x4E00;&#x500B;&#x7368;&#x7ACB;&#x7684;&#x74B0;&#x5883;</h3>
+<p>&#x4F8B;&#x5982;&#x4EE5;&#x4E0B;&#x7A0B;&#x5F0F;&#x78BC;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getSellTicketClosure</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-keyword">var</span> counter = <span class="hljs-number">0</span>;
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">action</span>(<span class="hljs-params">buyer</span>)</span>{
+    counter +=<span class="hljs-number">1</span>;
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`(Total Sold: <span class="hljs-subst">${counter}</span>) Buyer: <span class="hljs-subst">${buyer}</span>`</span>);
+  }
+  <span class="hljs-keyword">return</span> action;
+}
+
+<span class="hljs-keyword">var</span> sellTicket1 = getSellTicketClosure();
+sellTicket1(<span class="hljs-string">&apos;OneJar&apos;</span>);            <span class="hljs-comment">// (Total Sold: 1) Buyer: OneJar</span>
+sellTicket1(<span class="hljs-string">&apos;Tony Stark&apos;</span>);        <span class="hljs-comment">// (Total Sold: 2) Buyer: Tony Stark</span>
+sellTicket1(<span class="hljs-string">&apos;Steven Rogers&apos;</span>);     <span class="hljs-comment">// (Total Sold: 3) Buyer: Steven Rogers</span>
+
+<span class="hljs-keyword">var</span> sellTicket2 = getSellTicketClosure();
+sellTicket2(<span class="hljs-string">&apos;Luffy&apos;</span>);             <span class="hljs-comment">// (Total Sold: 1) Buyer: Luffy</span>
+sellTicket2(<span class="hljs-string">&apos;Nami&apos;</span>);              <span class="hljs-comment">// (Total Sold: 2) Buyer: Nami</span>
+</code></pre>
+<p>&#x7531;&#x65BC;&#x6BCF;&#x4E00;&#x6B21;&#x547C;&#x53EB; <code>getSellTicketClosure()</code>&#xFF0C;&#x90FD;&#x662F;&#x5EFA;&#x7ACB;&#x4E00;&#x500B;&#x65B0;&#x7684;&#x51FD;&#x6578;&#x57F7;&#x884C;&#x74B0;&#x5883;&#xFF0C;&#x6240;&#x4EE5;&#x56DE;&#x50B3;&#x7684;&#x9589;&#x5305;&#x51FD;&#x6578;&#x4E5F;&#x90FD;&#x5404;&#x81EA;&#x7368;&#x7ACB;&#x4E0D;&#x4E92;&#x76F8;&#x5E72;&#x64FE;&#x3002;</p>
+<h3 id="&#x5229;&#x7528;&#x7ACB;&#x5373;&#x51FD;&#x6578;&#x7C21;&#x5316;&#x8A9E;&#x6CD5;">&#x5229;&#x7528;&#x7ACB;&#x5373;&#x51FD;&#x6578;&#x7C21;&#x5316;&#x8A9E;&#x6CD5;</h3>
+<p>&#x7531;&#x65BC;&#x51FD;&#x6578; <code>getSellTicketClosure()</code> &#x7684;&#x76EE;&#x7684;&#x53EA;&#x662F;&#x70BA;&#x4E86;&#x56DE;&#x50B3;&#x4E00;&#x500B;&#x9589;&#x5305;&#x7684;&#x51FD;&#x6578;&#x7269;&#x4EF6;&#xFF0C;&#x5B9A;&#x7FA9;&#x5F8C;&#x53EF;&#x4EE5;&#x99AC;&#x4E0A;&#x57F7;&#x884C;&#xFF0C;&#x800C;&#x4E14;&#x53EA;&#x6703;&#x57F7;&#x884C;&#x4E00;&#x6B21;&#xFF0C;&#x56E0;&#x6B64;&#x8A9E;&#x6CD5;&#x4E0A;&#x53EF;&#x4EE5;&#x7528;&#x7ACB;&#x5373;&#x51FD;&#x6578;&#x4F5C;&#x7C21;&#x5316;&#x3002;</p>
+<p>&#x6B64;&#x5916;&#xFF0C;&#x88E1;&#x9762;&#x7684;&#x5167;&#x90E8;&#x51FD;&#x6578;&#x53EA;&#x662F;&#x7528;&#x65BC;&#x5B9A;&#x7FA9;&#x52D5;&#x4F5C;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x5728;&#x7236;&#x51FD;&#x6578;&#x88E1;&#x57F7;&#x884C;&#xFF0C;&#x56E0;&#x6B64;&#x51FD;&#x6578;&#x540D;&#x7A31;&#x4E5F;&#x4E0D;&#x91CD;&#x8981;&#x3002;</p>
+<p>&#x7C21;&#x5316;&#x5F8C;&#x7684;&#x8A9E;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> sellTicket = (<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-keyword">var</span> counter = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">buyer</span>)</span>{
+    counter +=<span class="hljs-number">1</span>;
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`(Total Sold: <span class="hljs-subst">${counter}</span>) Buyer: <span class="hljs-subst">${buyer}</span>`</span>);
+  }
+})();
+
+sellTicket(<span class="hljs-string">&apos;OneJar&apos;</span>);            <span class="hljs-comment">// (Total Sold: 1) Buyer: OneJar</span>
+sellTicket(<span class="hljs-string">&apos;Tony Stark&apos;</span>);        <span class="hljs-comment">// (Total Sold: 2) Buyer: Tony Stark</span>
+sellTicket(<span class="hljs-string">&apos;Steven Rogers&apos;</span>);     <span class="hljs-comment">// (Total Sold: 3) Buyer: Steven Rogers</span>
+</code></pre>
+<h2 id="&#x7E3D;&#x7D50;">&#x7E3D;&#x7D50;</h2>
+<p>&#x76EE;&#x524D;&#x770B;&#x5230;&#x7684;&#x9589;&#x5305;&#x6559;&#x5B78;&#xFF0C;&#x5927;&#x90E8;&#x5206;&#x90FD;&#x662F;&#x5F9E;&#x300C;&#x5B9A;&#x7FA9;&#x300D;&#x6216;&#x300C;&#x8A9E;&#x6CD5;&#x300D;&#x5207;&#x5165;&#xFF0C;&#x7136;&#x5F8C;&#x8A66;&#x8457;&#x5728;&#x904E;&#x7A0B;&#x4E2D;&#x9AD4;&#x6703;&#x9589;&#x5305;&#x7684;&#x300C;&#x76EE;&#x7684;&#x300D;&#x3002;</p>
+<p>&#x4F46;&#x662F;&#x9019;&#x7A2E;&#x65B9;&#x5F0F;&#x6211;&#x89BA;&#x5F97;&#x76F8;&#x5C0D;&#x62BD;&#x8C61;&#xFF0C;<strong>&#x6BD4;&#x8F03;&#x50CF;&#x70BA;&#x4E86;&#x5B78;&#x9589;&#x5305;&#x800C;&#x5B78;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x70BA;&#x4E86;&#x89E3;&#x6C7A;&#x554F;&#x984C;</strong>&#xFF0C;&#x4E00;&#x958B;&#x59CB;&#x7406;&#x89E3;&#x4E0A;&#x5BB9;&#x6613;&#x6709;&#x9694;&#x95A1;&#xFF0C;&#x9700;&#x8981;&#x82B1;&#x6BD4;&#x8F03;&#x9577;&#x7684;&#x6642;&#x9593;&#x6162;&#x6162;&#x9AD4;&#x6703;&#x9589;&#x5305;&#x7684;&#x6548;&#x679C;&#x3002;</p>
+<p>&#x56E0;&#x6B64;&#x672C;&#x7BC7;&#x6587;&#x7AE0;&#x5617;&#x8A66;<strong>&#x5F9E;&#x300C;&#x76EE;&#x7684;&#x300D;&#x5207;&#x5165;&#xFF0C;&#x5148;&#x63D0;&#x51FA;&#x9047;&#x5230;&#x7684;&#x56F0;&#x5883;&#x3001;&#x5206;&#x6790;&#x89E3;&#x6C7A;&#x56F0;&#x5883;&#x9700;&#x8981;&#x4EC0;&#x9EBC;&#x8981;&#x7D20;&#xFF0C;&#x7136;&#x5F8C;&#x81EA;&#x7136;&#x5C0E;&#x51FA;&#x9589;&#x5305;&#x7684;&#x7528;&#x6CD5;&#xFF0C;&#x6BD4;&#x8F03;&#x5C6C;&#x65BC;&#x76EE;&#x6A19;&#x5C0E;&#x5411;&#x7684;&#x601D;&#x8DEF;</strong>&#x3002;</p>
+<p>&#x5E0C;&#x671B;&#x9019;&#x6A23;&#x7684;&#x601D;&#x8DEF;&#x80FD;&#x63D0;&#x4F9B;&#x4E0D;&#x4E00;&#x6A23;&#x7684;&#x98A8;&#x683C;&#xFF0C;&#x8B93;&#x5B78;&#x7FD2;&#x9589;&#x5305;&#x4E4B;&#x8DEF;&#x66F4;&#x70BA;&#x9806;&#x66A2;&#x3002;</p>
+<p>&#x73FE;&#x5728;&#x518D;&#x4F86;&#x770B;&#x6587;&#x7AE0;&#x958B;&#x982D;&#x7684;&#x9589;&#x5305;&#x5B9A;&#x7FA9;&#xFF0C;&#x61C9;&#x8A72;&#x5C31;&#x6BD4;&#x8F03;&#x6709;&#x611F;&#xFF1A;</p>
+<blockquote>
+<p>A closure is a function having access to the parent scope, even after the parent function has closed.</p>
+</blockquote>
+<p><strong>&#x9589;&#x5305; (Closures) &#x662F;&#x4E00;&#x500B;&#x80FD;&#x5B58;&#x53D6;&#x7236;&#x4F5C;&#x7528;&#x57DF;&#x7684;&#x51FD;&#x6578;&#xFF0C;&#x5373;&#x4F7F;&#x7236;&#x4F5C;&#x7528;&#x57DF;&#x5DF2;&#x7D93;&#x7D50;&#x675F;</strong>&#x3002;</p>
+<p><strong>&#x9589;&#x5305;&#x91CD;&#x9EDE;&#x6574;&#x7406;&#xFF1A;</strong></p>
+<ul>
+<li>&#x9589;&#x5305;&#x662F;&#x4E00;&#x500B;&#x51FD;&#x6578;&#xFF0C;&#x80FD;&#x300C;&#x8A18;&#x5F97;&#x300D;&#x88AB;&#x5EFA;&#x7ACB;&#x6642;&#x7684;&#x74B0;&#x5883;&#x7684;&#x4E00;&#x7A2E;&#x6A5F;&#x5236;&#x3002;</li>
+<li>&#x9589;&#x5305;&#x904B;&#x7528;&#x7684;&#x6280;&#x5DE7;&#xFF1A;<ol>
+<li>&#x51FD;&#x6578;&#x5C0D;&#x8B8A;&#x6578;&#x7684; Local Scope &#x5C01;&#x88DD;&#x3002;</li>
+<li>&#x5167;&#x90E8;&#x51FD;&#x6578;&#x5C0D;&#x5916;&#x5C64;&#x51FD;&#x6578;&#x8B8A;&#x6578;&#x7684;&#x5F15;&#x7528;&#x3002;</li>
+<li>&#x56DE;&#x50B3;&#x5167;&#x90E8;&#x51FD;&#x6578;&#x7684;&#x7269;&#x4EF6;&#xFF0C;&#x5F62;&#x6210;&#x9589;&#x5305;&#x3002;</li>
+</ol>
+</li>
+<li>&#x9589;&#x5305;&#x5BE6;&#x969B;&#x4E0A;&#x5132;&#x5B58;&#x7684;&#x662F;&#x5C0D;&#x5916;&#x5C64;&#x51FD;&#x6578;&#x8B8A;&#x6578;&#x7684;&#x5F15;&#x7528; (References)&#x3002;</li>
+<li>&#x6BCF;&#x4E00;&#x500B;&#x9589;&#x5305;&#x4E2D;&#x4FDD;&#x5B58;&#x7684;&#x90FD;&#x662F;&#x4E00;&#x500B;&#x7368;&#x7ACB;&#x7684;&#x74B0;&#x5883;&#xFF0C;&#x4E0D;&#x540C;&#x9589;&#x5305;&#x9593;&#x4E0D;&#x4E92;&#x76F8;&#x5E72;&#x64FE;&#x3002;</li>
+<li>&#x53EF;&#x4EE5;&#x7528;&#x7ACB;&#x5373;&#x51FD;&#x6578;&#x7684;&#x5BEB;&#x6CD5;&#x4F86;&#x7C21;&#x5316;&#x8A9E;&#x6CD5;&#x3002;</li>
+</ul>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://www.w3schools.com/js/js_function_closures.asp" target="_blank">W3Schools - JavaScript Closures</a></li>
+<li><a href="https://www.fooish.com/javascript/function-closure.html" target="_blank">JavaScript Function Closure (&#x9589;&#x5305;)</a></li>
+<li><a href="https://ithelp.ithome.com.tw/articles/10130860" target="_blank">Javascript&#x4E2D;&#x7684;&#x50B3;&#x905E;&#x53C3;&#x8003;&#x8207;closure (2)</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="day27.html" class="navigation navigation-prev " aria-label="Previous page: Day 27：別管變數 Pass by Whatever，尋找容易理解的銀色子彈 (Silver Bullet)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="day29.html" class="navigation navigation-next " aria-label="Next page: Day 29：閉包 (Closures) 進階打怪實戰">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Day 28：閉包 (Closures)","level":"1.29","depth":1,"next":{"title":"Day 29：閉包 (Closures) 進階打怪實戰","level":"1.30","depth":1,"path":"articles/day29.md","ref":"./articles/day29.md","articles":[]},"previous":{"title":"Day 27：別管變數 Pass by Whatever，尋找容易理解的銀色子彈 (Silver Bullet)","level":"1.28","depth":1,"path":"articles/day27.md","ref":"./articles/day27.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","intopic-toc","edit-link"],"pluginsConfig":{"intopic-toc":{"label":"Table of Contents","selector":".markdown-section h2, .markdown-section h3","visible":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day28.md","mtime":"2019-08-10T04:39:08.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T16:47:57.947Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/gumshoe.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

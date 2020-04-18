@@ -1,0 +1,843 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Day 14：來挖挖恐龍骨 —— with 語法 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="day15.html" />
+    
+    
+    <link rel="prev" href="day13.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="day01.html">
+            
+                <a href="day01.html">
+            
+                    
+                    Day 1：前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="day02.html">
+            
+                <a href="day02.html">
+            
+                    
+                    Day 2：資料型態的夢魘——動態型別加弱型別(1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="day03.html">
+            
+                <a href="day03.html">
+            
+                    
+                    Day 3：資料型態的夢魘——動態型別加弱型別(2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="day04.html">
+            
+                <a href="day04.html">
+            
+                    
+                    Day 4：動態型別加弱型別不是罪——怎麼 JavaScript 一摔就變成個印度阿三？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="day05.html">
+            
+                <a href="day05.html">
+            
+                    
+                    Day 5：湯姆克魯斯與唐家霸王槍——變數的作用域(Scope) (1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="day06.html">
+            
+                <a href="day06.html">
+            
+                    
+                    Day 6：湯姆克魯斯與唐家霸王槍——變數的作用域(Scope) (2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="day07.html">
+            
+                <a href="day07.html">
+            
+                    
+                    Day 7：傳統 var 關鍵字的不足
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="day08.html">
+            
+                <a href="day08.html">
+            
+                    
+                    Day 8：var 掰掰 —— ES6 更嚴謹安全的 let 和 const
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="day09.html">
+            
+                <a href="day09.html">
+            
+                    
+                    Day 9：圖解變數作用域(Scope)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="day10.html">
+            
+                <a href="day10.html">
+            
+                    
+                    Day 10：程式也懂電梯向上？ —— Hoisting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="day11.html">
+            
+                <a href="day11.html">
+            
+                    
+                    Day 11：Strict Mode (嚴謹模式)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="day12.html">
+            
+                <a href="day12.html">
+            
+                    
+                    Day 12：看 Strict Mode 如何施展「還我漂亮拳」(1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="day13.html">
+            
+                <a href="day13.html">
+            
+                    
+                    Day 13：看 Strict Mode 如何施展「還我漂亮拳」(2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.15" data-path="day14.html">
+            
+                <a href="day14.html">
+            
+                    
+                    Day 14：來挖挖恐龍骨 —— with 語法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="day15.html">
+            
+                <a href="day15.html">
+            
+                    
+                    Day 15：this 關鍵字 (1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="day16.html">
+            
+                <a href="day16.html">
+            
+                    
+                    Day 16：this 關鍵字 (2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="day17.html">
+            
+                <a href="day17.html">
+            
+                    
+                    Day 17：this 關鍵字 (3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="day18.html">
+            
+                <a href="day18.html">
+            
+                    
+                    Day 18：this 關鍵字 (4)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="day19.html">
+            
+                <a href="day19.html">
+            
+                    
+                    Day 19：函數定義 (Function Definition) 的 100 種寫法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="day20.html">
+            
+                <a href="day20.html">
+            
+                    
+                    Day 20：ES6 的箭頭函數 (Arrow Functions)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="day21.html">
+            
+                <a href="day21.html">
+            
+                    
+                    Day 21：箭頭函數 (Arrow Functions) 的 this 和你想的不一樣 (1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="day22.html">
+            
+                <a href="day22.html">
+            
+                    
+                    Day 22：箭頭函數 (Arrow Functions) 的 this 和你想的不一樣 (2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="day23.html">
+            
+                <a href="day23.html">
+            
+                    
+                    Day 23：ES6 物件實字威力加強版 (Enhanced Object Literals)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="day24.html">
+            
+                <a href="day24.html">
+            
+                    
+                    Day 24：函數呼叫 (Function Invocation) 與立即函數 (Self-Invoking Functions)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="day25.html">
+            
+                <a href="day25.html">
+            
+                    
+                    Day 25：不是多了塊魚 —— 立即函數的應用整理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="day26.html">
+            
+                <a href="day26.html">
+            
+                    
+                    Day 26：程式界的哈姆雷特 —— Pass by value, or Pass by reference？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="day27.html">
+            
+                <a href="day27.html">
+            
+                    
+                    Day 27：別管變數 Pass by Whatever，尋找容易理解的銀色子彈 (Silver Bullet)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="day28.html">
+            
+                <a href="day28.html">
+            
+                    
+                    Day 28：閉包 (Closures)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="day29.html">
+            
+                <a href="day29.html">
+            
+                    
+                    Day 29：閉包 (Closures) 進階打怪實戰
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="day30.html">
+            
+                <a href="day30.html">
+            
+                    
+                    Day 30：ES10 醞釀中 —— 擁抱 JS の 未來
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Day 14：來挖挖恐龍骨 —— with 語法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day14&#xFF1A;&#x4F86;&#x6316;&#x6316;&#x6050;&#x9F8D;&#x9AA8;&#x2014;&#x2014;-with-&#x8A9E;&#x6CD5;">&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684; JavaScript &#x4E8C;&#x4E09;&#x4E8B;#Day14&#xFF1A;&#x4F86;&#x6316;&#x6316;&#x6050;&#x9F8D;&#x9AA8;&#x2014;&#x2014; with &#x8A9E;&#x6CD5;</h1>
+<p>JavaScript &#x6709;&#x4E00;&#x500B;&#x8A9E;&#x6CD5; <code>with</code> &#x4F3C;&#x4E4E;&#x76F8;&#x5C0D;&#x51B7;&#x9580;&#xFF0C;&#x6BD4;&#x8F03;&#x5C11;&#x770B;&#x5230;&#x88AB;&#x4F7F;&#x7528;&#x3002;</p>
+<p>&#x4E8B;&#x5BE6;&#x4E0A;&#x9023; <a href="https://www.w3schools.com/js/" target="_blank">W3Schools &#x7684; JavaScript &#x6559;&#x6750;</a> &#x90FD;&#x6C92;&#x6709; <code>with</code> &#x8A9E;&#x6CD5;&#x6559;&#x5B78;&#xFF01;&#x67E5;&#x4E86;&#x4E00;&#x4E0B;&#x7DB2;&#x8DEF;&#x8A0E;&#x8AD6;&#xFF0C;<code>with</code> &#x66FE;&#x7D93;&#x4E5F;&#x662F;&#x6709;&#x4EBA;&#x8A8D;&#x70BA;&#x5F88;&#x597D;&#x7528;&#x7684;&#x8A9E;&#x6CD5;&#x3002;&#x90A3;&#x9EBC;&#x7A76;&#x7ADF;&#x767C;&#x751F;&#x4EC0;&#x9EBC;&#x4E8B;&#xFF0C;&#x8B93; <code>with</code> &#x50CF;&#x500B;&#x9ED1;&#x6B77;&#x53F2;&#x4E00;&#x6A23;&#xFF0C;&#x88AB; W3Schools &#x523B;&#x610F;&#x907A;&#x5FD8;&#xFF1F;</p>
+<p>Day13 &#x4ECB;&#x7D39;&#x56B4;&#x8B39;&#x6A21;&#x5F0F; (Strict Mode) &#x7684;&#x4F8B;&#x5B50;&#x6642;&#x63D0;&#x5230;&#xFF0C;<code>with</code> &#x8A9E;&#x6CD5;&#x751A;&#x81F3;&#x5DF2;&#x7D93;&#x5728; ES5 &#x5C0E;&#x5165;&#x56B4;&#x8B39;&#x6A21;&#x5F0F;&#x5F8C;&#x88AB;&#x7981;&#x6B62;&#x4F7F;&#x7528;&#x3002;</p>
+<p>&#x90A3;&#x672C;&#x7BC7;&#x53BB;&#x7814;&#x7A76;&#x4E00;&#x500B;&#x5DF2;&#x7D93;&#x88AB;&#x6DD8;&#x6C70;&#x7684;&#x8A9E;&#x6CD5;&#x6709;&#x4EC0;&#x9EBC;&#x610F;&#x7FA9;&#xFF1F;</p>
+<p>&#x5C0D;&#xFF0C;&#x8A9E;&#x6CD5;&#x6C92;&#x610F;&#x7FA9;&#xFF0C;&#x4F60;&#x77E5;&#x9053;&#x4E86;&#x4E5F;&#x4E0D;&#x80FD;&#x7528; (&#x6BC6;)&#x3002;</p>
+<p><img src="https://i.imgur.com/OWsV1lC.png" alt=""><br>(Source: <a href="https://store.line.me/stickershop/product/1140900/zh-Hant?from=sticker" target="_blank">&#x8C46;&#x5361;&#x983B;&#x9053;&#x8CBC;&#x5716;</a>)</p>
+<p>&#x9019;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#x7684;&#x5B9A;&#x4F4D;&#x78BA;&#x5BE6;&#x6709;&#x9EDE;&#x50CF;&#x8003;&#x53E4;&#x6587;&#xFF0C;&#x77AD;&#x89E3;&#x4E00;&#x4E0B; JavaScript &#x66FE;&#x6709;&#x904E;&#x9019;&#x500B;&#x8A9E;&#x6CD5;&#x3002;</p>
+<p>&#x4F46;&#x60F3;&#x8981;&#x63A2;&#x8A0E;&#x7684;<strong>&#x4E0D;&#x662F;&#x9019;&#x500B;&#x8A9E;&#x6CD5;&#x600E;&#x9EBC;&#x5BEB;&#xFF0C;&#x800C;&#x662F;&#x5B83;&#x70BA;&#x4EC0;&#x9EBC;&#x6703;&#x88AB;&#x6452;&#x68C4;&#xFF1F;</strong></p>
+<p><img src="https://i.imgur.com/wWManCT.png" alt=""><br>(Source: <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiDBrJIeJcp-GaSZI42hma6hssYcdsJsTQMnuntRtUAkZT4vljGA" target="_blank">&#x7DB2;&#x8DEF;&#x5716;&#x7247;</a>)</p>
+<p>&#x4E00;&#x500B;&#x8A9E;&#x6CD5;&#x6216;&#x7279;&#x6027;&#x88AB;&#x7279;&#x5730;&#x767C;&#x5C55;&#x51FA;&#x4F86;&#xFF0C;&#x7136;&#x5F8C;&#x53C8;&#x88AB;&#x6DD8;&#x6C70;&#xFF0C;&#x4E00;&#x5B9A;&#x6709;&#x5176;&#x7F3A;&#x9EDE;&#x6216;&#x539F;&#x56E0;&#x3002;</p>
+<p><strong>&#x77AD;&#x89E3;&#x9019;&#x4E9B;&#x7F3A;&#x9EDE;&#xFF0C;&#x76F8;&#x7576;&#x65BC;&#x5B78;&#x5230;&#x4EC0;&#x9EBC;&#x662F;&#x8F03;&#x88AB;&#x5EFA;&#x8B70;&#x7684;&#x7A0B;&#x5F0F;&#x601D;&#x7DAD;</strong>&#x3002;&#x9019;&#x7A2E;&#x6982;&#x5FF5;&#x6027;&#x4E0A;&#x7684;&#x6536;&#x7A6B;&#x5C31;&#x50CF;&#x5167;&#x529F;&#x4E00;&#x6A23;&#xFF0C;&#x53EF;&#x80FD;&#x4E0D;&#x6703;&#x76F4;&#x63A5;&#x8F49;&#x5316;&#x6210;&#x67D0;&#x7A2E;&#x8A9E;&#x6CD5;&#x7684;&#x986F;&#x6027;&#x61C9;&#x7528;&#xFF0C;&#x4F46;&#x6709;&#x52A9;&#x65BC;&#x96B1;&#x6027;&#x7684;&#x7A0B;&#x5F0F;&#x64B0;&#x5BEB;&#x601D;&#x7DAD;&#x3002;</p>
+<p>&#x7576;&#x7136;&#xFF0C;&#x8981;&#x60F3;&#x63A2;&#x8A0E; <code>with</code> &#x7684;&#x7F3A;&#x9EDE;&#xFF0C;&#x9996;&#x5148;&#x8981;&#x5148;&#x77E5;&#x9053;&#x8A9E;&#x6CD5;&#x600E;&#x9EBC;&#x5BEB;&#x3002;</p>
+<h2 id="with-&#x7684;&#x8A9E;&#x6CD5;"><code>with</code> &#x7684;&#x8A9E;&#x6CD5;</h2>
+<p><code>with</code> &#x8A9E;&#x6CD5;&#x53EF;&#x4EE5;&#x70BA;&#x4E00;&#x6BB5;&#x7A0B;&#x5F0F;&#x6558;&#x8FF0;&#x6307;&#x5B9A;&#x9810;&#x8A2D;&#x7269;&#x4EF6;&#xFF0C;&#x7528;&#x4F86;&#x7C21;&#x5316;&#x7279;&#x5B9A;&#x60C5;&#x5F62;&#x4E0B;&#x5FC5;&#x9808;&#x64B0;&#x5BEB;&#x7684;&#x7A0B;&#x5F0F;&#x78BC;&#x91CF;&#x3002;</p>
+<p>&#x8A9E;&#x6CD5;&#x6A21;&#x677F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">with</span>(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">object</span>&gt;</span>){
+    // statement
+    // ....
+    // ....
+}
+</span></code></pre>
+<p>&#x4EE5;&#x4E0A;&#x662F; <code>with</code> &#x6A19;&#x6E96;&#x7684;&#x8A9E;&#x6CD5;&#x8AAA;&#x660E;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x5149;&#x770B;&#x9019;&#x7A2E;&#x8AD6;&#x6587;&#x5F0F;&#x7684;&#x8AAA;&#x660E;&#x5C31;&#x77E5;&#x9053;&#x600E;&#x9EBC;&#x7528;&#xFF0C;&#x4F60;&#x4E00;&#x5B9A;&#x662F;&#x767E;&#x5E74;&#x4E00;&#x898B;&#x7684;&#x7DF4;&#x6B66;&#x5947;&#x624D;&#x3002;</p>
+<p><img src="https://i.imgur.com/2ee8sjQ.jpg" alt=""><br>(Source: <a href="https://s9.rr.itc.cn/r/wapChange/20164_15_14/a0sisi1715111647352.JPEG" target="_blank">&#x7DB2;&#x8DEF;&#x5716;&#x7247;</a>)</p>
+<p>&#x6C92;&#x5B78;&#x904E;&#x5982;&#x4F86;&#x795E;&#x638C;&#x7684;&#x4EBA;&#xFF0C;&#x8ACB;&#x8DDF;&#x8457;&#x5C0E;&#x904A;&#x7E7C;&#x7E8C;&#x5F80;&#x4E0B;&#x770B;&#x5BE6;&#x969B;&#x8209;&#x4F8B;&#x3002;</p>
+<h2 id="with-&#x4F7F;&#x7528;&#x65BC;&#x5167;&#x5EFA;&#x7269;&#x4EF6;&#x7684;&#x7BC4;&#x4F8B;"><code>with</code> &#x4F7F;&#x7528;&#x65BC;&#x5167;&#x5EFA;&#x7269;&#x4EF6;&#x7684;&#x7BC4;&#x4F8B;</h2>
+<p>&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x500B;&#x4F7F;&#x7528; JavaScript &#x5167;&#x5EFA;&#x6578;&#x5B78;&#x904B;&#x7B97;&#x7269;&#x4EF6; <code>Math</code> &#x7684;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> x = <span class="hljs-built_in">Math</span>.cos(<span class="hljs-number">3</span> * <span class="hljs-built_in">Math</span>.PI) + <span class="hljs-built_in">Math</span>.sin(<span class="hljs-built_in">Math</span>.LN10);
+<span class="hljs-keyword">var</span> y = <span class="hljs-built_in">Math</span>.tan(<span class="hljs-number">14</span> * <span class="hljs-built_in">Math</span>.E);
+<span class="hljs-built_in">console</span>.log(x);     <span class="hljs-comment">// -0.2560196630425069</span>
+<span class="hljs-built_in">console</span>.log(y);     <span class="hljs-comment">// 0.37279230719931067</span>
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x767C;&#x73FE; <code>Math</code> &#x88AB;&#x4E0D;&#x65B7;&#x91CD;&#x8907;&#x547C;&#x53EB;&#xFF0C;&#x4F7F;&#x5F97;&#x9019;&#x4E00;&#x6BB5;&#x7A0B;&#x5F0F;&#x78BC;&#x770B;&#x8D77;&#x4F86;&#x5F88;&#x7D2F;&#x8D05;&#x3002;</p>
+<p>&#x9019;&#x6642;&#x5019;&#x53EF;&#x4EE5;&#x5229;&#x7528; <code>with</code>&#xFF0C;&#x8B93;&#x7A0B;&#x5F0F;&#x78BC;&#x8B8A;&#x5F97;&#x8F03;&#x7C21;&#x6F54;&#x6613;&#x8B80;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> x, y;
+<span class="hljs-keyword">with</span> (<span class="hljs-built_in">Math</span>){
+    x = cos(<span class="hljs-number">3</span> * PI) + sin(LN10);
+    y = tan(<span class="hljs-number">14</span> * E);
+};
+<span class="hljs-built_in">console</span>.log(x);     <span class="hljs-comment">// -0.2560196630425069</span>
+<span class="hljs-built_in">console</span>.log(y);     <span class="hljs-comment">// 0.37279230719931067</span>
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x5728; <code>with(Math){....}</code> &#x5340;&#x584A;&#x5167;&#xFF0C;&#x4E0D;&#x7528;&#x518D;&#x9010;&#x4E00;&#x6307;&#x5B9A;&#x6BCF;&#x500B;&#x51FD;&#x5F0F;&#x6216;&#x5C6C;&#x6027;&#x7684;&#x547C;&#x53EB;&#x7269;&#x4EF6;&#xFF0C;&#x56E0;&#x70BA;&#x5DF2;&#x7D93;&#x5728; <code>with</code> &#x7684;&#x5C0F;&#x62EC;&#x865F;&#x5167;&#x6307;&#x5B9A;&#x4E86; <code>Math</code> &#x4F5C;&#x70BA;&#x9810;&#x8A2D;&#x7684;&#x547C;&#x53EB;&#x7269;&#x4EF6;&#x3002;</p>
+<p>&#x7C21;&#x55AE;&#x4F86;&#x8AAA;&#xFF0C;<strong>&#x7576;&#x4F60;&#x9700;&#x8981;&#x5C0D;&#x540C;&#x4E00;&#x500B;&#x7269;&#x4EF6;&#x7684;&#x591A;&#x500B;&#x5C6C;&#x6027;&#x6216;&#x51FD;&#x5F0F;&#x4F5C;&#x64CD;&#x4F5C;&#x6642;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>with</code> &#x4F86;&#x7C21;&#x5316;&#x4F60;&#x7684;&#x7A0B;&#x5F0F;&#x78BC;</strong>&#x3002;</p>
+<p>&#x9664;&#x4E86;&#x7528;&#x5728;&#x5167;&#x5EFA;&#x7684; JavaScript &#x7269;&#x4EF6;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x5728;&#x81EA;&#x5B9A;&#x7FA9;&#x7684;&#x7269;&#x4EF6;&#x4E0A;&#x55CE;&#xFF1F;</p>
+<p>&#x7576;&#x7136;&#x53EF;&#x4EE5;&#x3002;</p>
+<h2 id="with-&#x4F7F;&#x7528;&#x65BC;&#x81EA;&#x8A02;&#x7269;&#x4EF6;&#x7684;&#x7BC4;&#x4F8B;"><code>with</code> &#x4F7F;&#x7528;&#x65BC;&#x81EA;&#x8A02;&#x7269;&#x4EF6;&#x7684;&#x7BC4;&#x4F8B;</h2>
+<p>&#x4EE5;&#x4E0B;&#x60F3;&#x5C0D;&#x81EA;&#x8A02;&#x7269;&#x4EF6; <code>player</code> &#x7684;&#x591A;&#x500B;&#x5C6C;&#x6027;&#x4F5C;&#x64CD;&#x4F5C;&#xFF0C;&#x5370;&#x51FA;&#x60F3;&#x8981;&#x7684;&#x8CC7;&#x8A0A;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">showHeroStatus</span>(<span class="hljs-params">hero</span>)</span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Name: &quot;</span> + hero.name);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Level: &quot;</span> + hero.level);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Exp: &quot;</span> + hero.currentExp);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;You need more &quot;</span> + (hero.nextLevelNeededExp - hero.currentExp) + <span class="hljs-string">&quot; Exp points for Level &quot;</span> + (hero.level + <span class="hljs-number">1</span>) + <span class="hljs-string">&quot;.&quot;</span>);
+}
+
+<span class="hljs-keyword">var</span> player = {
+    name: <span class="hljs-string">&quot;OneJar&quot;</span>,
+    level: <span class="hljs-number">1</span>,
+    currentExp: <span class="hljs-number">50</span>,
+    nextLevelNeededExp: <span class="hljs-number">200</span>
+};
+
+showHeroStatus(player);
+</code></pre>
+<p>&#x57F7;&#x884C;&#x7D50;&#x679C;&#xFF1A;</p>
+<pre><code>Name: OneJar
+Level: 1
+Exp: 50
+You need more 150 Exp points for Level 2.
+</code></pre><p>&#x53EF;&#x4EE5;&#x770B;&#x5230; <code>showHeroStatus()</code> &#x7684;&#x5167;&#x5BB9;&#x6709;&#x9EDE;&#x56C9;&#x55E6;&#xFF0C;&#x4E0D;&#x65B7;&#x91CD;&#x8907;&#x5C0D; <code>hero</code> &#x7684;&#x547C;&#x53EB;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x5229;&#x7528; <code>with</code> &#x8A9E;&#x6CD5;&#x8B93;&#x9019;&#x6BB5;&#x7A0B;&#x5F0F;&#x78BC;&#x66F4;&#x7C21;&#x6F54;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">showHeroStatus</span>(<span class="hljs-params">hero</span>)</span>{
+    <span class="hljs-keyword">with</span>(hero){
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Name: &quot;</span> + name);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Level: &quot;</span> + level);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Exp: &quot;</span> + currentExp);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;You need more &quot;</span> + (nextLevelNeededExp - currentExp) + <span class="hljs-string">&quot; Exp points for Level &quot;</span> + (level + <span class="hljs-number">1</span>) + <span class="hljs-string">&quot;.&quot;</span>);
+    }
+}
+</code></pre>
+<h2 id="&#x649E;&#x540D;&#x6703;&#x767C;&#x751F;&#x4EC0;&#x9EBC;&#x4E8B;&#xFF1F;">&#x649E;&#x540D;&#x6703;&#x767C;&#x751F;&#x4EC0;&#x9EBC;&#x4E8B;&#xFF1F;</h2>
+<p>&#x770B;&#x5230;&#x9019;&#x908A;&#xFF0C;&#x61C9;&#x8A72;&#x53EF;&#x4EE5;&#x96B1;&#x7D04;&#x611F;&#x89BA;&#x5230; <code>with</code> &#x8A9E;&#x6CD5;&#x7684;&#x7591;&#x616E;&#xFF1A;<strong>&#x5982;&#x679C;&#x6211;&#x53E6;&#x5916;&#x6709;&#x540C;&#x540D;&#x7684;&#x8B8A;&#x6578;&#x6703;&#x767C;&#x751F;&#x4EC0;&#x9EBC;&#x4E8B;&#xFF1F;</strong></p>
+<h3 id="1-&#x8B8A;&#x6578;&#x662F;&#x5728;-with-&#x5340;&#x584A;&#x4E4B;&#x5916;&#x5BA3;&#x544A;">1. &#x8B8A;&#x6578;&#x662F;&#x5728; <code>with</code> &#x5340;&#x584A;&#x4E4B;&#x5916;&#x5BA3;&#x544A;</h3>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">showHeroStatus</span>(<span class="hljs-params">hero</span>)</span>{
+    <span class="hljs-keyword">var</span> level = <span class="hljs-number">99</span>;     <span class="hljs-comment">// Function Scope</span>
+    <span class="hljs-keyword">var</span> money = <span class="hljs-number">1300</span>;   <span class="hljs-comment">// Function Scope</span>
+
+    <span class="hljs-keyword">with</span>(hero){
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Name: &quot;</span> + name);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Level: &quot;</span> + level);     <span class="hljs-comment">// `with` &#x9810;&#x8A2D;&#x7269;&#x4EF6;&#x512A;&#x5148;</span>
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Exp: &quot;</span> + currentExp);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;You need more &quot;</span> + (nextLevelNeededExp - currentExp) + <span class="hljs-string">&quot; Exp points for Level &quot;</span> + (level + <span class="hljs-number">1</span>) + <span class="hljs-string">&quot;.&quot;</span>);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Money: &quot;</span> + money);
+    }
+}
+</code></pre>
+<p>&#x57F7;&#x884C;&#x7D50;&#x679C;&#xFF1A;</p>
+<pre><code>Name: OneJar
+Level: 1
+Exp: 50
+You need more 150 Exp points for Level 2.
+Money: 1300
+</code></pre><ul>
+<li>&#x5728; <code>with</code> &#x4E4B;&#x5167;&#x6703;&#x4EE5;&#x9810;&#x8A2D;&#x7269;&#x4EF6;&#x7684;&#x5C6C;&#x6027;&#x70BA;&#x512A;&#x5148;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x8A72;&#x5C6C;&#x6027;&#x540D;&#x7A31;&#x4E0D;&#x5B58;&#x5728;&#x65BC;&#x7269;&#x4EF6;&#x5167;&#xFF0C;&#x6703;&#x6309;&#x7167;&#x4F5C;&#x7528;&#x57DF;&#x93C8; (Scope Chain)&#x7684;&#x9806;&#x5E8F;&#xFF0C;&#x7E7C;&#x7E8C;&#x627E;&#x5176;&#x4ED6;&#x8B8A;&#x6578;&#x5B9A;&#x7FA9;&#x3002;</li>
+<li>&#x5728;&#x9019;&#x500B;&#x4F8B;&#x5B50;&#x88E1;&#xFF1A;<ul>
+<li><code>level</code> &#x6703;&#x4EE5; <code>hero.level</code> &#x512A;&#x5148;&#x3002;</li>
+<li><code>hero</code> &#x6C92;&#x6709; <code>money</code> &#x9019;&#x500B;&#x5C6C;&#x6027;&#xFF0C;&#x6240;&#x4EE5; <code>money</code> &#x6703;&#x627E;&#x5230; Function Scope &#x6240;&#x5BA3;&#x544A;&#x7684; <code>money</code> &#x8B8A;&#x6578;&#x3002;</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-&#x8B8A;&#x6578;&#x662F;&#x5728;-with-&#x5340;&#x584A;&#x4E4B;&#x5167;&#x5BA3;&#x544A;">2. &#x8B8A;&#x6578;&#x662F;&#x5728; <code>with</code> &#x5340;&#x584A;&#x4E4B;&#x5167;&#x5BA3;&#x544A;</h3>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">showHeroStatus</span>(<span class="hljs-params">hero</span>)</span>{
+    <span class="hljs-keyword">with</span>(hero){
+        <span class="hljs-keyword">var</span> level = <span class="hljs-number">99</span>;     <span class="hljs-comment">// The Same Block</span>
+
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Name: &quot;</span> + name);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Level: &quot;</span> + level);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Exp: &quot;</span> + currentExp);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;You need more &quot;</span> + (nextLevelNeededExp - currentExp) + <span class="hljs-string">&quot; Exp points for Level &quot;</span> + (level + <span class="hljs-number">1</span>) + <span class="hljs-string">&quot;.&quot;</span>);
+    }
+}
+</code></pre>
+<p>&#x57F7;&#x884C;&#x7D50;&#x679C;&#xFF1A;</p>
+<pre><code>Name: OneJar
+Level: 99
+Exp: 50
+You need more 150 Exp points for Level 100.
+</code></pre><ul>
+<li>&#x6703;&#x4EE5;<strong>&#x5728; <code>with</code> &#x4E4B;&#x5167;&#x7684;&#x5BA3;&#x544A;&#x8B8A;&#x6578;&#x70BA;&#x512A;&#x5148;</strong>&#x3002;</li>
+<li>&#x5728;&#x9019;&#x500B;&#x4F8B;&#x5B50;&#x88E1;&#xFF1A;<ul>
+<li>&#x547C;&#x53EB; <code>level</code> &#x6642;&#xFF0C;&#x6703;&#x4EE5;&#x5340;&#x584A;&#x5167;&#x7684; <code>var level = 99</code> &#x512A;&#x5148;&#x3002;</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-&#x8B8A;&#x6578;&#x662F;&#x5728;-with-&#x5340;&#x584A;&#x4E4B;&#x5916;&#x5BA3;&#x544A;&#xFF0C;&#x4F46;&#x5728;-with-&#x5340;&#x584A;&#x4E4B;&#x5167;&#x88AB;&#x4F7F;&#x7528;">3. &#x8B8A;&#x6578;&#x662F;&#x5728; <code>with</code> &#x5340;&#x584A;&#x4E4B;&#x5916;&#x5BA3;&#x544A;&#xFF0C;&#x4F46;&#x5728; <code>with</code> &#x5340;&#x584A;&#x4E4B;&#x5167;&#x88AB;&#x4F7F;&#x7528;</h3>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">showHeroStatus</span>(<span class="hljs-params">hero</span>)</span>{
+    <span class="hljs-keyword">var</span> level = <span class="hljs-number">99</span>;     <span class="hljs-comment">// Function Scope</span>
+
+    <span class="hljs-keyword">with</span>(hero){
+        level = <span class="hljs-number">70</span>;
+
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Name: &quot;</span> + name);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Level: &quot;</span> + level);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Exp: &quot;</span> + currentExp);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;You need more &quot;</span> + (nextLevelNeededExp - currentExp) + <span class="hljs-string">&quot; Exp points for Level &quot;</span> + (level + <span class="hljs-number">1</span>) + <span class="hljs-string">&quot;.&quot;</span>);
+    }
+}
+</code></pre>
+<p>&#x57F7;&#x884C;&#x7D50;&#x679C;&#xFF1A;</p>
+<pre><code>Name: OneJar
+Level: 70
+Exp: 50
+You need more 150 Exp points for Level 71.
+</code></pre><ul>
+<li>&#x96D6;&#x7136; <code>level</code> &#x5BA3;&#x544A;&#x5728; <code>with</code> &#x5340;&#x584A;&#x4E4B;&#x5916;&#xFF0C;&#x800C; <code>hero</code> &#x6709; <code>hero.level</code> &#x9019;&#x500B;&#x5C6C;&#x6027;&#x540D;&#x7A31;&#xFF0C;&#x4F46;&#x5728; <code>with</code> &#x4E4B;&#x5167;&#x9084;&#x662F;&#x5148;&#x627E;&#x5230;&#x8B8A;&#x6578; <code>level</code>&#x3002;</li>
+</ul>
+<h2 id="&#x7E3D;&#x7D50;-with-&#x4F5C;&#x7528;&#x57DF;&#x7684;&#x512A;&#x5148;&#x9806;&#x5E8F;">&#x7E3D;&#x7D50; <code>with</code> &#x4F5C;&#x7528;&#x57DF;&#x7684;&#x512A;&#x5148;&#x9806;&#x5E8F;</h2>
+<p>&#x7576;&#x9047;&#x5230;&#x4E00;&#x500B;&#x547C;&#x53EB;&#x540D;&#x7A31;&#x6642; (&#x4F8B;&#x5982; <code>level</code>, <code>money</code>)&#xFF1A;</p>
+<ol>
+<li>&#x5148;&#x5F9E; <code>with</code> &#x5340;&#x584A;&#x5167;&#x5C0B;&#x627E;&#xFF0C;&#x6709;&#x4F7F;&#x7528;&#x904E;&#x5373;&#x53EF;&#xFF0C;&#x4E0D;&#x5FC5;&#x662F;&#x5728;&#x5340;&#x584A;&#x5167;&#x5BA3;&#x544A;&#x7684;&#x8B8A;&#x6578;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x627E;&#x4E0D;&#x5230;&#xFF0C;&#x518D;&#x5F9E;&#x9810;&#x8A2D;&#x7269;&#x4EF6; (&#x4F8B;&#x5982; <code>hero</code>) &#x7684;&#x5C6C;&#x6027;&#x53BB;&#x627E;&#x540C;&#x540D;&#x7A31;&#x7684;&#x5C6C;&#x6027;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x4EE5;&#x4E0A;&#x90FD;&#x627E;&#x4E0D;&#x5230;&#xFF0C;&#x518D;&#x6839;&#x64DA;&#x4E00;&#x822C;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#x93C8; (Scope Chain) &#x7E7C;&#x7E8C;&#x5F80;&#x5916;&#x627E;&#x3002;</li>
+</ol>
+<h2 id="with-&#x7684;&#x98A8;&#x96AA;"><code>with</code> &#x7684;&#x98A8;&#x96AA;</h2>
+<p>&#x5F9E;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x61C9;&#x8A72;&#x53EF;&#x4EE5;&#x9AD4;&#x6703;&#x5230;&#xFF0C;<strong>&#x4F7F;&#x7528; <code>with</code> &#x56FA;&#x7136;&#x53EF;&#x4EE5;&#x7BC0;&#x7701;&#x4E00;&#x9EDE;&#x7A0B;&#x5F0F;&#x78BC;&#xFF0C;&#x4F46;&#x5C0D;&#x65BC;&#x7A0B;&#x5F0F;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#x904B;&#x4F5C;&#x53EF;&#x80FD;&#x9020;&#x6210;&#x6DF7;&#x4E82;</strong>&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50; 1 &#x548C; 3&#xFF0C;<code>level</code> &#x90FD;&#x662F;&#x5BA3;&#x544A;&#x5728; <code>with</code> &#x4E4B;&#x5916;&#xFF0C;&#x537B;&#x56E0;&#x70BA;&#x662F;&#x5426;&#x66FE;&#x7D93;&#x5728; <code>with</code> &#x4E4B;&#x5167;&#x88AB;&#x4F7F;&#x7528;&#x800C;&#x6709;&#x4E0D;&#x540C;&#x884C;&#x70BA;&#xFF0C;&#x9019;&#x5C0D;&#x65BC;&#x7A0B;&#x5F0F;&#x7DAD;&#x8B77;&#x5B89;&#x5168;&#x6027;&#x4F86;&#x8AAA;&#x4E26;&#x975E;&#x597D;&#x4E8B;&#x3002;</p>
+<p>&#x5C24;&#x5176;&#x5F9E;&#x73FE;&#x5BE6;&#x5C08;&#x6848;&#x98A8;&#x96AA;&#x7684;&#x89D2;&#x5EA6;&#x4F86;&#x770B;&#xFF1A;</p>
+<ol>
+<li>&#x4F7F;&#x7528; <code>with</code> &#x80FD;&#x7BC0;&#x7701;&#x7684;&#x7A0B;&#x5F0F;&#x78BC;&#x91CF;&#x53EF;&#x80FD;&#x6709;&#x9650;&#xFF1B;&#x800C;&#x4E14;&#x7C21;&#x5316;&#x7A0B;&#x5F0F;&#x78BC;&#x901A;&#x5E38;&#x5C6C;&#x65BC;&#x300C;&#x80FD;&#x505A;&#x5230;&#x6700;&#x597D;&#xFF0C;&#x4F46;&#x4E0D;&#x80FD;&#x5371;&#x5BB3;&#x5230;&#x7A0B;&#x5F0F;&#x904B;&#x4F5C;&#x300D;&#x7684;&#x52A0;&#x5206;&#x9805;&#x76EE;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x4F7F;&#x7528; <code>with</code> &#x4E0D;&#x614E;&#xFF0C;&#x9020;&#x6210;&#x7A0B;&#x5F0F;&#x904B;&#x4F5C;&#x7684;&#x884C;&#x70BA;&#x4E0D;&#x540C;&#xFF0C;&#x5C6C;&#x65BC;&#x300C;&#x4E00;&#x65E6;&#x767C;&#x751F;&#xFF0C;&#x6703;&#x5371;&#x5BB3;&#x5230;&#x7A0B;&#x5F0F;&#x904B;&#x4F5C;&#x300D;&#x7684;&#x554F;&#x984C;&#x3002;</li>
+</ol>
+<p>&#x5C08;&#x6848;&#x6700;&#x5927;&#x7684;&#x8AB2;&#x984C;&#x5C31;&#x662F;&#x6B0A;&#x8861; (trade-off)&#x3002;&#x5F9E;&#x4EE5;&#x4E0A;&#x5169;&#x9EDE;&#x4F86;&#x770B;&#xFF0C;&#x6BEB;&#x7121;&#x7591;&#x554F;&#x7B2C; 2 &#x9EDE;&#x5C0D;&#x5C08;&#x6848;&#x7684;&#x6BBA;&#x50B7;&#x529B;&#x9060;&#x5927;&#x65BC;&#x7B2C; 1 &#x9EDE;&#xFF0C;&#x4F7F;&#x7528; <code>with</code> &#x6240;&#x5F97;&#x5230;&#x7684;&#x6548;&#x76CA;&#x53EF;&#x80FD;&#x9060;&#x4E0D;&#x53CA;&#x5B83;&#x96B1;&#x542B;&#x7684;&#x98A8;&#x96AA;&#xFF0C;&#x56E0;&#x6B64; <code>with</code> &#x7684;&#x6452;&#x68C4;&#x662F;&#x53EF;&#x4EE5;&#x88AB;&#x7406;&#x89E3;&#x3002;</p>
+<h2 id="with-&#x63B0;&#x63B0;&#xFF5E;"><code>with</code> &#x63B0;&#x63B0;&#xFF5E;</h2>
+<p>&#x5982;&#x524D;&#x9762;&#x6587;&#x7AE0;&#x4ECB;&#x7D39;&#x5230;&#xFF0C;&#x5728; ES5 &#x5C0E;&#x5165;&#x7684;&#x56B4;&#x8B39;&#x6A21;&#x5F0F;&#x5DF2;&#x7D93;&#x7981;&#x6B62; <code>with</code> &#x8A9E;&#x6CD5;&#x7684;&#x4F7F;&#x7528;&#x3002;</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/with" target="_blank">MDN</a> &#x5EFA;&#x8B70;&#xFF1A;</p>
+<blockquote>
+<p>Using with is not recommended, and is forbidden in ECMAScript 5 strict mode.
+The recommended alternative is to assign the object whose properties you want to access to a temporary variable.</p>
+</blockquote>
+<p>&#x5982;&#x679C;&#x55AE;&#x7D14;&#x5E0C;&#x671B;&#x7A0B;&#x5F0F;&#x78BC;&#x53EF;&#x4EE5;&#x518D;&#x7C21;&#x6F54;&#x4E00;&#x9EDE;&#xFF0C;MDN &#x7684;&#x5EFA;&#x8B70;&#x662F;&#x300C;&#x5C07;&#x9700;&#x8981;&#x91CD;&#x8907;&#x547C;&#x53EB;&#x7684;&#x7269;&#x4EF6;&#x66AB;&#x5B58;&#x65BC;&#x4E00;&#x500B;&#x540D;&#x7A31;&#x7C21;&#x77ED;&#x7684;&#x8B8A;&#x6578;&#x300D;&#x5C31;&#x597D;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#x4E0B;&#x9762;&#x9019;&#x6A23;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-meta">&quot;use strict&quot;</span>;
+<span class="hljs-keyword">var</span> m = <span class="hljs-built_in">Math</span>;
+<span class="hljs-keyword">var</span> x = m.cos(<span class="hljs-number">3</span> * m.PI) + m.sin(m.LN10);
+<span class="hljs-keyword">var</span> y = m.tan(<span class="hljs-number">14</span> * m.E);
+<span class="hljs-built_in">console</span>.log(x);     <span class="hljs-comment">// -0.2560196630425069</span>
+<span class="hljs-built_in">console</span>.log(y);     <span class="hljs-comment">// 0.37279230719931067</span>
+</code></pre>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/with" target="_blank">with - JavaScript | MDN</a></li>
+<li><a href="http://king39461.pixnet.net/blog/post/361793370-%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91javascript%E4%B8%ADwith%E3%80%81this%E7%94%A8%E6%B3%95%E5%B0%8F%E7%BB%93" target="_blank">&#x3010;&#x8F6C;&#x8F7D;&#x3011;JavaScript&#x4E2D;with&#x3001;this&#x7528;&#x6CD5;&#x5C0F;&#x7ED3;</a></li>
+<li><a href="http://stannotes.blogspot.com/2014/10/javascript-with.html" target="_blank">[JavaScript] with&#x7684;&#x7528;&#x6CD5;</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="day13.html" class="navigation navigation-prev " aria-label="Previous page: Day 13：看 Strict Mode 如何施展「還我漂亮拳」(2)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="day15.html" class="navigation navigation-next " aria-label="Next page: Day 15：this 關鍵字 (1)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Day 14：來挖挖恐龍骨 —— with 語法","level":"1.15","depth":1,"next":{"title":"Day 15：this 關鍵字 (1)","level":"1.16","depth":1,"path":"articles/day15.md","ref":"./articles/day15.md","articles":[]},"previous":{"title":"Day 13：看 Strict Mode 如何施展「還我漂亮拳」(2)","level":"1.14","depth":1,"path":"articles/day13.md","ref":"./articles/day13.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","intopic-toc","edit-link"],"pluginsConfig":{"intopic-toc":{"label":"Table of Contents","selector":".markdown-section h2, .markdown-section h3","visible":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day14.md","mtime":"2019-08-10T04:34:01.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T16:47:57.947Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/gumshoe.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

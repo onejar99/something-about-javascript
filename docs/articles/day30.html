@@ -1,0 +1,824 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Day 30：ES10 醞釀中 —— 擁抱 JS の 未來 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="day29.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="day01.html">
+            
+                <a href="day01.html">
+            
+                    
+                    Day 1：前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="day02.html">
+            
+                <a href="day02.html">
+            
+                    
+                    Day 2：資料型態的夢魘——動態型別加弱型別(1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="day03.html">
+            
+                <a href="day03.html">
+            
+                    
+                    Day 3：資料型態的夢魘——動態型別加弱型別(2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="day04.html">
+            
+                <a href="day04.html">
+            
+                    
+                    Day 4：動態型別加弱型別不是罪——怎麼 JavaScript 一摔就變成個印度阿三？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="day05.html">
+            
+                <a href="day05.html">
+            
+                    
+                    Day 5：湯姆克魯斯與唐家霸王槍——變數的作用域(Scope) (1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="day06.html">
+            
+                <a href="day06.html">
+            
+                    
+                    Day 6：湯姆克魯斯與唐家霸王槍——變數的作用域(Scope) (2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="day07.html">
+            
+                <a href="day07.html">
+            
+                    
+                    Day 7：傳統 var 關鍵字的不足
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="day08.html">
+            
+                <a href="day08.html">
+            
+                    
+                    Day 8：var 掰掰 —— ES6 更嚴謹安全的 let 和 const
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="day09.html">
+            
+                <a href="day09.html">
+            
+                    
+                    Day 9：圖解變數作用域(Scope)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="day10.html">
+            
+                <a href="day10.html">
+            
+                    
+                    Day 10：程式也懂電梯向上？ —— Hoisting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="day11.html">
+            
+                <a href="day11.html">
+            
+                    
+                    Day 11：Strict Mode (嚴謹模式)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="day12.html">
+            
+                <a href="day12.html">
+            
+                    
+                    Day 12：看 Strict Mode 如何施展「還我漂亮拳」(1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="day13.html">
+            
+                <a href="day13.html">
+            
+                    
+                    Day 13：看 Strict Mode 如何施展「還我漂亮拳」(2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="day14.html">
+            
+                <a href="day14.html">
+            
+                    
+                    Day 14：來挖挖恐龍骨 —— with 語法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="day15.html">
+            
+                <a href="day15.html">
+            
+                    
+                    Day 15：this 關鍵字 (1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="day16.html">
+            
+                <a href="day16.html">
+            
+                    
+                    Day 16：this 關鍵字 (2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="day17.html">
+            
+                <a href="day17.html">
+            
+                    
+                    Day 17：this 關鍵字 (3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="day18.html">
+            
+                <a href="day18.html">
+            
+                    
+                    Day 18：this 關鍵字 (4)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="day19.html">
+            
+                <a href="day19.html">
+            
+                    
+                    Day 19：函數定義 (Function Definition) 的 100 種寫法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="day20.html">
+            
+                <a href="day20.html">
+            
+                    
+                    Day 20：ES6 的箭頭函數 (Arrow Functions)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="day21.html">
+            
+                <a href="day21.html">
+            
+                    
+                    Day 21：箭頭函數 (Arrow Functions) 的 this 和你想的不一樣 (1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="day22.html">
+            
+                <a href="day22.html">
+            
+                    
+                    Day 22：箭頭函數 (Arrow Functions) 的 this 和你想的不一樣 (2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="day23.html">
+            
+                <a href="day23.html">
+            
+                    
+                    Day 23：ES6 物件實字威力加強版 (Enhanced Object Literals)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="day24.html">
+            
+                <a href="day24.html">
+            
+                    
+                    Day 24：函數呼叫 (Function Invocation) 與立即函數 (Self-Invoking Functions)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="day25.html">
+            
+                <a href="day25.html">
+            
+                    
+                    Day 25：不是多了塊魚 —— 立即函數的應用整理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="day26.html">
+            
+                <a href="day26.html">
+            
+                    
+                    Day 26：程式界的哈姆雷特 —— Pass by value, or Pass by reference？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="day27.html">
+            
+                <a href="day27.html">
+            
+                    
+                    Day 27：別管變數 Pass by Whatever，尋找容易理解的銀色子彈 (Silver Bullet)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="day28.html">
+            
+                <a href="day28.html">
+            
+                    
+                    Day 28：閉包 (Closures)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="day29.html">
+            
+                <a href="day29.html">
+            
+                    
+                    Day 29：閉包 (Closures) 進階打怪實戰
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.31" data-path="day30.html">
+            
+                <a href="day30.html">
+            
+                    
+                    Day 30：ES10 醞釀中 —— 擁抱 JS の 未來
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Day 30：ES10 醞釀中 —— 擁抱 JS の 未來</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day30&#xFF1A;es10-&#x919E;&#x91C0;&#x4E2D;-&#x2014;&#x2014;-&#x64C1;&#x62B1;-js-&#x306E;-&#x672A;&#x4F86;">&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684; JavaScript &#x4E8C;&#x4E09;&#x4E8B;#Day30&#xFF1A;ES10 &#x919E;&#x91C0;&#x4E2D; &#x2014;&#x2014; &#x64C1;&#x62B1; JS &#x306E; &#x672A;&#x4F86;</h1>
+<p>&#x7D42;&#x65BC;&#x4F86;&#x5230;&#x6700;&#x5F8C;&#x4E00;&#x5929;&#x5C3E;&#x8072;&#x3002;</p>
+<p><img src="https://i.imgur.com/e77c9Yp.png" alt=""><br>(Source: <a href="https://store.line.me/stickershop/product/1236945/?ref=Desktop" target="_blank">&#x767D;&#x721B;&#x8C93;&#x8CBC;&#x5716;</a>)</p>
+<h2 id="&#x64C1;&#x62B1;-javascript-&#x7684;&#x672A;&#x4F86;">&#x64C1;&#x62B1; JavaScript &#x7684;&#x672A;&#x4F86;</h2>
+<p>&#x9019;&#x7BC7;&#x6587;&#x7AE0;&#x7684;&#x984C;&#x76EE;&#x662F;&#x64C1;&#x62B1; JavaScript &#x7684;&#x672A;&#x4F86;&#xFF0C;&#x5C31;&#x8B93;&#x6211;&#x5011;&#x5728;&#x5C3E;&#x8072;&#x4F86;&#x770B;&#x4E00;&#x4E0B; JavaScript &#x7684;&#x6B77;&#x53F2;&#x548C;&#x672A;&#x4F86;&#x3002;</p>
+<h3 id="javascript-&#x7684;&#x8A95;&#x751F;">JavaScript &#x7684;&#x8A95;&#x751F;</h3>
+<p>&#x5148;&#x7C21;&#x55AE;&#x4ECB;&#x7D39;&#x4E00;&#x4E0B; JavaScript &#x7684;&#x80CC;&#x666F;&#x3002;&#x9084;&#x8A18;&#x5F97; Day 1 &#x6587;&#x7AE0;&#x770B;&#x5230;&#x7684;&#x9019;&#x4F4D;&#x8001;&#x5144;&#x55CE;&#xFF1F;</p>
+<p><img src="https://i.imgur.com/mbI00JX.png" alt=""><br>(Source: <a href="https://www.reddit.com/r/ProgrammerHumor/comments/8srix1/thanks_brendan_for_giving_us_the_javascript/" target="_blank">Thanks Brendan for giving us the Javascript : ProgrammerHumor - Reddit</a>)</p>
+<p>&#x9019;&#x4F4D;&#x7B11;&#x5F97;&#x4F60;&#x5FC3;&#x88E1;&#x767C;&#x5BD2;&#x7684;&#xFF0C;&#x5C31;&#x662F; JavaScript &#x7684;&#x767C;&#x660E;&#x8005; Brendan Eich&#x3002;</p>
+<p>1995 &#x5E74; Brendan Eich &#x5728; Netscape &#x516C;&#x53F8;&#x7684;&#x7DB2;&#x7F85;&#x4E0B;&#xFF0C;&#x70BA;&#x7528;&#x6236;&#x7AEF;&#x700F;&#x89BD;&#x5668;&#x767C;&#x660E;&#x4E00;&#x500B;&#x8173;&#x672C;&#x8A9E;&#x8A00;&#xFF0C;&#x6700;&#x521D;&#x547D;&#x540D;&#x70BA; Mocha&#xFF0C;&#x5F8C;&#x4F86;&#x6539;&#x540D; LiveScript&#xFF0C;&#x96A8;&#x5F8C;&#x70BA;&#x4E86;&#x642D;&#x4E0A;&#x7576;&#x6642; Java &#x8A71;&#x984C;&#x6027;&#x7684;&#x9806;&#x98A8;&#x8ECA;&#xFF0C;&#x518D;&#x5EA6;&#x6613;&#x540D;&#x70BA; JavaScript&#x3002;</p>
+<p>(Wiki &#x4E0A;&#x8AAA; Brendan &#x53EA;&#x7528; 10 &#x5929;&#x5C31;&#x8A2D;&#x8A08;&#x51FA;&#x539F;&#x578B;&#xFF0C;&#x679C;&#x771F;&#x795E;&#x4EBA;&#x2026;&#x2026;)</p>
+<p>&#x9019;&#x500B;&#x5546;&#x696D;&#x4E0A;&#x7684;&#x547D;&#x540D;&#x8003;&#x91CF;&#x4E5F;&#x9020;&#x6210;&#x6B77;&#x4F86;&#x8A31;&#x591A;&#x4EBA;&#x7684;&#x8AA4;&#x89E3;&#x548C;&#x7591;&#x60D1;&#xFF1A;Java &#x548C; JavaScript &#x6709;&#x4EC0;&#x9EBC;&#x95DC;&#x4FC2;&#xFF1F;</p>
+<p><img src="https://i.imgur.com/6qUTmr7.png" alt=""><br>(Source: <a href="https://zh.wikipedia.org/wiki/%E7%B6%B2%E6%99%AF" target="_blank">Wiki - &#x7DB2;&#x666F;</a>&#x3001;<a href="https://zh.wikipedia.org/wiki/%E6%98%87%E9%99%BD%E9%9B%BB%E8%85%A6" target="_blank">Wiki - &#x6607;&#x967D;&#x96FB;&#x8166;</a>)</p>
+<p>&#x96D6;&#x7136;&#x7576;&#x5E74; Netscape &#x548C;&#x767C;&#x660E; Java &#x7684; Sun &#x516C;&#x53F8;&#x4E4B;&#x9593;&#x6709;&#x5408;&#x4F5C;&#x95DC;&#x4FC2;&#xFF0C;&#x4F7F; JavaScript &#x5728;&#x8A9E;&#x6CD5;&#x4E0A;&#x53D7;&#x5230; Java &#x5F71;&#x97FF;&#x548C;&#x555F;&#x767C;&#x3002;</p>
+<p>&#x4F46;&#x57FA;&#x672C;&#x4E0A; <strong>Java &#x548C; JavaScript &#x7684;&#x95DC;&#x4FC2;&#x5C31;&#x50CF;&#x592A;&#x967D;&#x548C;&#x592A;&#x967D;&#x9905;&#x2014;&#x2014;&#x6C92;&#x6709;&#x95DC;&#x4FC2;</strong>&#x3002;</p>
+<h3 id="ecmascript-&#x7B49;&#x65BC;-javascript&#xFF1F;">ECMAScript &#x7B49;&#x65BC; JavaScript&#xFF1F;</h3>
+<p>1996 &#x5E74; 11 &#x6708;&#xFF0C;Netscape &#x516C;&#x53F8;&#x6C7A;&#x5B9A;&#x5C07; JavaScript &#x63D0;&#x4EA4;&#x7D66;&#x6A19;&#x6E96;&#x5316;&#x7D44;&#x7E54; ECMA&#xFF0C;&#x5E0C;&#x671B;&#x9019;&#x7A2E;&#x8A9E;&#x8A00;&#x80FD;&#x5920;&#x6210;&#x70BA;&#x570B;&#x969B;&#x6A19;&#x6E96;&#x3002;</p>
+<p><img src="https://i.imgur.com/Ni37bmp.png" alt=""><br>(Source: <a href="https://zh.wikipedia.org/wiki/Ecma%E5%9B%BD%E9%99%85" target="_blank">Wiki - Ecma&#x570B;&#x969B;</a>)</p>
+<p>ECMA &#x662F;&#x4E00;&#x5BB6;&#x570B;&#x969B;&#x6027;&#x6703;&#x54E1;&#x5236;&#x5EA6;&#x7684;&#x8CC7;&#x8A0A;&#x548C;&#x96FB;&#x4FE1;&#x6A19;&#x6E96;&#x7D44;&#x7E54;&#x3002;1994&#x5E74;&#x4E4B;&#x524D;&#x540D;&#x70BA;<strong>&#x6B50;&#x6D32;&#x96FB;&#x8166;&#x88FD;&#x9020;&#x5546;&#x5354;&#x6703;</strong> (<strong>E</strong>uropean <strong>C</strong>omputer <strong>M</strong>anufacturers <strong>A</strong>ssociation)&#x3002;1994&#x5E74;&#x4E4B;&#x5F8C;&#xFF0C;&#x56E0;&#x70BA;&#x96FB;&#x8166;&#x7684;&#x570B;&#x969B;&#x5316;&#xFF0C;&#x6539;&#x540D; Ecma &#x570B;&#x969B; (Ecma International)&#x3002;</p>
+<p>1997 &#x5E74; 6 &#x6708;&#xFF0C;ECMA &#x767C;&#x5E03; ECMA-262 &#x6A19;&#x6E96;&#x7B2C;&#x4E00;&#x7248;&#xFF0C;<strong>&#x4EE5; JavaScript &#x8A9E;&#x8A00;&#x70BA;&#x57FA;&#x790E;&#xFF0C;&#x5236;&#x5B9A;&#x4E86;&#x700F;&#x89BD;&#x5668;&#x8173;&#x672C;&#x8A9E;&#x8A00;&#x7684;&#x6A19;&#x6E96;&#xFF0C;&#x4E26;&#x5C07;&#x9019;&#x7A2E;&#x8A9E;&#x8A00;&#x7A31;&#x70BA; ECMAScript</strong>&#xFF0C;&#x9019;&#x5C31;&#x662F; ES &#x521D;&#x4EE3;&#x76EE;&#x2014;&#x2014; ECMAScript 1.0&#x3002;</p>
+<p>&#x800C; JavaScript &#x5C31;&#x662F; ECMAScript &#x6700;&#x8457;&#x540D;&#x7684;&#x5BE6;&#x73FE; (Implementation)&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x56B4;&#x683C;&#x4F86;&#x8AAA;&#xFF0C;<strong>ECMAScript &#x6307;&#x7684;&#x662F;&#x4E00;&#x7A2E;&#x6A19;&#x6E96;&#x898F;&#x683C; (Standard)&#xFF0C;JavaScript &#x662F;&#x9019;&#x500B;&#x6A19;&#x6E96;&#x7684;&#x5BE6;&#x73FE; (Implementation)</strong>&#x3002;&#x9664;&#x4E86; JavaScript&#xFF0C;ActionScript &#x548C; JScript &#x4E5F;&#x90FD;&#x662F; ECMAScript &#x6A19;&#x6E96;&#x7684;&#x5BE6;&#x73FE;&#x8A9E;&#x8A00;&#x3002;</p>
+<p>&#x4E0D;&#x904E;&#x7531;&#x65BC; JavaScript &#x7684;&#x5F37;&#x52E2;&#x767C;&#x5C55;&#xFF0C;&#x73FE;&#x5728;&#x6211;&#x5011;&#x5728;&#x6E9D;&#x901A;&#x6642;&#xFF0C;&#x5E7E;&#x4E4E;&#x53EF;&#x4EE5;&#x628A; ECMAScript &#x548C; JavaScript &#x5283;&#x4E0A;&#x7B49;&#x865F;&#x3002;</p>
+<h3 id="ecmascript-&#x7684;&#x6210;&#x9577;&#x53F2;">ECMAScript &#x7684;&#x6210;&#x9577;&#x53F2;</h3>
+<p>ECMAScript &#x81EA; 1997 &#x5E74;&#x6B63;&#x5F0F;&#x88AB;&#x767C;&#x5E03;&#x70BA;&#x6A19;&#x6E96;&#x5F8C;&#xFF0C;&#x4E5F;&#x6301;&#x7E8C;&#x6709;&#x65B0;&#x7248;&#x672C;&#x5236;&#x5B9A;&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x5230;&#x4ECA;&#x5E74;&#x70BA;&#x6B62;&#x7684; JavaScript &#x7248;&#x672C;&#x6B77;&#x53F2;&#xFF0C;&#x53C3;&#x8003;&#x5C31;&#x597D;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x7248;&#x672C;</th>
+<th>&#x6B63;&#x5F0F;&#x540D;&#x7A31;</th>
+<th>&#x767C;&#x5E03;&#x5E74;&#x4EFD;</th>
+<th>&#x5099;&#x8A3B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>ECMAScript 1</td>
+<td>1997</td>
+<td>&#x7B2C;&#x4E00;&#x7248;</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ECMAScript 2</td>
+<td>1998</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>ECMAScript 3</td>
+<td>1999</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>ECMAScript 4</td>
+<td>---</td>
+<td>&#x5F9E;&#x672A;&#x767C;&#x5E03;</td>
+</tr>
+<tr>
+<td>5</td>
+<td>ECMAScript 5</td>
+<td>2009</td>
+<td></td>
+</tr>
+<tr>
+<td>5.1</td>
+<td>ECMAScript 5.1</td>
+<td>2011</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>ECMAScript 2015</td>
+<td>2015</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>ECMAScript 2016</td>
+<td>2016</td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>ECMAScript 2017</td>
+<td>2017</td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>ECMAScript 2018</td>
+<td>2018</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x5F9E; ES6 &#x958B;&#x59CB;&#x6B63;&#x5F0F;&#x540D;&#x7A31;&#x6539;&#x7528;&#x5E74;&#x4EFD;&#x8868;&#x793A;</strong>&#xFF0C;&#x56E0;&#x6B64;&#x6703;&#x770B;&#x5230;&#x300C;ES6&#x300D;&#x6216;&#x300C;ES2015&#x300D;&#x9019;&#x5169;&#x7A2E;&#x8AAA;&#x6CD5;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x6CE8;&#x610F;&#x5230;&#xFF0C;&#x5F9E; 2015 &#x5E74;&#x958B;&#x59CB;&#x7A81;&#x7136;&#x5F88;&#x52E4;&#x52DE;&#xFF0C;&#x6BCF;&#x4E00;&#x5E74;&#x90FD;&#x6709;&#x4E00;&#x500B;&#x65B0;&#x7248;&#x672C;&#x767C;&#x5E03;&#x3002;</p>
+<h3 id="&#x5E74;&#x5E74;&#x64C1;&#x62B1;&#x65B0;&#x7684;-ecmascript">&#x5E74;&#x5E74;&#x64C1;&#x62B1;&#x65B0;&#x7684; ECMAScript</h3>
+<p>ECMA &#x4E2D;&#x8CA0;&#x8CAC;&#x5236;&#x5B9A; ECMAScript &#x6A19;&#x6E96;&#x7684;&#x662F;<strong>&#x7B2C; 39 &#x865F;&#x6280;&#x8853;&#x5C08;&#x5BB6;&#x59D4;&#x54E1;&#x6703;</strong> (Technical Committee 39)&#xFF0C;<strong>&#x7C21;&#x7A31; TC39</strong>&#x3002;</p>
+<p>&#x4EFB;&#x4F55;&#x4EBA;&#x90FD;&#x53EF;&#x4EE5;&#x5411; TC39 &#x6A19;&#x6E96;&#x59D4;&#x54E1;&#x6703;&#x63D0;&#x6848;&#xFF0C;&#x8981;&#x6C42;&#x589E;&#x4FEE;&#x8A9E;&#x6CD5;&#x3002;</p>
+<blockquote>
+<p>ECMAScript &#x76EE;&#x524D;&#x6240;&#x6709;&#x63D0;&#x6848;&#x53EF;&#x4EE5;&#x5728; <a href="https://github.com/tc39/ecma262" target="_blank">TC39 &#x7684;&#x5B98;&#x65B9; GitHub</a> &#x67E5;&#x770B;&#x3002;</p>
+</blockquote>
+<p>&#x4E00;&#x500B;&#x65B0;&#x7684;&#x8A9E;&#x6CD5;&#x5F9E;&#x63D0;&#x6848;&#x5230;&#x8B8A;&#x6210;&#x6B63;&#x5F0F;&#x6A19;&#x6E96;&#xFF0C;&#x9700;&#x8981;&#x7D93;&#x6B77;&#x4E94;&#x500B;&#x968E;&#x6BB5;&#xFF0C;&#x6BCF;&#x500B;&#x968E;&#x6BB5;&#x90FD;&#x9700;&#x8981;&#x7531; TC39 &#x59D4;&#x54E1;&#x6703;&#x6279;&#x51C6;&#xFF1A;</p>
+<ul>
+<li>Stage 0: Strawman (&#x5C55;&#x793A;&#x968E;&#x6BB5;)</li>
+<li>Stage 1: Proposal (&#x63D0;&#x6848;&#x968E;&#x6BB5;)</li>
+<li>Stage 2: Draft (&#x8349;&#x6848;&#x968E;&#x6BB5;)</li>
+<li>Stage 3: Candidate (&#x5019;&#x9078;&#x968E;&#x6BB5;)</li>
+<li>Stage 4: Finished (&#x5B9A;&#x6848;&#x968E;&#x6BB5;)</li>
+</ul>
+<p>&#x4E00;&#x500B;&#x63D0;&#x6848;&#x53EA;&#x8981;&#x80FD;&#x9032;&#x5165; Stage 2&#xFF0C;&#x5E7E;&#x4E4E;&#x5C31;&#x4EE3;&#x8868;&#x6703;&#x88AB;&#x5305;&#x542B;&#x9032;&#x672A;&#x4F86;&#x7684;&#x6B63;&#x5F0F;&#x6A19;&#x6E96;&#x88E1;&#x3002;&#x6240;&#x4EE5;&#x6709;&#x4E9B;&#x5DE5;&#x5177;&#x6703;&#x63D0;&#x4F9B;&#x5B9A;&#x6848;&#x968E;&#x6BB5;&#x524D;&#x7684;&#x8A9E;&#x6CD5;&#x6E2C;&#x8A66;&#xFF0C;&#x4F8B;&#x5982;<a href="https://babeljs.io/repl" target="_blank">Babel &#x7684;&#x7DDA;&#x4E0A; REPL</a>&#x3002;</p>
+<p><img src="https://i.imgur.com/hifPNmy.png" alt=""><br>(Source: <a href="https://babeljs.io/repl" target="_blank">Babel REPL</a>)</p>
+<p>TC39 &#x59D4;&#x54E1;&#x6703;&#x60F3;&#x8B93;&#x6A19;&#x6E96;&#x7684;&#x5347;&#x7D1A;&#x6210;&#x70BA;&#x5E38;&#x898F;&#x6D41;&#x7A0B;&#xFF0C;&#x6C7A;&#x5B9A;<strong>&#x5728;&#x6BCF;&#x5E74;&#x7684; 6 &#x6708;&#x4EFD;&#x6B63;&#x5F0F;&#x767C;&#x5E03;&#x4E00;&#x6B21;&#xFF0C;&#x4F5C;&#x70BA;&#x7576;&#x5E74;&#x5EA6;&#x7684;&#x6B63;&#x5F0F;&#x7248;&#x672C;</strong>&#x3002;&#x63A5;&#x4E0B;&#x4F86;&#x7684;&#x6642;&#x9593;&#x5C31;&#x5728;&#x9019;&#x500B;&#x7248;&#x672C;&#x7684;&#x57FA;&#x790E;&#x4E0A;&#x505A;&#x589E;&#x4FEE;&#xFF0C;&#x76F4;&#x5230;&#x4E0B;&#x4E00;&#x5E74;&#x7684; 6 &#x6708;&#xFF0C;&#x8349;&#x6848;&#x81EA;&#x7136;&#x8B8A;&#x6210;&#x65B0;&#x4E00;&#x5E74;&#x7684;&#x7248;&#x672C;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x9810;&#x671F;&#x660E;&#x5E74;&#x7684; 6 &#x6708;&#x5C31;&#x6703;&#x6709; ES10 &#x8A95;&#x751F;&#x3002;</p>
+<p>&#x6BCF;&#x5E74;&#x90FD;&#x6709;&#x4E00;&#x500B;&#x65B0;&#x7248;&#x672C;&#x767C;&#x5E03;&#x662F;&#x4E00;&#x500B;&#x5F88;&#x5FEB;&#x7684;&#x901F;&#x5EA6;&#xFF0C;&#x5404;&#x5BB6;&#x700F;&#x89BD;&#x5668;&#x7684;&#x5BE6;&#x4F5C;&#x652F;&#x63F4;&#x8981;&#x8D95;&#x4E0A;&#x81EA;&#x7136;&#x6703;&#x6709;&#x843D;&#x5DEE;&#xFF0C;&#x6240;&#x4EE5; Babel &#x9019;&#x6A23;&#x7684;&#x8F49;&#x8B6F;&#x5DE5;&#x5177;&#x66F4;&#x986F;&#x91CD;&#x8981;&#x3002;&#x9019;&#x6A23;&#x7684;&#x767C;&#x5E03;&#x901F;&#x5EA6;&#x4E5F;&#x53CD;&#x6620;&#x4E86; JavaScript &#x662F;&#x4F55;&#x7B49;&#x6D3B;&#x8E8D;&#x3002;</p>
+<p>&#x7A76;&#x7ADF; ES10 &#x53C8;&#x6703;&#x6709;&#x4EC0;&#x9EBC;&#x65B0;&#x7279;&#x6027;&#xFF0C;&#x5C31;&#x8B93;&#x6211;&#x5011;&#x62ED;&#x76EE;&#x4EE5;&#x5F85;&#x5427;&#xFF01;</p>
+<h2 id="&#x5C3E;&#x8072;">&#x5C3E;&#x8072;</h2>
+<p>&#x9019;&#x6A23;&#x6709;&#x610F;&#x7FA9;&#x7684;&#x6280;&#x8853;&#x9435;&#x4EBA;&#x8CFD;&#x76F8;&#x4FE1;&#x672A;&#x4F86;&#x5E7E;&#x5E74;&#x90FD;&#x9084;&#x6703;&#x8209;&#x8FA6;&#xFF0C;&#x5F88;&#x60F3;&#x52F8;&#x4E16;&#x672A;&#x4F86;&#x7684;&#x52C7;&#x8005;&#xFF1A;&#x4E00;&#x5B9A;&#x8981;&#x63D0;&#x65E9;&#x6E96;&#x5099;&#xFF0C;&#x4E0D;&#x8981;&#x50CF;&#x7B46;&#x8005;&#x81EA;&#x4F5C;&#x5B7D;&#x3002;</p>
+<p>&#x6A19;&#x984C;&#x5E36;&#x9EDE;&#x65E5;&#x6587;&#x98A8;&#x5473;&#xFF0C;&#x662F;&#x56E0;&#x70BA;&#x904E;&#x53BB; 30 &#x5929;&#x7684;&#x611F;&#x89BA;&#x5C31;&#x50CF;&#x6BCF;&#x5929;&#x88AB;&#x8FFD;&#x7A3F;&#x7684;&#x9023;&#x8F09;&#x6F2B;&#x756B;&#x5BB6;&#x3002;</p>
+<p><img src="https://i.imgur.com/juNeeAW.png" alt=""><br>(Source: <a href="https://www.google.com.tw/search?q=%E6%BC%AB%E7%95%AB%E5%AE%B6+%E8%B6%95%E7%A8%BF&amp;rlz=1C1SAVA_enTW523TW523&amp;source=lnms&amp;tbm=isch&amp;sa=X&amp;ved=0ahUKEwin9KaM5s_eAhWBErwKHbsiAM8Q_AUIDigB&amp;biw=1280&amp;bih=882#imgrc=aAmXWBceBZbs2M:" target="_blank">&#x7DB2;&#x8DEF;&#x5716;&#x7247;</a>)</p>
+<h3 id="&#x9435;&#x4EBA;&#x8CFD;&#x679C;&#x7136;&#x4E0D;&#x662F;&#x6D6A;&#x5F97;&#x865B;&#x540D;">&#x9435;&#x4EBA;&#x8CFD;&#x679C;&#x7136;&#x4E0D;&#x662F;&#x6D6A;&#x5F97;&#x865B;&#x540D;</h3>
+<p><img src="https://i.imgur.com/eBaKKLW.png" alt=""><br>(Source: <a href="http://nos.netease.com/v163/snapshot/20180108/WaugI2823_cover.jpg" target="_blank">&#x7DB2;&#x8DEF;&#x5716;&#x7247;</a>)</p>
+<p>&#x9019;&#x6B21;&#x53C3;&#x8CFD;&#x7684;&#x6C7A;&#x5B9A;&#x9817;&#x70BA;&#x5009;&#x4FC3;&#xFF0C;&#x5225;&#x8AAA;&#x4EC0;&#x9EBC;&#x5EAB;&#x5B58;&#xFF0C;&#x958B;&#x8CFD;&#x6B7B;&#x7DDA;&#x7684;&#x524D; 3 &#x5929;&#x624D;&#x6C7A;&#x5B9A;&#x5831;&#x540D;&#x3001;&#x958B;&#x59CB;&#x898F;&#x5283;&#x4E3B;&#x984C;&#x5927;&#x7DB1;&#x3002;&#x5831;&#x540D;&#x6642;&#x6211;&#x5FC3;&#x88E1;&#x9084;&#x60F3;&#xFF1A;&#x54FC;&#xFF0C;&#x9023;&#x7E8C; 30 &#x5929;&#x767C;&#x6587;&#x3001;&#x6BCF;&#x7BC7;&#x6700;&#x4F4E;&#x9580;&#x6ABB;&#x624D; 300 &#x5B57;&#x6709;&#x4EC0;&#x9EBC;&#x96E3;&#xFF0C;&#x96E3;&#x9053;&#x6BCF;&#x5929;&#x9023;&#x4E00;&#x3001;&#x5169;&#x500B;&#x5C0F;&#x6642;&#x90FD;&#x64A5;&#x4E0D;&#x51FA;&#x4F86;&#xFF1F;</p>
+<p>&#x679C;&#x7136;&#x4E8B;&#x60C5;&#x4E0D;&#x662F;&#x61A8;&#x4EBA;&#x60F3;&#x5F97;&#x9019;&#x9EBC;&#x7C21;&#x55AE;&#x3002;</p>
+<p><img src="https://i.imgur.com/wqbkXte.png" alt=""><br>(Source: <a href="http://komicolle.dreamhosters.com/pix/img12426.jpg" target="_blank">&#x7DB2;&#x8DEF;&#x5716;&#x7247;</a>)</p>
+<p>&#x6280;&#x8853;&#x6587;&#x7AE0;&#x548C;&#x5C0F;&#x8AAA;&#x6563;&#x6587;&#x5728;&#x5BEB;&#x4F5C;&#x6027;&#x8CEA;&#x4E0A;&#x6709;&#x5225;&#xFF0C;&#x6280;&#x8853;&#x6027;&#x8CEA;&#x7684;&#x5167;&#x5BB9;&#x672C;&#x4F86;&#x5C31;&#x6BD4;&#x8F03;&#x4E0D;&#x6613;&#x95B1;&#x8B80;&#xFF0C;&#x9700;&#x8981;&#x82B1;&#x66F4;&#x591A;&#x5FC3;&#x529B;&#x5728;&#x6587;&#x53E5;&#x4FEE;&#x98FE;&#x3001;&#x7DE8;&#x6392;&#x6F64;&#x98FE;&#xFF0C;&#x907F;&#x514D;&#x95B1;&#x8B80;&#x8D77;&#x4F86;&#x904E;&#x65BC;&#x751F;&#x786C;&#x4E4F;&#x5473;&#x3002;</p>
+<p>&#x504F;&#x504F;&#x6211;&#x53C8;&#x662F;&#x5C6C;&#x65BC;&#x6162;&#x7522;&#x578B;&#x7684;&#x5BEB;&#x4F5C;&#x8005;&#xFF0C;&#x5F9E;&#x767C;&#x60F3;&#x3001;&#x69CB;&#x601D;&#x3001;&#x5C07;&#x610F;&#x5FF5;&#x8F49;&#x6210;&#x8349;&#x7A3F;&#x6587;&#x5B57;&#x3001;&#x7DE8;&#x6392;&#x6587;&#x7AE0;&#x8108;&#x7D61;&#x3001;&#x7D44;&#x7E54;&#x6210;&#x689D;&#x7406;&#x6027;&#x7684;&#x6558;&#x8FF0;&#x3001;&#x60F3;&#x6897;&#x3001;&#x6F64;&#x98FE;&#x3001;&#x6821;&#x7A3F;&#xFF0C;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#x82B1;&#x500B;&#x4E94;&#x3001;&#x516D;&#x5C0F;&#x6642;&#x4EE5;&#x4E0A;&#x5E7E;&#x4E4E;&#x662F;&#x57FA;&#x672C;&#x76E4;&#xFF0C;&#x9084;&#x4E0D;&#x542B;&#x6280;&#x8853;&#x7814;&#x7A76;&#x7684;&#x6642;&#x9593;&#x3002;</p>
+<p>&#x4E00;&#x5929;&#x64A5;&#x51FA;&#x4E00;&#x5169;&#x5C0F;&#x6642;&#x4E0D;&#x96E3;&#xFF0C;&#x6BCF;&#x5929;&#x64A5;&#x51FA;&#x4E00;&#x5169;&#x5C0F;&#x6642;&#x5C31;&#x5F88;&#x5177;&#x6311;&#x6230;&#xFF0C;&#x4F55;&#x6CC1;&#x9084;&#x4E0D;&#x662F;&#x53EA;&#x8981;&#x4E00;&#x5169;&#x5C0F;&#x6642;&#x3002;</p>
+<p>&#x751F;&#x6D3B;&#x4E5F;&#x4E0D;&#x6703;&#x53EA;&#x6709;&#x9435;&#x4EBA;&#x8CFD;&#x9019;&#x4E00;&#x4EF6;&#x4E8B;&#x8981;&#x5FD9;&#xFF0C;&#x6C38;&#x9060;&#x7121;&#x6CD5;&#x77E5;&#x9053;&#x4F55;&#x6642;&#x6703;&#x5192;&#x51FA;&#x4E8B;&#x4EF6;&#x9700;&#x8981;&#x8655;&#x7406;&#xFF0C;&#x4F46;&#x4E00;&#x5929;&#x53EA;&#x6709; 24 &#x5C0F;&#x6642;&#x662F;&#x80AF;&#x5B9A;&#x7684;&#x3002;</p>
+<p>&#x5728;&#x8FFD;&#x7A3F;&#x72C0;&#x614B;&#x4E0B;&#x8981;&#x6301;&#x7E8C;&#x7DAD;&#x6301;&#x6587;&#x7AE0;&#x54C1;&#x8CEA;&#x6975;&#x96E3;&#xFF0C;&#x56DE;&#x60F3;&#x904E;&#x53BB; 30 &#x5929;&#x7684;&#x751F;&#x6D3B;&#xFF0C;&#x6263;&#x6389;&#x4E00;&#x4E9B;&#x5FC5;&#x9808;&#x8655;&#x7406;&#x7684;&#x4E8B;&#x4EF6;&#x7A7F;&#x63D2;&#xFF0C;&#x5269;&#x4E0B;&#x7684;&#x56DE;&#x61B6;&#x5E7E;&#x4E4E;&#x662F;&#x5DE5;&#x4F5C;&#x3001;&#x5403;&#x98EF;&#x3001;&#x5BEB;&#x7A3F;&#x3001;&#x71AC;&#x591C;&#x3001;&#x7761;&#x89BA;&#x3001;&#x5DE5;&#x4F5C;&#x3001;&#x5403;&#x98EF;&#x3001;&#x5BEB;&#x7A3F;&#x3001;&#x71AC;&#x591C;&#x3001;&#x7761;&#x89BA;&#xFF0C;&#x4E2D;&#x9593;&#x4E00;&#x5EA6;&#x89BA;&#x5F97;&#x81EA;&#x5DF1;&#x5FEB;&#x68C4;&#x8CFD;&#x3002;</p>
+<p>&#x4F86;&#x5230;&#x7B2C; 30 &#x5929;&#xFF0C;&#x771F;&#x7684;&#x6709;&#x7A2E;&#x604D;&#x5982;&#x9694;&#x4E16;&#x7684;&#x611F;&#x89BA;&#x3002;</p>
+<h3 id="&#x8AAA;&#x597D;&#x7684;-es7&#x3001;es8-&#x5462;&#xFF1F;">&#x8AAA;&#x597D;&#x7684; ES7&#x3001;ES8 &#x5462;&#xFF1F;</h3>
+<p>&#x7531;&#x65BC;&#x53C3;&#x8CFD;&#x5009;&#x4FC3;&#xFF0C;&#x6C92;&#x6642;&#x9593;&#x5B78;&#x65B0;&#x6771;&#x897F;&#xFF0C;&#x53EA;&#x597D;&#x628A;&#x4E0D;&#x4E45;&#x524D;&#x5728;&#x5B78;&#x7684; JavaScript &#x62FF;&#x51FA;&#x4F86;&#x737B;&#x5BF6;&#xFF0C;&#x770B;&#x80FD;&#x4E0D;&#x80FD;&#x7092;&#x51FA;&#x4EC0;&#x9EBC;&#x597D;&#x83DC;&#x3002;</p>
+<p>&#x601D;&#x8003;&#x4E3B;&#x984C;&#x5927;&#x7DB1;&#x6642;&#xFF0C;&#x672C;&#x4F86;&#x8003;&#x616E;&#x8D70;&#x65B0;&#x624B;&#x6559;&#x5B78;&#x8DEF;&#x7DDA;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x898F;&#x5283;&#x4E00;&#x4EFD; 30 &#x5929;&#x7531;&#x6DFA;&#x5165;&#x6DF1;&#x7684; JavaScript &#x5165;&#x9580;&#x6559;&#x6750;&#xFF0C;&#x5C0D;&#x8C61;&#x662F;&#x5F9E;&#x6C92;&#x5B78;&#x904E;&#x7A0B;&#x5F0F;&#x7684;&#x4EBA;&#x3002;</p>
+<p>&#x4F46;&#x5F8C;&#x4F86;&#x89BA;&#x5F97;&#x9019;&#x4EF6;&#x4E8B;&#x5728;&#x4ECA;&#x5E74;&#x5DF2;&#x7D93;&#x4EE5;&#x73FE;&#x5834;&#x7A0B;&#x5F0F;&#x6559;&#x5B78;&#x7684;&#x5F62;&#x5F0F;&#x505A;&#x904E;&#xFF0C;&#x96D6;&#x7136;&#x53E3;&#x982D;&#x6559;&#x5B78;&#x548C;&#x975C;&#x614B;&#x6559;&#x6750;&#x662F;&#x4E0D;&#x540C;&#x7684;&#x6311;&#x6230;&#xFF0C;&#x4F46;&#x5728;&#x9435;&#x4EBA;&#x8CFD;&#x91CD;&#x8907;&#x81EA;&#x5DF1;&#x5BE6;&#x5728;&#x4E0D;&#x592A;&#x7406;&#x60F3;&#x3002;&#x6C92;&#x8FA6;&#x6CD5;&#x5B78;&#x65B0;&#x6771;&#x897F;&#x4F86;&#x53C3;&#x8CFD;&#xFF0C;&#x9084;&#x662F;&#x5E0C;&#x671B;&#x5728;&#x53C3;&#x8CFD;&#x904E;&#x7A0B;&#x80FD;&#x5C0D;&#x81EA;&#x5DF1;&#x6709;&#x9EDE;&#x6536;&#x7A6B;&#x3002;</p>
+<p>&#x6700;&#x5F8C;&#x4E3B;&#x984C;&#x5B9A;&#x4F4D;&#x5728;&#x91DD;&#x5C0D; JavaScript &#x88E1;&#x4E00;&#x4E9B;&#x6211;&#x8A8D;&#x70BA;&#x6BD4;&#x8F03;&#x6DF7;&#x4E82;&#x3001;&#x62BD;&#x8C61;&#x9700;&#x8981;&#x6574;&#x7406;&#x7684;&#x89C0;&#x5FF5;&#xFF0C;&#x6216;&#x662F;&#x6BD4;&#x8F03;&#x65B0;&#x7684;&#x7528;&#x6CD5;&#xFF0C;&#x5F37;&#x5316;&#x81EA;&#x5DF1;&#x5C0D; JavaScript &#x7684;&#x638C;&#x63E1;&#xFF0C;&#x6240;&#x4EE5; Day 1 &#x6587;&#x7AE0;&#x9084;&#x63D0;&#x5230;&#x9019; 30 &#x5929;&#x7684;&#x4E3B;&#x984C;&#x9810;&#x8A08;&#x6703;&#x5305;&#x542B; ES6&#x3001;ES7&#x3001;ES8 &#x7684;&#x65B0;&#x7279;&#x6027;&#x3002;</p>
+<p>But&#xFF0C;&#x5C31;&#x662F;&#x9019;&#x500B; But&#x3002;</p>
+<p><strong>&#x6709;&#x4E9B;&#x6982;&#x5FF5;&#x5728;&#x8166;&#x888B;&#x88E1;&#x4EE5;&#x70BA;&#x81EA;&#x5DF1;&#x61C2;&#x4E86;&#x662F;&#x4E00;&#x56DE;&#x4E8B;&#xFF0C;&#x5316;&#x6210;&#x5177;&#x9AD4;&#x7684;&#x53E3;&#x982D;&#x8868;&#x9054;&#x6216;&#x6587;&#x5B57;&#x63CF;&#x8FF0;&#x78BA;&#x8A8D;&#x81EA;&#x5DF1;&#x771F;&#x7684;&#x61C2;&#x4E86;&#x662F;&#x53E6;&#x4E00;&#x56DE;&#x4E8B;&#xFF0C;&#x80FD;&#x8B1B;&#x5230;&#x5225;&#x4EBA;&#x4E5F;&#x61C2;&#x53C8;&#x662F;&#x53E6;&#x4E00;&#x56DE;&#x4E8B;</strong>&#x3002;</p>
+<p>&#x70BA;&#x4E86;&#x5C07;&#x6982;&#x5FF5;&#x8F49;&#x63DB;&#x70BA;&#x6587;&#x5B57;&#xFF0C;&#x9700;&#x8981;&#x66F4;&#x5177;&#x9AD4;&#x5730;&#x53BB;&#x56DE;&#x9867;&#x7D30;&#x7BC0;&#xFF0C;&#x624D;&#x767C;&#x73FE;&#x81EA;&#x5DF1;&#x53EF;&#x80FD;&#x9084;&#x6709;&#x67D0;&#x500B;&#x89C0;&#x5FF5;&#x6C92;&#x6709;&#x91D0;&#x6E05;&#xFF0C;&#x672C;&#x4F86;&#x4EE5;&#x70BA;&#x5F88;&#x7C21;&#x55AE;&#x7684;&#x4E00;&#x500B;&#x5C0F;&#x89C0;&#x5FF5;&#xFF0C;&#x8D8A;&#x6316;&#x8D8A;&#x6DF1;&#xFF0C;&#x7D30;&#x7BC0;&#x7ADF;&#x7136;&#x7121;&#x7AAE;&#x7121;&#x76E1;&#x3002;</p>
+<blockquote>
+<p>&#x4F8B;&#x5982; Day 10 &#x4ECB;&#x7D39;&#x4E86; Hoisting &#x89C0;&#x5FF5;&#xFF0C;&#x672C;&#x4EE5;&#x70BA;&#x662F;&#x4E00;&#x500B;&#x76F8;&#x5C0D;&#x7C21;&#x55AE;&#x7684;&#x5C0F;&#x89C0;&#x5FF5;&#xFF0C;&#x7D93;&#x90A6;&#x53CB;&#x6307;&#x6B63;&#x5206;&#x4EAB;&#xFF0C;&#x624D;&#x77E5;&#x9053;&#x80CC;&#x5F8C;&#x539F;&#x7406;&#x6DF1;&#x4E0D;&#x898B;&#x5E95;&#xFF0C;&#x7CBE;&#x901A;&#x4E8C;&#x5B57;&#x8AC7;&#x4F55;&#x5BB9;&#x6613;&#x3002;</p>
+</blockquote>
+<p>&#x4E0D;&#x540C;&#x89C0;&#x5FF5;&#x9593;&#x53C8;&#x6709;&#x5148;&#x5F8C;&#x95DC;&#x4FC2;&#xFF0C;&#x9806;&#x5E8F;&#x4E0D;&#x5C0D;&#xFF0C;&#x95B1;&#x8B80;&#x7BC0;&#x594F;&#x4E5F;&#x6703;&#x4E0D;&#x9806;&#x3002;</p>
+<p>&#x65BC;&#x662F;&#x5728; 30 &#x5929;&#x7684;&#x904E;&#x7A0B;&#x4E2D;&#xFF0C;&#x539F;&#x5148;&#x898F;&#x5283;&#x7684;&#x4E3B;&#x984C;&#x5927;&#x7DB1;&#x4E0D;&#x65B7;&#x8ABF;&#x6574;&#x9806;&#x5E8F;&#xFF0C;&#x4E00;&#x4E9B;&#x672C;&#x4F86;&#x6C92;&#x5728;&#x8A08;&#x756B;&#x5167;&#x7684;&#x4E3B;&#x984C;&#x4E5F;&#x8DF3;&#x51FA;&#x4F86;&#x63D2;&#x968A;&#x3002;</p>
+<p>&#x9019;&#x8B93;&#x6211;&#x60F3;&#x8D77;&#x4F5C;&#x5BB6;&#x502A;&#x5321;&#x5728;&#x300C;&#x6211;&#x770B;&#x91D1;&#x5EB8;&#x5C0F;&#x8AAA;&#x300D;&#x4E00;&#x66F8;&#x88E1;&#xFF0C;&#x5C0D;&#x300C;&#x5929;&#x9F8D;&#x516B;&#x90E8;&#x300D;&#x524D;&#x8A00;&#x8207;&#x5C0F;&#x8AAA;&#x5F8C;&#x7E8C;&#x767C;&#x5C55;&#x4E0D;&#x4E00;&#x7684;&#x8A55;&#x8A9E;&#xFF1A;</p>
+<blockquote>
+<p>&#x300C;&#x5BEB;&#x4F5C;&#x524D;&#x7684;&#x8A08;&#x756B;&#x3001;&#x610F;&#x9858;&#x662F;&#x4E00;&#x56DE;&#x4E8B;&#xFF0C;&#x5BEB;&#x51FA;&#x4F86;&#x7684;&#x5C0F;&#x8AAA;&#x662F;&#x600E;&#x9EBC;&#x6A23;&#x7684;&#xFF0C;&#x53C8;&#x662F;&#x53E6;&#x4E00;&#x56DE;&#x4E8B;&#x3002;&#x300D;
+&#x300C;&#x8A08;&#x756B;&#x5728;&#x5275;&#x4F5C;&#x7684;&#x904E;&#x7A0B;&#x4E2D;&#xFF0C;&#x5F80;&#x5F80;&#x7121;&#x6CD5;&#x5BE6;&#x8E10;&#xFF0C;&#x6703;&#x4E2D;&#x9014;&#x7A81;&#x7136;&#x6539;&#x8B8A;&#xFF0C;&#x6703;&#x6709;&#x65B0;&#x7684;&#x610F;&#x5FF5;&#x7A81;&#x7136;&#x7522;&#x751F;&#xFF0C;&#x6703;&#x7121;&#x6CD5;&#x63A7;&#x5236;&#x81EA;&#x5DF1;&#x3002;&#x300D;</p>
+</blockquote>
+<p>&#x6C92;&#x60F3;&#x5230;&#x9019;&#x500B;&#x7CFB;&#x5217;&#x6700;&#x5F8C;&#x53EA;&#x6709;&#x5E36;&#x5230; ES6 &#x5C11;&#x6578;&#x7279;&#x6027;&#xFF0C;&#x539F;&#x672C;&#x9810;&#x8A08;&#x6703;&#x63D0;&#x5230;&#x7684; ES6 &#x89E3;&#x69CB;&#x8CE6;&#x503C;&#x3001;Promises&#x3001;Classes&#x3001;Module&#xFF0C;&#x751A;&#x81F3; ES8 &#x7684; async/await&#xFF0C;&#x901A;&#x901A;&#x90FD;&#x6C92;&#x6709;&#xFF5E;</p>
+<p><img src="https://i.imgur.com/ynA5XVD.png" alt=""><br>(Source: <a href="https://www.youtube.com/watch?v=HzXLJyHLStc" target="_blank">Youtube</a>)</p>
+<p>&#x9084;&#x597D;&#xFF0C;&#x5C31;&#x50CF; Day 1 &#x6587;&#x7AE0;&#x63D0;&#x5230;&#xFF0C;&#x8FD1;&#x5E74; JavaScript &#x679C;&#x7136;&#x662F;&#x500B;&#x5927;&#x660E;&#x661F;&#x3002;&#x653E;&#x773C;&#x671B;&#x53BB;&#x4ECA;&#x5E74;&#x7684;&#x9435;&#x4EBA;&#x8CFD;&#x53C3;&#x8CFD;&#x4E3B;&#x984C;&#xFF0C;&#x4EE5; JavaScript &#x70BA;&#x984C;&#x7684;&#x61C9;&#x8A72;&#x53EF;&#x4EE5;&#x6E4A;&#x500B;&#x4E09;&#x4E94;&#x684C;&#x9EBB;&#x5C07;&#xFF0C;&#x5225;&#x8AAA; ES5&#x3001;ES6&#xFF0C;&#x751A;&#x81F3;&#x4E0D;&#x4E4F; ES8&#x3001;ES9&#x3002;</p>
+<p><img src="https://i.imgur.com/F9nXAet.png" alt=""><br>(Source: <a href="https://www.youtube.com/watch?v=b3op8Vo00Ec" target="_blank">Youtube</a>)</p>
+<p>&#x65E2;&#x7136;&#x5982;&#x6B64;&#xFF0C;&#x65B0;&#x7248;&#x672C;&#x7684;&#x8A9E;&#x6CD5;&#x4ECB;&#x7D39;&#x4E5F;&#x4E0D;&#x5DEE;&#x6211;&#x4E00;&#x500B;&#x6E4A;&#x71B1;&#x9B27;&#x3002;&#x8207;&#x5176;&#x628A;&#x4E00;&#x5806;&#x89C0;&#x5FF5;&#x4EE5;&#x6CBE;&#x91AC;&#x6CB9;&#x7684;&#x65B9;&#x5F0F;&#x4ECB;&#x7D39;&#x904E;&#x4E00;&#x8F2A;&#xFF0C;&#x4E0D;&#x5982;&#x597D;&#x597D;&#x505A;&#x500B;&#x6DF1;&#x5EA6;&#x6574;&#x7406;&#x3002;&#x4E0D;&#x6C42;&#x4E3B;&#x984C;&#x6DB5;&#x84CB;&#x7BC4;&#x570D;&#x5305;&#x5C71;&#x5305;&#x6D77;&#xFF0C;&#x4F46;&#x6C42;&#x91D0;&#x6E05;&#x4E00;&#x4E9B;&#x5FAE;&#x5999;&#x7684;&#x6982;&#x5FF5;&#x3002;</p>
+<p>&#x5C31;&#x6210;&#x679C;&#x4F86;&#x8AAA;&#x7B46;&#x8005;&#x81EA;&#x5DF1;&#x9084;&#x7B97;&#x6B23;&#x6170;&#xFF0C;&#x5728;&#x7DAD;&#x6301;&#x4E0D;&#x4EE4;&#x81EA;&#x5DF1;&#x6C57;&#x984F;&#x7684;&#x6587;&#x7AE0;&#x54C1;&#x8CEA;&#x524D;&#x63D0;&#xFF0C;&#x4E0D;&#x6562;&#x8AAA;&#x591A;&#x6709;&#x6DF1;&#x5EA6;&#xFF0C;&#x81F3;&#x5C11;&#x4E0D;&#x662F;&#x8D70;&#x99AC;&#x770B;&#x82B1;&#x6DFA;&#x6DFA;&#x5E36;&#x904E;&#xFF0C;&#x591A;&#x5C11;&#x91D0;&#x6E05;&#x4E86;&#x4E00;&#x4E9B;&#x62BD;&#x8C61;&#x89C0;&#x5FF5;&#xFF0C;&#x751A;&#x81F3;&#x7CFE;&#x6B63;&#x4E86;&#x81EA;&#x5DF1;&#x539F;&#x5148;&#x7406;&#x89E3;&#x932F;&#x8AA4;&#x7684;&#x89C0;&#x5FF5;&#x3002;</p>
+<p><strong>&#x6700;&#x5F8C;&#xFF0C;&#x611F;&#x8B1D;&#x8A02;&#x95B1;&#x9019;&#x500B;&#x7CFB;&#x5217;&#x7684;&#x90A6;&#x53CB;&#x3001;&#x4EE5;&#x53CA;&#x6B63;&#x770B;&#x8457;&#x9019;&#x7BC7;&#x6587;&#x7AE0;&#x7684;&#x60A8;&#xFF0C;&#x7B46;&#x8005;&#x80FD;&#x6490;&#x904E;&#x8840;&#x5C3F;&#x7684; 30 &#x5929;&#xFF0C;&#x4F60;&#x5011;&#x7684;&#x652F;&#x6301;&#x662F;&#x5341;&#x5206;&#x91CD;&#x8981;&#x7684;&#x9F13;&#x52F5;&#x3002;</strong></p>
+<p>&#x5C31;&#x8B93;&#x6211;&#x7528; Day 7 &#x7684;&#x4E00;&#x6BB5;&#x7BC4;&#x4F8B;&#x7A0B;&#x5F0F;&#x78BC;&#x4F86;&#x70BA;&#x9019;&#x500B;&#x7CFB;&#x5217;&#x5283;&#x4E0B;&#x53E5;&#x9EDE;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Day 7</span>
+<span class="hljs-keyword">var</span> gameName = <span class="hljs-string">&quot;IT Help 2019&quot;</span>;
+<span class="hljs-keyword">var</span> gamer = <span class="hljs-string">&quot;OneJar&quot;</span>, topic = <span class="hljs-string">&quot;Something about JavaScript&quot;</span>, progress = <span class="hljs-number">7</span>;
+<span class="hljs-keyword">var</span> isFinished; <span class="hljs-comment">// A variable declared without a value will have the value **undefined**.</span>
+
+<span class="hljs-comment">// Day 30</span>
+progress = <span class="hljs-number">30</span>;
+<span class="hljs-keyword">if</span>(progress == <span class="hljs-number">30</span>){
+    isFinished = <span class="hljs-literal">true</span>;
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Thank you guys!&apos;</span>);
+}
+</code></pre>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://www.w3schools.com/js/js_versions.asp" target="_blank">W3Schools - JavaScript Versions</a></li>
+<li><a href="http://es6.ruanyifeng.com/#docs/intro" target="_blank">ECMAScript 6 &#x5165;&#x9580;</a></li>
+<li><a href="https://huangxuan.me/2015/09/22/js-version/" target="_blank">&#x300C;&#x8BD1;&#x300D;ES5, ES6, ES2016, ES.Next: JavaScript &#x7684;&#x7248;&#x672C;&#x662F;&#x600E;&#x4E48;&#x56DE;&#x4E8B;&#xFF1F;</a></li>
+<li><a href="http://www.w3school.com.cn/js/pro_js_history.asp" target="_blank">JavaScript &#x7684;&#x5386;&#x53F2;</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E7%B6%B2%E6%99%AF" target="_blank">Wiki - &#x7DB2;&#x666F;</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E6%98%87%E9%99%BD%E9%9B%BB%E8%85%A6" target="_blank">Wiki - &#x6607;&#x967D;&#x96FB;&#x8166;</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/Ecma%E5%9B%BD%E9%99%85" target="_blank">Wiki - Ecma&#x570B;&#x969B;</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/ECMAScript" target="_blank">Wiki - ECMAScript</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/JavaScript" target="_blank">Wiki - JavaScript</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="day29.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Day 29：閉包 (Closures) 進階打怪實戰">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Day 30：ES10 醞釀中 —— 擁抱 JS の 未來","level":"1.31","depth":1,"previous":{"title":"Day 29：閉包 (Closures) 進階打怪實戰","level":"1.30","depth":1,"path":"articles/day29.md","ref":"./articles/day29.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","intopic-toc","edit-link"],"pluginsConfig":{"intopic-toc":{"label":"Table of Contents","selector":".markdown-section h2, .markdown-section h3","visible":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day30.md","mtime":"2019-08-10T04:40:45.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T16:47:57.947Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/gumshoe.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

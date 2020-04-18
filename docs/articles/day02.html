@@ -1,0 +1,731 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Day 2：資料型態的夢魘——動態型別加弱型別(1) · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="day03.html" />
+    
+    
+    <link rel="prev" href="day01.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="day01.html">
+            
+                <a href="day01.html">
+            
+                    
+                    Day 1：前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="day02.html">
+            
+                <a href="day02.html">
+            
+                    
+                    Day 2：資料型態的夢魘——動態型別加弱型別(1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="day03.html">
+            
+                <a href="day03.html">
+            
+                    
+                    Day 3：資料型態的夢魘——動態型別加弱型別(2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="day04.html">
+            
+                <a href="day04.html">
+            
+                    
+                    Day 4：動態型別加弱型別不是罪——怎麼 JavaScript 一摔就變成個印度阿三？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="day05.html">
+            
+                <a href="day05.html">
+            
+                    
+                    Day 5：湯姆克魯斯與唐家霸王槍——變數的作用域(Scope) (1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="day06.html">
+            
+                <a href="day06.html">
+            
+                    
+                    Day 6：湯姆克魯斯與唐家霸王槍——變數的作用域(Scope) (2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="day07.html">
+            
+                <a href="day07.html">
+            
+                    
+                    Day 7：傳統 var 關鍵字的不足
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="day08.html">
+            
+                <a href="day08.html">
+            
+                    
+                    Day 8：var 掰掰 —— ES6 更嚴謹安全的 let 和 const
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="day09.html">
+            
+                <a href="day09.html">
+            
+                    
+                    Day 9：圖解變數作用域(Scope)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="day10.html">
+            
+                <a href="day10.html">
+            
+                    
+                    Day 10：程式也懂電梯向上？ —— Hoisting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="day11.html">
+            
+                <a href="day11.html">
+            
+                    
+                    Day 11：Strict Mode (嚴謹模式)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="day12.html">
+            
+                <a href="day12.html">
+            
+                    
+                    Day 12：看 Strict Mode 如何施展「還我漂亮拳」(1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="day13.html">
+            
+                <a href="day13.html">
+            
+                    
+                    Day 13：看 Strict Mode 如何施展「還我漂亮拳」(2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="day14.html">
+            
+                <a href="day14.html">
+            
+                    
+                    Day 14：來挖挖恐龍骨 —— with 語法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="day15.html">
+            
+                <a href="day15.html">
+            
+                    
+                    Day 15：this 關鍵字 (1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="day16.html">
+            
+                <a href="day16.html">
+            
+                    
+                    Day 16：this 關鍵字 (2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="day17.html">
+            
+                <a href="day17.html">
+            
+                    
+                    Day 17：this 關鍵字 (3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="day18.html">
+            
+                <a href="day18.html">
+            
+                    
+                    Day 18：this 關鍵字 (4)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="day19.html">
+            
+                <a href="day19.html">
+            
+                    
+                    Day 19：函數定義 (Function Definition) 的 100 種寫法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="day20.html">
+            
+                <a href="day20.html">
+            
+                    
+                    Day 20：ES6 的箭頭函數 (Arrow Functions)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="day21.html">
+            
+                <a href="day21.html">
+            
+                    
+                    Day 21：箭頭函數 (Arrow Functions) 的 this 和你想的不一樣 (1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="day22.html">
+            
+                <a href="day22.html">
+            
+                    
+                    Day 22：箭頭函數 (Arrow Functions) 的 this 和你想的不一樣 (2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="day23.html">
+            
+                <a href="day23.html">
+            
+                    
+                    Day 23：ES6 物件實字威力加強版 (Enhanced Object Literals)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="day24.html">
+            
+                <a href="day24.html">
+            
+                    
+                    Day 24：函數呼叫 (Function Invocation) 與立即函數 (Self-Invoking Functions)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="day25.html">
+            
+                <a href="day25.html">
+            
+                    
+                    Day 25：不是多了塊魚 —— 立即函數的應用整理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="day26.html">
+            
+                <a href="day26.html">
+            
+                    
+                    Day 26：程式界的哈姆雷特 —— Pass by value, or Pass by reference？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="day27.html">
+            
+                <a href="day27.html">
+            
+                    
+                    Day 27：別管變數 Pass by Whatever，尋找容易理解的銀色子彈 (Silver Bullet)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="day28.html">
+            
+                <a href="day28.html">
+            
+                    
+                    Day 28：閉包 (Closures)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="day29.html">
+            
+                <a href="day29.html">
+            
+                    
+                    Day 29：閉包 (Closures) 進階打怪實戰
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="day30.html">
+            
+                <a href="day30.html">
+            
+                    
+                    Day 30：ES10 醞釀中 —— 擁抱 JS の 未來
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Day 2：資料型態的夢魘——動態型別加弱型別(1)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684;-javascript-&#x4E8C;&#x4E09;&#x4E8B;day2&#xFF1A;&#x8CC7;&#x6599;&#x578B;&#x614B;&#x7684;&#x5922;&#x9B58;&#x2014;&#x2014;&#x52D5;&#x614B;&#x578B;&#x5225;&#x52A0;&#x5F31;&#x578B;&#x5225;1">&#x4F60;&#x4E0D;&#x53EF;&#x4E0D;&#x77E5;&#x7684; JavaScript &#x4E8C;&#x4E09;&#x4E8B;#Day2&#xFF1A;&#x8CC7;&#x6599;&#x578B;&#x614B;&#x7684;&#x5922;&#x9B58;&#x2014;&#x2014;&#x52D5;&#x614B;&#x578B;&#x5225;&#x52A0;&#x5F31;&#x578B;&#x5225;(1)</h1>
+<p>&#x300C;JavaScript &#x662F;&#x52D5;&#x614B;&#x578B;&#x5225;&#x300D;&#xFF0C;&#x5F88;&#x591A;&#x4EBA;&#x6703;&#x8AAA;&#x77E5;&#x9053;&#x3002;</p>
+<p>&#x300C;JavaScript &#x662F;&#x5F31;&#x578B;&#x5225;&#x300D;&#xFF0C;&#x4E5F;&#x6709;&#x5F88;&#x591A;&#x4EBA;&#x6703;&#x8AAA;&#x77E5;&#x9053;&#x3002;</p>
+<p>&#x300C;JavaScript &#x662F;&#x52D5;&#x614B;&#x578B;&#x5225;&#x52A0;&#x5F31;&#x578B;&#x5225;&#x300D;&#xFF0C;&#x53EF;&#x80FD;&#x5F88;&#x591A;&#x4EBA;&#x5C31;&#x4E0D;&#x90A3;&#x9EBC;&#x80AF;&#x5B9A;&#x4E86;&#x3002;</p>
+<p>&#x8A31;&#x591A;&#x4EBA;&#x628A;&#x9019;&#x5169;&#x4EF6;&#x4E8B;&#x6DF7;&#x6DC6;&#xFF0C;&#x5176;&#x5BE6;&#x9019;&#x662F;&#x5169;&#x500B;&#x4E0D;&#x540C;&#x7684;&#x89C0;&#x5FF5;&#x3002;&#x90A3;&#x9EBC;&#xFF0C;&#x7A76;&#x7ADF;<strong>&#x52D5;&#x614B;&#x578B;&#x5225;</strong>&#x548C;<strong>&#x5F31;&#x578B;&#x5225;</strong>&#x6709;&#x4EC0;&#x9EBC;&#x5DEE;&#x5225;&#xFF1F;</p>
+<p><strong>&#x52D5;&#x614B;&#x578B;&#x5225;&#x52A0;&#x4E0A;&#x904E;&#x65BC;&#x5BEC;&#x9B06;&#x7684;&#x5F31;&#x578B;&#x5225;&#xFF0C;&#x662F;&#x6211;&#x8A8D;&#x70BA; JavaScript &#x6700;&#x53EB;&#x4EBA;&#x982D;&#x75DB;&#x7684;&#x842C;&#x60E1;&#x6839;&#x6E90;</strong>&#xFF0C;&#x56E0;&#x6B64;&#x9078;&#x64C7;&#x4EE5;&#x9019;&#x90E8;&#x5206;&#x505A;&#x5207;&#x5165;&#x3002;</p>
+<p>&#x672C;&#x7BC7;&#x6587;&#x7AE0;&#x5148;&#x4F86;&#x770B;&#x4F55;&#x8B02;&#x975C;&#x614B;&#x578B;&#x5225;&#x8207;&#x52D5;&#x614B;&#x578B;&#x5225;&#x3002;</p>
+<h2 id="&#x975C;&#x614B;&#x578B;&#x5225;-vs-&#x52D5;&#x614B;&#x578B;&#x5225;">&#x975C;&#x614B;&#x578B;&#x5225; vs. &#x52D5;&#x614B;&#x578B;&#x5225;</h2>
+<h3 id="&#x975C;&#x614B;&#x578B;&#x5225;&#x7684;&#x4F8B;&#x5B50;">&#x975C;&#x614B;&#x578B;&#x5225;&#x7684;&#x4F8B;&#x5B50;</h3>
+<p>&#x6211;&#x5011;&#x5148;&#x5F9E;&#x6BD4;&#x8F03;&#x5BB9;&#x6613;&#x7406;&#x89E3;&#x7684;&#x975C;&#x614B;&#x578B;&#x5225;&#x4F86;&#x770B;&#x3002;&#x4EE5; Java &#x70BA;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">int</span> x;
+</code></pre>
+<p>&#x9019;&#x662F;&#x4E00;&#x500B;&#x5F88;&#x7C21;&#x55AE;&#x7684;&#x8B8A;&#x6578;&#x5BA3;&#x544A;&#xFF0C;&#x6C92;&#x6709;&#x7D66;&#x521D;&#x59CB;&#x503C;&#x3002;&#x8ACB;&#x554F; <code>x</code> &#x9019;&#x500B;&#x8B8A;&#x6578;&#x88E1;&#x672A;&#x4F86;&#x6703;&#x653E;&#x4EC0;&#x9EBC;&#x985E;&#x578B;&#x7684;&#x503C;&#xFF1F;</p>
+<p>&#x7B54;&#x6848;&#x662F;&#x6574;&#x6578;&#x3002;</p>
+<p>&#x70BA;&#x4EC0;&#x9EBC;&#x6211;&#x80FD;&#x9019;&#x9EBC;&#x7BE4;&#x5B9A;&#xFF1F;&#x56E0;&#x70BA;&#x5728;&#x5BA3;&#x544A; <code>x</code> &#x6642;&#xFF0C;&#x4F7F;&#x7528;&#x4E86; <code>int</code> &#x9019;&#x500B;&#x95DC;&#x9375;&#x5B57;&#xFF0C;&#x660E;&#x78BA;&#x5BA3;&#x544A;&#x4E86;&#x8B8A;&#x6578; <code>x</code> &#x662F;&#x500B;&#x6574;&#x6578;&#x8B8A;&#x6578;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x6211;&#x5728;&#x4F7F;&#x7528;&#x904E;&#x7A0B;&#xFF0C;&#x4F01;&#x5716;&#x5728; <code>x</code> &#x5167;&#x653E;&#x5165;&#x975E;&#x6574;&#x6578;&#x7684;&#x503C;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">int</span> x;
+x = <span class="hljs-string">&quot;Hello&quot;</span>;
+</code></pre>
+<p>&#x7DE8;&#x8B6F;&#x6642;&#x5C31;&#x6703;&#x5F97;&#x5230;&#x4EE5;&#x4E0B;&#x932F;&#x8AA4;&#xFF1A;</p>
+<pre><code>HelloWorld.java:5: error: incompatible types: String cannot be converted to int
+</code></pre><p>&#x9019;&#x5C31;&#x662F;&#x5178;&#x578B;&#x7684;&#x975C;&#x614B;&#x578B;&#x5225;&#x3002;&#x9019;&#x985E;&#x8A9E;&#x8A00;&#x5728;&#x578B;&#x5225;&#x7684;&#x7BA1;&#x7406;&#x4E0A;&#x5341;&#x5206;&#x56B4;&#x8B39;&#xFF0C;&#x5728;&#x8A9E;&#x6CD5;&#x64B0;&#x5BEB;&#x6642;&#x5C31;&#x6703;&#x8981;&#x6C42;&#x5C0D;&#x8B8A;&#x6578;&#x578B;&#x5225;&#x6709;&#x660E;&#x78BA;&#x5B9A;&#x7FA9;&#xFF0C;&#x6709;&#x6642;&#x8B93;&#x4EBA;&#x89BA;&#x5F97;&#x56C9;&#x55E6;&#xFF1B;&#x4F46;&#x76F8;&#x5C0D;&#x7684;&#xFF0C;&#x4E00;&#x65E6;&#x6709;&#x8B8A;&#x6578;&#x8AA4;&#x7528;&#x6216;&#x8CC7;&#x6599;&#x578B;&#x614B;&#x4E0A;&#x7684; Bug&#xFF0C;&#x5728;&#x7DE8;&#x8B6F;&#x6642;&#x671F;&#x5C31;&#x80FD;&#x767C;&#x73FE;&#xFF0C;&#x964D;&#x4F4E;&#x57F7;&#x884C;&#x6642;&#x671F;&#x7684;&#x98A8;&#x96AA;&#x3002;</p>
+<p>&#x7DE8;&#x8B6F;&#x5F0F;&#x8A9E;&#x8A00;&#x591A;&#x534A;&#x662F;&#x975C;&#x614B;&#x8A9E;&#x8A00;&#xFF0C;Java &#x548C; C# &#x662F;&#x5176;&#x4E2D;&#x7684;&#x4EE3;&#x8868;&#x3002;</p>
+<h3 id="&#x52D5;&#x614B;&#x578B;&#x5225;&#x7684;&#x4F8B;&#x5B50;">&#x52D5;&#x614B;&#x578B;&#x5225;&#x7684;&#x4F8B;&#x5B50;</h3>
+<p>&#x7528;&#x53E6;&#x5916;&#x4E00;&#x500B;&#x8A9E;&#x8A00; Lua &#x4F86;&#x8209;&#x4F8B;&#xFF1A;</p>
+<pre><code>local x
+x = 123
+print(x)
+x = &quot;Hello&quot;
+print(x)
+</code></pre><p>&#x53EF;&#x4EE5;&#x767C;&#x73FE;&#x5728;&#x7528; <code>local</code> &#x5BA3;&#x544A;&#x8B8A;&#x6578; <code>x</code> &#x6642;&#xFF0C;&#x6C92;&#x6709;&#x4E8B;&#x5148;&#x660E;&#x78BA;&#x6307;&#x5B9A; <code>x</code> &#x7684;&#x578B;&#x5225;&#x662F;&#x4EC0;&#x9EBC;&#xFF0C;&#x80FD;&#x653E;&#x5165;&#x4EFB;&#x610F;&#x985E;&#x578B;&#x7684;&#x8CC7;&#x6599;&#xFF1B;&#x751A;&#x81F3;&#x4E2D;&#x9593;&#x9084;&#x4E00;&#x5EA6;&#x6539;&#x8B8A;&#x6307;&#x6D3E;&#x503C;&#x7684;&#x8CC7;&#x6599;&#x578B;&#x614B;&#xFF0C;&#x4E00;&#x958B;&#x59CB;&#x653E;&#x7684;&#x662F;&#x6574;&#x6578; <code>123</code>&#xFF0C;&#x5F8C;&#x4F86;&#x6539;&#x653E;&#x5B57;&#x4E32; <code>&quot;Hello&quot;</code>&#xFF0C;&#x7A0B;&#x5F0F;&#x4F9D;&#x7136;&#x53EF;&#x4EE5;&#x904B;&#x4F5C;&#x3002;</p>
+<p>&#x9019;&#x5C31;&#x662F;&#x4E00;&#x500B;&#x52D5;&#x614B;&#x8A9E;&#x8A00;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x9019;&#x985E;&#x8A9E;&#x8A00;&#x5728;&#x7A0B;&#x5F0F;&#x57F7;&#x884C;&#x904E;&#x7A0B;&#x624D;&#x6703;&#x9032;&#x884C;&#x8CC7;&#x6599;&#x578B;&#x614B;&#x7684;&#x6AA2;&#x67E5;&#x6216;&#x78BA;&#x8A8D;&#xFF0C;&#x56E0;&#x6B64;&#x76F4;&#x8B6F;&#x5F0F;&#x8A9E;&#x8A00;&#x90FD;&#x662F;&#x52D5;&#x614B;&#x8A9E;&#x8A00;&#x3002;&#x5982; Python&#x3001;PHP&#x3001;Ruby&#xFF0C;&#x9084;&#x6709;&#x6211;&#x5011;&#x7684;&#x4E3B;&#x89D2; JavaScript&#xFF0C;&#x90FD;&#x5C6C;&#x65BC;&#x6B64;&#x985E;&#x8A9E;&#x8A00;&#x3002;</p>
+<p>&#x9019;&#x985E;&#x8A9E;&#x8A00;&#x5728;&#x7A0B;&#x5F0F;&#x7DE8;&#x5BEB;&#x6642;&#xFF0C;&#x4E0D;&#x7528;&#x82B1;&#x592A;&#x591A;&#x5FC3;&#x601D;&#x5728;&#x5BA3;&#x544A;&#x578B;&#x5225;&#x7684;&#x8A9E;&#x6CD5;&#x4E0A;&#xFF0C;&#x7C21;&#x6F54;&#x800C;&#x9748;&#x6D3B;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x904E;&#x7A0B;&#x4F9D;&#x9700;&#x6C42;&#x4EFB;&#x610F;&#x6539;&#x8B8A;&#x578B;&#x5225;&#xFF0C;&#x505A;&#x5230;&#x5341;&#x5206;&#x9748;&#x6D3B;&#x7684;&#x8B8A;&#x6578;&#x8655;&#x7406;&#xFF1B;&#x4F46;&#x76F8;&#x5C0D;&#x7F3A;&#x4E4F;&#x5C0D;&#x7576;&#x524D;&#x8B8A;&#x6578;&#x7684;&#x578B;&#x5225;&#x9650;&#x5236;&#xFF0C;&#x7576;&#x57F7;&#x884C;&#x5230;&#x67D0;&#x4E00;&#x884C;&#x7A0B;&#x5F0F;&#x6642;&#xFF0C;&#x7121;&#x6CD5;&#x7D55;&#x5C0D;&#x80AF;&#x5B9A; <code>x</code> &#x8B8A;&#x6578;&#x73FE;&#x5728;&#x653E;&#x4E86;&#x4EC0;&#x9EBC;&#x985E;&#x578B;&#x7684;&#x503C;&#xFF0C;&#x5BB9;&#x6613;&#x9020;&#x6210;&#x975E;&#x9810;&#x671F;&#x7684;&#x57F7;&#x884C;&#x53EF;&#x80FD;&#x6027;&#xFF0C;&#x5C0E;&#x81F4;&#x975E;&#x9810;&#x671F;&#x7684;&#x57F7;&#x884C;&#x7D50;&#x679C;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x5BB9;&#x6613;&#x57CB;&#x4E0B; Bug&#xFF01;</p>
+<h3 id="&#x5BA3;&#x544A;&#x6642;&#x6C92;&#x6709;&#x6307;&#x5B9A;&#x578B;&#x5225;&#xFF0C;&#x5C31;&#x662F;&#x52D5;&#x614B;&#x578B;&#x5225;&#xFF1F;">&#x5BA3;&#x544A;&#x6642;&#x6C92;&#x6709;&#x6307;&#x5B9A;&#x578B;&#x5225;&#xFF0C;&#x5C31;&#x662F;&#x52D5;&#x614B;&#x578B;&#x5225;&#xFF1F;</h3>
+<p>&#x5F9E;&#x4E0A;&#x9762;&#x5169;&#x500B;&#x4F8B;&#x5B50;&#x53EF;&#x4EE5;&#x660E;&#x986F;&#x770B;&#x51FA;&#x52D5;&#x614B;&#x8A9E;&#x8A00;&#x548C;&#x975C;&#x614B;&#x8A9E;&#x8A00;&#x7684;&#x5DEE;&#x5225;&#x3002;&#x53EF;&#x80FD;&#x6703;&#x89BA;&#x5F97;&#xFF1A;&#x300C;&#x5F88;&#x597D;&#x8FA8;&#x8A8D;&#x561B;&#xFF0C;&#x770B;&#x5BA3;&#x544A;&#x8B8A;&#x6578;&#x6642;&#x6709;&#x6C92;&#x6709;&#x6307;&#x5B9A;&#x578B;&#x5225;&#xFF0C;&#x5C31;&#x77E5;&#x9053;&#x662F;&#x4E0D;&#x662F;&#x52D5;&#x614B;&#x8A9E;&#x8A00;&#x300D;&#x3002;</p>
+<p>&#x9019;&#x500B;&#x7406;&#x89E3;&#x662F;&#x4E0D;&#x7CBE;&#x78BA;&#x7684;&#x3002;</p>
+<p>&#x56E0;&#x70BA;&#x6709;&#x7684;&#x975C;&#x614B;&#x8A9E;&#x8A00;&#x5728;&#x5BA3;&#x544A;&#x6642;&#xFF0C;&#x4E5F;&#x4E0D;&#x9700;&#x8981;&#x6307;&#x5B9A;&#x578B;&#x5225;&#xFF0C;&#x662F;&#x900F;&#x904E;<strong>&#x96B1;&#x6027;&#x63A8;&#x5C0E;</strong>&#x7684;&#x65B9;&#x5F0F;&#x4F86;&#x78BA;&#x8A8D;&#x578B;&#x5225;&#xFF0C;&#x4F8B;&#x5982; Ocaml&#x3001;Haskell&#x3002;</p>
+<p>&#x50CF;&#x50B3;&#x7D71; C# &#x662F;&#x5178;&#x578B;&#x7684;&#x975C;&#x614B;&#x8A9E;&#x8A00;&#xFF0C;&#x4F46;&#x5728; C# 4.0 &#x6DFB;&#x52A0;&#x4E86;&#x65B0;&#x7279;&#x6027;&#xFF0C;&#x5141;&#x8A31;&#x5BA3;&#x544A;&#x6642;&#x4E0D;&#x6307;&#x5B9A;&#x578B;&#x5225;&#xFF0C;&#x4F46;&#x4E0D;&#x6539;&#x8B8A; C# &#x9AA8;&#x5B50;&#x88E1;&#x662F;&#x975C;&#x614B;&#x8A9E;&#x8A00;&#x7684;&#x4E8B;&#x5BE6;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#x50B3;&#x7D71; C# &#x7684;&#x64B0;&#x5BEB;&#x65B9;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-c#">int n = 123;
+Console.WriteLine(n);
+</code></pre>
+<p>C# 4.0 &#x5F8C;&#x5141;&#x8A31;&#x7528;&#x4EE5;&#x4E0B;&#x65B9;&#x5F0F;&#x64B0;&#x5BEB;&#xFF1A;</p>
+<pre><code class="lang-c#">var n = 456;
+Console.WriteLine(n);
+</code></pre>
+<p>&#x770B;&#x8D77;&#x4F86;&#x5F88;&#x50CF;&#x52D5;&#x614B;&#x8A9E;&#x8A00;&#x7684;&#x5BEB;&#x6CD5;&#x3002;&#x4F46;&#x5982;&#x679C;&#x4F01;&#x5716;&#x5728;&#x904E;&#x7A0B;&#x653E;&#x5165;&#x4E0D;&#x540C;&#x578B;&#x5225;&#x7684;&#x503C;&#xFF0C;&#x5728;&#x7DE8;&#x8B6F;&#x6642;&#x4E00;&#x6A23;&#x6703;&#x88AB;&#x6AA2;&#x67E5;&#x51FA;&#x4F86;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8AAA; C# &#x9AA8;&#x5B50;&#x9084;&#x662F;&#x975C;&#x614B;&#x8A9E;&#x8A00;&#xFF0C;&#x4E0D;&#x5141;&#x8A31;&#x52D5;&#x614B;&#x8A9E;&#x8A00;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#xFF0C;&#x6BD4;&#x5982;&#x4F7F;&#x7528;&#x904E;&#x7A0B;&#x4EFB;&#x610F;&#x6539;&#x8B8A;&#x578B;&#x5225;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#x4EE5;&#x4E0B;&#x4F8B;&#x5B50;&#xFF0C;&#x5C07;&#x767C;&#x751F; <code>Cannot implicity convert type &apos;string&apos; to &apos;int&apos;</code> &#x7684;&#x7DE8;&#x8B6F;&#x932F;&#x8AA4;(Compilation Error)&#xFF1A;</p>
+<pre><code class="lang-c#">var n = 456;
+Console.WriteLine(n);
+n = &quot;Hello&quot;;
+</code></pre>
+<p>&#x53EF;&#x80FD;&#x6703;&#x6709;&#x7591;&#x554F;&#xFF1A;&#x65E2;&#x7136;&#x6C92;&#x6709;&#x6307;&#x5B9A;&#x578B;&#x5225;&#xFF0C;&#x7DE8;&#x8B6F;&#x5668;&#x600E;&#x9EBC;&#x77E5;&#x9053; <code>n</code> &#x7684;&#x578B;&#x5225;&#x61C9;&#x8A72;&#x662F;&#x4EC0;&#x9EBC;&#xFF1F;</p>
+<p>&#x4EE5; C# 4.0 &#x4F86;&#x8AAA;&#xFF0C;<code>n</code> &#x7684;&#x578B;&#x5225;&#x5C31;&#x662F;<strong>&#x521D;&#x59CB;&#x503C;&#x7684;&#x578B;&#x5225;</strong>&#xFF0C;&#x6240;&#x4EE5;&#x5BA3;&#x544A;&#x6642;&#x5FC5;&#x9808;&#x88AB;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x5426;&#x5247;&#x6703;&#x6709; <code>Implicity-typed variables must be initialized</code> &#x7684;&#x7DE8;&#x8B6F;&#x932F;&#x8AA4;&#xFF0C;&#x5982;&#x4EE5;&#x4E0B;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-c#">var n;
+n = 123;
+Console.WriteLine(n);
+</code></pre>
+<p>&#x9019;&#x7A2E;&#x4E0D;&#x5728;&#x8A9E;&#x6CD5;&#x4E0A;&#x6307;&#x5B9A;&#xFF0C;&#x800C;&#x9760;&#x96B1;&#x6027;&#x63A8;&#x5C0E;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x7A31;&#x70BA;<strong>&#x96B1;&#x6027;&#x578B;&#x5225;(implicity typed)&#x7684;&#x975C;&#x614B;&#x8A9E;&#x8A00;</strong>&#x3002;</p>
+<p>C# 4.0 &#x6DFB;&#x52A0;&#x4E86;&#x9019;&#x500B;&#x7279;&#x6027;&#xFF0C;&#x7B97;&#x662F;&#x5438;&#x6536;&#x4E86;&#x52D5;&#x614B;&#x8A9E;&#x8A00;&#x5728;&#x5BA3;&#x544A;&#x8A9E;&#x6CD5;&#x4E0A;&#x7C21;&#x4FBF;&#x7684;&#x512A;&#x9EDE;&#xFF0C;&#x540C;&#x6642;&#x4ECD;&#x4FDD;&#x6709;&#x975C;&#x614B;&#x8A9E;&#x8A00;&#x7684;&#x7A69;&#x5B9A;&#x6027;&#x3002;</p>
+<h3 id="&#x7E3D;&#x7D50;&#x975C;&#x614B;&#x8A9E;&#x8A00;&#x548C;&#x52D5;&#x614B;&#x8A9E;&#x8A00;&#x7684;&#x5B9A;&#x7FA9;&#x548C;&#x5DEE;&#x5225;">&#x7E3D;&#x7D50;&#x975C;&#x614B;&#x8A9E;&#x8A00;&#x548C;&#x52D5;&#x614B;&#x8A9E;&#x8A00;&#x7684;&#x5B9A;&#x7FA9;&#x548C;&#x5DEE;&#x5225;</h3>
+<p><strong>&#x975C;&#x614B;&#x8A9E;&#x8A00;(Statically Typed Languages)&#xFF1A;</strong></p>
+<ul>
+<li>&#x578B;&#x5225;&#x6AA2;&#x67E5;(Type Checking)&#x767C;&#x751F;&#x5728;<strong>&#x7DE8;&#x8B6F;&#x6642;&#x671F;(Compile Time)</strong>&#x3002;</li>
+<li>&#x7A0B;&#x5F0F;&#x64B0;&#x5BEB;&#x6642;&#x5FC5;&#x9808;&#x4F7F;&#x7528;&#x660E;&#x78BA;&#x7684;&#x578B;&#x5225;&#x5BA3;&#x544A;&#x3002;</li>
+<li>&#x578B;&#x5225;&#x4E00;&#x65E6;&#x5BA3;&#x544A;&#x5F8C;&#xFF0C;&#x5728;&#x57F7;&#x884C;&#x6642;&#x671F;&#x6642;&#x7121;&#x6CD5;&#x4EFB;&#x610F;&#x66F4;&#x63DB;&#x578B;&#x5225;&#xFF0C;&#x5426;&#x5247;&#x6703;&#x767C;&#x751F;&#x932F;&#x8AA4;&#x3002;</li>
+</ul>
+<p><strong>&#x52D5;&#x614B;&#x8A9E;&#x8A00;(Dynamically Typed Languages)&#xFF1A;</strong></p>
+<ul>
+<li>&#x578B;&#x5225;&#x6AA2;&#x67E5;(Type Checking)&#x767C;&#x751F;&#x5728;<strong>&#x57F7;&#x884C;&#x6642;&#x671F;(Runtime)</strong>&#x3002;</li>
+<li>&#x7A0B;&#x5F0F;&#x64B0;&#x5BEB;&#x6642;&#x4E0D;&#x7528;&#x660E;&#x78BA;&#x7684;&#x578B;&#x5225;&#x5BA3;&#x544A;&#x3002;</li>
+<li>&#x57F7;&#x884C;&#x6642;&#xFF0C;&#x8B8A;&#x6578;&#x80FD;&#x4EFB;&#x610F;&#x66F4;&#x63DB;&#x578B;&#x5225;&#x3002;</li>
+</ul>
+<p><strong>&#x800C;&#x975C;&#x614B;&#x8A9E;&#x8A00;&#x53C8;&#x5206;&#x70BA;&#xFF1A;</strong></p>
+<ul>
+<li>&#x986F;&#x6027;&#x578B;&#x5225;(explicitly typed)&#xFF1A;&#x578B;&#x5225;&#x662F;&#x8A9E;&#x6CD5;&#x5BA3;&#x544A;&#x7684;&#x4E00;&#x90E8;&#x4EFD;&#xFF0C;&#x5F9E;&#x8A9E;&#x6CD5;&#x5C31;&#x80FD;&#x5F97;&#x77E5;&#x3002;</li>
+<li>&#x96B1;&#x6027;&#x578B;&#x5225;(implicity typed)&#xFF1A;&#x578B;&#x5225;&#x662F;&#x900F;&#x904E;&#x7DE8;&#x8B6F;&#x904E;&#x7A0B;&#x7684;&#x63A8;&#x5C0E;&#x5F97;&#x77E5;&#x3002;</li>
+</ul>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="http://blog.sina.com.tw/dotnet/article.php?entryid=614009" target="_blank">&#x975C;&#x614B;&#x8A9E;&#x8A00; vs. &#x52D5;&#x614B;&#x8A9E;&#x8A00;&#x7684;&#x6BD4;&#x8F03;</a></li>
+<li><a href="https://millenniummeetonce.blogspot.com/2018/04/blog-post_5.html" target="_blank">&#x52D5;&#x614B;&#x8A9E;&#x8A00;&#x8207;&#x975C;&#x614B;&#xFF1F;&#x76F4;&#x8B6F;&#x8207;&#x7DE8;&#x8B6F;&#xFF1F;&#x5F37;&#x578B;&#x5225;&#x8207;&#x5F31;&#x578B;&#x5225;&#xFF1F;</a></li>
+<li><a href="https://www.zhihu.com/question/19918532" target="_blank">&#x5F31;&#x7C7B;&#x578B;&#x3001;&#x5F3A;&#x7C7B;&#x578B;&#x3001;&#x52A8;&#x6001;&#x7C7B;&#x578B;&#x3001;&#x9759;&#x6001;&#x7C7B;&#x578B;&#x8BED;&#x8A00;&#x7684;&#x533A;&#x522B;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="day01.html" class="navigation navigation-prev " aria-label="Previous page: Day 1：前言">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="day03.html" class="navigation navigation-next " aria-label="Next page: Day 3：資料型態的夢魘——動態型別加弱型別(2)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Day 2：資料型態的夢魘——動態型別加弱型別(1)","level":"1.3","depth":1,"next":{"title":"Day 3：資料型態的夢魘——動態型別加弱型別(2)","level":"1.4","depth":1,"path":"articles/day03.md","ref":"./articles/day03.md","articles":[]},"previous":{"title":"Day 1：前言","level":"1.2","depth":1,"path":"articles/day01.md","ref":"./articles/day01.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","intopic-toc","edit-link"],"pluginsConfig":{"intopic-toc":{"label":"Table of Contents","selector":".markdown-section h2, .markdown-section h3","visible":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/onejar99/something-about-javascript/blob/master/book-root/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"articles/day02.md","mtime":"2018-11-28T14:13:30.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-18T16:47:57.947Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/gumshoe.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
