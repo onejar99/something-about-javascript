@@ -1,5 +1,5 @@
 {
-    "plugins": [  "anchor-navigation-ex", "edit-link", "copy-code-button", "ga" ],
+    "plugins": [  "anchor-navigation-ex", "edit-link", "copy-code-button", "theme-comscore", "ga" ],
     "pluginsConfig": {
       "fontSettings": {
         "theme": "night",
@@ -9,7 +9,7 @@
         "showLevel": false
       },
       "anchor-navigation-ex": {
-          "showLevel": true,
+          "showLevel": false,
           "associatedWithSummary": false,
           "printLog": false,
           "multipleH1": false,
