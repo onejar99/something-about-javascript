@@ -11,7 +11,7 @@
 **閉包 (Closures) 是一個能存取父作用域的函數，即使父作用域已經結束**。
 
 ![](https://i.imgur.com/lcqSy7g.png)  
-(Source: [網路圖片](http://colorfulblanche.com/wp-content/uploads/2018/01/%E6%8A%95%E5%BD%B1%E7%89%8713-1024x576.png))
+(Source: [網路圖片](https://colorfulblanche.com/wp-content/uploads/2018/01/%E6%8A%95%E5%BD%B1%E7%89%8713-1024x576.png))
 
 看到這種論文式的定義說明就能心領神會的練武奇才，可以考慮左轉離開去找對你更有價值的知識 (誤)。
 

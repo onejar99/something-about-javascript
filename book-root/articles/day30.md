@@ -115,14 +115,14 @@ TC39 委員會想讓標準的升級成為常規流程，決定**在每年的 6 �
 ### 鐵人賽果然不是浪得虛名
 
 ![](https://i.imgur.com/eBaKKLW.png)  
-(Source: [網路圖片](http://nos.netease.com/v163/snapshot/20180108/WaugI2823_cover.jpg))
+(Source: [網路圖片](https://nos.netease.com/v163/snapshot/20180108/WaugI2823_cover.jpg))
 
 這次參賽的決定頗為倉促，別說什麼庫存，開賽死線的前 3 天才決定報名、開始規劃主題大綱。報名時我心裡還想：哼，連續 30 天發文、每篇最低門檻才 300 字有什麼難，難道每天連一、兩個小時都撥不出來？
 
 果然事情不是憨人想得這麼簡單。
 
 ![](https://i.imgur.com/wqbkXte.png)  
-(Source: [網路圖片](http://komicolle.dreamhosters.com/pix/img12426.jpg))
+(Source: [網路圖片](https://komicolle.dreamhosters.com/pix/img12426.jpg))
 
 技術文章和小說散文在寫作性質上有別，技術性質的內容本來就比較不易閱讀，需要花更多心力在文句修飾、編排潤飾，避免閱讀起來過於生硬乏味。
 
@@ -200,9 +200,9 @@ if(progress == 30){
 
 ## References
 * [W3Schools - JavaScript Versions](https://www.w3schools.com/js/js_versions.asp)
-* [ECMAScript 6 入門](http://es6.ruanyifeng.com/#docs/intro)
+* [ECMAScript 6 入門](https://es6.ruanyifeng.com/#docs/intro)
 * [「译」ES5, ES6, ES2016, ES.Next: JavaScript 的版本是怎么回事？](https://huangxuan.me/2015/09/22/js-version/)
-* [JavaScript 的历史](http://www.w3school.com.cn/js/pro_js_history.asp)
+* [JavaScript 的历史](https://www.w3school.com.cn/js/pro_js_history.asp)
 * [Wiki - 網景](https://zh.wikipedia.org/wiki/%E7%B6%B2%E6%99%AF)
 * [Wiki - 昇陽電腦](https://zh.wikipedia.org/wiki/%E6%98%87%E9%99%BD%E9%9B%BB%E8%85%A6)
 * [Wiki - Ecma國際](https://zh.wikipedia.org/wiki/Ecma%E5%9B%BD%E9%99%85)

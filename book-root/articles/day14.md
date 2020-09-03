@@ -298,5 +298,5 @@ console.log(y);     // 0.37279230719931067
 
 ## References
 * [with - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/with)
-* [【转载】JavaScript中with、this用法小结](http://king39461.pixnet.net/blog/post/361793370-%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91javascript%E4%B8%ADwith%E3%80%81this%E7%94%A8%E6%B3%95%E5%B0%8F%E7%BB%93)
-* [[JavaScript] with的用法](http://stannotes.blogspot.com/2014/10/javascript-with.html)
+* [【转载】JavaScript中with、this用法小结](https://king39461.pixnet.net/blog/post/361793370-%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91javascript%E4%B8%ADwith%E3%80%81this%E7%94%A8%E6%B3%95%E5%B0%8F%E7%BB%93)
+* [[JavaScript] with的用法](https://stannotes.blogspot.com/2014/10/javascript-with.html)

@@ -1,7 +1,7 @@
 # 你不可不知的 JavaScript 二三事#Day26：程式界的哈姆雷特 —— Pass by value, or Pass by reference？
 
 ![](https://i.imgur.com/3jXfT1v.png)  
-(圖片素材來源: [網路圖片](http://cc2e7e3e75a47f276cc1-88ad9aa911bb90089a975b5bf54af6e6.r50.cf2.rackcdn.com/uploaded/l/0e7119966_1521467067_lego-hamlet.jpg))
+(圖片素材來源: [網路圖片](https://cc2e7e3e75a47f276cc1-88ad9aa911bb90089a975b5bf54af6e6.r50.cf2.rackcdn.com/uploaded/l/0e7119966_1521467067_lego-hamlet.jpg))
 
 「To be or not to be, that is the question.」
 
@@ -330,7 +330,7 @@ console.log(person3);  // {money: 333}
 電腦在執行程式的過程，是將資料暫存在記憶體裡，以供運算過程使用。
 
 ![](https://i.imgur.com/1n19mQ2.jpg)  
-(Source: [網路圖片](http://www.adata.com/upload/products/list/226.jpg))
+(Source: [網路圖片](https://www.adata.com/upload/products/list/226.jpg))
 
 對電腦來說，記憶體每一個空間都有對應的位址，就像住址編號一樣。
 

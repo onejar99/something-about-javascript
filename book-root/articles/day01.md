@@ -15,8 +15,8 @@ HTML5 的面世是個轉捩點，逐漸改變了一切。HTML5 增加了許多�
 
 無論你使用哪一派前端框架、或是使用哪一個轉譯語言，對原生 JavaScript (ECMAScript) 都應該有一定的了解。
 
-![](http://devhumor.com/content/uploads/images/October2018/baba-ji.png)  
-(Source: [Where is JS Man?](http://devhumor.com/tags/javascript))
+![](https://devhumor.com/content/uploads/images/October2018/baba-ji.png)  
+(Source: [Where is JS Man?](https://devhumor.com/tags/javascript))
 
 「JavaScript 很簡單」是許多人對它的印象。
 
@@ -34,4 +34,4 @@ HTML5 的面世是個轉捩點，逐漸改變了一切。HTML5 增加了許多�
 ## References
 * [Thoughts on Flash - Apple](https://www.apple.com/hotnews/thoughts-on-flash/)
 * [Steve Jobs "Thoughts on Flash" 全文翻譯 | T客邦](https://www.techbang.com/posts/2405-steve-jobs-thoughts-on-flash-full-translation)
-* [為什麼 Jobs 永遠不會讓 Flash 上 iPhone？ | MR JAMIE](http://mrjamie.cc/2010/04/30/why-jobs-will-never-allow-flash-on-iphone/)
+* [為什麼 Jobs 永遠不會讓 Flash 上 iPhone？ | MR JAMIE](https://mrjamie.cc/2010/04/30/why-jobs-will-never-allow-flash-on-iphone/)

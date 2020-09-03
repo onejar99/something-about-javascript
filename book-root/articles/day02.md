@@ -133,6 +133,6 @@ C# 4.0 添加了這個特性，算是吸收了動態語言在宣告語法上簡�
 
 
 ## Reference
-* [靜態語言 vs. 動態語言的比較](http://blog.sina.com.tw/dotnet/article.php?entryid=614009)
+* [靜態語言 vs. 動態語言的比較](https://blog.sina.com.tw/dotnet/article.php?entryid=614009)
 * [動態語言與靜態？直譯與編譯？強型別與弱型別？](https://millenniummeetonce.blogspot.com/2018/04/blog-post_5.html)
 * [弱类型、强类型、动态类型、静态类型语言的区别是什么？](https://www.zhihu.com/question/19918532)

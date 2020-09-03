@@ -3,7 +3,7 @@
 ## 星爺強碰阿湯哥誰會贏？Global Scope vs. Function Scope
 
 ![](https://i.imgur.com/KkQVLtA.png)  
-(Source: [網路1](https://puui.qpic.cn/qqvideo_ori/0/k0505psezun_496_280/0) / [網路2](http://globedia.com/imagenes/noticias/2015/9/4/mision-imposible-tom-cruise-corre-horas_1_2287136.jpg))
+(Source: [網路1](https://puui.qpic.cn/qqvideo_ori/0/k0505psezun_496_280/0) / [網路2](https://globedia.com/imagenes/noticias/2015/9/4/mision-imposible-tom-cruise-corre-horas_1_2287136.jpg))
 
 俗話說天高皇帝遠，十里外的瀑布不如眼前的一杯水。
 

@@ -182,4 +182,4 @@ ES6 多了第 5 種函數寫法：**Arrow Function**。
 
 ## References
 * [W3Schools - JavaScript Functions](https://www.w3schools.com/js/js_functions.asp)
-* [Javascript 開發學習心得 - 函數的多種寫法與應用限制](http://sweeteason.pixnet.net/blog/post/40371736)
+* [Javascript 開發學習心得 - 函數的多種寫法與應用限制](https://sweeteason.pixnet.net/blog/post/40371736)

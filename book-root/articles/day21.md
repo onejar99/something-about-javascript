@@ -294,6 +294,6 @@ Output#2:  10
 * [W3Schools - The JavaScript this Keyword](https://www.w3schools.com/js/js_this.asp)
 * [this - JavaScript | MDN](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Operators/this)
 * [#Javascript：this用法整理 | 英特尔® 软件](https://software.intel.com/zh-cn/blogs/2013/10/09/javascript-this)
-* [JavaScript 語言核心（11）this 是什麼？ by caterpillar | CodeData](http://www.codedata.com.tw/javascript/essential-javascript-11-what-is-this/)
+* [JavaScript 語言核心（11）this 是什麼？ by caterpillar | CodeData](https://www.codedata.com.tw/javascript/essential-javascript-11-what-is-this/)
 * [[ES6] Javascript 開發者必須知道的 10 個新功能](https://medium.com/@peterchang_82818/es6-10-features-javascript-developer-must-know-98b9782bef44)
 * [ES6,ES7,ES8 · class - easonwang01 - GitBook](https://easonwang01.gitbooks.io/class/es6es7.html)

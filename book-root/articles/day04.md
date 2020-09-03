@@ -21,8 +21,8 @@
 
 究竟～是動態型別加弱型別的原罪使然，還是型別系統的命運糾葛，讓我們繼續看下去～
 
-![](http://v1c.im.tv/beta/2014/04/ART1404281738-86793-Icon.jpg)  
-(Source: [網路](http://v1c.im.tv/beta/2014/04/ART1404281738-86793-Icon.jpg))
+![](https://i.imgur.com/hbWSAyj.png)  
+(Source: [網路](https://v1c.im.tv/beta/2014/04/ART1404281738-86793-Icon.jpg))
 
 ## 動態型別
 
